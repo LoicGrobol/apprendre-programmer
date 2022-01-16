@@ -72,7 +72,7 @@ jobs:
           enable_cache: true
           custom_opts: '--verbose'
       
-       name: Prevent Github Jekyll build
+      - name: Prevent Github Jekyll build
         run: |
           touch _site/.nojekyll
 
