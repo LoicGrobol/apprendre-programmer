@@ -71,6 +71,10 @@ jobs:
         with:
           enable_cache: true
           custom_opts: '--verbose'
+      
+       name: Prevent Github Jekyll build
+        run: |
+          touch _site/.nojekyll
 
       - name: Deploy to GitHub Pages 🚀
         if: github.ref == 'refs/heads/main'
