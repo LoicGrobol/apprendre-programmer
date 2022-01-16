@@ -1,0 +1,24 @@
+theme: minimal-mistakes-jekyll
+
+title: Apprendre à programmer
+description: Contenus pour le cours « Apprendre à programmer  », L3 SDL parcours LCN, université Paris Nanterre 
+name: Loïc Grobol
+
+baseurl: "/apprendre-programmer"
+repository: "loicgrobol/apprendre-programmer"
+
+atom_feed:
+  hide: true
+
+
+exclude:
+  - "*.py.md"
+  - "**/local"
+
+keep_files:
+  - "*.py.html"
+  - "pdf_slides/*"
+
+plugins:
+  - jekyll-default-layout
+
