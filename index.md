@@ -16,6 +16,18 @@ toc: true
     pour les dates de vacances.
 - **Contact** Loïc Grobol [`<lgrobol@parisnanterre.fr>`](mailto:lgrobol@parisnanterre.fr)
 
+
+## Séances
+
+### 2022-01-17 : Introduction, entrées/sorties de bases et variables
+
+- [![Launch in Binder
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/00-introduction/introduction-slides.py.md)
+  [Slides Introduction](slides/00-introduction/introduction-slides.py.md)
+- [![Launch in Binder
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/01-IO_variables_chaines/io_variables_chaines.py.md)
+  [Slides IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.md)
+
 ## Ressources
 
 ### Python général
