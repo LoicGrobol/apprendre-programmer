@@ -67,7 +67,7 @@ Stop à l'hégémonie de l'anglais ! Modifiez la cellule de code ci-dessous po
 « bonjour, tout le monde ! » dans la langue de votre choix.
 
 ```python
-print("Hello, world!")
+print("Bonjour tout le monde !")
 ```
 
 Vous l'avez ? C'est peut-être le premier programme que vous écrivez. Si c'est le cas, encore une
@@ -112,10 +112,17 @@ print("L'informatique c'est fantastique !")
 ```
 
 En d'autres termes, elle affiche ce qu'elle a entre ses parenthèses. Si on lui donne plusieurs
-arguments (en les séparant par des virgules), elle les affiche chacun sur une ligne.
+arguments (en les séparant par des virgules), elle les affiche à la suite
 
 ```python
 print("Morgan", "Alex")
+```
+
+Et voici ce que donne une suite de plusieurs `print`
+
+```python
+print("Morgan")
+print("Alex")
 ```
 
 ### ⬜ Exo ⬜
@@ -130,7 +137,19 @@ Grobol
 ```
 
 ```python
-# À toi de jouer
+print("Loïc")
+print("")
+print("Grobol")
+```
+
+```python
+print("Loïc")
+print()
+print("Grobol")
+```
+
+```python
+print("Loïc\n\nGrobol")
 ```
 
 ### Commentaires
@@ -241,6 +260,10 @@ On peut utiliser en Python les opérations arithmétiques classiques avec `int`s
 5 ** 10
 ```
 
+```python
+5 * (3+2)
+```
+
 ### Affichage
 
 Vous avez remarqué ?
@@ -314,6 +337,13 @@ On peut le faire aussi avec des simple quotes, mais dans ce cas, il faut le dés
 print('Le TAL, c\'est génial.')
 ```
 
+À l'inverse, si on veut utiliser des doubles quotes dans la chaîne, on peut la délimiter avec des
+simples.
+
+```python
+print('"Apprendre à programmer" est mon cours préféré')
+```
+
 Attention, un nombre entre quotes, c'est une chaîne de caractères :
 
 ```python
@@ -345,9 +375,25 @@ Testez ci-dessous. Vous pouvez aussi créer de nouvelles cellules dans le notebo
 
 ```
 
+```python
+"ab" - "b"
+```
+
+```python
+"aaaaa" / "a"
+```
+
+```python
+"a" % "b"
+```
+
+```python
+"abx"*4
+```
+
 Il est fréquent de devoir convertir une variable d'un type à l'autre. Par exemple pour effectuer des
 opérations arithmétiques sur un nombre contenu dans une chaîne de caractères. Pour celà, on peut
-utiliser les fonction de conversion `int` et `float`.
+utiliser les fonctions de conversion `int` et `float`.
 
 ```python
 print("Type d'origine:", type("55"))
@@ -413,7 +459,8 @@ Nous verrons bientôt à quoi ils peuvent servir.
 
 ## Variables
 
-Pour l'instant on a travaillé avec des instructions indépendantes. Mais comment faire si on peut utiliser le résultat d'une instruction dans une instruction qui suit ?
+Pour l'instant on a travaillé avec des instructions indépendantes. Mais comment faire si on peut
+utiliser le résultat d'une instruction dans une instruction qui suit ?
 
 
 On a vu
@@ -451,7 +498,8 @@ print("Le type de machin est", type(machin))
 ```
 
 
-Les lignes de la forme `nom_de_variable = <quelque chose>` sont des instructions d'**affectation**, qui *affectent* une valeur à une variable.
+Les lignes de la forme `nom_de_variable = <quelque chose>` sont des instructions d'**affectation**,
+qui *affectent* une valeur à une variable.
 
 
 Si on affecte plusieurs valeurs successivement à une variable, elle change de valeur à chaque fois.
@@ -473,12 +521,11 @@ Les règles à retenir
 - Les noms de variables ne peuvent pas commencer par un chiffre.
 - Les noms de variables ne contiennent pas d'espaces (utilisez `_` à la place) ni certains symboles
   comme `$`, `!`, `+`…
-- Les caractères Unicodes correspondant à des lettres ainsi que quelques autres sont utilisables.
+- Les caractères Unicodes correspondant à des lettres sont utilisables.
 
 ```python
 ééééééé = 1
 Δ = -0.5
-💗 = "Yes"
 ```
 
 Mais comme ce n'est pas toujours facile à entrer au clavier, on conseille en général d'éviter.
@@ -490,7 +537,9 @@ Quelques noms de variables sont interdits car ils correspondent à des mots-clé
 def = "nope"
 ```
 
-Et certains autres comme `print`, `int`, `type` sont *techniquement* utilisables mais on ne le fait pas pour éviter de tout casser.
+Et certains autres comme `print`, `int`, `type` sont *techniquement* utilisables comme noms de variables, mais c'est plutôt une mauvaise idée. À votre avis pourquoi ?
+
+
 
 
 On peut donc maintenant réutiliser les résultats d'instructions.
@@ -504,15 +553,15 @@ print(large_number)
 partenaire1 = "Morgan"
 partenaire2 = "Alex"
 partenaires = partenaire1 + " et " + partenaire2
-print(partenaire)
+print(partenaires)
 ```
 
 
 Ça marche aussi avec des interpolations
 
 ```python
-ship = f"{partenaire1} et {partenaire2}")
-print(partenaire)
+ship = f"{partenaire1} et {partenaire2}"
+print(ship)
 ```
 
 
@@ -528,7 +577,7 @@ print("Deuxième valeur", compteur)
 ```python
 mot = "machinal"
 print(mot)
-mot = f"{mot}lement"
+mot = f"{mot}ement"
 print(mot)
 ```
 
@@ -560,10 +609,10 @@ Python, on fait ça avec `input`.
 ```python tags=["nbconvert_ignore"]
 print("Comment tu t'appelles ?")
 nom = input()
-print("Salut," nom)
+print("Salut, ", nom)
 ```
 
-`input` donne la main à l'utilisateurice pour saisir une chaîne de caractère (terminée et en
+`input` donne la main à l'utilisateurice pour saisir une chaîne de caractère (terminée en
 appuyant sur entrée) et renvoie cette chaîne de caractères. On peut aussi préciser un message à
 afficher directement à côté de la zone de saisie.
 
@@ -603,8 +652,6 @@ L'opérateur inverse, qui vérifie la différence, est `!=` (≠ en ASCII art qu
 ```
 
 Les opérateurs `<`, `>`, `<=` et `>=` fonctionnent comme vous imaginez
-
-Operators >, >=, < and <= are defined as well.
 
 ```python
 7 < 9
