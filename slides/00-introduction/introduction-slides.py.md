@@ -45,7 +45,7 @@ Apprendre à programmer : introduction
     l'université](https://etudiants.parisnanterre.fr/calendrier-universitaire-2021-2022-1018180.kjsp)
     pour les dates de vacances.
 
-→ Travail sur machine systématique : ammener de préférence un PC portable. Si c'est un problème,
+→ Travail sur machine systématique : amener de préférence un PC portable. Si c'est un problème,
 venez m'en parler et on trouvera une solution.
 
 ### Liens
@@ -61,7 +61,7 @@ Connaissances :
 
 - Notion d'ordinateur, d'algorithme et de programme
 - Bases en langage Python :
-  - Notion de types primitifs: litéraux, expressions, variables
+  - Notion de types primitifs : litéraux, expressions, variables
   - Structures de données
   - Fonctions, module et sous-programmes
   - Lecture/écriture dans des fichiers
@@ -70,8 +70,10 @@ Connaissances :
 
 Compétences :
 
-- Décrire un problème puis écrire un algoritme pour mettre en œuvre sa résolution.
+- Décrire un problème puis écrire un algorithme pour mettre en œuvre sa résolution.
 - Maîtriser les outils élémentaires de la programmation en langage Python.
+
+À la fin du semestre, vous serez les dignes héritièr⋅es d'Ada Lovelace, Alan Turing, Grace Hopper et John Backus.
 
 ### Évaluation
 

@@ -23,10 +23,10 @@ toc: true
 
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/00-introduction/introduction-slides.py.md)
-  [Slides Introduction](slides/00-introduction/introduction-slides.py.md)
+  [Slides Introduction](slides/00-introduction/introduction-slides.py.html)
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/01-IO_variables_chaines/io_variables_chaines.py.md)
-  [Slides IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.md)
+  [Slides IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.html)
 
 ## Ressources
 

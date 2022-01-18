@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.3
+      jupytext_version: 1.13.6
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -284,7 +284,7 @@ Revenons aux types, avec le type le plus important pour nous, linguistes, TAList
 
 
 Les *chaînes de caractères* (`str`, *strings*) sont… des séquences de caractères, comme `"machin"`,
-`'Bonjour, tout le monde !' ou `"supercalifragillisticexpialidocious"`. Elles sont notées entre
+`'Bonjour, tout le monde !'` ou `"supercalifragillisticexpialidocious"`. Elles sont notées entre
 simple quotes `'` ou double quotes `"`. Vous pouvez choisir l'une ou l'autre option.
 
 ```python
@@ -301,7 +301,8 @@ Que se passe-t-il si on mélange les deux ?
 type("My phone number is 123.')
 ```
 
-En général, c'est plus pratique d'utiliser des double quotes, notamment parce que c'est plus agréable d'y utiliser `'` comme apostrophe
+En général, c'est plus pratique d'utiliser des double quotes, notamment parce que c'est plus
+agréable d'y utiliser `'` comme apostrophe
 
 ```python
 print("J'aime les humanités")
@@ -337,9 +338,11 @@ Pour les chaînes des caractères, `+` désigne la concaténation
 "15" + "1"
 ```
 
-À votre avis, peut-on utiliser les autres opérateurs arithmétiques avec des chaînes de caractères ? Testez ci-dessous. Vous pouvez aussi créer de nouvelles cellules dans le notebook.
+À votre avis, peut-on utiliser les autres opérateurs arithmétiques avec des chaînes de caractères ?
+Testez ci-dessous. Vous pouvez aussi créer de nouvelles cellules dans le notebook.
 
 ```python
+
 ```
 
 Il est fréquent de devoir convertir une variable d'un type à l'autre. Par exemple pour effectuer des
@@ -370,7 +373,8 @@ Qu'on préfère écrire ainsi :
 print(f"Le double de 5 est {2*5}. Étonnant, non")
 ```
 
-Le `f` devant les quotes signales qu'on utilise un *format string* pour une *interpolation*. On en reparlera.
+Le `f` devant les quotes signales qu'on utilise un *format string* pour une *interpolation*. On en
+reparlera.
 
 On peut aussi, convertir des `int` en `float`
 
@@ -386,7 +390,8 @@ int(7.9)
 
 ### Booléens
 
-Un dernier type : les **booléens** (*boolean*, `bool`), qui ne peuvent prendre que deux valeurs `True` (vrai) et `False` (faux).
+Un dernier type : les **booléens** (*boolean*, `bool`), qui ne peuvent prendre que deux valeurs
+`True` (vrai) et `False` (faux).
 
 
 (Pourquoi « booléen », d'ailleurs ?)
@@ -404,3 +409,440 @@ Les booléens sont les réponses aux questions comme
 - « Est-ce que j'ai déjà entendu cette phrase ? »
 
 Nous verrons bientôt à quoi ils peuvent servir.
+
+
+## Variables
+
+Pour l'instant on a travaillé avec des instructions indépendantes. Mais comment faire si on peut utiliser le résultat d'une instruction dans une instruction qui suit ?
+
+
+On a vu
+
+```python
+print(type(8))
+```
+
+Mais ça va devenir très pénible très vite. Ça serait bien d'avoir un moyen de stocker des données en
+mémoire et de les récupérer plus tard.
+
+
+Ce moyen, ce sont les **variables** qui vont nous les donner. Une variable, c'est un emplacement
+qu'on réserve dans la mémoire de la machine, avec un nom qui nous permet de la réutiliser. Comme
+ceci :
+
+```python
+nom = "Loïc"
+print("Salut, ", nom)
+```
+
+Une variable peut être de n'importe lequel des types qu'on a vu jusqu'à présent :
+
+```python
+fruit = "banane"
+un_nombre = 9
+un_autre_nombre = 0.2
+machin = True
+un_hotel = "Trivago"
+
+print("Le type de fruit est", type(fruit))
+print("Le type de un_nombre est", type(un_nombre))
+print("Le type de un_autre_nombre est", type(un_autre_nombre))
+print("Le type de machin est", type(machin))
+```
+
+
+Les lignes de la forme `nom_de_variable = <quelque chose>` sont des instructions d'**affectation**, qui *affectent* une valeur à une variable.
+
+
+Si on affecte plusieurs valeurs successivement à une variable, elle change de valeur à chaque fois.
+
+```python
+nom = "Loïc"
+print(nom)
+nom = "Alex"
+print(nom)
+nom = "Morgan"
+print(nom)
+```
+
+### Noms de variables
+
+Les règles à retenir
+
+- Les noms de variables ne sont pas des chaînes de caractères : pas de quotes autour !
+- Les noms de variables ne peuvent pas commencer par un chiffre.
+- Les noms de variables ne contiennent pas d'espaces (utilisez `_` à la place) ni certains symboles
+  comme `$`, `!`, `+`…
+- Les caractères Unicodes correspondant à des lettres ainsi que quelques autres sont utilisables.
+
+```python
+ééééééé = 1
+Δ = -0.5
+💗 = "Yes"
+```
+
+Mais comme ce n'est pas toujours facile à entrer au clavier, on conseille en général d'éviter.
+
+
+Quelques noms de variables sont interdits car ils correspondent à des mots-clés de Python
+
+```python
+def = "nope"
+```
+
+Et certains autres comme `print`, `int`, `type` sont *techniquement* utilisables mais on ne le fait pas pour éviter de tout casser.
+
+
+On peut donc maintenant réutiliser les résultats d'instructions.
+
+```python
+large_number = 193425 + 32532513
+print(large_number)
+```
+
+```python
+partenaire1 = "Morgan"
+partenaire2 = "Alex"
+partenaires = partenaire1 + " et " + partenaire2
+print(partenaire)
+```
+
+
+Ça marche aussi avec des interpolations
+
+```python
+ship = f"{partenaire1} et {partenaire2}")
+print(partenaire)
+```
+
+
+On peut redéfinir une variable en faisant référence à sa valeur actuelle
+
+```python
+compteur = 0
+print("Première valeur", compteur)
+compteur = compteur + 1
+print("Deuxième valeur", compteur)
+```
+
+```python
+mot = "machinal"
+print(mot)
+mot = f"{mot}lement"
+print(mot)
+```
+
+### Cellules et exécutions
+
+À présent qu'on travaille avec des variables, vous allez de plus en plus écrire du code dans une
+cellule qui utilise des variables définies dans une autre cellule. Faites attention à l'ordre dans
+lequel vous les exécutez.
+
+Regardez par exemple les deux cellules suivantes : que se passe-t-il si on exécute la deuxième sans
+exécuter la première
+
+```python
+un_nombre = 5
+```
+
+```python
+un_autre_nombre = 8
+un_troisieme_nombre = un_nombre + un_autre_nombre
+print(un_troisieme_nombre)
+```
+
+## Entrées et sorties de base
+
+On a vu comment afficher des valeurs à l'écran avec `print`. Mais pour beaucoup d'applications
+(pensez à un chatbot par exemple), il est utile de demander à un⋅e utilisateurice une entrée. En
+Python, on fait ça avec `input`.
+
+```python tags=["nbconvert_ignore"]
+print("Comment tu t'appelles ?")
+nom = input()
+print("Salut," nom)
+```
+
+`input` donne la main à l'utilisateurice pour saisir une chaîne de caractère (terminée et en
+appuyant sur entrée) et renvoie cette chaîne de caractères. On peut aussi préciser un message à
+afficher directement à côté de la zone de saisie.
+
+```python tags=["nbconvert_ignore"]
+nom = input("Comment tu t'appelles ?")
+print(f"Salut, {nom}")
+```
+
+## Expressions booléennes
+
+Les **expressions booléennes** sont les expressions qui ont une valeur de vérité, `True` or `False`. Elles peuvent se construire à l'aide d'opérateurs de comparaison :
+
+`==` est vrai si et seulement si ses termes gauches et droits sont égaux
+
+```python
+10 + 5 == 15
+```
+
+```python
+10 == 15
+```
+
+```python
+"Apple" == "apple"
+```
+
+```python
+(10 + 5 == 20) == False
+```
+
+**Attention** il y a bien **deux** signes « égal », pour le différencier de l'opérateur d'affectation
+
+L'opérateur inverse, qui vérifie la différence, est `!=` (≠ en ASCII art quoi)
+
+```python
+1 != 10
+```
+
+Les opérateurs `<`, `>`, `<=` et `>=` fonctionnent comme vous imaginez
+
+Operators >, >=, < and <= are defined as well.
+
+```python
+7 < 9
+```
+
+```python
+8 >= 8
+```
+
+L'opérateur `in` vérifie l'inclusion
+
+```python
+"world" in "Hello world!"
+```
+
+```python
+"Apple" in "I love apples"
+```
+
+Et `not in` vérifie la non-inclusion
+
+```python
+"peach" not in "I love apples"
+```
+
+L'opérateur `not` inverse la polarité d'un booléen
+
+```python
+not True
+```
+
+```python
+not False
+```
+
+```python
+not (10 + 5 == 15)
+```
+
+On peut donc aussi écrire
+
+```python
+not ("peach" in "I love apples")
+```
+
+Mais c'est plus laid et moins efficace que d'utiliser `not in`.
+
+On peut également combiner des expressions booléennes avec les opérateurs logiques `and` et `or`
+
+- `A and B` est vrai si `A` et `B` sont vraies toutes les deux.
+- `A or B` est vrai si au moins une des deux expressions `A` et `B` est vraie.
+
+### 🤷🏻 Exo 🤷🏻
+
+Déterminer sans les exécuter les valeurs de retour de ces instructions :
+
+<!-- #region -->
+```python
+True and True
+```
+
+```python
+True and False
+```
+
+```python
+False or False
+```
+
+```python
+(False and True) or True
+```
+
+```python
+False and (True or True)
+```
+
+```python
+("apple" in "apples") and (1 + 1 == 2)
+```
+
+```python
+("apple" in "apples") or (1 + 1 == 5)
+```
+
+```python
+(("apple" in "apples") and (1 + 1 == 3)) or (5 < 10)
+```
+<!-- #endregion -->
+
+**Puis** vérifiez vos réponses
+
+```python
+
+```
+
+Si vous peinez, vous pouvez aller regarder cette vidéo, qui vous donnera peut-être une meilleure
+intuition des opérateurs boolées
+
+```python
+IFrame('https://www.youtube.com/embed/sdx9dACkvyI', width=700, height=350)
+```
+
+Une autre façon de voir les opérateurs booléens est d'y penser en termes de tables de vérité. Si
+vous êtes intéressé⋅es, voici une vidéo sur le sujet :
+
+```python
+IFrame('https://www.youtube.com/embed/jbete3iXbdM', width=700, height=350)
+```
+
+## Méthodes des chaînes de caractères
+
+Un concept important en TAL est celui de « sac de mots ». Il s'agit d'un modèle sémantique très
+simple où on fait l'hypothèse que le sens d'un texte peut être représenté par la liste des mots
+qu'il contient et leurs nombres d'occurrence. Intuitivement, si un texte par d'animaux de compagnie,
+on s'attend à rencontre plus souvent les mots *chat* ou *chien* que s'il s'agit d'un texte sur la
+politique française.
+
+Certains mots, cependant, apparaissent à peu près avec la même fréquence dans tous les types de
+textes : *et*, *un*, *la*… On les appelle parfois « mots vides » ou « *stop words* », puisqu'ils
+n'apportent pas d'information pour ce modèle, et on commence en général par les enlever des textes à
+représenter.
+
+De même, pour beaucoup d'applications en lingusitique, la casse (majuscules et minuscules) n'est pas
+informative. Par exemple pour enelver les *stop words* d'un texte, on veut les enlever peu importe
+leur casse (*Un*, *un*, *UN*…). Cependant pour Python, *Un* et *un* des chaînes de caractères
+différentes.
+
+```python
+"un" == "UN"
+```
+
+Pour nous aider, il existe une façon de mettre tout en minuscules
+
+```python
+str.lower("UN")
+```
+
+```python
+"un" == str.lower("uN")
+```
+
+Les fonctions `str.upper` et `str.title` permettent d'autres normalisations.
+
+```python
+print("The uppercase of 'the' is '" + str.upper("the") + "'.")
+```
+
+```python
+print("The title version of 'hello world' is '" + str.title("hello world") + "'.")
+```
+
+Et il existe des fonctions pour vérifier si une chaîne de caractères est normalisée
+
+
+- `str.isupper` vérifie qu'une chaîne de caractères est en majusculese;
+- `str.islower` vérifie qu'une chaîne de caractères est en minuscules;
+- `str.istitle` vérifie qu'une chaîne de caractères est en casse de titre.
+
+
+```python
+str.isupper("HELLO WORLD!")
+```
+
+```python
+str.islower("hello world!")
+```
+
+```python
+str.istitle("Hello World!")
+```
+
+Une autre fonction utile est `len`. Pouvez-vous deviner ce qu'elle fait …
+
+```python
+len("Hello world!")
+```
+
+
+```python
+len("computational linguistics")
+```
+
+```python
+len(25)
+```
+
+## 🦾 Exercices 🦾
+
+Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
+`01_io_variables_chaines_Loic_Grobol.ipynb` et me l'envoyer avant le prochain cours à
+`<lgrobol@parisnanterre.fr>`.
+
+### Exercice 1
+
+Étant donné le paragraphe suivant
+
+```python
+texte = "Toi dont le trône étincelle, ô immortelle" \
+        "Aphrodite, fille de Zeus, ourdisseuse de" \
+        "trames, je t'implore : ne laisse pas, ô" \
+        "souveraine, dégoûts ou chagrins affliger" \
+        "mon âme," \
+        "Mais viens ici, si jamais autrefois" \
+        "entendant de loin ma voix, tu m'as" \
+        "écoutée, quand, quittant la demeure" \
+        "dorée de ton père tu venais, Après avoir" \
+        "attelé ton char," \
+        "de beaux passereaux rapides" \
+        "t'entraînaient autour de la terre" \
+        "sombre,secouant leurs ailes serrées et du" \
+        "haut du ciel tirant droit à travers l'éther."
+```
+
+Écrire un programme qui demande à l'utilisateurice de saisir un mot, puis vérifie si ce mot est dans
+le texte.
+
+### Exercice 2
+
+Écrire un programme qui vérifie si le mot *banane* est contenue dans une entrée récupérée avec
+`input`, en quelle que soit la casse.
+
+### Exercice 3
+
+Écrire un programme qui demande à son utilisateurice son année de naissance et affiche l'âge qu'aura
+cette personne en 2022.
+
+Indice : `int`
+
+### Exercice 4
+
+Demander à l'utilisateurice d'entrer un nombre minimal de caractères pour qu'un mot soit considéré
+comme long. Puis lui demander de saisir un mot et lui afficher `"😱"` si ce mot est long.
+
+### Réflexion
+
+Quelques points auxquels réfléchir
+
+- Combien de temps avez-vous passé à faire ces exercices ?
+- Qu'est-ce qui vous a paru le plus compliqué ?
+- À votre avis, pourquoi ?
