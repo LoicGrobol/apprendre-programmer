@@ -884,7 +884,10 @@ Indice : `int`
 ### Exercice 4
 
 Demander à l'utilisateurice d'entrer un nombre minimal de caractères pour qu'un mot soit considéré
-comme long. Puis lui demander de saisir un mot et lui afficher `"😱"` si ce mot est long.
+comme long. Puis lui demander de saisir un mot et lui afficher `True` si le mot est long et `False`
+sinon.
+
+Bonus : alternativement, afficher `"😱"` si le mot est long et ne rien afficher sinon.
 
 ### Réflexion
 
