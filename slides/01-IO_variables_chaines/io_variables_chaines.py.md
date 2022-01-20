@@ -842,7 +842,7 @@ len(25)
 ## 🦾 Exercices 🦾
 
 Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
-`01_io_variables_chaines_Loic_Grobol.ipynb` et me l'envoyer avant le prochain cours à
+`01_io_variables_chaines_PRENOM_NOM.ipynb` et me l'envoyer avant le prochain cours à
 `<lgrobol@parisnanterre.fr>`.
 
 ### Exercice 1

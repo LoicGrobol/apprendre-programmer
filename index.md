@@ -34,6 +34,9 @@ toc: true
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/01-IO_variables_chaines/io_variables_chaines.py.md)
   [Slides IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.html)
 
+À faire pour la prochaine fois : exercices du notebook « IO et variables » et installer
+l'environnement [Thonny](https://thonny.org).
+
 ## Ressources
 
 ### Python général
