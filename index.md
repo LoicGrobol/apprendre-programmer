@@ -5,6 +5,12 @@ toc: true
 
 [comment]: <> "LTeX: language=fr"
 
+## Nouvelle
+
+- **2022-01-20** l'exercice 4 des slides « IO et variables » a été mis à jour pour corriger une
+  erreur. Si vous avez déjà résolu l'ancienne version, ne changez rien, mais sinon faites plutôt la
+  nouvelle.
+
 ## Infos pratiques
 
 - **Quoi** « Apprendre à programmer »
