@@ -25,8 +25,7 @@ toc: true
     l'université](https://etudiants.parisnanterre.fr/calendrier-universitaire-2021-2022-1018180.kjsp)
     pour les dates de vacances.
 - **Contact** Loïc Grobol [`<lgrobol@parisnanterre.fr>`](mailto:lgrobol@parisnanterre.fr)
-- **Dépôt des exercices** de préférence [sur Cours en Ligne]([espace sur Cours en
-  Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) (clé d'inscription `rossum`)
+- **Dépôt des exercices** de préférence [sur Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) (clé d'inscription `rossum`)
   ou par email (voir ci-dessus.)
 
 
