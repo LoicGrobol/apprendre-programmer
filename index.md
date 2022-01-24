@@ -7,13 +7,17 @@ toc: true
 
 ## Nouvelle
 
+- **2022-01-24** un [espace sur Cours en
+  Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) a été. **Il ne contiendra
+  rien de plus qu'un lien vers la page où vous vous trouvez**, mais vous pouvez y déposer vos
+  exercices hebdomadaires pour une gestion plus pratique. La clé d'accès est `rossum`.
 - **2022-01-20** l'exercice 4 des slides « IO et variables » a été mis à jour pour corriger une
   erreur. Si vous avez déjà résolu l'ancienne version, ne changez rien, mais sinon faites plutôt la
   nouvelle.
 
 ## Infos pratiques
 
-- **Quoi** « Apprendre à programmer »
+- **Quoi** « Apprendre à programmer », 4L6SC01P
 - **Où** Salle R05, bâtiment Ricœur, Université Paris Nanterre, 200 avenue de la République,
   Nanterre
 - **Quand** 12 séances, les mardis de 10:30 à 12:30, du 17/01 au 18/04
@@ -21,6 +25,9 @@ toc: true
     l'université](https://etudiants.parisnanterre.fr/calendrier-universitaire-2021-2022-1018180.kjsp)
     pour les dates de vacances.
 - **Contact** Loïc Grobol [`<lgrobol@parisnanterre.fr>`](mailto:lgrobol@parisnanterre.fr)
+- **Dépôt des exercices** de préférence [sur Cours en Ligne]([espace sur Cours en
+  Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) (clé d'inscription `rossum`)
+  ou par email (voir ci-dessus.)
 
 
 ## Séances
@@ -36,6 +43,12 @@ toc: true
 
 À faire pour la prochaine fois : exercices du notebook « IO et variables » et installer
 l'environnement [Thonny](https://thonny.org).
+
+### 2022-01-24 : Dessiner avec `turtle` et instructions conditionnelles
+
+- Correction des exercices
+- slides Turtle
+- Slides instructions conditionnelles
 
 ## Ressources
 
