@@ -5,10 +5,10 @@ toc: true
 
 [comment]: <> "LTeX: language=fr"
 
-## Nouvelle
+## Nouvelles
 
 - **2022-01-24** un [espace sur Cours en
-  Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) a été. **Il ne contiendra
+  Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) a été créé. **Il ne contiendra
   rien de plus qu'un lien vers la page où vous vous trouvez**, mais vous pouvez y déposer vos
   exercices hebdomadaires pour une gestion plus pratique. La clé d'accès est `rossum`.
 - **2022-01-20** l'exercice 4 des slides « IO et variables » a été mis à jour pour corriger une
