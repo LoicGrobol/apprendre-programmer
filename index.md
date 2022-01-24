@@ -46,7 +46,9 @@ l'environnement [Thonny](https://thonny.org).
 ### 2022-01-24 : Dessiner avec `turtle` et instructions conditionnelles
 
 - Correction des exercices
-- slides Turtle
+- [![Launch in Binder
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/01-turtle/turtle.py.md)
+  [Slides Turtle](slides/01-turtle/turtle.py.html)
 - Slides instructions conditionnelles
 
 ## Ressources
