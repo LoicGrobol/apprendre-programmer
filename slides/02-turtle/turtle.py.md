@@ -30,6 +30,11 @@ Dans ce notebook :
 - Dessiner avec le module [`turtle`](https://docs.python.org/3/library/turtle.html)
 - Créer et exécuter des scripts Python avec [Thonny](https://thonny.org/)
 
+Matériel complémentaire : [une vidéo pertinente](https://youtu.be/FN2RM-CHkuI).
+
+Les exercices sont tirés du cours « Apprendre à programmer avec Python », donnée à l'Université
+Sorbonne Nouvelle par Marine Delaborde et Pascal Amsili, que je remercie très chaleureusement.
+
 ## Thonny
 
 [Thonny](https://thonny.org/) est un **environnement de programmation** Python à destination des

@@ -49,7 +49,13 @@ l'environnement [Thonny](https://thonny.org).
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/01-turtle/turtle.py.md)
   [Slides Turtle](slides/01-turtle/turtle.py.html)
-- Slides instructions conditionnelles
+- [![Launch in Binder
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/02-conditions/conditions.py.html)
+  [Slides instructions conditionnelles]](slides/02-conditions/conditions.py.html)
+
+À faire pour la prochaine fois : exercices du notebook « instructions conditionnelles », attention
+le mode de rendu change légèrement.
+
 
 ## Ressources
 

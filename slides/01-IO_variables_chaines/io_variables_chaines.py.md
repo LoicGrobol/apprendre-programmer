@@ -845,6 +845,8 @@ Répondre à ces exercices directement dans le notebook, le sauvegarder sous un 
 `01_io_variables_chaines_PRENOM_NOM.ipynb` et me l'envoyer avant le prochain cours à
 `<lgrobol@parisnanterre.fr>`.
 
+**Assurez-vous bien que l'extension du fichier est `ipynb`.**
+
 ### Exercice 1
 
 Étant donné le paragraphe suivant
