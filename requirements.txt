@@ -1,12 +1,4 @@
-conllu
-ipympl
 jupyterlab
 jupytext
 nbconvert
-numpy
-matplotlib
-pandas
-regex
-seaborn
-tol-colors
 RISE
