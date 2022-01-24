@@ -47,11 +47,11 @@ l'environnement [Thonny](https://thonny.org).
 
 - Correction des exercices
 - [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/01-turtle/turtle.py.md)
-  [Slides Turtle](slides/01-turtle/turtle.py.html)
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/02-turtle/turtle.py.md)
+  [Slides Turtle](slides/02-turtle/turtle.py.html)
 - [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/02-conditions/conditions.py.html)
-  [Slides instructions conditionnelles](slides/02-conditions/conditions.py.html)
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/03-conditions/conditions.py.html)
+  [Slides instructions conditionnelles](slides/03-conditions/conditions.py.html)
 
 À faire pour la prochaine fois : exercices du notebook « instructions conditionnelles », attention
 le mode de rendu change légèrement.
