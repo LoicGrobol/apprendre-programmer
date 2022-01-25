@@ -73,7 +73,7 @@ Voici un exemple concret
 user_1_age = 99
 user_2_age = 30
 
-print("Salut" !)
+print("Salut !")
 
 if user_1_age > 90:
     print("Tu n'es plus tout jeune , numéro 1!")
@@ -90,7 +90,7 @@ lisible. Écrire
 ```python
 user_1_age = 99
 user_2_age = 30
-print("Salut" !)
+print("Salut !")
 if user_1_age > 90:
     print("Tu n'es plus tout jeune , numéro 1!")
 if user_2_age > 90:
@@ -101,8 +101,8 @@ print("Ciao !")
 est donc exactement équivalent pour Python.
 
 ```python
-talkative = True
-#talkative = False
+#talkative = True
+talkative = False
 
 if talkative:
     print("On discute ?")
@@ -130,7 +130,7 @@ print("Ravie de te connaître en tout cas.")
 ```
 
 Le code ci-dessus est un peu redondant : il y a plus d'instruction que ce qui est strictement
-nécessaire, mais il devrait vous montrer clairement comment fiare dépendre l'exécution du code d'une
+nécessaire, mais il devrait vous montrer clairement comment faire dépendre l'exécution du code d'une
 entrée.
 
 ### 🐁 Exo 🐁
@@ -141,6 +141,34 @@ donne les mêmes sorties si on lui donne les mêmes entrées), mais en utilisant
 Vous pouvez faire des tests dans la cellule de code ci-dessous : 
 
 ```python
+print("Tu aimes bavarder ?")
+answer = input()
+
+talkative = (answer == "oui")
+
+if talkative:
+    print("On discute ?")
+    
+print("Ravie de te connaître en tout cas.")
+```
+
+```python
+print("Tu aimes bavarder ?")
+answer = input()
+
+if answer == "oui":
+    print("On discute ?")
+    
+print("Ravie de te connaître en tout cas.")
+```
+
+```python
+print("Tu aimes bavarder ?")
+
+if input() == "oui":
+    print("On discute ?")
+    
+print("Ravie de te connaître en tout cas.")
 ```
 
 ### Des blocs plus longs
@@ -180,11 +208,12 @@ Est-ce qu'il est possible d'avoir une instruction `if` sans condition ? Un `if
 suivi par un bloc ? Essayez ces différentes options dans la cellule suivante.
 
 ```python
+
 ```
 
 ## `else`
 
-Reprenons le code précédent : dnas le deuxième `if`, on pose une question dont la réponse est soit
+Reprenons le code précédent : dans le deuxième `if`, on pose une question dont la réponse est soit
 « oui », soit « non », mais on exécute du code que si c'est « non ». Comment faire pour exécuter
 d'autres instructions si c'est « oui » ?.
 
@@ -205,7 +234,7 @@ Mais c'est un peu redondant : puisque la réponse est soit `"Oui"` soit `"Non"
 a répondu correctement et qu'on sait que la réponse n'est pas `"Non"`, c'est forcément que c'est
 `"Oui"` et on a donc pas besoin du deuxième test. Il nous faudrait juste une instruction « sinon ».
 
-Cette instruction c'est `else`. Voici à quoi on l'utilise. D'abord en pseudo-code
+Cette instruction c'est `else`. Voici comment on l'utilise. D'abord en pseudo-code
 
 ```text
 if condition:
@@ -251,6 +280,36 @@ if "vert" in sentence:
 
 else:
     print("Aucune couleur n'a été trouvée")
+```
+
+```python tags=["nbconvert_ignore"]
+answer = input("Tu aimes bavarder ?")
+
+if answer == "Oui":
+    print("Top ! On discute, alors ?")
+    print("Tu aimes le chocolat ? Oui/Non")
+    answer2 = input()
+    if answer2 == "Non":
+        print("Monstre !")
+        print("Adieu !")
+    else:
+        print("Bravo")
+print("Ciao !")
+```
+
+```python tags=["nbconvert_ignore"]
+answer = input("Tu aimes bavarder ?")
+
+if answer == "Oui":
+    print("Top ! On discute, alors ?")
+    print("Tu aimes le chocolat ? Oui/Non")
+    answer2 = input()
+    if answer2 == "Non":
+        print("Monstre !")
+        print("Adieu !")
+else:
+    print("Dommage")
+print("Ciao !")
 ```
 
 ## `elif`
@@ -360,7 +419,7 @@ qui suit
 ```python
 test = "Le chat est content"
 
-if "chat" and "content" in test:
+if "chat" in test and "content" in test:
     print("Hello")
 else:
     print("bye")
@@ -430,11 +489,6 @@ Répondre à ces exercices directement dans le notebook, le sauvegarder sous un 
   (clé d'inscription `rossum`)
 - À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
 
-Upload your modified notebook on Canvas, adding your name to the existing file name (e.g. 02_control_flow_Aniello.ipynb).
-
-Be careful:
-
-- The file extension needs to be .ipynb! Do not change that
 
 ### Exercice 1
 

@@ -133,9 +133,16 @@ print(f"En 2022 tu auras {age_2022} ans")
 > comme long. Puis lui demander de saisir un mot et lui afficher `True` si le mot est long et
 > `False` sinon.
 
+```python
+raw = input("Long, c'est combien de caractères ? ")
+long_len = int(raw)
+mot = input("Saisir un mot : ")
+print(len(mot) >= long_len)
+```
+
 ```python tags=["nbconvert_ignore"]
 long_len = int(input("Long, c'est combien de caractères ? "))
-mot = input("Saisir un mot :")
+mot = input("Saisir un mot : ")
 print(len(mot) >= long_len)
 ```
 
@@ -183,8 +190,7 @@ print("banane" in texte)
 
 Quelques points de style
 
-- Pas d'espace entre le nom d'une fonction et les parenthèses : `print("Salut")` et non `print
-  ("Salut")`, `int("2713")` et pas `int ("2713")`.
+- Pas d'espace entre le nom d'une fonction et les parenthèse : `print("Salut")` et non `print ("Salut")`, `int("2713")` et pas `int ("2713")`.
 - Quand la question demande un affichage, utilisez plutôt `print` que de simplement laisser Jupyter
   afficher le dernier résultat.
 - On peut terminer une chaîne de caractère par une espace :
@@ -193,14 +199,6 @@ Quelques points de style
 nom = "Loïc"
 print("Je m'appelle " + nom)
 ```
-
----
-
-Attention sur les envois de notebook :
-
-- Sauvegardez bien un fichier avec l'extension `.ipynb` (*File*/*Download as…*/*Notebook*)
-- **Sauvegardez** : un lien vers votre session dans Binder ne me permet pas d'accéder à votre
-  Notebook (la session est unique et est de toute façon effacée après votre déconnexion).
 
 ---
 
