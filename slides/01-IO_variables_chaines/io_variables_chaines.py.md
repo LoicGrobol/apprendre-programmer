@@ -745,11 +745,10 @@ False and (True or True)
 **Puis** vérifiez vos réponses
 
 ```python
-
 ```
 
 Si vous peinez, vous pouvez aller regarder cette vidéo, qui vous donnera peut-être une meilleure
-intuition des opérateurs boolées
+intuition des opérateurs booléens
 
 ```python
 IFrame('https://www.youtube.com/embed/sdx9dACkvyI', width=700, height=350)

@@ -105,6 +105,8 @@ commandes de base :
 - `up()` relève le crayon pour avancer sans dessiner
 - `down()` abaisse le crayon pour dessiner
 - `reset()` remet le dessin à zéro
+- `circle(r, a)` trace un arc de cercle de rayon `rayon` et d'angle `a` degrés. `a` est facultatif
+  et vaut `360` par défaut (soit un cercle entier).
 
 ## 🐢 Exo 🐢
 
@@ -191,6 +193,10 @@ habituer.
 des segments : 65px, 42px, 76px, 100px).
 
 ![Une ligne en dents de scie vers la droite (nord-est, sud-est…)](images/ex6.png)
+
+### Exercice 7
+
+Dessiner avec `turtle` une maison d’enfant (sans perspective : un toit, une porte, une fenêtre, une cheminée).
 
 ## Et après ?
 

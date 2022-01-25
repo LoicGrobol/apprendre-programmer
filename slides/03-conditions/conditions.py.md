@@ -276,8 +276,8 @@ else:
 Il est assez fréquent de rencontrer ce type de structures, et même plus profondément imbriquée, ce
 qui rend le code plus difficile à lire.
 
-Il y a cependant une alternative : `elif` (« sinon, si »), qui nous permet de réécrire le codepré
-cédent plus lisiblement :
+Il y a cependant une alternative : `elif` (« sinon, si »), qui nous permet de réécrire le code
+précédent plus lisiblement :
 
 ```python
 sentence = "Les idées vertes incolores dorment furieusement"
@@ -304,8 +304,8 @@ elif condition3:
 ```
 
 Évidemment, ça n'a du sens que si vous voulez tester des conditions mutuellement exclusives. Si vous
-voulez tester indépendament lesquels de ces mots apparaissent dans la phrase, il faut des blocs `if`
-différents :
+voulez tester indépendamment lesquels de ces mots apparaissent dans la phrase, il faut des blocs
+`if` différents :
 
 ```python
 sentence = "Les idées vertes incolores dorment furieusement"
@@ -411,7 +411,9 @@ autre vides, nuls… Nous verrons d'autres exemples.
 
 ## 💬 Entraînement 💬 : un chatbot basique
 
-Demandez à votre utilisateurice si son humeur est bavarde. Si la réponse n'est pas « oui », souhaitez-lui une bonne journée. Sinon, demandez lui comment ça va et répondez différemment suivant que sa réponse contient les mots
+Demandez à votre utilisateurice si son humeur est bavarde. Si la réponse n'est pas « oui »,
+souhaitez-lui une bonne journée. Sinon, demandez lui comment ça va et répondez différemment suivant
+que sa réponse contient les mots
 
 - « bien » ou « bon »
 - « mal » ou « mauvais » ou « horrible »
