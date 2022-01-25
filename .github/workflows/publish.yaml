@@ -94,5 +94,5 @@ jobs:
       uses: jupyterhub/repo2docker-action@master
       with:
         NO_PUSH: true
-        MYBINDERORG_TAG: main
+        MYBINDERORG_TAG: ${{ github.event.ref }}
 
