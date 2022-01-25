@@ -422,7 +422,9 @@ que sa réponse contient les mots
 ## Exercices
 
 Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
-`01_io_variables_chaines_PRENOM_NOM.ipynb` et me le transmettre avant dimanche soir prochain
+`02_conditions_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
+`02_conditions_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche soir prochain
+(2022-01-30).
 
 - De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
   (clé d'inscription `rossum`)

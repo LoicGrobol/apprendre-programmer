@@ -150,3 +150,59 @@ print("😱" * (len(mot) >= long_len))
 Jeu : pourquoi ça marche ?
 
 **Ne faites pas ça dans du vrai code**, on va voir dans le cours 3 comment faire mieux.
+
+## Retour sur vos rendus
+
+Attention à ne pas confondre les rôles de `print` et `input`
+
+- `print` pour **afficher** du texte
+- `input` pour **récupérer** du texte
+
+---
+
+Si une question vous paraît difficile, pensez à vous poser avec du papier et un crayon. Noter les entrées et les sorties du programme (sans détailler comment est fait le traitement) peut vous aider.
+
+---
+
+Pensez à utiliser des variables pour stocker des résultats intermédiaires ou des entrées. Ne faites
+pas :
+
+```python tags=["nbconvert_ignore"]
+texte = input()
+print("banane" in "J'aime les bananes")
+```
+
+Mais plutôt
+
+```python tags=["nbconvert_ignore"]
+texte = input()
+print("banane" in texte)
+```
+
+---
+
+Quelques points de style
+
+- Pas d'espace entre le nom d'une fonction et les parenthèses : `print("Salut")` et non `print
+  ("Salut")`, `int("2713")` et pas `int ("2713")`.
+- Quand la question demande un affichage, utilisez plutôt `print` que de simplement laisser Jupyter
+  afficher le dernier résultat.
+- On peut terminer une chaîne de caractère par une espace :
+
+```python
+nom = "Loïc"
+print("Je m'appelle " + nom)
+```
+
+---
+
+Attention sur les envois de notebook :
+
+- Sauvegardez bien un fichier avec l'extension `.ipynb` (*File*/*Download as…*/*Notebook*)
+- **Sauvegardez** : un lien vers votre session dans Binder ne me permet pas d'accéder à votre
+  Notebook (la session est unique et est de toute façon effacée après votre déconnexion).
+
+---
+
+Certaines consignes semblent avoir été mal comprises. On va collectivement essayer de mieux faire
+pour les suivantes.

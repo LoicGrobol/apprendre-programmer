@@ -774,9 +774,9 @@ textes : *et*, *un*, *la*… On les appelle parfois « mots vides » ou «
 n'apportent pas d'information pour ce modèle, et on commence en général par les enlever des textes à
 représenter.
 
-De même, pour beaucoup d'applications en lingusitique, la casse (majuscules et minuscules) n'est pas
-informative. Par exemple pour enelver les *stop words* d'un texte, on veut les enlever peu importe
-leur casse (*Un*, *un*, *UN*…). Cependant pour Python, *Un* et *un* des chaînes de caractères
+De même, pour beaucoup d'applications en linguistique, la casse (majuscules et minuscules) n'est pas
+informative. Par exemple pour enlever les *stop words* d'un texte, on veut les enlever peu importe
+leur casse (*Un*, *un*, *UN*…). Cependant, pour Python, *Un* et *un* des chaînes de caractères
 différentes.
 
 ```python
@@ -841,7 +841,8 @@ len(25)
 ## 🦾 Exercices 🦾
 
 Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
-`01_io_variables_chaines_PRENOM_NOM.ipynb` et me l'envoyer avant le prochain cours à
+`01_io_variables_chaines_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
+`01_io_variables_chaines_Morgan_Lefeuvre.ipynb`) et me l'envoyer avant le prochain cours à
 `<lgrobol@parisnanterre.fr>`.
 
 **Assurez-vous bien que l'extension du fichier est `ipynb`.**
