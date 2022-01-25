@@ -43,6 +43,13 @@ toc: true
 À faire pour la prochaine fois : exercices du notebook « IO et variables » et installer
 l'environnement [Thonny](https://thonny.org).
 
+Pour installer Thonny sous ChromeOS, c'est [un peu plus
+sophistiqué](https://boldidea.org/static/thonny/chromebook.html), mais c'est possible.
+
+Pour les tablette sous iOS ou Android, ça ne sera pas possible. Vous devriez pouvoir suivre
+l'essentiel du cours avec [`repl.it`](https://repl.it) mais ce n'est pas idéal, tenez-moi au courant
+si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
+
 ### 2022-01-24 : Dessiner avec `turtle` et instructions conditionnelles
 
 - [![Launch in Binder
