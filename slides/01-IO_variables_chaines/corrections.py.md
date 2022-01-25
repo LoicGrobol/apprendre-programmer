@@ -106,7 +106,7 @@ print("banane" in texte.lower())
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
 age_2022 = 2022 - annee_int
-print("En 2022 tu auras ", age_2022, " ans")
+print("En 2022 tu auras", age_2022, "ans")
 ```
 
 ou encore
