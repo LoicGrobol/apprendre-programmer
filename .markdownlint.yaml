@@ -1,6 +1,7 @@
 MD003: false
-MD025: false
-MD033: false
+MD012: false
 MD013:
   "line_length": 100
-MD012: false
+MD025: false
+MD033: false
+MD049: false

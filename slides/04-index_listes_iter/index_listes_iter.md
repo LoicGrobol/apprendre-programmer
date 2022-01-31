@@ -252,7 +252,7 @@ On a vu qu'une chaîne de caractères était une **séquence** de caractères.
 Il existe d'autres types de séquences en Python. Le plus élémentaire est la **liste**, un objet du
 type `list`.
 
-Il s'agit d'un conteneur générique qui peut contenir des séquences de n'importe quel type d'objets. 
+Il s'agit d'un conteneur générique qui peut contenir des séquences de n'importe quel type d'objets.
 
 On crée une liste avec la syntaxe suivante (oui, encore des crochets)
 
@@ -300,7 +300,7 @@ Comme les chaînes de caractères, les listes sont **ordonnées**
 [1, 2, 3] == [3, 1, 2]
 ```
 
-Elles sont donc également indicées : 
+Elles sont donc également indicées :
 
 ```python
 ma_liste= ["Je", "reconnais", "l'", "existence", "du", "kiwi"]
@@ -667,7 +667,8 @@ Uppsala Uppsala
 # codez ici
 ```
 
-**Problem 3. (4 points)** Voici quelques mots de la (https://fr.wikipedia.org/wiki/Liste_Swadesh).
+**Problem 3. (4 points)** Voici quelques mots de la [Liste
+Swadesh](https://fr.wikipedia.org/wiki/Liste_Swadesh).
 
 ```python
 words = ["soleil", "lune", "terre", "eau", "nouriture", "ciel"]
