@@ -543,7 +543,7 @@ Et la cellule suivante ?
 
 ```python
 for i in [1, 2, 3, 4, 5]:
-    j = 2*j
+    j = 2*i
     print(j)
 ```
 
