@@ -138,7 +138,7 @@ entrée.
 Pouvez-vous simplifier le code précédent de telle sorte qu'il soit équivalent (c'est-à-dire qu'il
 donne les mêmes sorties si on lui donne les mêmes entrées), mais en utilisant moins d'instructions ?
 
-Vous pouvez faire des tests dans la cellule de code ci-dessous : 
+Vous pouvez faire des tests dans la cellule de code ci-dessous :
 
 ```python
 print("Tu aimes bavarder ?")
