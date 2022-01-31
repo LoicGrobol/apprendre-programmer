@@ -68,8 +68,8 @@ le mode de rendu change légèrement.
 ### 2022-02-01 : Indices, listes et boucle `for`
 
 - [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/04-index_listes_iter/index_listes_iter.md)
-  [Slides indices, listes et itération](slides/04-index_listes_iter/index_listes_iter.html)
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/04-index_listes_iter/index_listes_iter.py.md)
+  [Slides indices, listes et itération](slides/04-index_listes_iter/index_listes_iter.py.html)
 
 À faire pour la prochaine fois : exercices du notebook « Indexation, listes et itération ».
 
