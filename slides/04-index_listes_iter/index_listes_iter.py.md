@@ -574,7 +574,7 @@ On peut combiner boucles et tests
 ```python
 voyelles = ["a", "e", "i", "o", "u"]
 for char in "linguistique":
-    if char in vowels:
+    if char in voyelles:
         print("J'ai trouvé une voyelle : ", char)
 ```
 
