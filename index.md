@@ -69,12 +69,13 @@ le mode de rendu change légèrement.
 
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/03-conditions/corrections.py.md)
-  [Corrections des exercices](slides/03-conditions/corrections.py.html
+  [Corrections des exercices](slides/03-conditions/corrections.py.html)
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/04-index_listes_iter/index_listes_iter.py.md)
   [Slides indices, listes et itération](slides/04-index_listes_iter/index_listes_iter.py.html)
 
-À faire pour la prochaine fois : exercices du notebook « Indexation, listes et itération ».
+À faire pour la prochaine fois : entraînement 🛠️ et exercices dans le notebook « Indexation, listes
+et itération ».
 
 ## Ressources
 

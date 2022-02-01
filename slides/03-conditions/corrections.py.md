@@ -105,7 +105,7 @@ que sa réponse contient les mots
 talkative = input("Es-tu d'humeur bavarde ? ")
 
 if talkative.lower() == "oui":
-    mood = input("Et de quelle humeur es-tu ? ")
+    mood = input("Et de quelle humeur es-tu ? ").lower()
     if "bien" in mood or "bon" in mood:
         print("Ah, top, ça fait plaisir !")
     elif "mal" in mood or "mauvais" in mood:
@@ -120,7 +120,8 @@ if talkative.lower() == "oui":
 
 
 > Demander à l'utilisateurice d'entrer un nombre minimal de caractères pour qu'un mot soit considéré
-> comme long. Puis lui demander de saisir un mot et afficher `"😱"` si le mot est long et `"😌"` > sinon.
+> comme long. Puis lui demander de saisir un mot et afficher `"😱"` si le mot est long et `"😌"`
+> sinon.
 
 ```python tags=["nbconvert_ignore"]
 long_len = int(input("Long, c'est combien de caractères ? "))
@@ -158,8 +159,7 @@ else:
 > - Guerrier
 > ```
 >
-> La liste affichée ne doit pas contenir de doublons. Si un des choix n'existes pas, signalez-le et
-> utilisez neutre à la place.
+> La liste affichée ne doit pas contenir de doublons.
 >
 > **Conseil** avant de commencer à coder, commencez par dessiner ou écrire sur papier la structure
 > qu'aura votre programme
@@ -267,7 +267,7 @@ else:
     print("Non-bissextile")
 ```
 
-voire même exploiter le fait que `0` est le seul entier `False`, mais ça devient vraiment
+voire exploiter le fait que `0` est le seul entier `False`, mais ça devient vraiment
 désagréable
 
 ```python tags=["nbconvert_ignore"]
@@ -298,7 +298,7 @@ En général :
 
 En particulier :
 
-- Les exercices qui ont été rendus ont été dans l'ensemble bien réussis (ou l'inverse)
+- Les exercices qui ont été rendus ont été dans l'ensemble bien réussi (ou l'inverse)
 - Pour l'exercice 2, on pouvait certes faire par force brute, et c'est tout à fait correct, mais il
   y avait plus simple.
 

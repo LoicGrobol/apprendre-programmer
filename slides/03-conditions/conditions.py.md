@@ -522,8 +522,7 @@ Vous êtes chaotique bon. Vous pouvez être :
 - Guerrier
 ```
 
-La liste affichée ne doit pas contenir de doublons. Si un des choix n'existes pas, signalez-le et
-utilisez neutre à la place.
+La liste affichée ne doit pas contenir de doublons.
 
 **Conseil** avant de commencer à coder, commencez par dessiner ou écrire sur papier la structure
 qu'aura votre programme

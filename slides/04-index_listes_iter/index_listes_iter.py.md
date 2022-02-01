@@ -27,7 +27,7 @@ Cours 4 : Indexation, listes et itération
 Dans ce notebook, on introduit les concepts suivants :
 
 - L'opération *index* et les types de données indicés
-- Le type de donnée `lst`
+- Le type de donnée `list`
 - La boucle d'itération `for`
 
 Ce cours est inspiré des cours [*Control flow and
@@ -101,7 +101,7 @@ Et on peut utiliser une variable ou une expression comme indice :
 
 ```python
 ma_chaine = "Je reconnais l'existence du kiwi."
-position = 13
+position = 11
 print(ma_chaine[position])
 print(ma_chaine[position-1])
 ```
@@ -112,18 +112,28 @@ Ce n'est pas forcément intuitif, et d'ailleurs ce n'est pas le cas de tous les 
 programmation. Tout le monde se plante de temps en temps, mais il faut le retenir.
 
 
-### 🔭Exo 🔭
+### 🔭 Entraînement 🔭
 
-Demandez un mot et un indice `i` à l'utilisateurice. Si le mot a un `i`-ème caractère, affichez-le,
+Demandez un mot et un indice `i` à l'utilisateurice. Si le mot a un `i`-ème caractère, affichez ce caractère,
 sinon affichez un message d'erreur.
 
 Indice : vous savez déterminer la longueur d'une chaîne de caractères.
 
 ```python tags=["nbconvert_ignore"]
 mot = input("Dis-moi un mot : ")
-position = int(input("Dis-moi un nombre : ")
+position = int(input("Dis-moi un nombre : "))
 
 # À vous de jouer : ajoutez du code ici pour répondre à la question.
+```
+
+```python
+mot = input("Dis-moi un mot : ")
+position = int(input("Dis-moi un nombre : "))
+
+if position >= len(mot) or position < 0:
+    print("Indice", position, "incorrect pour un mot de longueur", len(mot))
+else:
+    print(mot[position])
 ```
 
 ### *Slices*
@@ -182,7 +192,7 @@ print("Pomme"[-4:-1])
 print("Pomme"[1:4])
 ```
 
-En revanche, ceci est fréquenc
+En revanche, ceci est fréquent
 
 ```python
 print("supercallifragilisticexpialidocious"[-3:])
@@ -237,7 +247,7 @@ str.find("rock and roll", "ro")
 
 **Note** Les fonctions comme `find`, `upper`… sont plus précisément des **méthodes**, c'est-à-dire
 des fonctions attachées à un type d'objet en particulier (ici les chaînes de caractères). On peut
-les appeller via leur type (`str`) ou via un objet :
+les appeler via leur type (`str`) ou via un objet :
 
 ```python
 "Une pomme".find("pom")
@@ -266,7 +276,7 @@ type(a)
 ```
 
 ```python
-a = [0.1, 12.5, 13]
+a = [0.1, 12.5, 13.0]
 print(a)
 print(type(a))
 ```
@@ -327,7 +337,7 @@ len([1, "machin", [0, 2]])
 À votre avis, qu'affiche la cellule suivante ?
 
 ```python
-ma_liste = [1, "machin", [0, 2]]
+ma_liste = [1, "machin", [9, 2]]
 print(ma_liste[2][0])
 ```
 
@@ -369,12 +379,13 @@ print(ma_liste)
 one_list = [1, 2, 3]
 another_list = [True, "linguistique"]
 one_list.append(another_list)
+print(one_list)
 ```
 
-Combien d'éléments a `another_list` ?
+Combien d'éléments a `one_list` ?
 
 ```python
-print(another_list, " a ", len(another_list), "éléments")
+print(one_list, "a", len(one_list), "éléments")
 ```
 
 #### `extend`
@@ -383,7 +394,7 @@ print(another_list, " a ", len(another_list), "éléments")
 
 ```python
 one_list = [1, 2, 3]
-another_list = [True, ["linguistique"]]
+another_list = [True, "linguistique"]
 one_list.extend(another_list)
 print(one_list)
 ```
@@ -392,9 +403,9 @@ est donc équivalent à
 
 ```python
 one_list = [1, 2, 3]
-another_list = [True, ["linguistique"]]
+another_list = [True, "linguistique"]
 one_list.append(another_list[0])
-one_list.extend(another_list[1])
+one_list.append(another_list[1])
 print(one_list)
 ```
 
@@ -444,7 +455,7 @@ cities[0] = "SF"
 print(cities)
 ```
 
-### 🛠️ Exo 🛠️
+### 🛠️ Entraînement 🛠️
 
 Voici une liste de lettres :
 
@@ -531,7 +542,7 @@ Pouvez-vous en déduire ce qu'affichent les cellules suivantes ?
 
 ```python
 for c in "Seitan":
-    print(c)  
+    print(c)
 ```
 
 ```python
@@ -545,6 +556,7 @@ Et la cellule suivante ?
 for i in [1, 2, 3, 4, 5]:
     j = 2*i
     print(j)
+print("hello")
 ```
 
 ---
@@ -575,7 +587,7 @@ On peut combiner boucles et tests
 voyelles = ["a", "e", "i", "o", "u"]
 for char in "linguistique":
     if char in voyelles:
-        print("J'ai trouvé une voyelle : ", char)
+        print("J'ai trouvé une voyelle :", char)
 ```
 
 Et les boucles peuvent être imbriquées :
@@ -585,25 +597,11 @@ Et les boucles peuvent être imbriquées :
 cities = ["NYC", "LA", "SF"]
 
 for city in cities:
-    print("La ville est ", city)
+    print("La ville est", city)
     print("Ses lettres sont :")
 
     for letter in city:
         print("\t", letter)
-```
-
-### 🔄 Exo 🔄
-
-Voici une liste
-
-```python
-fruits = ["pomme", "poire", "kiwi", "maracuja"]
-```
-
-Demandez à l'utilisateurice un nom de fruit et affichez `"😋"` s'il est dans la liste et `"🤨"` sinon.
-
-```python
-
 ```
 
 ## Exercices
@@ -667,7 +665,9 @@ Uppsala Uppsala
 # codez ici
 ```
 
-**Problem 3. (4 points)** Voici quelques mots de la [Liste
+### Exercice 3
+
+Voici quelques mots de la [Liste
 Swadesh](https://fr.wikipedia.org/wiki/Liste_Swadesh).
 
 ```python
