@@ -529,19 +529,19 @@ utilisez neutre à la place.
 qu'aura votre programme
 
 - Combien de branches conditionnelles y aura-t-il ?
-- Quels conditions dépendent les unes des autres ?
+- Quelles conditions dépendent les unes des autres ?
 - Comment vais-je gérer les imbrications ?
 
 ### 📅 Exercice 3 📅
 
 Une année est bissextile si son numéro est divisible par $4$, sauf si c'est la dernière d'un siècle
 (i.e. elle est divisible par $100$, par exemple 1900), auquel cas, elle est bissextile
-seuelemnt si son numéro est divisible par $400$.
+seulement si son numéro est divisible par $400$.
 
 Écrire un programme qui indique si une année entrée par l'utilisateurice est bissextile ou non.
 
 **Indice** l'opérateur modulo `%`, qu'on a vu dans le cours 1 peut vous être utile. En particulier,
-un nombre $a$ est divisible par une nombrre $b$ si et seulement si `a % b == 0`.
+un nombre $a$ est divisible par un nombre $b$ si et seulement si `a % b == 0`.
 
 
 ### Réflexion

@@ -47,8 +47,8 @@ Pour installer Thonny sous ChromeOS, c'est [un peu plus
 sophistiqué](https://boldidea.org/static/thonny/chromebook.html), mais c'est possible.
 
 Pour les tablette sous iOS ou Android, ça ne sera pas possible. Vous devriez pouvoir suivre
-l'essentiel du cours avec [`repl.it`](https://repl.it) mais ce n'est pas idéal, tenez-moi au courant
-si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
+l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal, tenez-moi au
+courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
 
 ### 2022-01-24 : Dessiner avec `turtle` et instructions conditionnelles
 
@@ -67,6 +67,9 @@ le mode de rendu change légèrement.
 
 ### 2022-02-01 : Indices, listes et boucle `for`
 
+- [![Launch in Binder
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/03-conditions/corrections.py.md)
+  [Corrections des exercices](slides/03-conditions/corrections.py.html
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/04-index_listes_iter/index_listes_iter.py.md)
   [Slides indices, listes et itération](slides/04-index_listes_iter/index_listes_iter.py.html)
