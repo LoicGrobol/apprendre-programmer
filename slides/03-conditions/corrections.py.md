@@ -279,11 +279,26 @@ else:
     print("Non-bissextile")
 ```
 
-### Réflexion
+## Retour sur vos rendus
 
-Quelques points auxquels réfléchir
+En général :
 
-- Combien de temps avez-vous passé à faire ces exercices ?
-- Qu'est-ce qui vous a paru le plus compliqué ?
-- À votre avis, pourquoi ?
+- Un certain nombre d'entre vous n'a rien rendu.
+  - En soi ce n'est pas dramatique : les exercices ne sont pas obligatoires, mais s'astreindre à
+    rendre quelque chose devrait vous aider à revenir sur le cours et à vous entraîner.
+  - Tous les rendus, même partiels, sont utiles.
+  - Vous n'avez rien à perdre à rendre quelque chose : au pire ça ne compte pas, mais si vous
+    réussissez des exercices, vous validez des compétences, ce qui peut permettre de rattraper un
+    raté sur le projet ou le partiel.
+- Pensez à bien remplir la partie réflexion à la fin des exercices !
+- Si des consignes vous paraissent peu claires, ou si vous ne comprenez pas quelque chose, n'héistez
+  **vraiment** pas à m'écrire.
+- Attention au format et au nom des fichiers : je vous refais en cours une démonstration de comment
+  bien exporter vos travaux.
+
+En particulier :
+
+- Les exercices qui ont été rendus ont été dans l'ensemble bien réussis (ou l'inverse)
+- Pour l'exercice 2, on pouvait certes faire par force brute, et c'est tout à fait correct, mais il
+  y avait plus simple.
 
