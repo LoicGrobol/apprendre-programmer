@@ -31,7 +31,7 @@ donne les mêmes sorties si on lui donne les mêmes entrées), mais en utilisant
 
 Vous pouvez faire des tests dans la cellule de code ci-dessous :
 
-```python
+```python tags=["nbconvert_ignore"]
 print("Tu aimes bavarder ?")
 answer = input()
 
@@ -43,7 +43,7 @@ if talkative:
 print("Ravie de te connaître en tout cas.")
 ```
 
-```python
+```python tags=["nbconvert_ignore"]
 print("Tu aimes bavarder ?")
 answer = input()
 
@@ -55,7 +55,7 @@ print("Ravie de te connaître en tout cas.")
 
 Dernière version, un peu **trop** synthétique :
 
-```python
+```python tags=["nbconvert_ignore"]
 print("Tu aimes bavarder ?")
 
 if input() == "oui":
