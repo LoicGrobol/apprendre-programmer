@@ -606,7 +606,7 @@ On a vu comment afficher des valeurs à l'écran avec `print`. Mais pour beaucou
 (pensez à un chatbot par exemple), il est utile de demander à un⋅e utilisateurice une entrée. En
 Python, on fait ça avec `input`.
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 print("Comment tu t'appelles ?")
 nom = input()
 print("Salut, ", nom)
@@ -616,7 +616,7 @@ print("Salut, ", nom)
 appuyant sur entrée) et renvoie cette chaîne de caractères. On peut aussi préciser un message à
 afficher directement à côté de la zone de saisie.
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 nom = input("Comment tu t'appelles ?")
 print(f"Salut, {nom}")
 ```

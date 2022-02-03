@@ -49,7 +49,7 @@ jobs:
       - name: Build slides
         run: |
           jupytext --to ipynb ${{ github.workspace }}/slides/**/*.py.md
-          jupyter nbconvert --execute --allow-errors --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags "nbconvert_ignore" --to html ${{ github.workspace }}/slides/**/*.py.ipynb
+          jupyter nbconvert --execute --allow-errors --to html ${{ github.workspace }}/slides/**/*.py.ipynb
           jupyter nbconvert --to slides ${{ github.workspace }}/slides/**/*-slides.py.ipynb
       
       - name: Get node cache

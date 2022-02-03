@@ -114,7 +114,7 @@ Dans l'exemple ci-dessus, la variable `talkative` est utilisée comme un *flag* 
 vraiment de *drapeau*). On peut le faire dépendre d'une entrée de l'utilisateurice, ou d'une autre
 partie du code
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 talkative = False
 
 print("Tu aimes bavarder ?")
@@ -176,7 +176,7 @@ print("Ravie de te connaître en tout cas.")
 On a dit qu'on pouvait inclure plusieurs instructions dans le bloc de code qui suit `if`. Voici ce
 que ça donne :
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 # Avant d'exécuter cette cellule, essayer de deviner les résultats en fonction des entrées
 
 answer = input("Tu aimes bavarder ?")
@@ -219,7 +219,7 @@ d'autres instructions si c'est « oui » ?.
 
 Voici une solution :
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 print("Tu aimes le chocolat ? Oui/Non")
 answer = input()
 if answer == "Non":
@@ -245,7 +245,7 @@ else:
 
 Et en Python
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 print("Tu aimes le chocolat ? Oui/Non")
 answer = input()
 if answer == "Non":
@@ -282,7 +282,7 @@ else:
     print("Aucune couleur n'a été trouvée")
 ```
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 answer = input("Tu aimes bavarder ?")
 
 if answer == "Oui":
@@ -297,7 +297,7 @@ if answer == "Oui":
 print("Ciao !")
 ```
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 answer = input("Tu aimes bavarder ?")
 
 if answer == "Oui":
@@ -398,7 +398,7 @@ else:
 
 Et on peut continuer à imbriquer des blocs arbitrairement.
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 user_mood = input("Quelle est ton humeur: ")
 
 if "heureu" in user_mood:

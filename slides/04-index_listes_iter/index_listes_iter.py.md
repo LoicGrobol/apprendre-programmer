@@ -119,7 +119,7 @@ sinon affichez un message d'erreur.
 
 Indice : vous savez déterminer la longueur d'une chaîne de caractères.
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 mot = input("Dis-moi un mot : ")
 position = int(input("Dis-moi un nombre : "))
 

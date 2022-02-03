@@ -80,7 +80,7 @@ texte = "Toi dont le trône étincelle, ô immortelle" \
 > Écrire un programme qui demande à l'utilisateurice de saisir un mot, puis vérifie si ce mot est
 > dans le texte.
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 mot = input("Saisir un mot : ")
 print(mot in texte)
 ```
@@ -90,7 +90,7 @@ print(mot in texte)
 > Écrire un programme qui vérifie si le mot *banane* est contenue dans une entrée récupérée avec
 > `input`, en quelle que soit la casse.
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 texte = input("Saisir un texte : ")
 print("banane" in texte.lower())
 ```
@@ -102,7 +102,7 @@ print("banane" in texte.lower())
 >
 > Indice : `int`
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
 age_2022 = 2022 - annee_int
@@ -111,7 +111,7 @@ print("En 2022 tu auras", age_2022, "ans")
 
 ou encore
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
 age_2022 = 2022 - annee_int
@@ -120,7 +120,7 @@ print("En 2022 tu auras " + str(age_2022) + " ans")
 
 ou mieux
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
 age_2022 = 2022 - annee_int
@@ -140,7 +140,7 @@ mot = input("Saisir un mot : ")
 print(len(mot) >= long_len)
 ```
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 long_len = int(input("Long, c'est combien de caractères ? "))
 mot = input("Saisir un mot : ")
 print(len(mot) >= long_len)
@@ -148,7 +148,7 @@ print(len(mot) >= long_len)
 
 > Bonus : alternativement, afficher `"😱"` si le mot est long et ne rien afficher sinon.
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 long_len = int(input("Long, c'est combien de caractères ? "))
 mot = input("Saisir un mot :")
 print("😱" * (len(mot) >= long_len))
@@ -174,14 +174,14 @@ Si une question vous paraît difficile, pensez à vous poser avec du papier et u
 Pensez à utiliser des variables pour stocker des résultats intermédiaires ou des entrées. Ne faites
 pas :
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 texte = input()
 print("banane" in "J'aime les bananes")
 ```
 
 Mais plutôt
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 texte = input()
 print("banane" in texte)
 ```

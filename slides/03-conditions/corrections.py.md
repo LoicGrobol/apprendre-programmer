@@ -31,7 +31,7 @@ donne les mêmes sorties si on lui donne les mêmes entrées), mais en utilisant
 
 Vous pouvez faire des tests dans la cellule de code ci-dessous :
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 print("Tu aimes bavarder ?")
 answer = input()
 
@@ -43,7 +43,7 @@ if talkative:
 print("Ravie de te connaître en tout cas.")
 ```
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 print("Tu aimes bavarder ?")
 answer = input()
 
@@ -55,7 +55,7 @@ print("Ravie de te connaître en tout cas.")
 
 Dernière version, un peu **trop** synthétique :
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 print("Tu aimes bavarder ?")
 
 if input() == "oui":
@@ -78,7 +78,7 @@ else:
     print("bye")
 ```
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 user_mood = input("Quelle est ton humeur: ")
 
 if "heureu" in user_mood and "relax" in user_mood:
@@ -101,7 +101,7 @@ que sa réponse contient les mots
 - « mal » ou « mauvais » ou « horrible »
 - n'importe quoi d'autres
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 talkative = input("Es-tu d'humeur bavarde ? ")
 
 if talkative.lower() == "oui":
@@ -123,7 +123,7 @@ if talkative.lower() == "oui":
 > comme long. Puis lui demander de saisir un mot et afficher `"😱"` si le mot est long et `"😌"`
 > sinon.
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 long_len = int(input("Long, c'est combien de caractères ? "))
 mot = input("Saisir un mot :")
 if len(mot) >= long_len:
@@ -168,7 +168,7 @@ else:
 > - Quelles conditions dépendent les unes des autres ?
 > - Comment vais-je gérer les imbrications ?
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 law = input("Choisir un alignement parmis loyal—neutre—chaotique : ")
 moral = input("Choisir un alignement parmis bon—neutre—mauvais : ")
 
@@ -205,7 +205,7 @@ if law == "neutre" or moral == "neutre":
 > un nombre $a$ est divisible par un nombre $b$ si et seulement si `a % b == 0`.
 
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 year = int(input("On parle de quelle année ? "))
 
 divisible_par_4 = (year % 4 == 0)
@@ -226,7 +226,7 @@ else:
 
 On peut faire plus compact sans les variables
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 year = int(input("On parle de quelle année ? "))
 
 if year % 4 == 0:
@@ -243,7 +243,7 @@ else:
 
 On peut aussi combiner les conditions
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 year = int(input("On parle de quelle année ? "))
 
 divisible_par_4 = (year % 4 == 0)
@@ -258,7 +258,7 @@ else:
 
 et resupprimer les variables
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 year = int(input("On parle de quelle année ? "))
 
 if (year % 4 == 0) and ((year % 100 != 0) or (year % 400 == 0)):
@@ -270,7 +270,7 @@ else:
 voire exploiter le fait que `0` est le seul entier `False`, mais ça devient vraiment
 désagréable
 
-```python tags=["nbconvert_ignore"]
+```python tags=["skip-execution"]
 year = int(input("On parle de quelle année ? "))
 
 if not year % 4 and (year % 100 or not year % 400):
