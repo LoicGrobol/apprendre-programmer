@@ -471,56 +471,6 @@ de la liste
 
 ```
 
-### Mutabilité
-
-Les méthodes qu'on a vu **modifient** les listes directement (*in-place*).
-
-```python
-ma_liste = ["a"]
-ma_liste.append("b")
-print(ma_liste)
-```
-
-Ce n'était pas le cas des méthodes de chaînes de caractères
-
-```python
-str1 = "a"
-print(str.upper(str1))
-print(str1)
-```
-
-En Python, les `str` sont **immutables** et les listes sont **mutables**. Ça a d'autres conséquences
-peu intuitives. Comparez ainsi :
-
-```python
-a = 1
-b = a
-a = a+1
-print("a vaut ", a)
-print("b vaut ", b)
-```
-
-et
-
-```python
-a = [1, 2, 3]
-b = a
-a[1] = 2713
-print("a vaut ", a)
-print("b vaut ", b)
-```
-
-Pour faire une **copie** indépendante d'une liste, on peut utiliser ceci (qu'on expliquera plus en
-détails plus tard) :
-
-```python
-a = [1, 2, 3]
-b = a[:]  # ← notez la différence
-a[1] = 2713
-print("a vaut ", a)
-print("b vaut ", b)
-```
-
 ## Boucle `for`
 
 Nous disposons à présent de **séquences** : les chaînes de caractères et les listes. Il nous manque
