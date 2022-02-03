@@ -79,6 +79,9 @@ et itération ».
 
 ## Ressources
 
+- [Le dépôt Github du cours](https://github.com/LoicGrobol/apprendre-programmer/) contient toutes
+  les sources permettant de générer le matériel du cours.
+
 ### Python général
 
 Il y a beaucoup, beaucoup de ressources disponibles pour apprendre Python. Ce qui suit n'est qu'une sélection.
