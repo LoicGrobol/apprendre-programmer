@@ -126,7 +126,7 @@ position = int(input("Dis-moi un nombre : "))
 # À vous de jouer : ajoutez du code ici pour répondre à la question.
 ```
 
-```python
+```python tags=["skip-execution"]
 mot = input("Dis-moi un mot : ")
 position = int(input("Dis-moi un nombre : "))
 
