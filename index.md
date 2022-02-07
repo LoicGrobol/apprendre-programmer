@@ -77,7 +77,7 @@ le mode de rendu change légèrement.
 À faire pour la prochaine fois : entraînement 🛠️ et exercices dans le notebook « Indexation, listes
 et itération ».
 
-### 2022-02-017: Indices, listes et boucle `for`
+### 2022-02-08 : Exercices et compléments sur les boucles
 
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/td_while.py.md)
