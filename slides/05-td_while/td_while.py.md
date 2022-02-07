@@ -118,7 +118,7 @@ est équivalent à
 ```python
 l = ["spam", "spam", "lovely spam", "wonderful spam"]
 i = 0
-while i < len(l)
+while i < len(l):
     print(l[i])
     i = i + 1
 ```
