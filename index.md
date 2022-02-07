@@ -80,7 +80,7 @@ et itération ».
 ### 2022-02-08 : Exercices et compléments sur les boucles
 
 - [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/td_while.py.md)
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LoicGrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/td_while.py.md)
   [Slides exercices et compléments sur les boucles](slides/05-td_while/td_while.py.html)
 
 À faire pour la prochaine fois : Finir les exercices du notebook. Rien à rendre pour cette fois !
