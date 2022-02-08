@@ -193,7 +193,7 @@ Exercice 1 :
 
 Exercice 2 :
 
-- Rapellez-vous qu'on peut imbriquer des boucles.
+- Rappelez-vous qu'on peut imbriquer des boucles.
 
 Exercice 3 :
 
