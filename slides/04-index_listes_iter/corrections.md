@@ -55,10 +55,15 @@ letters = ["d", "b", "c", "n"]
 > contenu de la liste
 
 ```python
+letters = ["d", "b", "c", "n"]
 letters.insert(3, "x")
+print(letters)
 letters.remove("c")
+print(letters)
 letters.append("e")
+print(letters)
 letters.pop(2)
+print(letters)
 letters[1] = "o"
 print(letters)
 ```

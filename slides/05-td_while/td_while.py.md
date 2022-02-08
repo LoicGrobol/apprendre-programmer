@@ -43,7 +43,12 @@ fruits = ["pomme", "poire", "kiwi", "maracuja"]
 Demandez à l'utilisateurice un nom de fruit et affichez `"😋"` s'il est dans la liste et `"🤨"` sinon.
 
 ```python
+reponse = input("Quel fruit ? ")
 
+if reponse in fruits:
+    print("😋")
+else:
+    print("🤨")
 ```
 
 ## Blockly games
@@ -110,7 +115,7 @@ facilement simuler une boucle `for` avec une boucle `while`. Ainsi :
 ```python
 l = ["spam", "spam", "lovely spam", "wonderful spam"]
 for s in l:
-    print(l)
+    print(s)
 ```
 
 est équivalent à
@@ -129,10 +134,10 @@ Inversement, il n'est pas évident de simuler le comportement suivant avec une b
 ingredients_disponibles = ["piment", "poireau", "champignon", "carotte"]
 ingredient = input("Donne-moi un ingrédient: ")
 
-while ingredient not ingredients_disponibles:
+while ingredient not in ingredients_disponibles:
     ingredient = input("Donne-moi un ingrédient: ")
     
-print("Ah, oui," ingredient, "j'en ai")
+print("Ah, oui,", ingredient, "j'en ai")
 ```
 
 ---
@@ -189,7 +194,6 @@ tombez dessus vous saurez de quoi il s'agit.
 
 - [Onboarding](https://www.codingame.com/training/easy/onboarding)
 - [Power of Thor E01](https://www.codingame.com/training/easy/power-of-thor-episode-1)
-- [The descent](https://www.codingame.com/training/easy/the-descent)
 
 ## Mutabilité
 
