@@ -185,9 +185,9 @@ Exercice 1 :
 
 - Attention à la différence entre ces listes :
 
-  ```python
-  ['NYC', 'LA', ['Stony Brook', 'Provo'], 'SF'] == ['NYC', 'LA', 'Stony Brook', 'Provo', 'SF']
-  ```
+```python
+['NYC', 'LA', ['Stony Brook', 'Provo'], 'SF'] != ['NYC', 'LA', 'Stony Brook', 'Provo', 'SF']
+```
 
   Ici, c'est la deuxième qu'il fallait obtenir.
 
