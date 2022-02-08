@@ -84,15 +84,15 @@ jobs:
           folder: _site
           single-commit: true
 
-  prebuild-binder:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Code
-      uses: actions/checkout@v2
+  # prebuild-binder:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Checkout Code
+  #     uses: actions/checkout@v2
 
-    - name: update jupyter dependencies with repo2docker
-      uses: jupyterhub/repo2docker-action@master
-      with:
-        NO_PUSH: true
-        MYBINDERORG_TAG: ${{ github.event.ref }}
+  #   - name: update jupyter dependencies with repo2docker
+  #     uses: jupyterhub/repo2docker-action@master
+  #     with:
+  #       NO_PUSH: true
+  #       MYBINDERORG_TAG: ${{ github.event.ref }}
 
