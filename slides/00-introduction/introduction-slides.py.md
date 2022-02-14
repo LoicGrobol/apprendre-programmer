@@ -52,8 +52,10 @@ Apprendre à programmer : introduction
     l'université](https://etudiants.parisnanterre.fr/calendrier-universitaire-2021-2022-1018180.kjsp)
     pour les dates de vacances.
 
-→ Travail sur machine systématique : amener de préférence un PC portable. Si c'est un problème,
-venez m'en parler et on trouvera une solution.
+- → Travail sur machine systématique : amener de préférence un PC portable. Si c'est un problème,
+  venez m'en parler et on trouvera une solution.
+- → On peut s'en sortir avec une tablette, voire un smartphone, mais vous risquez de vraiment
+  peiner.
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -84,7 +86,8 @@ Compétences :
 - Décrire un problème puis écrire un algorithme pour mettre en œuvre sa résolution.
 - Maîtriser les outils élémentaires de la programmation en langage Python.
 
-À la fin du semestre, vous serez les dignes héritièr⋅es d'Ada Lovelace, Alan Turing, Grace Hopper et John Backus.
+À la fin du semestre, vous serez les dignes héritièr⋅es d'Ada Lovelace, Alan Turing, Grace Hopper et
+John Backus.
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->

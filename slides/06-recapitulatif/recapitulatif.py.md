@@ -36,8 +36,8 @@ Dans ce notebook
 Si vous avez suivi le bon lien, ce document est un *notebook interactif*, il contient des cellules
 de texte et des cellules de code exécutable. Exécuter la  cellule courante (celle en surbrillance)
 se fait en utilisant « execute » dans le menu « cell », en utilisant le bouton ▶️ de la barre
-d'outils ou en appuyant simultanément sur les touches <kbd>ctrl</kbd> (ou <kbd>cmd</kbd>/<kbd>⌘</kbd> pour les
-Macs) et <kbd>entrée</kbd>/<kbd>↲</kbd> de votre clavier.
+d'outils ou en appuyant simultanément sur les touches <kbd>ctrl</kbd> (ou
+<kbd>cmd</kbd>/<kbd>⌘</kbd> pour les Macs) et <kbd>entrée</kbd>/<kbd>↲</kbd> de votre clavier.
 
 Testez : cliquez sur le texte écrit dans une police différente ci-dessous et exécutez-la avec
 chacune des méthodes proposées
