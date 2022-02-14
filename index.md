@@ -31,6 +31,13 @@ toc: true
 
 ## Séances
 
+**ATTENTION** : Les liens hypertextes ci-dessous mènent vers des versions statiques des notebooks.
+C'est pratique en cas de problème, mais pour suivre le cours et faire les exercices, il faut ouvrir
+les version interactives sur Binder.
+
+<strong>Pour ouvrir les versions interactives, cliquez sur les boutons ![Launch in Binder
+  badge](https://mybinder.org/badge_logo.svg)</strong>.
+
 ### 2022-01-17 : Introduction, entrées/sorties de bases et variables
 
 - [![Launch in Binder
@@ -40,8 +47,9 @@ toc: true
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/01-IO_variables_chaines/io_variables_chaines.py.md)
   [Slides IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.html)
 
-À faire pour la prochaine fois : exercices du notebook « IO et variables » et installer
-l'environnement [Thonny](https://thonny.org).
+À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
+
+Installer aussi l'environnement [Thonny](https://thonny.org).
 
 Pour installer Thonny sous ChromeOS, c'est [un peu plus
 sophistiqué](https://boldidea.org/static/thonny/chromebook.html), mais c'est possible.
@@ -62,7 +70,7 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/03-conditions/conditions.py.md)
   [Slides instructions conditionnelles](slides/03-conditions/conditions.py.html)
 
-À faire pour la prochaine fois : exercices du notebook « instructions conditionnelles », attention
+À rendre pour la prochaine fois : exercices du notebook « instructions conditionnelles », attention
 le mode de rendu change légèrement.
 
 ### 2022-02-01 : Indices, listes et boucle `for`
@@ -74,19 +82,27 @@ le mode de rendu change légèrement.
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/04-index_listes_iter/index_listes_iter.py.md)
   [Slides indices, listes et itération](slides/04-index_listes_iter/index_listes_iter.py.html)
 
-À faire pour la prochaine fois : entraînement 🛠️ et exercices dans le notebook « Indexation, listes
+À rendre pour la prochaine fois : entraînement 🛠️ et exercices dans le notebook « Indexation, listes
 et itération ».
 
 ### 2022-02-08 : Exercices et compléments sur les boucles
 
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/04-index_listes_iter/corrections.md)
-  [Corrections des exercices](slides/04-index_listes_iter/corrections.html)
+  [Corrections des exercices](slides/04-index_listes_iter/corrections.py.html)
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LoicGrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/td_while.py.md)
   [Slides exercices et compléments sur les boucles](slides/05-td_while/td_while.py.html)
 
-À faire pour la prochaine fois : Finir les exercices du notebook. Rien à rendre pour cette fois !
+### 2022-02-15 : Récapitulatif
+
+Résumé des épisodes précédents, avec **plein** d'exos.
+
+- [![Launch in Binder
+badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/06-recapitulatif/recapitulatif.py.md)
+[Notebook récapitulatif](slides/06-recapitulatif/recapitulatif.py.html)
+
+À rendre pour la prochaine fois : les es exercices du notebook.
 
 ## Ressources
 

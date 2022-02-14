@@ -59,7 +59,7 @@ Instruction 3
 Ici, si la condition est vérifiée, les instructions 0, 1, 2 et 3 seront exécutées ; mais si elle ne
 l'est pas, alors seules les instructions 0 et 3 le seront.
 
-Notez les points suivant :
+Notez les points suivants :
 
 - L'ordre dans lequel les instructions sont effectuées est le même dans les deux cas. Simplement,
   certaines ne sont pas toujours exécutées.
@@ -476,7 +476,7 @@ que sa réponse contient les mots
 
 - « bien » ou « bon »
 - « mal » ou « mauvais » ou « horrible »
-- n'importe quoi d'autres
+- n'importe quoi d'autre
 
 ## Exercices
 

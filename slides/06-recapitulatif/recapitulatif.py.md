@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.6
+      jupytext_version: 1.13.7
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -31,6 +31,9 @@ Dans ce notebook
 - Toujours des exercices.
 - Non vraiment rien d'autre que des exercices.
 
+Il y a des rappels pour chacune des notions, mais n'hésitez pas à aller relire les cours précédents
+et les corrections des exercices.
+
 ## Rappel : usage du notebook
 
 Si vous avez suivi le bon lien, ce document est un *notebook interactif*, il contient des cellules
@@ -49,6 +52,23 @@ print("Salut à toi !")
 Si rien ne se passe, vous n'êtes probablement pas dans le bon environnement : cliquez sur le bouton
 suivant : [![Launch in Binder
 badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LoicGrobol/apprendre-programmer/main?urlpath=tree/slides/06-recapitulatif/recapitulatif.py.md).
+
+
+En cliquant sur les cellules de code, vous pouvez également modifier leur valeur : remplacez le
+point d'exclamation par un point d'interrogation dans la cellule suivante et exécutez-la pour voir
+ce qui se passe
+
+```python
+print("Salut à toi !")
+```
+
+Vous pouvez aussi créer de nouvelles cellules, supprimer des cellules existantes et changer leur
+type (texte ou code) avec le menu « *edit* ».
+
+Les cellules de texte sont écrites en
+[Markdown](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html),
+ce qui vous permet de les formatter. N'oubliez pas de sauvegarder vos modifications en les exécutant
+(comme les cellules de code).
 
 
 ## Sorties
@@ -74,6 +94,7 @@ Loïc Grobol
 ```
 
 ```python
+
 ```
 
 2\. Écrire dans la cellule ci-dessous un programme qui affiche votre année et votre lieu de
@@ -86,6 +107,7 @@ Orléans
 ```
 
 ```python
+
 ```
 
 > **Note** : les espaces sont en général ignorées par Python, les lignes suivantes sont donc équivalentes :
@@ -153,10 +175,11 @@ print(False)
 ```
 
 > - Pour les nombres, les opérations utilisables sont `+`, `-`, `*` (multiplication), `/`, `//`
->   (quotient), `%` (reste), et `**` puissance.
+>   (quotient), `%` (reste) et `**` (puissance) ; ainsi que les opérateurs de comparaison `<`, `>`,
+>   `<=` et `>=`, qui renvoient des booléens.
 > - Pour les chaînes de caractères, seules `+` (concaténation) et `*` (multiplication par un entier)
->   sont définies, ainsi que l'opérateur `in` qui teste l'inclusion d'une chaîne dans une autre (et
->   renvoie donc un booléen).
+>   sont définies, ainsi que les opérateurs `in` et `not in` qui testent respectivement l'inclusion
+>   d'une chaîne dans une autre et son contraire (et renvoient un booléen).
 > - Pour les booléens, les opérateurs logiques `and`, `or` et `not`.
 > - Les opérateurs `==` et `!=` qui testent respectivement l'égalité et la différence de deux
 >   valeurs sont définis pour tous les types en renvoient des booléens.
@@ -198,24 +221,27 @@ print("Hello, " + "world")
 $(-1)^{45+766}$ et $(512-256)\times\left(-\frac{3}{2}\right)$.
 
 ```python
+
 ```
 
 2\. Construire et afficher une chaîne de caractères composée de $4096$ répétition de la séquence
 `UPX>*`.
 
 ```python
+
 ```
 
 3\. Construire et afficher une chaîne de caractères contenant `This is fine` suivie de $1024$ fois
 `🔥`.
 
 ```python
+
 ```
 
 4\. Déterminer sans les exécuter les valeurs de retour des instructions suivantes, écrivez les
-résultats dans la cellule de texte en-dessous
+résultats dans la cellule de texte en-dessous.
 
-<!-- #region -->
+
 
 1. 
 
@@ -271,7 +297,7 @@ résultats dans la cellule de texte en-dessous
    (("apple" in "apples") and (1 + 1 == 3)) or (5 < 10)
    ```
 
-<!-- #endregion -->
+
 
 
 1. 
@@ -304,12 +330,14 @@ print(str.title("hElLo"))
 1\. Mettre en minuscules la chaine de caractères `"ILliil1ILiiIILLL!1lIÎï"` et afficher le résultat.
 
 ```python
+
 ```
 
 2\. Mettre en casse de titre la chaîne de caractères `Les maîtres de l'ombre` et afficher le
 résultat.
 
 ```python
+
 ```
 
 ## Variables
@@ -345,7 +373,7 @@ print(affiche)
 > on peut également redéfinir une variable en affectant une deuxième fois au même nom
 
 ```python
-nom = "Université Paris X
+nom = "Université Paris X"
 nom = "Université Paris Ouest"
 nom = "Université Paris Nanterre"
 print(nom)
@@ -361,6 +389,7 @@ spam = "spam, spam, lovely spam"
 2\. Créer une variable contenant la chaîne de caractère `"Bonjour, tout le monde"`
 
 ```python
+
 ```
 
 3\. Stocker le résultat du calcul suivant dans une variable et afficher son résultat : $\frac{36}{5}$
@@ -419,21 +448,344 @@ print("Salut, ", nom)
 1\. Demander la saisie d'un nombre et afficher son triple.
 
 ```python
+
 ```
 
 2\. Demander la saisie d'une chaîne de caractères et l'afficher tout en majuscules.
 
 ```python
+
 ```
 
 3\. Demander la saisie d'une chaîne de caractères. Afficher `True` si elle contient `spam` et
 `False` sinon.
 
 ```python
+
 ```
 
 4\. Écrire un programme qui demande à son utilisateurice son année de naissance et affiche l'âge
 qu'aura cette personne en 2050.
 
 ```python
+
+```
+
+## Instruction conditionnelle `if`
+
+> **Rappel** : l'instruction `if` permet de n'exécuter certaines instructions que si une si une
+> condition (un booléen) est vraie (`True`) :
+
+```python
+if 1+1 == 2:
+   print("Ceci est exécuté")
+
+if 1+1 == 3:
+   print("Mais pas cela")
+```
+
+> La condition peut-être n'import quelle expression dont le résultat est un booléen
+
+```python
+if "apple" not in "spam":
+   print("Ceci est exécuté")
+
+if True:
+   print("Ceci est exécuté, mais ce n'est pas très intéressant.")
+
+a = 2
+
+if 2*a != 6:
+   print("Ceci est exécuté et c'est plutôt classe.")
+```
+
+> Les instructions qui sont exécutées conditionnellement sont celles du bloc qui suit `if`,
+> matérialisé par l'indentation (les lignes commençant par quatre espaces, que vous pouvez entrer
+> avec la touche <kbd>tab</kbd>/<kbd>⇄</kbd>) :
+
+```python
+if 2+2 != 4:
+   print("Ceci n'est pas exécuté")
+   print("Cela non plus")
+```
+
+> On peut imbriquer les conditions les unes dans les autres, en augmentant l'indentation de quatre
+> espaces supplémentaires pour chaque niveau :
+
+```python
+if 2+2 == 4:
+   print("Ceci est exécuté")
+   if 13 != 12:
+      print("Ceci également")
+      if "justice" in "partout":
+         print("Mais pas ceci")
+```
+
+> L'instruction `elif` permet de tester des conditions supplémentaires si les précédentes ne sont
+> pas remplies
+
+```python
+if 2+1 != 3:
+   print("Non")
+elif 3+2 == 12:
+   print("Toujours pas")
+elif "p" in "apples":
+   print("Oui !")
+```
+
+> Et seulement si elles ne sont pas remplies :
+
+```python
+if 2+1 == 3:
+   print("Oui")
+elif "p" in "apples":
+   print("Oui, mais trop tard")
+```
+
+> Enfin, `else` permet d'indiquer des instructions à exécuter si aucune des conditions précédentes
+> n'a été remplie :
+
+```python
+if 2+1 != 3:
+   print("Non")
+elif 3+2 == 12:
+   print("Toujours pas")
+elif "p" in "APPLES":
+   print("Non !")
+else:
+   print("Bon, ben tant pis")
+```
+
+> Dans ces exercices on va souvent écrire des conditions qui portent sur une entrée de
+> l'utilisateurice (ce qui est plus intéressant que des conditions qui ne changent pas).
+> Rappelez-vous que vous pouvez utiliser `input` :
+
+```python
+saisie = input("Dis-moi quelque chose")
+if saisie == "Le TAL, c'est génial":
+   print("Incroyable, tu lis dans mes pensées !")
+else:
+   print("ok,,,")
+```
+
+1\. Écrire un programme qui affiche `trop petit` si le résultat du calcul $2^11/3$ est plus petit 
+que $1000$ sans jamais afficher le résultat du calcul lui-même.
+
+2\. Demander la saisie d'une chaîne de caractères. Afficher `a` si la saisie est `voyelle`, `b` si
+la saisie est `consonne`. N'affichez rien pour toute autre saisie.
+
+```python
+
+```
+
+3\. Demander la saisie d'une chaîne de caractères contenant un nombre. Afficher `🥶` si ce nombre
+est inférieur à $5$, $😌$ s'il est entre $5$ et $16$ et $🥵$ sinon.
+
+```python
+
+```
+
+4\. Demandez à votre utilisateurice de saisir sa couleur préférée :
+
+- Si la réponse contient `rouge`, affichez `🟥!`.
+- Si la réponse contient `vert`, affichez `🟩!`.
+- Si la réponse contient `violet` ou `indigo`, affichez `💜!`.
+- Si la réponse est n'importe quoi d'autre, demandez `Tu penses avoir bon goût ?`.
+  - Si la réponse à cette deuxième question est `oui`, affichez `😂`
+  - Sinon, affichez `👉👉`
+
+Utilisez `str.lower` pour comparer des chaînes sans tenir compte de la casse, comme ici :
+
+```python
+mot = "hELLo"
+
+if str.lower(mot) == "hello":
+   print("Ceci s'affiche")
+```
+
+## Séquences et listes
+
+> **Rappel** : les chaînes de caractères sont composées de **caractères**, chacun ayant une
+> position. L'opération d'indexation permet d'accéder à la valeur de ces caractères en connaissant
+> leurs positions (en partant de `0`) :
+
+```python
+chn = "Bonjour"
+print(chn[0])
+print(chn[1])
+print(chn[2])
+print(chn[3])
+print(chn[4])
+print(chn[5])
+```
+
+> Cette propriété fait des chaînes de caractères des **séquences**. Il existe d'autres types de
+> séquences en Python, notamment les listes, qui contiennent des suites de valeurs de n'importe quel
+> type.
+
+```python
+lst = [1, 3, 5, "hello", True, 3.14]
+print(lst[0])
+print(lst[4])
+print(lst[5])
+```
+
+> « n'importe quel type » signifie en particulier qu'une liste peut contenir une autre liste :
+
+```python
+lst = [1, 2, ["hello", "world"], True, 12]
+lst[2]
+```
+
+> ce qui n'empêche pas d'accéder aux éléments des listes internes :
+
+```python
+lst = [1, 2, ["hello", "world"], True, 12]
+sublst = lst[2]
+print(sublst[0])
+
+# Ou en plus compact
+
+print(lst[2][0])
+```
+
+> Pour se faciliter la vie, quand on a une séquence on peut également accéder aux éléments en
+> partant de la fin :
+
+```python
+lst = [1, 2, ["hello", "world"], True, 12]
+print(lst[-1])
+print("Hello, world!"[-2])
+```
+
+> Enfin, on peut extraire des sous-séquences :
+
+```python
+lst = ["a", "b", "c", "d", "e", "f", "g"]
+print(lst[2])
+print(lst[5])
+print(lst[2:5])
+```
+
+1\. En utilisant uniquement les chaînes de caractères déjà définies dans la cellule-ci dessous,
+modifiez cette cellule pour afficher `le nouveau monde tarde à apparaître`
+
+```python
+lst = ["le", "nouveau", "monde", "tarde", "à", "apparaître"]
+print()
+```
+
+2\. Même question
+
+```python
+lst = ["le", "nouveau", ["monde", "tarde", "à"], "apparaître"]
+print()
+```
+
+3\. Même question
+
+```python
+lst = ["le", "nouveau", ["monde", ["tarde"], "à"], "apparaître"]
+print()
+```
+
+4\. Même question
+
+```python
+lst = ["le", "nouveau", "apparaître monde tarde à"]
+print()
+```
+
+5\. Même question
+
+```python
+lst = ["le", [[[["nouveau"]]]], "apparaître monde tarde à"]
+print()
+```
+
+6\. Même question en utilisant que des nombres négatifs ou nuls
+
+```python
+lst = ["le", "nouveau", ["monde", "tarde", "à"], "apparaître"]
+print()
+```
+
+Bonus : en utilisant que des nombres strictement négatifs.
+
+## Édition de listes
+
+> **Rappel** : à la différence des chaînes de caractères, les listes sont **mutables**. C'est-à-dire
+> qu'on peut modifier leurs éléments, en ajouter et en enlever :
+
+```python
+lst = ["le", "nouveau", "monde", "tarde", "à", "apparaître"]
+print(lst)
+lst[0] = "Le"
+print(lst)
+lst.append("naissent")
+print(lst)
+lst.extend(["Antonio Gramsci", "des monstre"])
+print(lst)
+lst.insert(6, "et dans ce clair-obscur")
+print(lst)
+lst.pop(-2)
+print(lst)
+```
+
+1\. Modifiez la liste suivante à l'aide des instructions ci-dessus pour former l'alphabet latin
+
+```python
+lst = ["a", "b", "c", "g", "g", "g", "h", "i", "j", "spam", "k", "l", 1, "m", "n", "o", "p", "q", "r", "s", "t", "v"]
+```
+
+## Boucles d'itération
+
+> **Rappel** la structure de contrôle `for` permet de répéter l'exécution d'un bloc de code (c'est
+> donc une **boucle**) pour chacun des éléments d'une séquence (liste ou chaîne de caractères) :
+
+```python
+for elem in [1, 3, 1, 2]:
+   print(elem)
+   print(2*elem)
+```
+
+> Comme les autres structures de contrôle, les boucles peuvent être imbriquées :
+
+```python
+for i in [1, 2, 3, 4]:
+   print(i)
+   for w in ["tous", "les", "chats", "sont", "mignons"]:
+      print(w)
+```
+
+> Une recette courante est de remplir une liste avec des saisies
+
+```python tags=["skip-execution"]
+couleurs = ["noire", "blanche", "rouge", "verte", "bleue"]
+voyelles = []
+for col in couleurs:
+   voy = input("Quelle voyelle est, " + col + " ?")
+   voyelles.append(voy)
+print("Voici tes voyelles :", voyelles)
+```
+
+1\. Afficher sur des lignes séparées les carrés de nombres de la liste suivante :
+
+```python
+lst = [1, 3, 1, 2, 10, -75]
+```
+
+2\. En utilisant une boucle les mots suivants, chacun sur une ligne, en casse de titre (avec
+`str.titlecase`)
+
+```python
+words = ["tRAIteMENT", "automAtique", "du", "langage", "à", "l'", "universitÉ", "paris", "nanterre"]
+```
+
+3\. Pour chacune des familles de langues indo-européennes de la liste suivante, demandez à
+l'utilisateurice d'entrer une langue de la famille. Stockez ces entrées dans une liste et affichez
+cette liste à la fin.
+
+```python
+familles = ["Romanes", "Germaniques", "Balto-slaves", "Celtiques", "Indo-ariennes"]
 ```

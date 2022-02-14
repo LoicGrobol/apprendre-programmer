@@ -189,7 +189,6 @@ while n < 9:
 On peut toujours faire sans et pour l'instant ça ne nous sera pas trop utile, mais si jamais vous
 tombez dessus vous saurez de quoi il s'agit.
 
-
 ## Codingame
 
 - [Onboarding](https://www.codingame.com/training/easy/onboarding)

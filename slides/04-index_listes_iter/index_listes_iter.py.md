@@ -617,8 +617,7 @@ Uppsala Uppsala
 
 ### Exercice 3
 
-Voici quelques mots de la [Liste
-Swadesh](https://fr.wikipedia.org/wiki/Liste_Swadesh).
+Voici quelques mots de la [Liste Swadesh](https://fr.wikipedia.org/wiki/Liste_Swadesh).
 
 ```python
 words = ["soleil", "lune", "terre", "eau", "nouriture", "ciel"]
