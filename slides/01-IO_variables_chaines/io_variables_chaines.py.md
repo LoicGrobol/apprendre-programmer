@@ -537,9 +537,8 @@ Quelques noms de variables sont interdits car ils correspondent à des mots-clé
 def = "nope"
 ```
 
-Et certains autres comme `print`, `int`, `type` sont *techniquement* utilisables comme noms de variables, mais c'est plutôt une mauvaise idée. À votre avis pourquoi ?
-
-
+Et certains autres comme `print`, `int`, `type` sont *techniquement* utilisables comme noms de
+variables, mais c'est plutôt une mauvaise idée. À votre avis pourquoi ?
 
 
 On peut donc maintenant réutiliser les résultats d'instructions.
@@ -623,7 +622,8 @@ print(f"Salut, {nom}")
 
 ## Expressions booléennes
 
-Les **expressions booléennes** sont les expressions qui ont une valeur de vérité, `True` or `False`. Elles peuvent se construire à l'aide d'opérateurs de comparaison :
+Les **expressions booléennes** sont les expressions qui ont une valeur de vérité, `True` or `False`.
+Elles peuvent se construire à l'aide d'opérateurs de comparaison :
 
 `==` est vrai si et seulement si ses termes gauches et droits sont égaux
 
