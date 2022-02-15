@@ -87,6 +87,14 @@ print("Bonjour, tout le monde !")
 print("Hello,", "world")
 ```
 
+> Si vous ne lui donnez pas d'argument, `print` affiche une ligne vide :
+
+```python
+print("Une ligne")
+print()
+print("Une autre ligne")
+```
+
 1\. Écrire dans la cellule ci-dessous un programme qui affiche votre nom complet, comme ceci :
 
 ```text
@@ -165,6 +173,7 @@ print(1.0)
 print("Hello")
 print("Python, je préférais quand c'était un 🐍")
 print("1")
+print("Cette chaîne cont\nient un retour à la ligne.")
 ```
 
 > - Les booléens (`bool`), qui ne sont que deux, `True` et `False`
@@ -224,7 +233,7 @@ $(-1)^{45+766}$ et $(512-256)\times\left(-\frac{3}{2}\right)$.
 
 ```
 
-2\. Construire et afficher une chaîne de caractères composée de $4096$ répétition de la séquence
+2\. Construire et afficher une chaîne de caractères composée de $4096$ répétition des caractères
 `UPX>*`.
 
 ```python
@@ -394,12 +403,25 @@ spam = "spam, spam, lovely spam"
 
 3\. Stocker le résultat du calcul suivant dans une variable et afficher son résultat : $\frac{36}{5}$
 
-4\. Stocker $86$ dans une variable et $33$ dans une autre.
+```python
 
-1. Stocker la somme dans une autre variable et afficher le résultat.
-2. Afficher le type de la somme.
+```
+
+4\.
+
+1. Stocker $86$ dans une variable et $33$ dans une autre.
+2. Stocker la somme dans une autre variable et afficher le résultat.
+3. Afficher le type de la somme.
+
+```python
+
+```
 
 5\. Même chose que 4., mais avec les valeurs `"py"` et `"thon"`.
+
+```python
+
+```
 
 ## Entrées
 
@@ -568,11 +590,15 @@ else:
    print("ok,,,")
 ```
 
-1\. Écrire un programme qui affiche `trop petit` si le résultat du calcul $2^11/3$ est plus petit 
-que $1000$ sans jamais afficher le résultat du calcul lui-même.
+1\. Écrire un programme qui affiche `trop petit` si le résultat du calcul $\frac{2{^11}}{3}$ est
+plus petit que $1000$ sans jamais afficher le résultat du calcul lui-même.
 
-2\. Demander la saisie d'une chaîne de caractères. Afficher `a` si la saisie est `voyelle`, `b` si
-la saisie est `consonne`. N'affichez rien pour toute autre saisie.
+```python
+
+```
+
+2\. Demander la saisie d'une chaîne de caractères. Afficher `a` si la saisie est `"voyelle"`, `b` si
+la saisie est `"consonne"`. N'affichez rien pour toute autre saisie.
 
 ```python
 
@@ -593,6 +619,10 @@ est inférieur à $5$, $😌$ s'il est entre $5$ et $16$ et $🥵$ sinon.
 - Si la réponse est n'importe quoi d'autre, demandez `Tu penses avoir bon goût ?`.
   - Si la réponse à cette deuxième question est `oui`, affichez `😂`
   - Sinon, affichez `👉👉`
+
+```python
+
+```
 
 Utilisez `str.lower` pour comparer des chaînes sans tenir compte de la casse, comme ici :
 
@@ -667,46 +697,46 @@ print(lst[5])
 print(lst[2:5])
 ```
 
-1\. En utilisant uniquement les chaînes de caractères déjà définies dans la cellule-ci dessous,
-modifiez cette cellule pour afficher `le nouveau monde tarde à apparaître`
+1\. En utilisant uniquement les chaînes de caractères déjà définies (pas forcément toutes) dans la
+cellule-ci dessous, modifiez cette cellule pour afficher `le nouveau monde tarde à apparaître`
 
 ```python
-lst = ["le", "nouveau", "monde", "tarde", "à", "apparaître"]
+lst = [" ", "le", "nouveau", "monde", "tarde", "à", "apparaître"]
 print()
 ```
 
 2\. Même question
 
 ```python
-lst = ["le", "nouveau", ["monde", "tarde", "à"], "apparaître"]
+lst = [" ", "le", "nouveau", ["monde", "tarde", "à"], "apparaître"]
 print()
 ```
 
 3\. Même question
 
 ```python
-lst = ["le", "nouveau", ["monde", ["tarde"], "à"], "apparaître"]
+lst = [" ", "le", "nouveau", ["monde", ["tarde"], "à"], "apparaître"]
 print()
 ```
 
 4\. Même question
 
 ```python
-lst = ["le", "nouveau", "apparaître monde tarde à"]
+lst = [" ", "le", "nouveau", "apparaître monde tarde à"]
 print()
 ```
 
 5\. Même question
 
 ```python
-lst = ["le", [[[["nouveau"]]]], "apparaître monde tarde à"]
+lst = [" ", "le", [[[["nouveau"]]]], "apparaître monde tarde à"]
 print()
 ```
 
 6\. Même question en utilisant que des nombres négatifs ou nuls
 
 ```python
-lst = ["le", "nouveau", ["monde", "tarde", "à"], "apparaître"]
+lst = [" ", "le", "nouveau", ["monde", "tarde", "à"], "apparaître"]
 print()
 ```
 
