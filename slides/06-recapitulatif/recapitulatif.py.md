@@ -217,7 +217,7 @@ print("Hello, world!")
 print("Hello, " + "world")
 ```
 
-1\. Affichez les résultats des calculs suivants : $2713+4096$, $\frac{12-75}{3}$, $2^10$,
+1\. Affichez les résultats des calculs suivants : $2713+4096$, $\frac{12-75}{3}$, $2^{10}$,
 $(-1)^{45+766}$ et $(512-256)\times\left(-\frac{3}{2}\right)$.
 
 ```python
