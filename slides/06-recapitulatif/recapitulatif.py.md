@@ -819,3 +819,16 @@ cette liste à la fin.
 ```python
 familles = ["Romanes", "Germaniques", "Balto-slaves", "Celtiques", "Indo-ariennes"]
 ```
+
+## Consignes pour le rendu
+
+Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
+`06_recapitulatif_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
+`06_recapitulatif_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche soir prochain
+(2022-02-20).
+
+- De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
+  (clé d'inscription `rossum`)
+- À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
+
+Attention : **l'extension doit être `.ipynb`**.
