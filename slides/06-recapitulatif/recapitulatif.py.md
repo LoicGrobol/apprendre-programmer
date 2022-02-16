@@ -831,4 +831,4 @@ Répondre à ces exercices directement dans le notebook, le sauvegarder sous un 
   (clé d'inscription `rossum`)
 - À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
 
-Attention : **l'extension doit être `.ipynb`**.
+**Si vous avez plusieurs fichiers `ipynb`, mettez les dans un fichier zip pour pouvoir les déposer sur CEL.**
