@@ -33,7 +33,7 @@ toc: true
 
 **ATTENTION** : Les liens hypertextes ci-dessous mènent vers des versions statiques des notebooks.
 C'est pratique en cas de problème, mais pour suivre le cours et faire les exercices, il faut ouvrir
-les version interactives sur Binder.
+les versions interactives sur Binder.
 
 <strong>Pour ouvrir les versions interactives, cliquez sur les boutons ![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)</strong>.
@@ -54,7 +54,7 @@ Installer aussi l'environnement [Thonny](https://thonny.org).
 Pour installer Thonny sous ChromeOS, c'est [un peu plus
 sophistiqué](https://boldidea.org/static/thonny/chromebook.html), mais c'est possible.
 
-Pour les tablette sous iOS ou Android, ça ne sera pas possible. Vous devriez pouvoir suivre
+Pour les tablettes sous iOS ou Android, ça ne sera pas possible. Vous devriez pouvoir suivre
 l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal, tenez-moi au
 courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
 
@@ -104,7 +104,7 @@ badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrob
 
 À rendre pour la prochaine fois : les exercices du notebook.
 
-### 2022-02-21 : Compléments sur les séquences
+### 2022-02-21 : Compléments sur les boucles et les séquences
 
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/corrections.py.md)
@@ -113,6 +113,10 @@ badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrob
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/corrections.py.md)
   [Corrections exos récapitulatifs](slides/05-td_while/corrections.py.html)
+- [![Launch in Binder
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md)
+  [slides compléments boucles et
+  séquences](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.html)
 
 ## Ressources
 
@@ -165,7 +169,8 @@ Il vous est vivement conseillé d'utiliser un (ou plus) des sites et tutoriels c
 
 ## Licences
 
-[![CC BY Licence badge](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+[![CC BY Licence
+badge](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 
 Copyright © 2022 Loïc Grobol [\<loic.grobol@gmail.com\>](mailto:loic.grobol@gmail.com)
 
@@ -174,6 +179,8 @@ la licence [Creative Commons Attribution 4.0
 International](https://creativecommons.org/licenses/by/4.0/). Voir [le README](README.md#Licences)
 pour plus de détails.
 
- Un résumé simplifié de cette licence est disponible à <https://creativecommons.org/licenses/by/4.0/>.
+ Un résumé simplifié de cette licence est disponible à
+ <https://creativecommons.org/licenses/by/4.0/>.
 
- Le texte intégral de cette licence est disponible à <https://creativecommons.org/licenses/by/4.0/legalcode>
+ Le texte intégral de cette licence est disponible à
+ <https://creativecommons.org/licenses/by/4.0/legalcode>

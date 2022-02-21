@@ -40,7 +40,8 @@ Voici une liste
 fruits = ["pomme", "poire", "kiwi", "maracuja"]
 ```
 
-Demandez à l'utilisateurice un nom de fruit et affichez `"😋"` s'il est dans la liste et `"🤨"` sinon.
+Demandez à l'utilisateurice un nom de fruit et affichez `"😋"` s'il est dans la liste et `"🤨"`
+sinon.
 
 ```python
 reponse = input("Quel fruit ? ")
@@ -60,7 +61,8 @@ else:
 ## Boucle conditionnelle `while`
 
 Les boucles **itératives** `for` permettent de parcourir une séquence, en accédant à ses éléments
-les uns à la suite des autres et en exécutant à chaque itération (chaque « tour ») une même série d'instructions.
+les uns à la suite des autres et en exécutant à chaque itération (chaque « tour ») une même série
+d'instructions.
 
 La boucle **conditionnelle** `while` (« tant que ») permet elle aussi de répéter plusieurs fois une
 série d'instructions, mais au lieu d'être contrôlée par une séquence, elle est contrôlée par une

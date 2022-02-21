@@ -1,2 +1,7 @@
 utilisateurice
 exos
+notebooks
+Binder
+Thonny
+ChromeOS
+README
