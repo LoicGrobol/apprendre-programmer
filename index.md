@@ -102,7 +102,17 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/06-recapitulatif/recapitulatif.py.md)
 [Notebook récapitulatif](slides/06-recapitulatif/recapitulatif.py.html)
 
-À rendre pour la prochaine fois : les es exercices du notebook.
+À rendre pour la prochaine fois : les exercices du notebook.
+
+### 2022-02-21 : Compléments sur les séquences
+
+- [![Launch in Binder
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/corrections.py.md)
+  [Corrections slides exercices et compléments sur les
+  boucles](slides/05-td_while/corrections.py.html)
+- [![Launch in Binder
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/corrections.py.md)
+  [Corrections exos récapitulatifs](slides/05-td_while/corrections.py.html)
 
 ## Ressources
 

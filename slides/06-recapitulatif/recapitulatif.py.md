@@ -67,7 +67,7 @@ type (texte ou code) avec le menu « *edit* ».
 
 Les cellules de texte sont écrites en
 [Markdown](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html),
-ce qui vous permet de les formatter. N'oubliez pas de sauvegarder vos modifications en les exécutant
+ce qui vous permet de les formater. N'oubliez pas de sauvegarder vos modifications en les exécutant
 (comme les cellules de code).
 
 
@@ -324,7 +324,7 @@ résultats dans la cellule de texte en-dessous.
 
 ## Opérations sur les chaînes de caractères
 
-> **Rappel** : Plusieurs méthodes de manipulations de chaînes de caractères sont disponible sous la
+> **Rappel** : Plusieurs méthodes de manipulations de chaînes de caractères sont disponibles sous la
 > forme `str.méthode`. Notamment les méthodes de manipulation de casse (majuscules et minuscules)
 > `str.lower` (mettre en minuscules), `str.upper` (mettre en majuscules) et `str.title` (mettre en
 > casse de titre).
@@ -597,8 +597,9 @@ plus petit que $1000$ sans jamais afficher le résultat du calcul lui-même.
 
 ```
 
-2\. Demander la saisie d'une chaîne de caractères. Afficher `a` si la saisie est `"voyelle"`, `b` si
-la saisie est `"consonne"`. N'affichez rien pour toute autre saisie.
+2\. Demander la saisie d'une chaîne de caractères en posant la question `"Voyelle ou consonne ?"`.
+Afficher `a` si la saisie est `"voyelle"`, `b` si la saisie est `"consonne"`. N'affichez rien pour
+toute autre saisie.
 
 ```python
 
