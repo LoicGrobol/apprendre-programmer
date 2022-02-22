@@ -390,7 +390,7 @@ chacun sur une ligne.
 
 ```
 
-### ⚒️ Exo : n-grammes ⚒️
+### ⚒️ N-grammes ⚒️
 
 Le concept de **n-gramme** est fondamental en TAL. Un n-gramme, c'st une suite de $n$ symboles. Par
 exemple dans le mot « banane », les 2-grammes (bigrammes) de caractères sont :
