@@ -111,8 +111,8 @@ badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrob
   [Corrections slides exercices et compléments sur les
   boucles](slides/05-td_while/corrections.py.html)
 - [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md)
-  [Corrections exos récapitulatifs](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.html)
+  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/06-recapitulatif/corrections.py.md)
+  [Corrections exos récapitulatifs](slides/06-recapitulatif/corrections.py.html)
 - [![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md)
   [slides compléments boucles et

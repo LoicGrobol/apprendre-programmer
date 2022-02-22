@@ -150,6 +150,10 @@ spam = "spam, spam, lovely spam"
 print(spam)
 ```
 
+```python
+type(spam)
+```
+
 > 2\. Créer une variable contenant la chaîne de caractère `"Bonjour, tout le monde"`
 
 ```python
@@ -173,7 +177,7 @@ print(res)
 ```python
 un_nombre = 86
 un_autre_nombre = 33
-la_somme = 86 + 33
+la_somme = un_nombre + un_autre_nombre
 print(la_somme)
 print(type(la_somme))
 ```
@@ -433,11 +437,11 @@ print(lst)
 ```python
 lst = [1, 3, 1, 2, 10, -75]
 for elem in lst:
-    print(elem)
+    print(elem**2)
 ```
 
 > 2\. En utilisant une boucle les mots suivants, chacun sur une ligne, en casse de titre (avec
-> `str.titlecase`)
+> `str.title`)
 
 ```python
 words = ["tRAIteMENT", "automAtique", "du", "langage", "à", "l'", "universitÉ", "paris", "nanterre"]
@@ -453,7 +457,7 @@ for mot in words:
 familles = ["Romanes", "Germaniques", "Balto-slaves", "Celtiques", "Indo-ariennes"]
 langues = []
 for fam in familles:
-    lng = input("Entrer une langue de la famille " + fam + ": ")
+    lng = input("Entrer une langue " + fam + ": ")
     langues.append(lng)
 print(langues)
 ```
