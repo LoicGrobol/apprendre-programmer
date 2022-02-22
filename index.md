@@ -50,11 +50,9 @@ téléchargé.
 
 ### 2022-01-17 : Introduction, entrées/sorties de bases et variables
 
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/00-introduction/introduction-slides.py.md)
+- {% notebook_badges slides/00-introduction/introduction-slides.py.md %}
   [Slides Introduction](slides/00-introduction/introduction-slides.py.html)
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/01-IO_variables_chaines/io_variables_chaines.py.md)
+- {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
   [Slides IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.html)
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
@@ -70,14 +68,11 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 ### 2022-01-24 : Dessiner avec `turtle` et instructions conditionnelles
 
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/01-IO_variables_chaines/corrections.py.md)
+- {% notebook_badges slides/01-IO_variables_chaines/corrections.py.md %}
   [Corrections des exercices](slides/01-IO_variables_chaines/corrections.py.html)
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/02-turtle/turtle.py.md)
+- {% notebook_badges slides/02-turtle/turtle.py.md %}
   [Slides Turtle](slides/02-turtle/turtle.py.html)
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/03-conditions/conditions.py.md)
+- {% notebook_badges slides/03-conditions/conditions.py.md %}
   [Slides instructions conditionnelles](slides/03-conditions/conditions.py.html)
 
 À rendre pour la prochaine fois : exercices du notebook « instructions conditionnelles », attention
@@ -85,11 +80,9 @@ le mode de rendu change légèrement.
 
 ### 2022-02-01 : Indices, listes et boucle `for`
 
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/03-conditions/corrections.py.md)
+- {% notebook_badges slides/03-conditions/corrections.py.md %}
   [Corrections des exercices](slides/03-conditions/corrections.py.html)
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/04-index_listes_iter/index_listes_iter.py.md)
+- {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
   [Slides indices, listes et itération](slides/04-index_listes_iter/index_listes_iter.py.html)
 
 À rendre pour la prochaine fois : entraînement 🛠️ et exercices dans le notebook « Indexation, listes
@@ -97,35 +90,29 @@ et itération ».
 
 ### 2022-02-08 : Exercices et compléments sur les boucles
 
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/04-index_listes_iter/corrections.md)
+- {% notebook_badges slides/04-index_listes_iter/corrections.md %}
   [Corrections des exercices](slides/04-index_listes_iter/corrections.py.html)
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LoicGrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/td_while.py.md)
+- {% notebook_badges slides/05-td_while/td_while.py.md %}
   [Slides exercices et compléments sur les boucles](slides/05-td_while/td_while.py.html)
 
 ### 2022-02-15 : Récapitulatif
 
 Résumé des épisodes précédents, avec **plein** d'exos.
 
-- [![Launch in Binder
-badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/06-recapitulatif/recapitulatif.py.md)
+- {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
 [Notebook récapitulatif](slides/06-recapitulatif/recapitulatif.py.html)
 
 À rendre pour la prochaine fois : les exercices du notebook.
 
 ### 2022-02-21 : Compléments sur les boucles et les séquences
 
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/05-td_while/corrections.py.md)
+- {% notebook_badges slides/05-td_while/corrections.py.md %}
   [Corrections slides exercices et compléments sur les
   boucles](slides/05-td_while/corrections.py.html)
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/06-recapitulatif/corrections.py.md)
+- {% notebook_badges slides/06-recapitulatif/corrections.py.md %}
   [Corrections exos récapitulatifs](slides/06-recapitulatif/corrections.py.html)
-- [![Launch in Binder
-  badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrobol/apprendre-programmer/main?urlpath=tree/slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md)
-  [slides compléments boucles et
+- {% notebook_badges slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md %}
+  [Slides compléments boucles et
   séquences](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.html)
 
 ## Ressources
@@ -135,7 +122,8 @@ badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loicgrob
 
 ### Python général
 
-Il y a beaucoup, beaucoup de ressources disponibles pour apprendre Python. Ce qui suit n'est qu'une sélection.
+Il y a beaucoup, beaucoup de ressources disponibles pour apprendre Python. Ce qui suit n'est qu'une
+sélection.
 
 #### Livres
 
