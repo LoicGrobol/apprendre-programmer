@@ -32,9 +32,10 @@ Voici une liste
 fruits = ["pomme", "poire", "kiwi", "maracuja"]
 ```
 
-Demandez à l'utilisateurice un nom de fruit et affichez `"😋"` s'il est dans la liste et `"🤨"` sinon.
+Demandez à l'utilisateurice un nom de fruit et affichez `"😋"` s'il est dans la liste et `"🤨"`
+sinon.
 
-```python
+```python tags=["skip-execution"]
 reponse = input("Quel fruit ? ")
 
 if reponse in fruits:

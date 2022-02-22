@@ -99,7 +99,7 @@ for lettre in "linguistique":
 On peut s'en servir pour compter les éléments d'une séquence qui vérifient une certaine condition.
 Par exemple :
 
-```python
+```python tags=["skip-execution"]
 voyelles = ["a","e","o","i","u", "y", "à", "â", "é", "è", "ê", "ë", "î", "ï", "ô", "ù", "ü", "ÿ"]
 mot = input("Dis-moi un mot : ")
 

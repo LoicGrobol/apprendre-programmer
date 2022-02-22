@@ -582,7 +582,7 @@ else:
 > l'utilisateurice (ce qui est plus intéressant que des conditions qui ne changent pas).
 > Rappelez-vous que vous pouvez utiliser `input` :
 
-```python
+```python tags=["skip-execution"]
 saisie = input("Dis-moi quelque chose")
 if saisie == "Le TAL, c'est génial":
    print("Incroyable, tu lis dans mes pensées !")
