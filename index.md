@@ -28,7 +28,6 @@ toc: true
 - **Dépôt des exercices** de préférence [sur Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) (clé d'inscription `rossum`)
   ou par email (voir ci-dessus.)
 
-
 ## Séances
 
 **ATTENTION** : Les liens hypertextes ci-dessous mènent vers des versions statiques des notebooks.
@@ -37,6 +36,13 @@ les versions interactives sur Binder.
 
 <strong>Pour ouvrir les versions interactives, cliquez sur les boutons ![Launch in Binder
   badge](https://mybinder.org/badge_logo.svg)</strong>.
+
+Une fois dans Binder, vous pouvez récupérer votre travail sous forme de fichier ipynb dans le menu
+`File` →  `Download as` → `Notebook (ipynb)` et vous pouvez ouvrir un fichier ipynb qui est votre
+machine avec `File` → `Open…` → `Upload` (en haut à droite) → `Upload` (à côté du nom de fichier).
+
+Vous pouver aussi les télécharger sous forme de fichier `.py` pour les ouvrir sur votre machine (par
+exemple avec Thonny).
 
 ### 2022-01-17 : Introduction, entrées/sorties de bases et variables
 
