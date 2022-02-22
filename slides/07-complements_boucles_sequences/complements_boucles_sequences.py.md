@@ -31,7 +31,7 @@ des caractères :
   et nombres.
 - Itérateur `zip` pour les itérations simultanées génériques.
 - Méthodes de chaînes de caractères `split` et `join` pour segmenter et concaténer des chaînes,
-  ainsi que `replace`, `strip`, `startswith`, et `endswith`
+  ainsi que `replace`.
 
 ## Boucles `for` : rappels
 
@@ -192,6 +192,7 @@ numb3rs = [2, 3, 6, 3, 8, 2, 10, 2, 8, 3, 7, 7, 3, 5, 2, 7, 7, 3, 7, 2, 7, 4, 3,
 À l'aide d'une boucle, déterminer le nombre le plus grand (le maximum) de cette liste
 
 ```python
+
 ```
 
 ### 4. Le pot aux roses
@@ -207,6 +208,9 @@ print(sum(lst))
 
 Pouvez-vous expliquer ce qu'elles font ?
 
+
+
+
 #### 5. Min
 
 Voici une liste de noms
@@ -218,11 +222,13 @@ names = ['Nicole-Reine Lepaute', 'Ada Lovelace', 'Maria Mitchell', 'Anna Winlock
 1\. À l'aide d'une boucle, déterminer la longueur du nom le plus court de cette liste
 
 ```python
+
 ```
 
 2\. À l'aide d'une boucle, déterminer le nom le plus court de cette liste
 
 ```python
+
 ```
 
 ## `range` : les intervalles entiers
@@ -287,7 +293,7 @@ r = range(16)
 r[5]
 ```
 
-Pourquoi `range` ne renvoie pas une liste ? Parce que ça ne servirait pas à grand chose : vous
+Pourquoi `range` ne renvoie pas une liste ? Parce que ça ne servirait pas à grand-chose : vous
 connaissez déjà les valeurs des éléments d'un `range`, pas besoin d'indexer. En plus, ça permet
 d'éviter de stocker tous les éléments de la liste en mémoire, ça prend moins de place, votre machine
 est contente.
@@ -351,251 +357,289 @@ qui est plus compact, et un peu plus agréable (on a plus à gérer manuellement
 Attention, ce n'est pas optimale et on verra mieux plus tard, mais pour l'instant on va s'en
 servir pour s'entraîner à manipuler des `range`.
 
+## 🍄 Exo 🍄
 
-**Practice** OK, now you know all you need to know about for-loops! Can you write a code that asks the user for $10$ favorite foods, one at the time? Add those foods into a list, and once the user is done print them back!
-
-
-```python
-# Try it here!
-
-#empty list as a buffer
-foods = []
-
-#get answers from user
-for i in range(10):
-    food = input("What's one of your fav foods? ")
-    #store the answers here
-    foods.append(food)
-
-#print answers
-for j in foods:
-    print(j)
-```
-
-## N-grams
-
-$n$-gram models are a very basic, fundamental concept in computational linguistics!
-Intuitively, $n$-grams are sequences of $n$ consequtive symbols.
-
-    word:   banana
-    n:      2
-    ngrams: ba, an, na
-    
-    word:   linguist
-    n:      3
-    ngrams: lin, ing, ngu, gui, uis, ist
-
-A special case of $n$-grams where the value of $n$ is $2$ are called _bigrams_. If $n=1$, these are called _unigrams_.
-
-For computational linguistics and NLP, **$n$-gram models** are extremely important: symbol-level $n$-gram models define which sequences of characters are (im)possible in a certain language, word-level $n$-gram models tell us which words can be adjacent to each other, and so on.
-
-**Practice:** write code that extracts _bigrams_ from a given word. You want to:
-
-- loop through the word
-- selectes adjacent elements in the word, 2 at the time
-- maybe save them into a list?
-
-
+Écrire un programme qui demande à l'utilisateurice de saisir les uns après les autres ses cinq
+aliments préférés. Stocker ces réponses dans une liste, puis affichez les éléments de cette liste,
+chacun sur une ligne.
 
 ```python
-word = input("Word: ")
-    
-# add your bigram code here
-bigrams = []
 
-for i in range(len(word)-1):
-    bigram = word[i:i+2]
-    if bigram not in bigrams:
-        bigrams.append(bigram)
-
-print(bigrams)
 ```
 
-    Word: test
-    ['tes', 'est', 'st']
+## ⚒️ Exo : n-grammes ⚒️
 
+Le concept de **n-gramme** est fondamental en TAL. Un n-gramme, c'st une suite de $n$ symboles. Par
+exemple dans le mot « banane », les 2-grammes (bigrammes) de caractères sont :
 
-## Optional Excursus: Enumerate and Zip
+- ba
+- an
+- na
+- ne
 
-Object-defining functions that can sometimes be very useful are `enumerate` and `zip`.
+Et dans le mot « linguiste », les 3-grammes (trigrammes) de caractères sont :
 
-**`enumerate`** takes a list as input, and returns list of _tuples_, where every tuple contains an item from the input list, and its index. Just as `range`, this function creates its own object that can be easily typecasted into a list.
+- lin
+- ing
+- ngu
+- gui
+- uis
+- ist
+- ste
 
+Écrire un programme qui demande la saisie d'un mot et affiche tous les bigrammes de caractères de ce
+mot. Il vous faudra utiliser une boucle `for`, et probablement des outils parmi ceux qu'on a vu dans
+cette séance.
+
+## D'autres façons d'itérer
+
+Deux nouvelles fonctions qu'on utilise très souvent en Python. On ne va pas y passer beaucoup de
+temps tout de suite, mais sachez que ça existe, on les rencontrera d'autres fois.
+
+### `enumerate`
 
 ```python
-input_list = ["NY", "CA", "RI", "CO"]
-x = list(enumerate(input_list[1:]))
-print(x)
-print(type(x))
-print(type(x[0]))
+liste = ["le", "petit", "chat", "est", "content"]
+for truc in enumerate(liste):
+    print(truc)
 ```
 
-
-**Tuple** is another basic data type in Python. While they share the majority of the functionality with lists, their main difference is that tuples cannot be modified as easily as lists. Tuples can be thought of as "protected lists", but read [here](https://realpython.com/python-lists-tuples/) to learn more.
-
-**`zip`** takes an arbitrary number of lists as input, and returns a list of tuples, where every tuple is an index-wise combination of items from those lists (i.e. `[(lis1[0],list2[0]),(lis1[1],list2[1]), ...]`).
-
+La fonction `enumerate`, appliqué à une séquence renvoie une **itérable** (comme `range`) dont les
+éléments sont des couples `(indice, élément)` composés des éléments de la séquence. Ça permet de
+remplacer ceci :
 
 ```python
-towns = ["Port Jeff", "Stony Brook", "Lake Grove"]
-zip_codes = [11777, 11790, 11755]
-print(list(zip(towns, zip_codes)))
-print(list(enumerate(towns)))
+mot = "linguistique"
+for i in range(len(mot)):
+    print(mot[i], " indice :", i)
 ```
+
+par ceci
+
+```python
+mot = "linguistique"
+for couple in enumerate(mot):
+    print(couple[1], " indice :", couple[0])
+```
+
+qui est *un peu* plus lisible. On peut aussi utiliser la syntaxe suivante, dont on reparlera plus
+tard :
+
+```python
+mot = "linguistique"
+for idx, lettre in enumerate(mot):
+    print(lettre, " indice :", idx)
+```
+
+c'est encore plus lisible et c'est le style recommandé en Python (pour plusieurs raisons, là aussi
+on en reparlera).
+
+### `zip`
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+cp = ["45000", "37000", "92000"]
+for truc in zip(villes, cp):
+    print(truc)
+```
+
+`zip` permet d'itérer sur plusieurs séquences en parallèle
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+cp = ["45000", "37000", "92000"]
+appreciation = ["cool", "génial", "super"]
+for truc in zip(villes, cp, appreciation):
+    print(truc)
+```
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+annee = ["1991", "2014", "2021"]
+appreciation = ["cool", "génial", "super"]
+for truc in zip(villes, annee, appreciation):
+    print("Où:", truc[0], "Quand:", truc[1], "Comment:", truc[2])
+```
+
+Là aussi on peut utiliser cette nouvelle syntaxe pour que ce soit plus lisible :
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+annee = ["1991", "2014", "2021"]
+appreciation = ["cool", "génial", "super"]
+for ou, quand, comment in zip(villes, annee, appreciation):
+    print("Où:", ou, "Quand:", quand, "Comment:", comment)
+```
+
+Est-ce que vous voyez comment simuler `enumerate` en utilisant `zip` ?
+
+
+Un dernier point : c'est quoi exactement ces éléments que renvoient `zip` et `enumerate`, ça ressemble à des listes mais avec des parenthèses ?
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+annee = ["1991", "2014", "2021"]
+appreciation = ["cool", "génial", "super"]
+for truc in zip(villes, annee, appreciation):
+    print(type(truc))
+```
+
+Ce sont es `tuple`s, effectivement ça ressemble à des listes mais pas tout à fait. On les retrouvera plus tard !
 
 ## Encore des manipulations de chaînes 😤
 
-There are multiple methods that simplify working with strings and lists, and in this section, I exemplify the following ones: `replace`, `split`, `strip`, `join`, `startswith`, and `endswith`.
+Quelques nouvelles méthodes de manipulations de chaînes de caractères. Là aussi on les rencontrera
+dans le futur :
 
-**`replace`** returns a string in which some replacement was performed.
+### `replace`
 
-    string.replace(old_substring, new_substring)
-
+`replace` **remplace** une chaîne de caractère dans une autre :
 
 ```python
-string = "Hi friend. It is very nice to see you, friend!"
-string2 = string.replace("friend", "Alex")
-print(string)
-print(string2)
+message = "Salut poto. Ça fait plaisir de te voir, poto !"
+nouveau_message = str.replace(message, "poto", "Alex")
+print(message)
+print(nouveau_message)
 ```
 
-
-**Practice:** Using the template provided below, greet everybody whose name is listed in the list `guests`.
-
+**Entraînement** : en utilisant les variables ci-dessous, affichez un message de bienvenue pour
+chaque personne dans la liste `guests` :
 
 ```python
-template = "Hi, [guest], it is very nice to meet you!"
+template = "Salut, [invité], ravi⋅e de te rencontrer !"
 guests = ["Glimmer", "Bow", "Catra",]
 
-# your code
-for guest in guests:
-    print(template.replace("[guest]", guest))
+# À toi de coder !
 ```
 
-**`split`** takes a string and splits it into a list based on the provided argument. If no argument is provided, `split` splits the string based on the whitespaces.
+### `split`
 
-    string.split(separator)
-
+`split` découpe, tronçonne, une chaîne de caractères
 
 ```python
-text = "A chessboard appeared, but it was triangular, and so big that only the nearest point could be seen."
-parsed_text = text.split(" ",2)
-print(parsed_text)
+texte = "You ever have that feeling, where you’re not sure if you’re awake or still dreaming?"
+tokens = str.split(texte)
+print(tokens)
 ```
 
+C'est une façon rapide et simple (simpliste ?) de découper un texte en tokens.
+
+Vous pouvez aussi utiliser un autre séparateur que les espaces :
 
 ```python
-text = "Achessboardappeared"
-parsed_text = text.split()
-print(parsed_text)
+texte = "bleu,rouge,indigo,vert"
+colours = str.split(texte, ",")
+print(colours)
 ```
 
-    ['Achessboard', 'appeared']
-
-
+et les séparateurs peuvent être des chaînes arbitraires :
 
 ```python
-names = "Anna and Mary and John and Sebastian"
-list_of_names = names.split(" and ")
-print(list_of_names)
+texte = "bleu et rouge et indigo et vert"
+colours = str.split(texte, " et ")
+print(colours)
 ```
 
-```python
-names = "Anna, and , Mary and John and Sebastian"
-list_of_names1 = names.split(",",1)
-list_of_names2 = names.split(",",2)
-print(list_of_names1)
-print(list_of_names2)
-```
+### `join`
 
-**`strip`** removes inisible symbols from the ends of the string. The invisible things that `strip` removes are ` `, `\n` and `\t`. It is an extremely useful function when working with the "dirty" user input, or when processing text files.
-
-
-```python
-string = "\nHello world!   \t"
-string = string.strip()
-print("-->" + string + "<--")
-```
-
-**`startswith`** and **`endswith`** are string methods that return booleans depending on the string starting or ending with a certain substring.
-
-
-```python
-print("'hello' starts with 'hell':", "hello".startswith("hell"))
-print("'hello' starts with 'hi':", "hello".startswith("hi"))
-print("'hello' starts with 'hello':", "hello".startswith("hello"))
-```
-
-
-```python
-print("'linguistics' ends with 'cs':", "linguistics".endswith("cs"))
-print("'linguistics' ends with '':", "linguistics".endswith(""))
-```
-
-
-**`join`** is a string method that takes a list as argument, and, if all items within that list are strings, it concatenates them using the given string.
-
+`join` est d'une certaine façon l'inverse de `split` :
 
 ```python
 names = ['Anna', 'Mary', 'John', 'Sebastian']
-print(" and ".join(names))
+text = str.join(" and ", names)
+print(texte)
 ```
+
 
 ```python
 letters = ['P', 'y', 't', 'h', 'o', 'n']
-print("".join(letters))
+print(str.join("", letters))
 ```
 
-# Homework 4
+### Utiliser les méthodes de chaîne
 
-
-Self reflection is worth 3 points and is mandatory. Passing the homework requires a minimum of 13 points.
-
-Upload your modified notebook on Canvas, adding your name to the existing file name (e.g. 04_range_zip_enumerate_string_methods_Aniello.ipynb).
-
-**Be careful:**
-
-    - The file extension needs to be .ipynb! Do not change that
-
-**Problem 1. (3 points)** You are given the following list of English vowels.
-
+Ces méthodes peuvent aussi être utilisées directement, sans faire appel à `str` :
 
 ```python
-vowels = ["a", "o", "i", "u", "e"]
+texte = "bleu,rouge,indigo,vert"
+colours = str.split(texte, ",")
+print(colours)
 ```
 
-Using the idea of a counter, implement a program that asks the user for a word, and then prints the number of consonants in that word. (For simplicity, we assume that "y" always behaves as a consonant, even though [it is not true](https://www.rd.com/culture/letter-y-vowel-consonant/).)
+est équivalent à
 
+```python
+texte = "bleu,rouge,indigo,vert"
+colours = texte.split(",")
+print(colours)
+```
+
+et
+
+```python
+names = ['Anna', 'Mary', 'John', 'Sebastian']
+text = str.join(" and ", names)
+print(text)
+```
+
+à
+
+```python
+names = ['Anna', 'Mary', 'John', 'Sebastian']
+text = " and ".join(names)
+print(text)
+```
+
+## Exercices
+
+Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
+`07_boucles_sequences_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
+`07_boucles_sequences_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche 2022-03-06 au soir.
+(2022-02-06).
+
+- De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
+  (clé d'inscription `rossum`)
+- À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
+
+Attention : **l'extension doit être `.ipynb`**.
+
+Cette fois-ci ils sont assez longs, ne vous y prenez pas au dernier moment et n'hésitez pas à
+revenir sur les cours et les corrigés précédents pour trouver des idées.
+
+### Consonnes
+
+Voici une liste de voyelles
+
+```python
+voyelles = ["a","e","o","i","u", "y", "à", "â", "é", "è", "ê", "ë", "î", "ï", "ô", "ù", "ü", "ÿ"]
+```
+
+Écrire un programme qui demande la saisie d'un mot et affiche le nombre de consonnes (donc de lettre
+qui ne sont pas de voyelles) dans ce mot.
 
 ```python
 
 ```
 
-**Problem 2. (5 points)**
-Implement a program that asks the user for the value of $n$ and for a word, and extracts $n$-grams from that word for any $n$ provided by the user.
+### N-grammes
 
-    word:   banana
-    n:      2
-    ngrams: ba, an, na, an, na
-    
-    word:   linguist
-    n:      3
-    ngrams: lin, ing, ngu, gui, uis, ist
-    
-    
-*Hint 1* If you didn't do it for practice before, start by implementing a code that extracts all bigrams. Then think about how you can generalize it to arbitary $n$.
+Écrire un programme qui demande la saisie d'un mot et d'un entier `n`, puis affiche la liste des
+n-grammes de caractères de ce mot.
 
-*Hint 2* Be careful with the *edges* (i.e., the last $n$ gram in each word). And what happens if the word is shorter then the $n$-gram? (i.e, the word is "hi" and n=3? You still need to list "hi"!)
+Indices :
 
-**Important** There are multiple default libraries to extract $n$-grams, already available in Python. But for this homework you **must** use the concepts we have studies so far. It is a practice, after all :)
-
+- Partez d'un programme qui affiche la liste des bigrammes, puis essayez de généraliser à un n
+  arbitraire
+- Attention aux cas particuliers : que faire des n premiers et derniers caractères du mot ? Que
+  faire si le mot fait moins de n caractères…
 
 ```python
 
 ```
 
-**Problem 3. (12 points - 3 points per part)** You are given the following text.
+## Encore des bigrammes
 
+Voici un texte
 
 ```python
 text = "It was dark, like the bottom of a well. There was a pattern of skulls and bones around \
@@ -612,161 +656,67 @@ fruit picking and domestic service industries. On every other black or white tri
 chessboard, all the way to infinity, was a small grey shape, rather like an empty hooded robe."
 ```
 
-You are also given a string that contains all symbols of English alphabet.
+<!-- #region -->
+1\. Écrire un programme qui génère la liste `unique_words`, qui contient tous les mots du texte,
+sans doublons, et en minuscules. Le résultat devrait être le suivant (l'ordre peut être différent) :
+
+```python
+['a', 'infinity', 'reflection', 'with', 'like', 'big', 'briefly', 'into', 'children', 'which', 'fruit', 'picking', 'there', 'try', 'little', 'around', 'appearances', 'appeared', 'all', 'crossed', 'basis', 'improbability', 'their', 'discworld', 'black', 'to', 'death', 'future', 'only', 'my', 'robe', 'things', 'for', 'it', 'existed', 'said', 'sake', 'sometimes', 'right', 'way', 'that', 'country', 'chessboard', 'quoth', 'well', 'domestic', 'skull', 'wonderful', 'hooded', 'or', 'empty', 'bottom', 'mirror', 'himself', 'rather', 'over', 'every', 'triangle', 'roses', 'border', 'orbiting', 'was', 'from', 'show', 'be', 'pecked', 'bones', 'just', 'universe', 'me', 'triangular', 'gets', 'worth', 'have', 'climbed', 'service', 'fluttered', 'top', 'but', 'grey', 'claws', 'at', 'rats', 'creep', 'own', 'pattern', 'point', 'white', 'than', 'dark', 'therefore', 'frame', 'this', 'not', 'the', 'could', 'mind', 'turtle', 'scrabble', 'better', 'industries', 'looked', 'an', 'cherubs', 'life', 'anything', 'more', 'small', 'and', 'of', 'his', 'on', 'skulls', 'elephants', 'in', 'thoughts', 'seen', 'nearest', 'expectantly', 'other', 'side', 'shape', 'total', 'so', 'world', 'look', 'sun']
+```
+
+(évidemment ne faites pas juste un copier-coller)
+
+<!-- #endregion -->
+
+```python
+
+```
+
+2\. Écrire un programme qui extrait à partir de la liste `unique_words` la liste `attested_bigrams`
+des bigrammes de caractères qui apparaissent dans le texte.
+
+**Indice** Vous pouvez utiliser le code de l'exercice précédent, que vous appliquerez successivement
+à chacun des mots de `unique_words`, en agrégeant les résultats dans une seule liste, et en vous
+assurant de ne pas créer de doublons.
+
+
+```python
+
+```
+
+3\. Voici une liste des lettres de l'alphabet anglais. Utilisez-la pour générer une liste
+`possible_bigrams` de tous les bigrammes de caractères théoriquement possibles en anglais.
 
 
 ```python
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 ```
 
-_Part 1._ Write some code that generates the list `unique_words`, containing all and only the unique lowercase words from `text`.
-
-You should see the following output (the order can differ!):
-    
-    ['a', 'infinity', 'reflection', 'with', 'like', 'big', 'briefly', 'into', 'children', 'which', 'fruit', 'picking', 'there', 'try', 'little', 'around', 'appearances', 'appeared', 'all', 'crossed', 'basis', 'improbability', 'their', 'discworld', 'black', 'to', 'death', 'future', 'only', 'my', 'robe', 'things', 'for', 'it', 'existed', 'said', 'sake', 'sometimes', 'right', 'way', 'that', 'country', 'chessboard', 'quoth', 'well', 'domestic', 'skull', 'wonderful', 'hooded', 'or', 'empty', 'bottom', 'mirror', 'himself', 'rather', 'over', 'every', 'triangle', 'roses', 'border', 'orbiting', 'was', 'from', 'show', 'be', 'pecked', 'bones', 'just', 'universe', 'me', 'triangular', 'gets', 'worth', 'have', 'climbed', 'service', 'fluttered', 'top', 'but', 'grey', 'claws', 'at', 'rats', 'creep', 'own', 'pattern', 'point', 'white', 'than', 'dark', 'therefore', 'frame', 'this', 'not', 'the', 'could', 'mind', 'turtle', 'scrabble', 'better', 'industries', 'looked', 'an', 'cherubs', 'life', 'anything', 'more', 'small', 'and', 'of', 'his', 'on', 'skulls', 'elephants', 'in', 'thoughts', 'seen', 'nearest', 'expectantly', 'other', 'side', 'shape', 'total', 'so', 'world', 'look', 'sun']
-
+4\. Écrire un programme qui génère la liste `unattested_bigrams` des bigrammes de caractères
+non attestés, c'est-à-dire de tous les bigrammes qui sont possibles, mais qu'on ne trouve pas dans
+ce texte.
 
 ```python
 
 ```
 
-_Part 2._ Write a program which generates the list `bigrams`, collect all attested bigrams in `unique_words`. Ignore words that are shorter than $2$ characters. **Make sure that the list `bigrams` does not contain duplicates**.
+### Réflexion
 
-*Hint.* You can use the code to extract bigrams you wrote above. Then, you need to have that code iterate over each word in the `unique_words` list and add a check for duplicates!
+Quelques questions sur votre travail :
 
+- Combien de temps avez-vous passé à faire ces exercices ?
+- Combien de temps avez-vous passé à relire le cours (ou les cours précédents) ?
+- Avez-vous l'impression d'avoir bien mémorisé les concepts et les techniques vus jusqu'ici ?
+- Qu'est-ce qui vous paraît le plus compliqué ?
+- À votre avis, pourquoi ?
 
-```python
-
-```
-
-_Part 3._ Based on the variable `alphabet`, generate all possible bigrams of English. (Hint: look at the second exercise of the previous homework!)
-
-
-```python
-
-```
-
-_Part 4._ Collect all unattested bigrams of English in the list `unattested_bigrams`. 
-
-*Hint.* The unattested bigrams are those bigrams that are possible but not attested in the word sample (you collected all attested bigrams before)!
+Merci de bien répondre à chacune de ces questions dans la cellule de texte ci-dessous (n'oubliez pas
+de l'exécuter avant de sauvegarder) : elles me permettent d'ajuster le cours en fonction de vos
+besoins, avec un peu de chance, elles devraient également vous aider à guider votre travail et à
+apprécier votre progression.
 
 
-```python
-
-```
-
-Don't be surprised that some bigrams from `unattested_bigrams` are actually present in other English words, the text that we are working with is very small! If you are curious, take a larger text, and run your code on it. :)
-
-**Self Reflection**. Some things to consider: How well do you think you did? How much time did you spend on the homework? And how much time did you spend preparing for it (e.g. rereading the lecture notes)? How well do you feel you are retaining the concepts learned so far? What did you struggle with the most, and why do you think that is? 
-
-**You can add your answer here by doble clicking on the markdown cell **
-
-### Immutabilité des chaînes de caractères
-
-String indexes cannot be reassigned, i.e. the existent parts of the string cannot be modified directly:
 
 
-```python
-string = "hello"
-string[-1] = "a"
-```
-
-If we have a task to "mask" all vowels from a text, we will need to create a new string based on the old one.
-
-**Practice** Withouth looking at the code in the next cell, can you think of how to do it?
 
 
-```python
-vowels = "aoiue"
-text = "This is a sentence that should contain no vowels."
-
-#try it here by yoursel!
-```
-
-
-```python
-vowels = "aoiue"
-text = "This is a sentence that should contain no vowels."
-
-masked_text = ""
-for char in text:
-    if char not in vowels:
-        masked_text += char
-    else:
-        masked_text += "*"
-print(masked_text)
-```
-
-**Practice:** You are given a string `alphabet` that contains all English letters, and a string `text`.
-
-
-```python
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-text = "A chessboard appeared, but it was triangular, and so big that only the nearest point could be seen."
-```
-
-Write code that makes this string lowercase and deletes punctuations from the text.
-
-
-```python
-
-```
-
-## Mutabilité des listes
-
-Les méthodes de listes qu'on a vu **modifient** les listes directement (*in-place*).
-
-```python
-ma_liste = ["a"]
-ma_liste.append("b")
-print(ma_liste)
-```
-
-Ce n'était pas le cas des méthodes de chaînes de caractères
-
-```python
-str1 = "a"
-print(str.upper(str1))
-print(str1)
-```
-
-En Python, les `str` sont **immutables** et les listes sont **mutables**. Ça a d'autres conséquences
-peu intuitives. Comparez ainsi :
-
-```python
-a = 1
-b = a
-a = a + 1
-print("a vaut ", a)
-print("b vaut ", b)
-```
-
-et
-
-```python
-a = [1, 2, 3]
-b = a
-a[1] = 2713
-print("a vaut ", a)
-print("b vaut ", b)
-```
-
-Pour faire une **copie** indépendante d'une liste, on peut utiliser la fonction `list` :
-
-```python
-a = [1, 2, 3]
-b = list(a)
-a[1] = 2713
-print("a vaut ", a)
-print("b vaut ", b)
-```
-
-On peut également utiliser ceci :
-
-```python
-a = [1, 2, 3]
-b = a[:]  # ← notez la différence
-a[1] = 2713
-print("a vaut ", a)
-print("b vaut ", b)
-```
