@@ -93,7 +93,7 @@ dont la valeur initiale sera $0$ et à laquelle on ajoutera $1$ (**incrémenter*
 index = 0
 for lettre in "linguistique":
     print(lettre, " indice :", index)
-    index += 1
+    index = index + 1
 ```
 
 On peut s'en servir pour compter les éléments d'une séquence qui vérifient une certaine condition.
@@ -106,7 +106,7 @@ mot = input("Dis-moi un mot : ")
 compteur = 0
 for lettre in mot:
     if lettre in voyelles:
-        compteur += 1
+        compteur = compteur + 1
 print(compteur)
 ```
 
@@ -146,7 +146,7 @@ index = 0
 for state in states:
     if state in new_england:
         print(state+":", temperatures[index])
-    index += 1
+    index = index + 1
 ```
 
 ### Entraînement : compteurs et accumulateurs
@@ -181,7 +181,7 @@ numb3rs = [2, 3, 6, 3, 8, 2, 10, 2, 8, 3, 7, 7, 3, 5, 2, 7, 7, 3, 7, 2, 7, 4, 3,
 
 ```
 
-### 3. Min
+### 3. Max
 
 Voici la même liste de nombres
 
@@ -266,6 +266,11 @@ Vous devinez ce que renvoie `range(10)` ? À votre avis que renverrait `range(
 On teste ?
 
 ```python
+lst = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(lst)
+```
+
+```python
 print(range(10))
 ```
 
@@ -286,13 +291,6 @@ for i in range(16):
     print(i)
 ```
 
-Mais pas indexer :
-
-```python tags=["raises-exception"]
-r = range(16)
-r[5]
-```
-
 Pourquoi `range` ne renvoie pas une liste ? Parce que ça ne servirait pas à grand-chose : vous
 connaissez déjà les valeurs des éléments d'un `range`, pas besoin d'indexer. En plus, ça permet
 d'éviter de stocker tous les éléments de la liste en mémoire, ça prend moins de place, votre machine
@@ -305,7 +303,7 @@ ce ne sont donc pas des **séquences**. En revanche on peut itérer dessus, ce s
 En plus de la borne supérieure, on peut aussi spécifier la borne inférieure :
 
 ```python
-for i in range(2, 16):
+for i in range(-2, 16):
     print(i)
 ```
 
@@ -341,7 +339,7 @@ mot = "linguistique"
 index = 0
 for lettre in mot:
     print(lettre, " indice :", index)
-    index += 1
+    index = index + 1
 ```
 
 on peut écrire ça :
@@ -349,7 +347,7 @@ on peut écrire ça :
 ```python
 mot = "linguistique"
 for i in range(len(mot)):
-    print(mot[i], " indice :", index)
+    print(mot[i], " indice :", i)
 ```
 
 qui est plus compact, et un peu plus agréable (on a plus à gérer manuellement le compteur).
@@ -710,13 +708,123 @@ Quelques questions sur votre travail :
 - Qu'est-ce qui vous paraît le plus compliqué ?
 - À votre avis, pourquoi ?
 
-Merci de bien répondre à chacune de ces questions dans la cellule de texte ci-dessous (n'oubliez pas
-de l'exécuter avant de sauvegarder) : elles me permettent d'ajuster le cours en fonction de vos
-besoins, avec un peu de chance, elles devraient également vous aider à guider votre travail et à
-apprécier votre progression.
+Merci de bien répondre à chacune de ces questions dans la cellule de texte ci-dessous (n'oubliez pas de l'exécuter avant de saubegarder) : elles me permettent d'ajuster le cours en
+fonction de vos besoins, avec un peu de chance, elles devraient également vous aider à guider votre
+travail et à apprécier votre progression.
 
 
 
 
 
 
+
+## Compléments
+
+### Immutabilité des chaînes de caractères
+
+String indexes cannot be reassigned, i.e. the existent parts of the string cannot be modified directly:
+
+
+```python
+string = "hello"
+string[-1] = "a"
+```
+
+If we have a task to "mask" all vowels from a text, we will need to create a new string based on the old one.
+
+**Practice** Withouth looking at the code in the next cell, can you think of how to do it?
+
+
+```python
+vowels = "aoiue"
+text = "This is a sentence that should contain no vowels."
+
+#try it here by yoursel!
+```
+
+
+```python
+vowels = "aoiue"
+text = "This is a sentence that should contain no vowels."
+
+masked_text = ""
+for char in text:
+    if char not in vowels:
+        masked_text += char
+    else:
+        masked_text += "*"
+print(masked_text)
+```
+
+**Practice:** You are given a string `alphabet` that contains all English letters, and a string `text`.
+
+
+```python
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+text = "A chessboard appeared, but it was triangular, and so big that only the nearest point could be seen."
+```
+
+Write code that makes this string lowercase and deletes punctuations from the text.
+
+```python
+
+```
+
+### Mutabilité des listes
+
+Les méthodes de listes qu'on a vu **modifient** les listes directement (*in-place*).
+
+```python
+ma_liste = ["a"]
+ma_liste.append("b")
+print(ma_liste)
+```
+
+Ce n'était pas le cas des méthodes de chaînes de caractères
+
+```python
+str1 = "a"
+print(str.upper(str1))
+print(str1)
+```
+
+En Python, les `str` sont **immutables** et les listes sont **mutables**. Ça a d'autres conséquences
+peu intuitives. Comparez ainsi :
+
+```python
+a = 1
+b = a
+a = a + 1
+print("a vaut ", a)
+print("b vaut ", b)
+```
+
+et
+
+```python
+a = [1, 2, 3]
+b = a
+a[1] = 2713
+print("a vaut ", a)
+print("b vaut ", b)
+```
+
+Pour faire une **copie** indépendante d'une liste, on peut utiliser la fonction `list` :
+
+```python
+a = [1, 2, 3]
+b = list(a)
+a[1] = 2713
+print("a vaut ", a)
+print("b vaut ", b)
+```
+
+On peut également utiliser ceci :
+
+```python
+a = [1, 2, 3]
+b = a[:]  # ← notez la différence
+a[1] = 2713
+print("a vaut ", a)
+print("b vaut ", b)
+```
