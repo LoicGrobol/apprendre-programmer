@@ -41,6 +41,11 @@ Autres éléments magiques :
   l'extension jupytext. Par contre, le build initial de l'image est assez lent. (même avec
   `--minimize=False` qui [accélère un
   peu](https://github.com/jupyterlab/jupyterlab/issues/4824#issuecomment-697188390))
+- Les badges « open in binder » sont générés avec le tag Liquid `{% notebook_badges
+  chemin/du/notebook %}`.
+  - Voir [`_plugins/notebooks.rb`](_plugins/notebooks.rb) pour comprendre comment ça marche.
+  - Utilise les variables `site.{baseurl,repository,repo_branch}` définies dans
+    [`_config.yml`](config.yml).
 
 ## Générer le site
 
