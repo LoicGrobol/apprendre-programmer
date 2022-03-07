@@ -7,10 +7,11 @@ toc: true
 
 ## Nouvelles
 
+- **2022-03-07** pas de cours le mardi 08/03/2022.
 - **2022-01-24** un [espace sur Cours en
-  Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) a été créé. **Il ne contiendra
-  rien de plus qu'un lien vers la page où vous vous trouvez**, mais vous pouvez y déposer vos
-  exercices hebdomadaires pour une gestion plus pratique. La clé d'accès est `rossum`.
+  Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) a été créé. **Il ne
+  contiendra rien de plus qu'un lien vers la page où vous vous trouvez**, mais vous pouvez y déposer
+  vos exercices hebdomadaires pour une gestion plus pratique. La clé d'accès est `rossum`.
 - **2022-01-20** l'exercice 4 des slides « IO et variables » a été mis à jour pour corriger une
   erreur. Si vous avez déjà résolu l'ancienne version, ne changez rien, mais sinon faites plutôt la
   nouvelle.
@@ -114,6 +115,8 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 - {% notebook_badges slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md %}
   [Slides compléments boucles et
   séquences](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.html)
+
+### 2022-03-08 : Pas de cours
 
 ## Ressources
 
