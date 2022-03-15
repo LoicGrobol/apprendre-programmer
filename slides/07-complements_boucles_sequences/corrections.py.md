@@ -185,7 +185,7 @@ for aliment in pref:
 > - uis
 > - ist
 > - ste
-
+>
 > 1\. Écrire un programme qui demande la saisie d'un mot et affiche tous les bigrammes de caractères
 > de ce mot. Il vous faudra utiliser une boucle `for`, et probablement des outils parmi ceux qu'on a
 > vu dans cette séance.
