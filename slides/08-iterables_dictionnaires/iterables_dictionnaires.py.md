@@ -536,9 +536,9 @@ print(commence_par_une_voyelle)
 ## Exercices
 
 Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
-`07_boucles_sequences_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
-`07_boucles_sequences_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche 2022-03-06 au soir.
-(2022-02-06).
+`08_iterables_dictionnaires_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
+`08_iterables_dictionnaires_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche 2022-03-20
+au soir.
 
 - De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
   (clé d'inscription `rossum`)

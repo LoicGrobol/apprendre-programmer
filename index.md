@@ -118,6 +118,14 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 
 ### 2022-03-08 : Pas de cours
 
+### 2022-03-15 : Manipulations de chaînes, itérables composites et dictionnaires
+
+- {% notebook_badges slides/07-complements_boucles_sequences/corrections.md %}
+  [Corrections exercices ompléments sur les boucles et les séquences](slides/07-complements_boucles_sequences/corrections.py.html)
+- {% notebook_badges slides/08-iterables_dictionnaires/iterables_dictionnaires.py.md %}
+  [Slides itérables composites et dictionnaires](slides/08-iterables_dictionnaires/iterables_dictionnaires.py.html)
+
+
 ## Ressources
 
 - [Le dépôt Github du cours](https://github.com/LoicGrobol/apprendre-programmer/) contient toutes
