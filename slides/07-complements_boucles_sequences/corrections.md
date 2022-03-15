@@ -140,7 +140,7 @@ voyelles = ["a","e","o","i","u", "y", "à", "â", "é", "è", "ê", "ë", "î", 
 > Écrire un programme qui demande la saisie d'un mot et affiche le nombre de consonnes (donc de
 > lettre qui ne sont pas de voyelles) dans ce mot.
 
-```python
+```python tags=["skip-execution"]
 mot = input("Dis-moi un mot: ")
 nombre_voyelles = 0
 for caractere in mot:
@@ -156,7 +156,7 @@ print("Il y a", nombre_voyelles, "voyelles dans ton mot !")
 > aliments préférés. Stocker ces réponses dans une liste, puis affichez les éléments de cette liste,
 > chacun sur une ligne.
 
-```python
+```python tags=["skip-execution"]
 pref = []
 for _ in range(5):
     m = input("Dis-moi un de tes aliments préférés: ")
@@ -190,7 +190,7 @@ for aliment in pref:
 > de ce mot. Il vous faudra utiliser une boucle `for`, et probablement des outils parmi ceux qu'on a
 > vu dans cette séance.
 
-```python
+```python tags=["skip-execution"]
 mot = input("Saisir un mot : ")
 bigrams = []
 for i in range(len(mot)-1):
@@ -208,7 +208,7 @@ Indices :
 - Attention aux cas particuliers : que faire des `n` premiers et derniers caractères du mot ? Que
   faire si le mot fait moins de n caractères…
 
-```python
+```python tags=["skip-execution"]
 mot = input("Saisir un mot : ")
 n = int(input("Saisir n : "))
 ngrams = []
