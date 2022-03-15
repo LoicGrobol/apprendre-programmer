@@ -43,7 +43,7 @@ compte = 0
 for mot in paragraphe:
     if mot in stop_words:
         compte = compte + 1
-print("Il y a", compte, "mots dans ce paragraphe")
+print("Il y a", compte, "mots vides dans ce paragraphe")
 ```
 
 ### 2. Accumulateurs
