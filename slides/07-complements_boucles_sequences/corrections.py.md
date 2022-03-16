@@ -142,12 +142,11 @@ voyelles = ["a","e","o","i","u", "y", "à", "â", "é", "è", "ê", "ë", "î", 
 
 ```python tags=["skip-execution"]
 mot = input("Dis-moi un mot: ")
-nombre_voyelles = 0
+nombre_consonnes = 0
 for caractere in mot:
-    if caractere in voyelles:
-        nombre_voyelles = nombre_voyelles + 1
-print("Il y a", nombre_voyelles, "voyelles dans ton mot !")
-
+    if caractere not in voyelles:
+        nombre_consonnes = nombre_consonnes + 1
+print("Il y a", nombre_consonnes, "consonnes dans ton mot !")
 ```
 
 ### 🍄 Accumuler dans une liste 🍄
@@ -168,7 +167,7 @@ for aliment in pref:
 
 ### ⚒️ N-grammes ⚒️
 
-> Le concept de **n-gramme** est fondamental en TAL. Un n-gramme, c'st une suite de $n$ symboles.
+> Le concept de **n-gramme** est fondamental en TAL. Un n-gramme, c'est une suite de $n$ symboles.
 > Par exemple dans le mot « banane », les 2-grammes (bigrammes) de caractères sont :
 >
 > - ba

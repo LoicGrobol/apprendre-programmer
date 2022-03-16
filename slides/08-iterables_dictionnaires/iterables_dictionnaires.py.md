@@ -56,6 +56,23 @@ guests = ["Glimmer", "Bow", "Catra",]
 # À toi de coder !
 ```
 
+```python
+template = "Salut, [invité], ravi⋅e de te rencontrer !"
+guests = ["Glimmer", "Bow", "Catra",]
+
+print(str.replace(template, "[invité]", guests[0]))
+print(str.replace(template, "[invité]", guests[1]))
+print(str.replace(template, "[invité]", guests[2]))
+```
+
+```python
+template = "Salut, [invité], ravi⋅e de te rencontrer !"
+guests = ["Glimmer", "Bow", "Catra",]
+
+for g in guests:
+    print(str.replace(template, "[invité]", g))
+```
+
 ### `split`
 
 `split` découpe, tronçonne, une chaîne de caractères
@@ -71,8 +88,8 @@ C'est une façon rapide et simple (simpliste ?) de découper un texte en *toke
 Vous pouvez aussi utiliser un autre séparateur que les espaces :
 
 ```python
-texte = "bleu,rouge,indigo,vert"
-colours = str.split(texte, ",")
+texte = "bleu|rouge|indigo|vert"
+colours = str.split(texte, "|")
 print(colours)
 ```
 
@@ -91,7 +108,7 @@ print(colours)
 ```python
 names = ['Anna', 'Mary', 'John', 'Sebastian']
 text = str.join(" and ", names)
-print(texte)
+print(text)
 ```
 
 ```python
@@ -347,6 +364,7 @@ mon_dict = {
     "b": "machin",
     "a": "chose",
 }
+print(mon_dict)
 ```
 
 De plus les clés ne peuvent pas être des objets **mutables** — dont on peut modifier la valeur —
@@ -370,10 +388,12 @@ string_keys = {"hello": "world", "goodbye": "earth"}
 bool_keys = {True: "hello", False: "world"}
 ```
 
-Quelles est la taille maximale que peut atteindre un dictionnaire dont toutes les clés sont de type
+Quelle est la taille maximale que peut atteindre un dictionnaire dont toutes les clés sont de type
 `bool`.
 
 ## Étude de cas : les codes ISO 639
+
+<!-- TODO: commencer plutôt par un Dict[str, str] et passer aux listes dans un second temps -->
 
 Voici un dictionnaire qui contient une liste de quelques langues indexées par leur code [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
