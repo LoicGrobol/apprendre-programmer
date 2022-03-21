@@ -58,10 +58,13 @@ commande ») et que vous pouvez y entrer du texte.
 Tapez `print("Hello, world!")` et appuyez sur entrée. Que se passe-t-il ?
 
 
-Ce bloc « Console » vous permet d'entrer des instructions en Python et de les voir directement exécutées, le résultat s'affichant en dessous de votre instruction, comme quand vous exécutez une cellule dans un notebook. C'est ce qu'on appelle une _**R**ead **E**val **P**rint **L**oop_ ou REPL.
+Ce bloc « Console » vous permet d'entrer des instructions en Python et de les voir directement
+exécutées, le résultat s'affichant en dessous de votre instruction, comme quand vous exécutez une
+cellule dans un notebook. C'est ce qu'on appelle une _**R**ead **E**val **P**rint **L**oop_ ou REPL.
 
 
-Testez l'usage de la fonction `input()` en vous en servant pour stocker une valeur dans une variable nommée `spam`, puis affichez la valeur de `spam` avec la fonction `print()`.
+Testez l'usage de la fonction `input()` en vous en servant pour stocker une valeur dans une variable
+nommée `spam`, puis affichez la valeur de `spam` avec la fonction `print()`.
 
 ## Turtle
 
@@ -196,7 +199,8 @@ des segments : 65px, 42px, 76px, 100px).
 
 ### Exercice 7
 
-Dessiner avec `turtle` une maison d’enfant (sans perspective : un toit, une porte, une fenêtre, une cheminée).
+Dessiner avec `turtle` une maison d’enfant (sans perspective : un toit, une porte, une fenêtre, une
+cheminée).
 
 ## Et après ?
 

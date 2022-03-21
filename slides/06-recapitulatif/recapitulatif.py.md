@@ -118,7 +118,8 @@ Orléans
 
 ```
 
-> **Note** : les espaces sont en général ignorées par Python, les lignes suivantes sont donc équivalentes :
+> **Note** : les espaces sont en général ignorées par Python, les lignes suivantes sont donc
+> équivalentes :
 
 ```python
 print("hello", "world")
@@ -346,7 +347,11 @@ print(str.title("hElLo"))
 résultat.
 
 ```python
-
+une_chaine = "Je reconnais"
+une_autre = "l'existence de"
+un_fruit = "kiwi"
+un_nombre = 4
+print(une_chaine, une_autre, 4*un_nombre, un_fruit)
 ```
 
 ## Variables
