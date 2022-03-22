@@ -588,10 +588,11 @@ text = ['a', 'infinity', 'reflection', 'with', 'like', 'big', 'briefly', 'into',
 words = ["shape", "linguistics", "every", "even", "world", "chessboard", "water", "sake"]
 ```
 
-Créer un dictionnaire dont les clés sont les mots de la liste `words` et les valeurs associées sont `True` si le mot est dans `text` et `False` sinon. Vous devriez obtenir quelque chose comme
+Créer un dictionnaire dont les clés sont les mots de la liste `words` et les valeurs associées sont
+`True` si le mot est dans `text` et `False` sinon. Vous devriez obtenir quelque chose comme
 
 ```text
-{'shape': True, 'lingusitics': False, 'every': True, 'even': False, 'world': True, 
+{'shape': True, 'linguistics': False, 'every': True, 'even': False, 'world': True, 
 'chessboard': True, 'water': False, 'sake': True}
 ```
 

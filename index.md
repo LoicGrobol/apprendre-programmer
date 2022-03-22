@@ -127,6 +127,8 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 
 ### 2022-03-22 : fonctions
 
+- {% notebook_badges slides/08--iterables_dictionnaires/corrections.py.md %}
+  [Corrections exercices itérables composites et dictionnaires](slides/08--iterables_dictionnaires/corrections.py.html)
 - {% notebook_badges slides/09-fonctions/fonctions.py.md %}
   [Slides fonctions](slides/09-fonctions/fonctions.py.html)
 
