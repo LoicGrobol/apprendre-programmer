@@ -59,7 +59,7 @@ Les commandes de base en `turtle` :
 - `reset()` remet le dessin à zéro
 - `circle(r, a)` trace un arc de cercle de rayon `rayon` et d'angle `a` degrés. `a` est facultatif
   et vaut `360` par défaut (soit un cercle entier).
-- `pensize(e)` épaisseur du tracé (pixels)$
+- `pensize(e)` épaisseur du tracé (pixels)
 - `color(couleur)` couleur du tracé (par exemple `color("blue")`).
 
 ## 🐢 Exo 🐢
@@ -126,7 +126,7 @@ print("Hello les potos !")
 input()
 ```
 
-Vous connaissez `print` et `input` et `len`.
+Vous connaissez `len`.
 
 ```python
 len("hello")
@@ -196,6 +196,7 @@ def sing():
     print("Sunt eu")
     print("un haiduc")
 
+sing()
 sing()
 ```
 
@@ -276,24 +277,51 @@ une_fonction_nom_très_très_long()
 ```
 
 En général on essaie de donner aux fonctions — comme aux variables — un nom **descriptif**, qui dit
-ce que fait la fonction. Ça rend le code plus lisibles pour les humains (dont vous) qui liront votre
+ce que fait la fonction. Ça rend le code plus lisible pour les humains (dont vous) qui liront votre
 code. Mais Python n'en a absolument rien à cirer et son comportement sera toujours le même, quel que
 soit le nom que vous donnez.
 
 ### 🟠 Entraînements 🟠
 
-1\. Écrire une fonction nommmée `dire_bonjour` qui affiche `"Bonjour les amis !"` et écrire un
-programme qui appelle trois fois cette fonction.
+1\. Écrire un programme dans lequel
+
+- Vous définissez une fonction nommmée `dire_bonjour` qui affiche `"Bonjour les amis !"`.
+- Vous appellez trois fois cette fonction.
+
+```python
+def dire_bonjour():
+    print("Bonjour les amis !")
+
+dire_bonjour()
+dire_bonjour()
+dire_bonjour()
+```
 
 2\. Écrire un programme dans lequel
 
 - Vous définissez une fonction (du nom que vous voulez) qui affiche mille fois `"spam"`
 - Vous appellez une fois cette fonction.
 
+```python
+def spam():
+    for i in range(1000):
+        print("spam")
+
+spam()
+```
+
 3\. Écrire un programme dans lequel
 
 - Vous définissez une fonction (du nom que vous voulez) qui affiche une fois `"spam"`
-- Vous appellez une fois cette fonction.
+- Vous appellez mille fois cette fonction.
+
+```python
+def spam2():
+    print("spam")
+    
+for i in range(1000):
+    spam2()
+```
 
 4\. Refaire l'exercice 4 précédent, mais en utilisant une fonction pour les instructions qui
 dessinent un carré.
@@ -321,11 +349,11 @@ pour nous</small>
 Est-ce qu'on peut avoir la même chose pour nos fonctions : bien sûr !
 
 ```python
-def dire_un_truc(truc):
+def dire_un_machin(truc):
     print(truc)
 
-dire_un_truc("Obéron")
-dire_un_truc("est un très beau chat")
+dire_un_machin("Obéron")
+dire_un_machin("est un très beau chat")
 ```
 
 Le principe est le suivant : au moment où on définit la fonction avec `def`, on peut donner dans les
@@ -361,9 +389,9 @@ Les arguments peuvent être utilisés dans les structures qu'on a vues :
 
 ```python
 def bonjour(lang):
-    if langue == "fr":
+    if lang == "fr":
         print("Bonjour")
-    elif langue == "bzh":
+    elif lang == "bzh":
         print("Demat")
     else:
         print("LANGUE INCONNUE")
@@ -381,6 +409,33 @@ def enumère(l):
 enumère([1, 2, 3, "carbone"])
 ```
 
+
+## 😺 Entraînements 😺
+
+(Pensez à tester vos fonctions)
+
+1\. Définir une fonction nommée `triple` qui accepte un argument, supposé être un nombre, et affiche
+son triple.
+
+```python
+```
+
+2\. Définir une fonction nommée `crier` qui accepte un argument, supposé être une chaîne de
+caractères, et affiche cette chaîne mise tout en majuscules.
+
+```python
+```
+
+3\. Définir une fonction nommée `produit` qui accepte deux arguments et affiche leur produit. Tester
+`produit(3, 4)` et `produit("spam ", 5)`.
+
+```python
+```
+
+4\. Définir une fonction `carré`, qui accepte un argument `c`, supposé être un nombre entier et
+dessine à l'aide de `turtle` un carré de côté `c`.
+
+## (Optionnel) arguments nommés et valeurs par défaut
 
 Par défaut, les arguments sont lus dans l'ordre où ils apparaissent dans la définition
 
@@ -417,166 +472,3 @@ ma_fonction(15)
 print()
 ma_fonction(a="machin")
 ```
-
-## 😺 Entraînements 😺
-
-(Pensez à tester vos fonctions)
-
-1\. Définir une fonction nommée `triple` qui accepte un argument, supposé être un nombre, et affiche
-son double.
-
-2\. Définir une fonction nommée `crier` qui accepte un argument, supposé être une chaîne de
-caractères, et affiche cette chaîne mise tout en majuscules.
-
-3\. Définir une fonction nommée `produit` qui accepte deux arguments et affiche leur produit. Tester
-`produit(3, 4)` et `produit("spam ", 5)`.
-
-4\. Définir une fonction `carré`, qui accepte un argument `c`, supposé être un nombre entier et
-dessine à l'aide de `turtle` un carré de côté `c`.
-
-## Valeur de retour
-
-Pour l'instant, les fonctions qu'on a définies affichent toujours quelque chose. Ce n'est pas une
-obligation :
-
-```python
-def ssss(arg):
-    bidule = arg*2
-    for i in range(10):
-        bidule = bidule + arg
-        
-ssss(3)
-```
-
-Ici, la fonction `ssss` a bien été exécutée, mais elle ne fait rien de visible.
-
-
-Par contre, remarquez un truc : parfois dans le passé, on a stocké le résultat de fonctions dans des
-variables. Par exemple
-
-```python
-longueur = len("anticonstitutionnellement")
-```
-
-On a bien appelé la fonction `len`, qui n'affiche rien. Donc rien ne s'affiche.
-
-
-En revanche, on a bien fait quelque chose ici : on a donnée une valeur à la variable `longueur`.
-
-```python
-print(longueur)
-```
-
-Autrement dit, `len` ne fait pas un affichage : elle transmet plutôt une information : la longueur
-de son argument.
-
-
-
-Et nos fonctions, elles passent une information ?
-
-```python
-def bonjour():
-    print("Salut")
-    
-varbl = bonjour()
-```
-
-Pas vraiment :
-
-```python
-print(varbl)
-```
-
-Elles passent en fait toutes la valeur `None` : un objet spéciale de Python qui signifie
-littéralement « rien ».
-
-
-Comment on fait alors ? On leur donne une **valeur de retour** avec le mot-clé `return` :
-
-```python
-def renvoi():
-    return "Salut"
-
-varbl = renvoi()
-```
-
-Vous voyez la différence ? On a rien affiché ici. Par contre :
-
-```python
-print(varbl)
-```
-
-on a bien **renvoyé** une valeur.
-
-
-Renvoyer une valeur, c'est surtout utile quand on a des paramètres, on va pas se mentir (sinon on
-renvoie toujours la même chose, pas vraiment la peine de faire une fonction, une vairiable
-suffirait.
-
-```python
-def somme(a, b):
-    return a+b
-
-a = somme(5, 10)
-print(a)
-```
-
-Et comme d'habitude, vous pouvez mettre un appel de fonction partout où vous pouvez écrire une
-valeur littérale :
-
-```python
-print(somme(12, 75))
-```
-
-```python
-print(somme("ha", "ha"))
-```
-
-**Attention** maintenant à bien faire la différence :
-
-
-Cette fonction **affiche** quelque chose et ne **renvoie** rien (ou `None`)
-
-```python
-def affiche(arg):
-    print("Mon argument est " + arg)
-
-ret = affiche("thing")
-print(ret)
-```
-
-Celle-ci n'**affiche** rien et **renvoie** quelque chose
-
-```python
-def renvoie(arg):
-    return "Mon argument est " + arg
-
-ret = renvoie("thing") # Ceci n'affiche rien
-print(ret)
-```
-
-Celle-ci fait les deux
-
-```python
-def porquenolosdos(arg):
-    print("Voici mon argument: " + arg)
-    return "Mon argument est " + arg
-
-ret = porquenolosdos("thing")
-print(ret)
-```
-
-## ↩️ Entraînements ↩️
-
-1\. Écrire une fonction sans arguments, qui renvoie le nombre `2713`
-
-2\. Écrire une fonction qui accepte un argument et renvoie son double
-
-3\. Écrire une fonction qui accepte deux arguments, affiche la valeur du premier et renvoie le
-triple du deuxième
-
-4\. Écrire une fonction qui accepte un argument, supposé être une liste, qui affiche le premier
-élément de cette liste et renvoie la valeur du dernier.
-
-5\. Écrire une fonction qui accepte un argument, supposé être une liste de chaînes de caractères,
-qui renvoie la plus longue chaîne de la liste.
