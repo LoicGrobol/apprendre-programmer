@@ -1,4 +1,6 @@
+ipywidgets
 jupyterlab
 jupytext
 nbconvert
+nbtutor
 RISE
