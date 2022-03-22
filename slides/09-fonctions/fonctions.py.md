@@ -357,6 +357,31 @@ Là encore, les noms des arguments, c'est vous qui les décidez. Ils ne portent 
 Python.
 
 
+Les arguments peuvent être utilisés dans les structures qu'on a vues :
+
+```python
+def bonjour(lang):
+    if langue == "fr":
+        print("Bonjour")
+    elif langue == "bzh":
+        print("Demat")
+    else:
+        print("LANGUE INCONNUE")
+
+bonjour("fr")
+bonjour("en")
+```
+
+```python
+def enumère(l):
+    print("Dans ta liste, il y a:")
+    for elem in l:
+        print("L'élément", elem)
+
+enumère([1, 2, 3, "carbone"])
+```
+
+
 Par défaut, les arguments sont lus dans l'ordre où ils apparaissent dans la définition
 
 ```python
@@ -405,6 +430,9 @@ caractères, et affiche cette chaîne mise tout en majuscules.
 
 3\. Définir une fonction nommée `produit` qui accepte deux arguments et affiche leur produit. Tester
 `produit(3, 4)` et `produit("spam ", 5)`.
+
+4\. Définir une fonction `carré`, qui accepte un argument `c`, supposé être un nombre entier et
+dessine à l'aide de `turtle` un carré de côté `c`.
 
 ## Valeur de retour
 
@@ -539,7 +567,6 @@ print(ret)
 ```
 
 ## ↩️ Entraînements ↩️
-
 
 1\. Écrire une fonction sans arguments, qui renvoie le nombre `2713`
 
