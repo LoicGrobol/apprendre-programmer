@@ -418,18 +418,34 @@ enumère([1, 2, 3, "carbone"])
 son triple.
 
 ```python
+def triple(n):
+    print(3*n)
+    
+triple(4)
+triple(-16)
+triple(14)
 ```
 
 2\. Définir une fonction nommée `crier` qui accepte un argument, supposé être une chaîne de
 caractères, et affiche cette chaîne mise tout en majuscules.
 
 ```python
+def crier(chn):
+    s = str.upper(chn)
+    print(s)
+
+crier("wesh")
 ```
 
 3\. Définir une fonction nommée `produit` qui accepte deux arguments et affiche leur produit. Tester
 `produit(3, 4)` et `produit("spam ", 5)`.
 
 ```python
+def produit(a, b):
+    print(a*b)
+
+produit(3, 4)
+produit("spam ", 5)
 ```
 
 4\. Définir une fonction `carré`, qui accepte un argument `c`, supposé être un nombre entier et
