@@ -138,5 +138,54 @@ print("b vaut ", b)
 ```
 
 
+## Fichiers tabulaires
+
+It is in fact possible to engineer a way to work with csv files using the same methods we already discussed.
+
+
+```python
+with open('files/grades.csv', 'r') as file:
+    for line in file:
+        print(line.strip())
+```
+
+Every line of the file is still a string, and therefore to represent them as a list of values, we will need to split them.
+
+
+```python
+with open('files/grades.csv', 'r') as file:
+    for line in file:
+        print(line.strip().split(","))
+```
+
+A simpler way to read csv files in Python is to use `csv` package.
+
+### Bonus : le module `csv`
+
+```python
+import csv
+```
+
+In order to read a csv file using the `csv` package, right after opening the file, we need to define a `csv.reader` for it. It will parse the rows automatically!
+
+
+```python
+with open('files/grades.csv', 'r') as file:
+    csvreader = csv.reader(file)
+    for row in csvreader:
+        print(row)
+```
+
+Similarly, to write files, we want to define a `scv.writer` and change the editing mode to `w`. Then we will be able to write rows of the csv one-by-one by applying `writerow` method to the `csv.writer` object.
+
+
+```python
+with open('files/greetings.csv', 'w') as file:
+    csvwriter = csv.writer(file)
+    csvwriter.writerow(["hello", "hi", "howdy"])
+    csvwriter.writerow(["zdravstvujte", "privet", "hej"])
+```
+
+You can read more about the functionality of the `csv` package [here](https://docs.python.org/3/library/csv.html).
 
 

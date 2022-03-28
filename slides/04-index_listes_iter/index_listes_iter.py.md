@@ -28,7 +28,7 @@ Dans ce notebook, on introduit les concepts suivants :
 
 - L'opération *index* et les types de données indicés
 - Le type de donnée `list`
-- La boucle d'itération `for`
+- La boucle de parcours `for`
 
 Ce cours est inspiré des cours [*Control flow and
 indexing*](https://github.com/aniellodesanto/Utah_CompLang21/blob/main/02_control_flow_and_indexing.ipynb)

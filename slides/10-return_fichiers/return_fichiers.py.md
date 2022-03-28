@@ -29,6 +29,10 @@ Dans ce notebook
 - Un nouveau pouvoir pour les fonctions
 - Accéder à des fichiers externes.
 
+Ce cours est inspiré du cours [*File
+IO*](https://github.com/aniellodesanto/Utah_CompLang21/blob/main/04b_file_io.ipynb) d'Aniello de
+Santo. Merci à lui.
+
 ## Valeur de retour
 
 Pour l'instant, les fonctions qu'on a définies affichent toujours quelque chose. Ce n'est pas une
@@ -38,7 +42,7 @@ obligation :
 def ssss(arg):
     bidule = arg*2
     for i in range(10):
-        bidule = bidule + arg
+        bidule = bidule + i
         
 ssss(3)
 ```
@@ -178,181 +182,233 @@ qui renvoie la plus longue chaîne de la liste.
 
 ## Lire des fichiers
 
-There are two files in the folder `files`: `novartis_microsoft.txt` and `grades.csv`. To open or create a file, we will use the following syntax:
+En situation réelle, les programmes manipulent souvent de fichiers :
 
-    with open(path_to_file, mode) as name_of_open_file:
-        # code where the open file is referred to as name_of_open_file
-        
-`path_to_file` is a string that points to the file that we want to open or create. The current notebook is in the `notebooks` repository, and therefore in order to give the adress of, for example,  `novartis_microsoft.txt`, we need to provide the following path: `'files/novartis_microsoft.txt'`.
+- Pour y lire des données ou des configurations.
+- Pour y écrire le résultat d'opérations afin de les sauvegarder.
+- …
 
-`mode` is a string that defined the mode in which you are going to work with the file. The main modes are the following ones:
-  * `'r'` (read): in this case we expect the file with the indicated name to already exist, and we are going to read the file line-by-line, where lines are separated by a new line character from each other;
-  * `'w'` (write): opening a file with a writing mode will _create_ that file on the computer and will allow us to write strings into that file;
-  * `'a'` (append): opens an already existent files and allows to add new lines to the end of that file.
-  
-There are many other modes in which it is possible to open a file, but you can read about them on your own [here](https://stackabuse.com/file-handling-in-python/).
+En fait, un des usages les plus courants de Python, surtout comme outil pour les LSHS, c'est la
+manipulation de fichiers :
 
+- Pour établir des listes de vocabulaire dans des corpus.
+- Pour traiter des enregistrements sonores.
+- Pour manipuler des données sous forme tabulaire, comme des résultats d'expériences.
+
+On va donc maintenant voir comment on peut, en Python, manipuler des fichier.
+
+### Bases
+
+Dans le même dossier que ce notebook, il y a un fichier : [`ada.txt`](ada.txt) qui va servir
+d'exemple pour cette partie.
+
+<!-- beginregion -->
+
+En Python, pour ouvrir un fichier, que ce soit pour lire son contenu, pour le modifier, ou pour
+créer un nouveau fichier, on utilise la syntaxe suivante :
 
 ```python
-with open('files/novartis_microsoft.txt', 'r') as file:
-    for line in file:
-        print(line)
+with open(chemin_du_fichier, mode) as nom_du_flux:
+    # du code qui utilise le nom du flux pour le manipuler
+```
+<!-- endregion -->
+
+On fait bien la différence entre
+
+- Le **chemin** du fichier `chemin_du_fichier`
+  - Indique la position du fichier sur votre machine.
+  - Une chaîne de caractères
+  - `/home/lgrobol/monsupercorpus.txt`, ou
+    `C:\Users\Loïc\Documents\monsupercorpus.txt` (chemin **absolu**).
+  - `ada.txt` ou `sous_dossier/ada.txt` (chemin **relatif** au notebook ou au script en cours)
+- Le **flux** `nom_du_flux`, qui est un objet Python qui permet d'interagir avec le fichier tant
+  qu'il est ouvert.
+
+Enfin `mode` est une chaîne de caractères qui indique qu'on veut faire avec le fichier. Les options
+courantes sont :
+
+- `"r"` (*read*) pour ouvrir le fichier en lecture, ce qui permet d'accéder à son contenu.
+- `"w"` (*write*) pour ouvrir le fichier en écriture, ce qui efface son contenu et permet d'y écrire
+  de nouvelles données.
+- `"a"` (*append*) pour ouvrir le fichier en ajout, ce qui préserve son contenu et permet d'ajouter
+  des lignes à la fin.
+
+Pour `"w"` et `"a"`, le fichier ciblé n'existe pas, il est créé (vide). Pour `"r"`, c'est une
+erreur.
+
+Il y a d'autres options possibles, vous trouverez la liste dans la [doc]().
+
+```python
+with open("ada.txt", "r") as flux_lecture:
+    print(type(flux_lecture))
 ```
 
-The variable `file` is a name for the .txt file when it is loaded in the memory and ready to be processed. Its type is `<class '_io.TextIOWrapper'>` and it is an iterable that contains ordered strings.
-
-
 ```python
-with open('files/novartis_microsoft.txt', 'r') as file:
-    print("Type of `file`:", type(file), "\n")
-    for line in file:
-        print(type(line))
-        print(line)
+with open("sous_dossier/maria.txt", "r") as flux_lecture:
+    print(type(flux_lecture))
 ```
 
-Every line in a text file ends with a new line character `\n` -- this is how we know when a new line starts! However, if you want to avoid printing a new line every time you are displaying the line, we can use the string method `strip`.
-
+Les flux vers des fichiers ouverts en lecture sont des itérables : on peut les parcourir à l'aide de
+la boucle de parcours `for`. Les éléments de l'itérable sont les lignes du fichier sous forme de
+chaînes de caractères.
 
 ```python
-with open('files/novartis_microsoft.txt', 'r') as file:
-    for line in file:
-        print(line.strip(), end = " ")
+with open("ada.txt", "r") as xulf:
+    for l in xulf:
+        print(l)
 ```
 
-If instead of iterating through the lines of the file you want to get access to all of them at once, we can read all the lines of it into some variable by using `readlines` method: it creates a list of strings, where every string is a separate line of the file.
-
+Attention, il y a un truc pas forcément intuitif avec ces lignes :
 
 ```python
-with open('files/novartis_microsoft.txt', 'r') as file:
-    lines = file.readlines()
-    print(type(lines))
-    print(lines)
+with open("ada.txt", "r") as flux:
+    lst = []
+    for ligne in flux:
+        lst.append(ligne)
+print(lst)
 ```
 
-Another way to avoid overt iteration and to get lines one by one, is to read them in memory one after another by using the `readline` method.
+Vous voyez ?
 
+---
+
+Les lignes sont toutes terminées par le caractère `"\n"` « fin de ligne ».
+
+En général on ne veut pas de ce caractère quand on traite les informations dans un fichier. On
+l'enlève donc avec la méthode de chaînes de caractères `strip()`, qui supprime les espaces (y
+compris les fins de lignes) en début et fin de chaîne.
 
 ```python
-with open('files/novartis_microsoft.txt', 'r') as file:
-    line = file.readline()
+with open("ada.txt", "r") as flux:
+    lst = []
+    for ligne in flux:
+        lst.append(ligne.strip())
+print(lst)
+```
+
+### Lecture manuelle
+
+Si vous préférez récupérer les lignes une à une manuellement plutôt que d'utiliser une boucle, vous
+pouvez utiliser la méthode `readline()`.
+
+```python
+with open("ada.txt", "r") as in_stream:
+    line = in_stream.readline()
     print(line)
-    line = file.readline()
+    line = in_stream.readline()
     print(line)
 ```
 
-Notice, that every time you execute `readline`, it moves the the next line of the file. We need to use `seek` method that goes to the bite indicated of the file, and therefore using `seek(0)` will move us back to the very beginning of the file.
-
+Vous pouvez aussi récupérer en un coup tout le contenu du fichier dans une variable avec `read`
 
 ```python
-with open('files/novartis_microsoft.txt', 'r') as file:
-    line = file.readline()
-    print(line)
-    line = file.readline()
-    print(line)
-    file.seek(0)
-    line = file.readline()
+with open("ada.txt", "r") as stream:
+    line = stream.read()
     print(line)
 ```
 
-If you are using the `with open(filepath, mode)` syntax, the file is being open in the memory only while the indented code is being executed. As soon as we finished executing the code within the `with` codeblock, the variable `file` becomes unavailable.
+### Portée
 
+Attention, le fichier n'est accessible que dans le bloc introduit par `with open(fichier) as flux:`.
+Quand vous sortez du bloc, la variable `flux` n'est plus définie :
 
-```python
-with open('files/novartis_microsoft.txt', 'r') as file:
-    line = file.readline().strip()
+```python tag=["raises-exception"]
+with open("ada.txt", 'r') as flllux:
+    line = flllux.readline().strip()
     print(line)
     
-line = file.readline()
+line = flllux.readline()
 ```
+
+En revanche, si vous avez stocké sont contenu (ou une partie) dans une variable, ces valeurs restent
+accessibles (l'affectation les a copié en mémoire) :
+
+```python
+with open("ada.txt", 'r') as flllux:
+    line = flllux.readline().strip()
+    print(line)
+
+print(line)
+```
+
+### 🍞 Entraînement 🍞
+
+1\. Afficher ligne par ligne le contenu du fichier [`sous_dossier/maria.txt`](sous_dossier/maria.txt).
+
+2\. Afficher la longueur en nombre de caractères de chacune des lignes du fichier
+[`ada.txt`](ada.txt).
 
 ## Écrire dans des fichiers
 
-As I mentioned before, the mode `w` opens the files in the writing mode, i.e. creates the files.
-
-* `readline` reads a line and returns a _string_ containing that line;
-* `readlines` reads all lines and returns a _list of strings_.
-
-In the writing mode, there are methods that write line or lines in a similar manner:
-
-* `writeline` takes a _string_ as its argument and writes it to the newly created file;
-* `writelines` takes a _list of strings_ as its argument and writes all of them to the newly created file.
-
+Comme on l'a dit précédemment, le mode `"w"` ouvre les fichiers en écriture, en les créant si
+besoin.
 
 ```python
-file = open('files/newfile.txt', 'w')
-text_to_write = ["Hello world!", "It is Wednesday.", "Middle of the week!"]
-file.writelines(text_to_write)
-file.close()
+with open("apprendre_a_programmer.txt", "w") as out_stream:
+    out_stream.write("Clairement, le meilleur cours de la licence SDL.")
 ```
 
-**Warning:** it is possible to write only lists of strings. If the data that needs to be written contains other data types, make sure to convert them to strings!
+Allez maintenant voir [`apprendre_a_programmer.txt`](apprendre_a_programmer.txt).
 
+Attention : `open()` peut créer pour vous un fichier qui n'existerait pas encore, mais pas un
+dossier :
+
+```python tags=["raises-exception"]
+with open("bidule/apprendre_a_programmer.txt", "w") as out_stream:
+    out_stream.write("Clairement, le meilleur cours de la licence SDL.")
+```
+
+Attention aussi : si vous voulez des retours à la ligne, il faudra les donner explicitement :
 
 ```python
-file = open('files/newfile.txt', 'w')
-text_to_write = ["Hello world!", 42]
-file.writelines(text_to_write)
-file.close()
+with open("apprendre_a_programmer.txt", "w") as out_stream:
+    out_stream.write("Clairement, le meilleur cours de la licence SDL.")
+    out_stream.write("Dans trois semaines, y en aura plus.")
+
+with open("apprendre_a_programmer.txt", "r") as in_stream:
+    print(in_stream.read())
 ```
-
-The usual `str` function takes care of converting nearly any datatype to its string representation.
-
 
 ```python
-file = open('files/newfile.txt', 'w')
-text_to_write = ["Hello world! ", str(42)]
-file.writelines(text_to_write)
-file.close()
+with open("apprendre_a_programmer.txt", "w") as out_stream:
+    out_stream.write("Clairement, le meilleur cours de la licence SDL.\n")
+    out_stream.write("Dans trois semaines, y en aura plus.\n")
+
+with open("apprendre_a_programmer.txt", "r") as in_stream:
+    print(in_stream.read())
 ```
 
-## Fichiers tabulaires
+De plus, `write` n'est pas aussi aimable que `print`, et ne fera pas de conversion pour vous : il
+écrit des chaînes de caractères et c'est tout.
 
-It is in fact possible to engineer a way to work with csv files using the same methods we already discussed.
+```python tag=["raises-exception"]
+with open("apprendre_a_programmer.txt", "w") as out_stream:
+    out_stream.write(131)
+```
 
+Si vous voulez faire ça, il faut convertir explicitement avec `str` :
+
+```python tag=["raises-exception"]
+with open("apprendre_a_programmer.txt", "w") as out_stream:
+    out_stream.write(str(131))
+```
+
+L'autre option, c'est cette technique secrète et mal vue :
 
 ```python
-with open('files/grades.csv', 'r') as file:
-    for line in file:
-        print(line.strip())
+with open("apprendre_a_programmer.txt", "w") as out_stream:
+    print("Clairement, le meilleur cours de la licence SDL.", file=out_stream)
+    print("Dans trois semaines, y en aura plus.", file=out_stream)
+    print(13, file=out_stream)
+
+with open("apprendre_a_programmer.txt", "r") as in_stream:
+    print(in_stream.read())
 ```
 
-Every line of the file is still a string, and therefore to represent them as a list of values, we will need to split them.
+## ✍🏻 Entraînement ✍🏻
 
+1\. Écrire un programme qui copie dans `sortie.txt` le contenu de `ada.txt`
 
-```python
-with open('files/grades.csv', 'r') as file:
-    for line in file:
-        print(line.strip().split(","))
-```
-
-A simpler way to read csv files in Python is to use `csv` package.
-
-### Bonus : le module `csv`
-
-```python
-import csv
-```
-
-In order to read a csv file using the `csv` package, right after opening the file, we need to define a `csv.reader` for it. It will parse the rows automatically!
-
-
-```python
-with open('files/grades.csv', 'r') as file:
-    csvreader = csv.reader(file)
-    for row in csvreader:
-        print(row)
-```
-
-Similarly, to write files, we want to define a `scv.writer` and change the editing mode to `w`. Then we will be able to write rows of the csv one-by-one by applying `writerow` method to the `csv.writer` object.
-
-
-```python
-with open('files/greetings.csv', 'w') as file:
-    csvwriter = csv.writer(file)
-    csvwriter.writerow(["hello", "hi", "howdy"])
-    csvwriter.writerow(["zdravstvujte", "privet", "hej"])
-```
-
-You can read more about the functionality of the `csv` package [here](https://docs.python.org/3/library/csv.html).
-
-## Exercices
+2\. Écrire une fonction `copie`, avec comme argument deux chaînes de caractères `chemin_entree` et
+`chemin_sortie`, qui copie dans le fichier dont le chemin est `chemin_sortie` le contenu du fichier
+dont le chemin est `chemin_entree`.
