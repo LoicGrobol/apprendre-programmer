@@ -178,8 +178,6 @@ qui renvoie la plus longue chaîne de la liste.
 
 ## Lire des fichiers
 
-
-
 There are two files in the folder `files`: `novartis_microsoft.txt` and `grades.csv`. To open or create a file, we will use the following syntax:
 
     with open(path_to_file, mode) as name_of_open_file:
@@ -267,7 +265,7 @@ with open('files/novartis_microsoft.txt', 'r') as file:
 line = file.readline()
 ```
 
-## \[Locally\] Writing files
+## Écrire dans des fichiers
 
 As I mentioned before, the mode `w` opens the files in the writing mode, i.e. creates the files.
 
@@ -307,7 +305,7 @@ file.writelines(text_to_write)
 file.close()
 ```
 
-## \[Locally\] Working with CSV files
+## Fichiers tabulaires
 
 It is in fact possible to engineer a way to work with csv files using the same methods we already discussed.
 
@@ -327,10 +325,9 @@ with open('files/grades.csv', 'r') as file:
         print(line.strip().split(","))
 ```
 
-A simpler way to read csv files in Python is to use `csv` or `pandas` packages.
+A simpler way to read csv files in Python is to use `csv` package.
 
-### \[Locally\] Working with csv through `csv` package
-
+### Bonus : le module `csv`
 
 ```python
 import csv
@@ -358,4 +355,4 @@ with open('files/greetings.csv', 'w') as file:
 
 You can read more about the functionality of the `csv` package [here](https://docs.python.org/3/library/csv.html).
 
-However, frequently we want to extract the values from a particular _column_ and this might be slightly trickier then extracting a row.
+## Exercices
