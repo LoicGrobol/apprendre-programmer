@@ -48,8 +48,8 @@ jobs:
       
       - name: Build slides
         run: |
-          jupytext --to ipynb ${{ github.workspace }}/slides/**/*.py.md
-          jupyter nbconvert --execute --allow-errors --to html ${{ github.workspace }}/slides/**/*.py.ipynb
+          jupytext --to ipynb ${{ github.workspace }}/**/*.py.md
+          jupyter nbconvert --execute --allow-errors --to html ${{ github.workspace }}/**/*.py.ipynb
           jupyter nbconvert --to slides ${{ github.workspace }}/slides/**/*-slides.py.ipynb
       
       - name: Get node cache

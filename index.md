@@ -127,10 +127,17 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 
 ### 2022-03-22 : fonctions
 
-- {% notebook_badges slides/08--iterables_dictionnaires/corrections.py.md %}
-  [Corrections exercices itérables composites et dictionnaires](slides/08--iterables_dictionnaires/corrections.py.html)
+- {% notebook_badges slides/08-iterables_dictionnaires/corrections.py.md %}
+  [Corrections exercices itérables composites et dictionnaires](slides/08-iterables_dictionnaires/corrections.py.html)
 - {% notebook_badges slides/09-fonctions/fonctions.py.md %}
   [Slides fonctions](slides/09-fonctions/fonctions.py.html)
+
+### 2022-03-29 : Valeurs de retour et accès à des fichiers
+
+- {% notebook_badges slides/10-return_fichiers/return_fichiers.py.md %}
+  [Slides retour et fichiers](slides/10-return_fichiers/return_fichiers.py.html)
+- {% notebook_badges assignment/projet-2022.py.md %}
+  [Consignes mini-projet](assignment/projet-2022.py.html)
 
 ## Ressources
 
