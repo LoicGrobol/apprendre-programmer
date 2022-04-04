@@ -39,6 +39,28 @@ Pour l'instant, les fonctions qu'on a définies affichent toujours quelque chose
 obligation :
 
 ```python
+def f():
+    print("hello")
+```
+
+```python
+f()
+```
+
+```python
+def bonjour(nom):
+    print("Bonjour,", nom)
+```
+
+```python
+bonjour("Loïc")
+```
+
+```python
+bonjour("Morgan")
+```
+
+```python
 def ssss(arg):
     bidule = arg*2
     for i in range(10):
@@ -180,9 +202,107 @@ triple du deuxième
 5\. Écrire une fonction qui accepte un argument, supposé être une liste de chaînes de caractères,
 qui renvoie la plus longue chaîne de la liste.
 
+
+1\.
+
+```python
+def mon_nombre_préféré():
+    return 2713
+```
+
+```python
+print(mon_nombre_préféré())
+a = mon_nombre_préféré()
+print(a)
+```
+
+2\.
+
+```python
+def double(nombre):
+    d = 2*nombre
+    return d
+```
+
+```python
+print(double(5))
+```
+
+3\.
+
+```python
+def trois(a, b):
+    print(a)
+    return 3*b
+```
+
+```python
+ret=trois(7, 9)
+```
+
+```python
+print(ret+10)
+```
+
+```python
+l=[ret, 2, ret]
+print(l)
+```
+
+```python
+def quatre(lst):
+    print(lst[0])
+    i = len(lst) - 1
+    return lst[i]
+```
+
+```python
+c = quatre(["ab", "c", 2713])
+```
+
+```python
+print(c)
+```
+
+```python
+def quatre(lst):
+    print(lst[0])
+    return lst[-1]
+
+c = quatre(["ab", "c", 2713])
+print(c)
+```
+
+```python
+def cinq(lst):
+    res = ""
+    for c in lst:
+        if len(c) > len(res):
+            res = c
+    return res
+```
+
+```python
+plus_longue = cinq(["abc", "a", "hallo", "truc", "oxygène", "p"])
+```
+
+```python
+print(plus_longue)
+```
+
+```python
+def cinq(lst):
+    res = ""
+    for i in range(len(lst)):
+        c = lst[i]
+        if len(c) > len(res):
+            res = c
+    return res
+```
+
 ## Lire des fichiers
 
-En situation réelle, les programmes manipulent souvent de fichiers :
+En situation réelle, les programmes manipulent souvent des fichiers :
 
 - Pour y lire des données ou des configurations.
 - Pour y écrire le résultat d'opérations afin de les sauvegarder.
@@ -195,7 +315,7 @@ manipulation de fichiers :
 - Pour traiter des enregistrements sonores.
 - Pour manipuler des données sous forme tabulaire, comme des résultats d'expériences.
 
-On va donc maintenant voir comment on peut, en Python, manipuler des fichier.
+On va donc maintenant voir comment on peut, en Python, manipuler des fichiers.
 
 ### Bases
 
@@ -265,7 +385,7 @@ with open("ada.txt", "r") as flux:
     lst = []
     for ligne in flux:
         lst.append(ligne)
-print(lst)
+lst
 ```
 
 Vous voyez ?
@@ -277,6 +397,12 @@ Les lignes sont toutes terminées par le caractère `"\n"` « fin de ligne �
 En général on ne veut pas de ce caractère quand on traite les informations dans un fichier. On
 l'enlève donc avec la méthode de chaînes de caractères `strip()`, qui supprime les espaces (y
 compris les fins de lignes) en début et fin de chaîne.
+
+```python
+s ="    abzdfzef   "
+print(s)
+print(s.strip())
+```
 
 ```python
 with open("ada.txt", "r") as flux:

@@ -7,6 +7,7 @@ toc: true
 
 ## Nouvelles
 
+- **2022-03-29** pas de cours le mardi 05/04/2022, reporté au 12/04/2022
 - **2022-03-07** pas de cours le mardi 08/03/2022.
 - **2022-01-24** un [espace sur Cours en
   Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) a été créé. **Il ne
