@@ -812,7 +812,7 @@ lst = [1, 3, 1, 2, 10, -75]
 ```
 
 2\. En utilisant une boucle les mots suivants, chacun sur une ligne, en casse de titre (avec
-`str.titlecase`)
+`str.title`)
 
 ```python
 words = ["tRAIteMENT", "automAtique", "du", "langage", "à", "l'", "universitÉ", "paris", "nanterre"]
@@ -837,4 +837,5 @@ Répondre à ces exercices directement dans le notebook, le sauvegarder sous un 
   (clé d'inscription `rossum`)
 - À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
 
-**Si vous avez plusieurs fichiers `ipynb`, mettez les dans un fichier zip pour pouvoir les déposer sur CEL.**
+**Si vous avez plusieurs fichiers `ipynb`, mettez les dans un fichier zip pour pouvoir les déposer
+sur CEL.**
