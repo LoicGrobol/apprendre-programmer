@@ -7,6 +7,8 @@ toc: true
 
 ## Nouvelles
 
+- **2022-04-12** pas de cours le mardi 12/04/2022 pour cause de Covid, séance d'exercices en temps
+  libre à la place
 - **2022-03-29** pas de cours le mardi 05/04/2022, reporté au 12/04/2022
 - **2022-03-07** pas de cours le mardi 08/03/2022.
 - **2022-01-24** un [espace sur Cours en
@@ -139,6 +141,11 @@ Résumé des épisodes précédents, avec **plein** d'exos.
   [Slides retour et fichiers](slides/10-return_fichiers/return_fichiers.py.html)
 - {% notebook_badges assignment/projet-2022.py.md %}
   [Consignes mini-projet](assignment/projet-2022.py.html)
+
+### 2022-04-12 : Récapitulatif (en temps libre)
+
+- {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Exercices récapitulatifs
+  2](slides/11-recapitulatif-2/recapitulatif-2.py.html)
 
 ## Ressources
 
