@@ -146,6 +146,8 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 
 - {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Exercices récapitulatifs
   2](slides/11-recapitulatif-2/recapitulatif-2.py.html)
+- {% notebook_badges slides/11-recapitulatif-2/corrections.py.md %}
+  [Corrections](slides/11-recapitulatif-2/corrections.py.html)
 
 ## Ressources
 
