@@ -96,8 +96,8 @@ print(longs_mots)
 
 1\.
 
-1.1 Écrire un programme qui compte le nombre de mots de moins de $4$ caractères dans la liste suivante,
-puis affiche ce nombre
+1.1 Écrire un programme qui compte le nombre de mots de moins de $4$ caractères dans la liste
+suivante, puis affiche ce nombre
 
 ```python
 paragraphe = ["c'", 'est', 'devenu', 'une', 'banalité', "l'", 'ordinateur', "s'", 'accapare', 'nos', 'bureaux', 'modifie', 'nos', 'modes', 'de', 'travail', 'envahit', 'nos', 'maisons', "s'", 'intègre', 'dans', 'les', 'objets', 'les', 'plus', 'quotidiens', 'et', 'nous', 'propose', 'des', 'loisirs', 'inédits', 'il', 'est', 'même', 'à', "l'", 'origine', 'de', 'nouveaux', 'modes', 'de', 'sociabilité', 'et', "d'", 'une', 'nouvelle', 'économie', "l'", 'informatique', 'est', 'partout', 'pourtant', "l'", 'ordinateur', 'lui', 'même', 'demeure', 'pour', 'beaucoup', 'une', 'énigme', 'un', 'objet', 'mystérieux', 'et', 'un', 'peu', 'magique']
@@ -163,8 +163,8 @@ voyelles = ["a","e","o","i","u", "y", "à", "â", "é", "è", "ê", "ë", "î", 
 # Coder ici
 ```
 
-4\. Écrire un programme qui stocke dans une liste `courts` tous les mots de moins de $6$ caractères de
-la liste `paragraphe`, puis affiche `courts`.
+4\. Écrire un programme qui stocke dans une liste `courts` tous les mots de moins de $6$ caractères
+de la liste `paragraphe`, puis affiche `courts`.
 
 ```python
 paragraphe = ["c'", 'est', 'devenu', 'une', 'banalité', "l'", 'ordinateur', "s'", 'accapare', 'nos', 'bureaux', 'modifie', 'nos', 'modes', 'de', 'travail', 'envahit', 'nos', 'maisons', "s'", 'intègre', 'dans', 'les', 'objets', 'les', 'plus', 'quotidiens', 'et', 'nous', 'propose', 'des', 'loisirs', 'inédits', 'il', 'est', 'même', 'à', "l'", 'origine', 'de', 'nouveaux', 'modes', 'de', 'sociabilité', 'et', "d'", 'une', 'nouvelle', 'économie', "l'", 'informatique', 'est', 'partout', 'pourtant', "l'", 'ordinateur', 'lui', 'même', 'demeure', 'pour', 'beaucoup', 'une', 'énigme', 'un', 'objet', 'mystérieux', 'et', 'un', 'peu', 'magique']
