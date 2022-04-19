@@ -1,0 +1,361 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Apprendre à programmer</title>
+<meta name="description" content="Contenus pour le cours « Apprendre à programmer », L3 SDL parcours LCN, université Paris Nanterre">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Apprendre à programmer">
+<meta property="og:title" content="Apprendre à programmer">
+<meta property="og:url" content="/apprendre-programmer/slides/04-index_listes_iter/corrections.html">
+
+
+  <meta property="og:description" content="Contenus pour le cours « Apprendre à programmer », L3 SDL parcours LCN, université Paris Nanterre">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/apprendre-programmer/slides/04-index_listes_iter/corrections.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Loïc Grobol",
+      "url": "/apprendre-programmer/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/apprendre-programmer/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/apprendre-programmer/">
+          Apprendre à programmer
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <!-- LTeX: language=fr -->
+<!-- #region slideshow={"slide_type": "slide"} -->
+<p>Cours 4 : Corrections
+=========================================</p>
+
+<p><strong>Loïc Grobol</strong> <a href="mailto:lgrobol@parisnanterre.fr"><a href="mailto:lgrobol@parisnanterre.fr">lgrobol@parisnanterre.fr</a></a></p>
+
+<p>2022-02-08
+<!-- #endregion --></p>
+
+<h2 id="-entraînement-">🔭 Entraînement 🔭</h2>
+
+<blockquote>
+  <p>Demandez un mot et un indice <code class="language-plaintext highlighter-rouge">i</code> à l’utilisateurice. Si le mot a un <code class="language-plaintext highlighter-rouge">i</code>-ème caractère, affichez ce
+caractère, sinon affichez un message d’erreur.</p>
+
+  <p><strong>Indice</strong> : vous savez déterminer la longueur d’une chaîne de caractères.</p>
+</blockquote>
+
+<p>```python tags=[“skip-execution”]
+mot = input(“Dis-moi un mot : “)
+position = int(input(“Dis-moi un nombre : “))</p>
+
+<p>if position &gt;= len(mot) or position &lt; 0:
+    print(“Indice”, position, “incorrect pour un mot de longueur”, len(mot))
+else:
+    print(mot[position])</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## 🛠️ Entraînement 🛠️
+
+&gt; Voici une liste de lettres :
+
+```python
+letters = ["d", "b", "c", "n"]
+</code></pre></div></div>
+
+<blockquote>
+  <p>Insérez <code class="language-plaintext highlighter-rouge">"x"</code> en position <code class="language-plaintext highlighter-rouge">3</code>, puis retirez <code class="language-plaintext highlighter-rouge">"c"</code>, ajoutez <code class="language-plaintext highlighter-rouge">"e"</code> à la fin, supprimez l’élément
+d’indice <code class="language-plaintext highlighter-rouge">2</code>, et, finalement remplacez l’élément en position <code class="language-plaintext highlighter-rouge">1</code> par <code class="language-plaintext highlighter-rouge">"o"</code>. Puis affichez le
+contenu de la liste</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">"d"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"n"</span><span class="p">]</span>
+<span class="n">letters</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">"x"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+<span class="n">letters</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"c"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+<span class="n">letters</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"e"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+<span class="n">letters</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+<span class="n">letters</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">"o"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="exercices">Exercices</h2>
+
+<h2 id="exercice-1">Exercice 1</h2>
+
+<blockquote>
+  <p>Voici deux listes</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">"NYC"</span><span class="p">,</span> <span class="s">"LA"</span><span class="p">,</span> <span class="s">"SF"</span><span class="p">]</span>
+<span class="n">small_cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Stony Brook"</span><span class="p">,</span> <span class="s">"Provo"</span><span class="p">]</span>
+
+<span class="c1"># Codez ici
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>Modifiez la cellule de sorte à modifier <code class="language-plaintext highlighter-rouge">cities</code> pour que son contenu soit <code class="language-plaintext highlighter-rouge">["NYC", "LA",
+"Stony Brook", "Provo", "SF"]</code></p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">"NYC"</span><span class="p">,</span> <span class="s">"LA"</span><span class="p">,</span> <span class="s">"SF"</span><span class="p">]</span>
+<span class="n">small_cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Stony Brook"</span><span class="p">,</span> <span class="s">"Provo"</span><span class="p">]</span>
+
+<span class="n">cities</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="n">cities</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">small_cities</span><span class="p">)</span>
+<span class="n">cities</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"SF"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Il y a beaucoup d’autres solutions, par exemple :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">"NYC"</span><span class="p">,</span> <span class="s">"LA"</span><span class="p">,</span> <span class="s">"SF"</span><span class="p">]</span>
+<span class="n">small_cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Stony Brook"</span><span class="p">,</span> <span class="s">"Provo"</span><span class="p">]</span>
+
+<span class="n">cities</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">"Stony Brook"</span><span class="p">)</span>
+<span class="n">cities</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">"Provo"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Y compris des trop sophistiquées :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">"NYC"</span><span class="p">,</span> <span class="s">"LA"</span><span class="p">,</span> <span class="s">"SF"</span><span class="p">]</span>
+<span class="n">small_cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Stony Brook"</span><span class="p">,</span> <span class="s">"Provo"</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">small_cities</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="n">cities</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="exercice-2">Exercice 2</h2>
+
+<blockquote>
+  <p>Voici une liste</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">villes</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Paris"</span><span class="p">,</span> <span class="s">"Nanterre"</span><span class="p">,</span> <span class="s">"Orléans"</span><span class="p">,</span> <span class="s">"Uppsala"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>En utilisant cette liste, écrivez un programme qui affiche la sortie suivante</p>
+
+  <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Paris Paris
+Paris Nanterre
+Paris Orléans
+Paris Uppsala
+Nanterre Paris
+Nanterre Nanterre
+Nanterre Orléans
+Nanterre Uppsala
+Orléans Paris
+Orléans Nanterre
+Orléans Orléans
+Orléans Uppsala
+Uppsala Paris
+Uppsala Nanterre
+Uppsala Orléans
+Uppsala Uppsala
+</code></pre></div>  </div>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">villes</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">villes</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="exercice-3">Exercice 3</h3>
+
+<blockquote>
+  <p>Voici quelques mots de la <a href="https://fr.wikipedia.org/wiki/Liste_Swadesh">Liste Swadesh</a>.</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">"soleil"</span><span class="p">,</span> <span class="s">"lune"</span><span class="p">,</span> <span class="s">"terre"</span><span class="p">,</span> <span class="s">"eau"</span><span class="p">,</span> <span class="s">"nouriture"</span><span class="p">,</span> <span class="s">"ciel"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Imaginez que vous êtes un⋅e linguiste de terrain en train de collecter du vocabulaire pour
+documenter une langue :</p>
+
+  <ul>
+    <li>Créez une liste vide dans une variable <code class="language-plaintext highlighter-rouge">traduction</code>.</li>
+    <li>Pour chacun des mots de la liste <code class="language-plaintext highlighter-rouge">words</code>, demandez à l’utilisateurice d’entrer sa traduction et
+sauvegardez cette entrée dans <code class="language-plaintext highlighter-rouge">traductions</code>.</li>
+    <li>Une fois que vous avez terminé, affichez la valeur de <code class="language-plaintext highlighter-rouge">traductions</code>.</li>
+  </ul>
+</blockquote>
+
+<p>```python tags=[“skip-execution”]
+traductions = []
+for mot in words:
+    trad = input(f”Traduction de {mot}: “)
+    traductions.append(trad)
+print(traductions)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## Retours sur vos rendus
+
+En général :
+
+- Plus de rendus cette fois, c'est bien !
+- La séance de la semaine dernière était dense, mais vous vous en sortez plutôt bien.
+  - Beaucoup de réponses créatives pour l'exercice 2 en particulier, ce qui est une **bonne** chose.
+- Plusieurs demandes de plus d'exos : c'est le programme pour cette semaine et je mettrai plus
+  d'exos d'application directe dans les prochaines séances.
+
+Exercice 1 :
+
+- Attention à la différence entre ces listes :
+
+```python
+['NYC', 'LA', ['Stony Brook', 'Provo'], 'SF'] != ['NYC', 'LA', 'Stony Brook', 'Provo', 'SF']
+</code></pre></div></div>
+
+<p>Ici, c’est la deuxième qu’il fallait obtenir.</p>
+
+<p>Exercice 2 :</p>
+
+<ul>
+  <li>Rappelez-vous qu’on peut imbriquer des boucles.</li>
+</ul>
+
+<p>Exercice 3 :</p>
+
+<ul>
+  <li>Oui, on peut mettre un <code class="language-plaintext highlighter-rouge">input</code> dans une boucle :-)</li>
+</ul>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Loïc Grobol. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/apprendre-programmer/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
