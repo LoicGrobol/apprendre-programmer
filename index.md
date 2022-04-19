@@ -149,6 +149,10 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 - {% notebook_badges slides/11-recapitulatif-2/corrections.py.md %}
   [Corrections](slides/11-recapitulatif-2/corrections.py.html)
 
+### 2022-04-19 : Partiel
+
+- {% notebook_badges exams/exam-2022.py.md %} [Prtiel](exams/exam-2022.py.html)
+
 ## Ressources
 
 - [Le dépôt Github du cours](https://github.com/LoicGrobol/apprendre-programmer/) contient toutes
