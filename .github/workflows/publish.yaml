@@ -20,25 +20,25 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Set up Python 🐍
         uses: actions/setup-python@v3
         with:
             python-version: ${{ matrix.python-version }}
             cache: 'pip'
             cache-dependency-path: '${{ github.workspace }}/requirements.txt'
       
-      - name: Install dependencies
+      - name: Install dependencies 💁🏻
         run: |
           pip install -U -r "${{ github.workspace }}/requirements.txt"
       
-      - name: Build slides
+      - name: Build slides 📚
         run: |
           shopt -s globstar
           jupytext --to ipynb ${{ github.workspace }}/**/*.py.md
           jupyter nbconvert --execute --allow-errors --to html ${{ github.workspace }}/**/*.py.ipynb
           jupyter nbconvert --to slides ${{ github.workspace }}/slides/**/*-slides.py.ipynb
       
-      - name: Get node cache
+      - name: Get node cache 🪢
         uses: actions/cache@v2
         with:
           path: vendor/bundle
@@ -58,9 +58,15 @@ jobs:
           enable_cache: true
           custom_opts: '--verbose'
       
-      - name: Prevent Github Jekyll build
+      - name: Prevent Github Jekyll build 🙅🏻
         run: |
           touch _site/.nojekyll
+      
+      - name: ⬆️ Upload site for inspection
+        uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: ${{ github.workspace }}/_site/
 
       - name: Deploy to GitHub Pages 🚀
         if: github.ref == 'refs/heads/main'
