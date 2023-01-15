@@ -47,15 +47,31 @@ Autres éléments magiques :
   - Utilise les variables `site.{baseurl,repository,repo_branch}` définies dans
     [`_config.yml`](config.yml).
 
-## Générer le site
+## Générer le site en local
+
+Dependencies:
+
+- Ruby
+  - Bundle
+
+Setup:
 
 ```console
 gem install jekyll bundler
 bundle config set --local path 'vendor/bundle'
 bundle install
+```
+
+Regenerate:
+
+```bash
 bundle exec jekyll build
 bundle exec jekyll serve
 ```
+
+Astuce pour les pages : Jekyll n'est pas très bon pour les pages qui ne sont pas des postes de blog,
+les ajouter dans `_pages` (ce qui fonctionne parce qu'on l'a mis dans `_config.yml`)- et leur donner
+un `permalink` dans le header.
 
 ## Licences
 

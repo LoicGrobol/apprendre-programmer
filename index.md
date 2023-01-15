@@ -1,6 +1,6 @@
 ---
 title: Informations et cours
-toc: true
+layout: default
 ---
 
 [comment]: <> "LTeX: language=fr"
