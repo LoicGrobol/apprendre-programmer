@@ -5,32 +5,39 @@ layout: default
 
 [comment]: <> "LTeX: language=fr"
 
+
 ## Nouvelles
 
-- **2022-04-12** pas de cours le mardi 12/04/2022 pour cause de Covid, séance d'exercices en temps
-  libre à la place
-- **2022-03-29** pas de cours le mardi 05/04/2022, reporté au 12/04/2022
-- **2022-03-07** pas de cours le mardi 08/03/2022.
-- **2022-01-24** un [espace sur Cours en
-  Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) a été créé. **Il ne
-  contiendra rien de plus qu'un lien vers la page où vous vous trouvez**, mais vous pouvez y déposer
-  vos exercices hebdomadaires pour une gestion plus pratique. La clé d'accès est `rossum`.
-- **2022-01-20** l'exercice 4 des slides « IO et variables » a été mis à jour pour corriger une
-  erreur. Si vous avez déjà résolu l'ancienne version, ne changez rien, mais sinon faites plutôt la
-  nouvelle.
+- **2022-01-75** Premier cours de cette session le mardi 17 janvier 2023. *Be there and beware!*
+
 
 ## Infos pratiques
 
 - **Quoi** « Apprendre à programmer », 4L6SC01P
-- **Où** Salle R05, bâtiment Ricœur, Université Paris Nanterre, 200 avenue de la République,
+- **Où** Salle N19, bâtiment Éphémère 2, Université Paris Nanterre, 200 avenue de la République,
   Nanterre
 - **Quand** 12 séances, les mardis de 10:30 à 12:30, du 17/01 au 18/04
   - Voir [le calendrier de
     l'université](https://etudiants.parisnanterre.fr/calendrier-universitaire-2021-2022-1018180.kjsp)
     pour les dates de vacances.
+  - Voir [le calendrier de
+    l'université](https://etudiants.parisnanterre.fr/calendrier-universitaire/calendrier-universitaire-2022-2023)
+    pour les dates de vacances.
 - **Contact** Loïc Grobol [`<lgrobol@parisnanterre.fr>`](mailto:lgrobol@parisnanterre.fr)
 - **Dépôt des exercices** de préférence [sur Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694) (clé d'inscription `rossum`)
   ou par email (voir ci-dessus.)
+
+## Liens utiles
+
+- [Espace Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7431)
+  - Inscription libre avec la clé `rossum`
+  - Attention, cet espace ne sert qu'aux dépôts de devoirs.
+- [Page du cours de l'an dernier]({{site.url}}{{site.baseurl}}/2022)
+- [Le dépôt Github du cours](https://github.com/LoicGrobol/apprendre-programmer/) contient toutes
+  les sources permettant de générer le matériel du cours.
+- Lien Binder de secours :
+  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LoicGrobol/apprendre-programmer/main)
+
 
 ## Séances
 
@@ -70,93 +77,8 @@ Pour les tablettes sous iOS ou Android, ça ne sera pas possible. Vous devriez p
 l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal, tenez-moi au
 courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
 
-### 2022-01-24 : Dessiner avec `turtle` et instructions conditionnelles
-
-- {% notebook_badges slides/01-IO_variables_chaines/corrections.py.md %}
-  [Corrections des exercices](slides/01-IO_variables_chaines/corrections.py.html)
-- {% notebook_badges slides/02-turtle/turtle.py.md %}
-  [Slides Turtle](slides/02-turtle/turtle.py.html)
-- {% notebook_badges slides/03-conditions/conditions.py.md %}
-  [Slides instructions conditionnelles](slides/03-conditions/conditions.py.html)
-
-À rendre pour la prochaine fois : exercices du notebook « instructions conditionnelles », attention
-le mode de rendu change légèrement.
-
-### 2022-02-01 : Indices, listes et boucle `for`
-
-- {% notebook_badges slides/03-conditions/corrections.py.md %}
-  [Corrections des exercices](slides/03-conditions/corrections.py.html)
-- {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
-  [Slides indices, listes et itération](slides/04-index_listes_iter/index_listes_iter.py.html)
-
-À rendre pour la prochaine fois : entraînement 🛠️ et exercices dans le notebook « Indexation, listes
-et itération ».
-
-### 2022-02-08 : Exercices et compléments sur les boucles
-
-- {% notebook_badges slides/04-index_listes_iter/corrections.md %}
-  [Corrections des exercices](slides/04-index_listes_iter/corrections.py.html)
-- {% notebook_badges slides/05-td_while/td_while.py.md %}
-  [Slides exercices et compléments sur les boucles](slides/05-td_while/td_while.py.html)
-
-### 2022-02-15 : Récapitulatif
-
-Résumé des épisodes précédents, avec **plein** d'exos.
-
-- {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
-[Notebook récapitulatif](slides/06-recapitulatif/recapitulatif.py.html)
-
-À rendre pour la prochaine fois : les exercices du notebook.
-
-### 2022-02-21 : Compléments sur les boucles et les séquences
-
-- {% notebook_badges slides/05-td_while/corrections.py.md %}
-  [Corrections slides exercices et compléments sur les
-  boucles](slides/05-td_while/corrections.py.html)
-- {% notebook_badges slides/06-recapitulatif/corrections.py.md %}
-  [Corrections exos récapitulatifs](slides/06-recapitulatif/corrections.py.html)
-- {% notebook_badges slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md %}
-  [Slides compléments boucles et
-  séquences](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.html)
-
-### 2022-03-08 : Pas de cours
-
-### 2022-03-15 : Manipulations de chaînes, itérables composites et dictionnaires
-
-- {% notebook_badges slides/07-complements_boucles_sequences/corrections.py.md %}
-  [Corrections exercices compléments sur les boucles et les séquences](slides/07-complements_boucles_sequences/corrections.py.html)
-- {% notebook_badges slides/08-iterables_dictionnaires/iterables_dictionnaires.py.md %}
-  [Slides itérables composites et dictionnaires](slides/08-iterables_dictionnaires/iterables_dictionnaires.py.html)
-
-### 2022-03-22 : fonctions
-
-- {% notebook_badges slides/08-iterables_dictionnaires/corrections.py.md %}
-  [Corrections exercices itérables composites et dictionnaires](slides/08-iterables_dictionnaires/corrections.py.html)
-- {% notebook_badges slides/09-fonctions/fonctions.py.md %}
-  [Slides fonctions](slides/09-fonctions/fonctions.py.html)
-
-### 2022-03-29 : Valeurs de retour et accès à des fichiers
-
-- {% notebook_badges slides/10-return_fichiers/return_fichiers.py.md %}
-  [Slides retour et fichiers](slides/10-return_fichiers/return_fichiers.py.html)
-- {% notebook_badges assignment/projet-2022.py.md %}
-  [Consignes mini-projet](assignment/projet-2022.py.html)
-
-### 2022-04-12 : Récapitulatif (en temps libre)
-
-- {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Exercices récapitulatifs
-  2](slides/11-recapitulatif-2/recapitulatif-2.py.html)
-- {% notebook_badges slides/11-recapitulatif-2/corrections.py.md %}
-  [Corrections](slides/11-recapitulatif-2/corrections.py.html)
-
-### 2022-04-19 : Partiel
-
-- {% notebook_badges exams/exam-2022.py.md %} [Prtiel](exams/exam-2022.py.html)
 
 ## Ressources
-
-- [Le dépôt Github du cours](https://github.com/LoicGrobol/apprendre-programmer/) contient toutes
-  les sources permettant de générer le matériel du cours.
 
 ### Python général
 
@@ -196,19 +118,12 @@ Il vous est vivement conseillé d'utiliser un (ou plus) des sites et tutoriels c
   l'INRIA, carré.
 - [Code combat](https://codecombat.com/)
 
-### Divers
-
-- La chaîne YouTube [3blue1brown](https://www.youtube.com/c/3blue1brown) pour des vidéos de maths
-  générales.
-- La chaîne YouTube de [Freya Holmér](https://www.youtube.com/c/Acegikmo) plutôt orientée *game
-  design*, mais avec d'excellentes vidéos de géométrie computationnelle.
-
 ## Licences
 
 [![CC BY Licence
 badge](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 
-Copyright © 2022 Loïc Grobol [\<loic.grobol@gmail.com\>](mailto:loic.grobol@gmail.com)
+Copyright © 2023 Loïc Grobol [\<loic.grobol@gmail.com\>](mailto:loic.grobol@gmail.com)
 
 Sauf indication contraire, les fichiers présents dans ce dépôt sont distribués selon les termes de
 la licence [Creative Commons Attribution 4.0
