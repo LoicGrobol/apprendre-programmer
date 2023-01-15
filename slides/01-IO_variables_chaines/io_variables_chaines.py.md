@@ -40,7 +40,7 @@ d'Aniello de Santo, merci infiniment à lui.
 
 Dans ce cours, nous allons utiliser plusieurs environnements en Python. Celui dans lequel vous vous
 trouvez s'appelle un *notebook Jupyter*. Leur principal avantage est qu'ils permettent de mélanger
-du code, du texte formaté et des objets multimedia.
+du code, du texte formaté et des objets multimédia.
 
 Pour vous épargner la peine d'installer Jupyter sur vos machines, nous allons travailler dans
 Binder. Nous verrons plus tard dans le semestre comment installer Python et Jupyter, mais si vous
@@ -51,7 +51,7 @@ l'environnement que vous utilisez, vérifiez que la version de Python est la bon
 
 Rentrons dès maintenant dans le vif du sujet : le texte en dessous, dans une police différente est
 une cellule de code en Python. Pour l'exécuter, utilisez les boutons de la barre d'outil, le menu,
-ou simplement cliquez dedans pour la sélectionner et appuyez sur les touche `ctrl` et `entrée`.
+ou simplement cliquez dedans pour la sélectionner et appuyez sur les touches `ctrl` et `entrée`.
 
 ```python
 print("Hello, world!")
