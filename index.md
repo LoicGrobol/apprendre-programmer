@@ -56,12 +56,14 @@ Une autre option, si vous avez un compte Google est d'utiliser
 [Colaboratory](https://colab.research.google.com/) pour éditer les notebooks que vous avez
 téléchargé.
 
-### 2022-01-17 : Introduction, entrées/sorties de bases et variables
+### 2022-01-17 : Introduction, notebooks, entrées/sorties de bases et variables
 
 - {% notebook_badges slides/00-introduction/introduction-slides.py.md %}
-  [Slides Introduction](slides/00-introduction/introduction-slides.py.html)
+  [Slides Introduction](slides/00-introduction/introduction-slides.py.ipynb)
+- {% notebook_badges slides/00-introduction/notebooks.py.md %}
+  [Utiliser les notebooks Jupyter](slides/00-introduction/notebooks.py.ipynb)
 - {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
-  [Slides IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.html)
+  [Notebook IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
 
