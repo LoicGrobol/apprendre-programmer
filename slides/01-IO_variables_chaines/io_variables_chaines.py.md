@@ -36,7 +36,7 @@ d'Aniello de Santo, merci infiniment à lui.
 
 
 Le texte en dessous, dans une police différente est une cellule de code en Python. Exécutez-la. Si
-vous avez oublié comment, retournez voir [le tutoriel Jupyeter
+vous avez oublié comment, retournez voir [le tutoriel Jupyter
 notebook](../00-introduction/notebooks.py.md)
 
 ```python
@@ -58,37 +58,19 @@ print("Hello, world")
 ## Fonctions
 
 Dans ce qui précède, `print` est un **appel de fonction**, et `"Hello, world!"` est son argument
-<!-- 
-À ce stade, une **fonction** en Python ressemble au concept de fonction en sémantique, en logique ou
-en mathématiques. On ne va pas rentrer dans des détails formels, mais plutôt garder en tête un
-exemple : la phrase « Morgan mange une pomme », peut être vue comme l'action d'une **fonction**,
-`manger` sur deux **arguments**, `Morgan` et `une pomme`, qu'on écrit `manger(Morgan, une pomme)`. -->
+
 
 En Python, on peut penser aux fonctions comme la description d'actions qu'on demande à la machine
 d'effectuer : ici « affiche le message que je te donne en argument ».
 
-<!-- - Une fonction qui inverse une chaîne de caractères renvoie une chaîne de caractères.
-- Une fonction qui additionne deux nombres renvoie leur somme.
-- Une fonction qui compte le nombre de caractères renvoie un nombre.
-
-Et `print` ? Elle renvoie la valeur spéciale `None`, « rien ». Je vous laisse réfléchir aux
-implications philosophiques d'un tel objet. -->
 
 Les **arguments** (ou **paramètres**) d'une fonction servent à spécifier les éléments sur lesquels
 portent l'action. Il peut y en avoir un, plusieurs ou zéro.
 
-<!-- Par exemple :
-
-- Une fonction qui inverse une chaîne de caractères a un argument : cette chaîne de caractères.
-- Une fonction qui renvoie les $n$ premiers mots d'une phrase a deux arguments : la phrase et $n$.
-- Une fonction qui affiche « Bonjour, tout le monde ! » a zéro arguments : son exécution sera la
-  même à chaque fois.
-
-**Question** : combien faut-il d'arguments pour une fonction qui dessine un cercle ? -->
 
 ### `print`
 
-La fonction la plus commune (mais pas nécéssaireemnt la plus simple) de Python est `print`. Elle
+La fonction la plus commune (mais pas nécessairement la plus simple) de Python est `print`. Elle
 affiche simplement sur l'écran son ou ses argument(s) :
 
 ```python
@@ -381,15 +363,6 @@ On peut ainsi intégrer le résultat d'un calcul dans un message
 ```python
 print("Le double de 5 est " + str(2*5) + ". Étonnant, non")
 ```
-
-<!-- Qu'on préfère écrire ainsi :
-
-```python
-print(f"Le double de 5 est {2*5}. Étonnant, non")
-```
-
-Le `f` devant les quotes signales qu'on utilise un *format string* pour une *interpolation*. On en
-reparlera. -->
 
 On peut aussi, convertir des `int` en `float`
 
@@ -706,11 +679,6 @@ False and (True or True)
 ("apple" in "apples") or (1 + 1 == 5)
 ```
 
-```python
-(("apple" in "apples") and (1 + 1 == 3)) or (5 < 10)
-```
-<!-- #endregion -->
-
 **Puis** vérifiez vos réponses
 
 ```python
@@ -730,83 +698,6 @@ vous êtes intéressé⋅es, voici une vidéo sur le sujet :
 ```python
 IFrame('https://www.youtube.com/embed/jbete3iXbdM', width=700, height=350)
 ```
-
-<!-- ## Méthodes des chaînes de caractères
-
-Un concept important en TAL est celui de « sac de mots ». Il s'agit d'un modèle sémantique très
-simple où on fait l'hypothèse que le sens d'un texte peut être représenté par la liste des mots
-qu'il contient et leurs nombres d'occurrence. Intuitivement, si un texte par d'animaux de compagnie,
-on s'attend à rencontre plus souvent les mots *chat* ou *chien* que s'il s'agit d'un texte sur la
-politique française.
-
-Certains mots, cependant, apparaissent à peu près avec la même fréquence dans tous les types de
-textes : *et*, *un*, *la*… On les appelle parfois « mots vides » ou « *stop words* », puisqu'ils
-n'apportent pas d'information pour ce modèle, et on commence en général par les enlever des textes à
-représenter.
-
-De même, pour beaucoup d'applications en linguistique, la casse (majuscules et minuscules) n'est pas
-informative. Par exemple pour enlever les *stop words* d'un texte, on veut les enlever peu importe
-leur casse (*Un*, *un*, *UN*…). Cependant, pour Python, *Un* et *un* des chaînes de caractères
-différentes.
-
-```python
-"un" == "UN"
-```
-
-Pour nous aider, il existe une façon de mettre tout en minuscules
-
-```python
-str.lower("UN")
-```
-
-```python
-"un" == str.lower("uN")
-```
-
-Les fonctions `str.upper` et `str.title` permettent d'autres normalisations.
-
-```python
-print("The uppercase of 'the' is '" + str.upper("the") + "'.")
-```
-
-```python
-print("The title version of 'hello world' is '" + str.title("hello world") + "'.")
-```
-
-Et il existe des fonctions pour vérifier si une chaîne de caractères est normalisée
-
-
-- `str.isupper` vérifie qu'une chaîne de caractères est en majusculese;
-- `str.islower` vérifie qu'une chaîne de caractères est en minuscules;
-- `str.istitle` vérifie qu'une chaîne de caractères est en casse de titre.
-
-
-```python
-str.isupper("HELLO WORLD!")
-```
-
-```python
-str.islower("hello world!")
-```
-
-```python
-str.istitle("Hello World!")
-```
-
-Une autre fonction utile est `len`. Pouvez-vous deviner ce qu'elle fait …
-
-```python
-len("Hello world!")
-```
-
-
-```python
-len("computational linguistics")
-```
-
-```python
-len(25)
-``` -->
 
 ## 🦾 Exercices 🦾
 
@@ -840,25 +731,24 @@ texte = "Toi dont le trône étincelle, ô immortelle" \
 Écrire un programme qui demande à l'utilisateurice de saisir un mot, puis vérifie si ce mot est dans
 le texte.
 
+```python
+```
+
 ### Exercice 2
 
 Écrire un programme qui vérifie si le mot *banane* est contenue dans une entrée récupérée avec
-`input`, en quelle que soit la casse.
+`input`.
+
+```python
+```
 
 ### Exercice 3
 
-Écrire un programme qui demande à son utilisateurice son année de naissance et affiche l'âge qu'aura
-cette personne en 2022.
+Dans une nouvelle cellule ci-dessous, écrire un programme qui demande à son utilisateurice son année
+de naissance et affiche l'âge qu'aura cette personne en 2022.
 
 Indice : `int`
 
-<!-- ### Exercice 4
-
-Demander à l'utilisateurice d'entrer un nombre minimal de caractères pour qu'un mot soit considéré
-comme long. Puis lui demander de saisir un mot et lui afficher `True` si le mot est long et `False`
-sinon.
-
-Bonus : alternativement, afficher `"😱"` si le mot est long et ne rien afficher sinon. -->
 
 ### Réflexion
 
@@ -867,3 +757,5 @@ Quelques points auxquels réfléchir
 - Combien de temps avez-vous passé à faire ces exercices ?
 - Qu'est-ce qui vous a paru le plus compliqué ?
 - À votre avis, pourquoi ?
+
+Merci d'ajouter vos réponses à cette cellule, elles m'aideront à améliorer les prochains cours.
