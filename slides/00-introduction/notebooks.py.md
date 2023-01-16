@@ -114,7 +114,7 @@ Pour exécuter une cellule, il faut cliquer dessus, puis sur le bouton « ▸ 
 print("Cliquez sur « ▸ *Run* » pour exécuter cette cellule")
 ```
 
-Vous pouvez aussi utiliser le raccourci clavier <kbd>ctrl</kbd>+<kbd>↩</kdb>. Il y a plein de
+Vous pouvez aussi utiliser le raccourci clavier <kbd>ctrl</kbd>+<kbd>↩</kbd>. Il y a plein de
 raccourcis clavier dans Jupyter, n'hésitez pas à explorer !
 
 ### Créer une nouvelle cellule
@@ -124,10 +124,10 @@ Vous pouvez facilement créer de nouvelles cellules :
 - À l'aide du menu « *Insert* ».
 - En utilisant le raccourci <kbd>echap</kbd>+<kbd>B</kbd> pour insérer une cellule en dessous de la
   cellule actuelle (ou <kbd>echap</kbd>+<kbd>A</kbd> pour le faire au dessus), puis en appuyant sur
-  <kbd>↩</kdb> pour entrer en mode édition.
+  <kbd>↩</kbd> pour entrer en mode édition.
 
 (Précisément : <kbd>echap</kbd> vous passe en mode « commande », puis <kbd>B</kbd> lance la commande
-« insérer une cellule ci-dessous », et <kbd>↩</kdb> vous sort du mode commande pour passer en mode
+« insérer une cellule ci-dessous », et <kbd>↩</kbd> vous sort du mode commande pour passer en mode
 édition).
 
 
@@ -138,7 +138,7 @@ utiliser la boîte déroulate pour changer de mode.
 
 Ou vous pouvez utiliser <kbd>echap</kbd>+<kbd>M</kbd> pour passer une cellule en mode Markdown ou
 <kbd>echap</kbd>+<kbd>Y</kbd> pour la passer en mode code (n'oubliez pas de rappuyer sur
-<kbd>↩</kdb> pour repasser en mode édition).
+<kbd>↩</kbd> pour repasser en mode édition).
 
 
 ### Formater du Markdown
@@ -184,5 +184,6 @@ Double-cliquez sur la cellule de texte ci-dessous pour passer en mode édition, 
 
 
 *Replace this text by your own message*
+
 
 Déposez ensuite le fichier ipynb que vous venez de télécharger sur Cours En Ligne.
