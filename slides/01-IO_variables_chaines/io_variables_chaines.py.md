@@ -650,7 +650,6 @@ On peut également combiner des expressions booléennes avec les opérateurs log
 
 Déterminer sans les exécuter les valeurs de retour de ces instructions :
 
-<!-- #region -->
 ```python
 True and True
 ```
