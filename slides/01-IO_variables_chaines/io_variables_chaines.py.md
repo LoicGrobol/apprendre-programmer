@@ -498,14 +498,6 @@ print(partenaires)
 ```
 
 
-Ça marche aussi avec des interpolations
-
-```python
-ship = f"{partenaire1} et {partenaire2}"
-print(ship)
-```
-
-
 On peut redéfinir une variable en faisant référence à sa valeur actuelle
 
 ```python
@@ -518,7 +510,7 @@ print("Deuxième valeur", compteur)
 ```python
 mot = "machinal"
 print(mot)
-mot = f"{mot}ement"
+mot = mot + "lement"
 print(mot)
 ```
 
@@ -554,13 +546,7 @@ print("Salut, ", nom)
 ```
 
 `input` donne la main à l'utilisateurice pour saisir une chaîne de caractère (terminée en
-appuyant sur entrée) et renvoie cette chaîne de caractères. On peut aussi préciser un message à
-afficher directement à côté de la zone de saisie.
-
-```python tags=["skip-execution"]
-nom = input("Comment tu t'appelles ?")
-print(f"Salut, {nom}")
-```
+appuyant sur entrée) et renvoie cette chaîne de caractères.
 
 ## Expressions booléennes
 
