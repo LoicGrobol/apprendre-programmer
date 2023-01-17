@@ -22,8 +22,6 @@ Apprendre à programmer : introduction
 =====================================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
-
-2022-01-18
 <!-- #endregion -->
 
 
