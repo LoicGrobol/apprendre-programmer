@@ -61,28 +61,39 @@ print("Loïc\n\nGrobol")
 <!-- #endregion -->
 
 ```python
-texte = "Toi dont le trône étincelle, ô immortelle" \
-        "Aphrodite, fille de Zeus, ourdisseuse de" \
-        "trames, je t'implore : ne laisse pas, ô" \
-        "souveraine, dégoûts ou chagrins affliger" \
-       "mon âme," \
-        "Mais viens ici, si jamais autrefois" \
-        "entendant de loin ma voix, tu m'as" \
-        "écoutée, quand, quittant la demeure" \
-        "dorée de ton père tu venais, Après avoir" \
-        "attelé ton char," \
-        "de beaux passereaux rapides" \
-        "t'entraînaient autour de la terre" \
-        "sombre,secouant leurs ailes serrées et du" \
-        "haut du ciel tirant droit à travers l'éther."
+texte = "Toi dont le trône étincelle, ô immortelle " \
+        "Aphrodite, fille de Zeus, ourdisseuse de " \
+        "trames, je t'implore : ne laisse pas, ô souveraine, " \
+        "dégoûts ou chagrins affliger mon âme, " \
+        "Mais viens ici, si jamais autrefois " \
+        "entendant de loin ma voix, tu as " \
+        "écoutée, quand, quittant la demeure " \
+        "dorée de ton père tu venais, après avoir " \
+        "attelé ton char,"
 ```
 
-> Écrire un programme qui demande à l'utilisateurice de saisir un mot, puis vérifie si ce mot est
-> dans le texte.
+> Écrire un programme qui demande à l'utilisateurice de saisir un mot, puis affiche `True` si le mot
+> est dans le texte (autrement dit s'il est inclus dans la variable `texte`) et `False` sinon.
+
+Voici une solution qui marche presque (et ça me suffit pour cette fois !)
 
 ```python tags=["skip-execution"]
 mot = input("Saisir un mot : ")
 print(mot in texte)
+```
+
+Pourquoi « presque » ? Essayez avec « mortel ». Vous voyez le problème ?
+
+Voici une solution plus compliquée, mais qui marche complètement
+
+```python tags=["skip-execution"]
+mot = input("Saisir un mot : ")
+print(
+  " " + mot + " "  in texte
+  or " " + mot + "," in texte
+  or mot == "Toi
+  or mot == "
+)
 ```
 
 ### Exercice 2
@@ -127,37 +138,6 @@ age_2022 = 2022 - annee_int
 print(f"En 2022 tu auras {age_2022} ans")
 ```
 
-### Exercice 4
-
-> Demander à l'utilisateurice d'entrer un nombre minimal de caractères pour qu'un mot soit considéré
-> comme long. Puis lui demander de saisir un mot et lui afficher `True` si le mot est long et
-> `False` sinon.
-
-```python
-raw = input("Long, c'est combien de caractères ? ")
-long_len = int(raw)
-mot = input("Saisir un mot : ")
-print(len(mot) >= long_len)
-```
-
-```python tags=["skip-execution"]
-long_len = int(input("Long, c'est combien de caractères ? "))
-mot = input("Saisir un mot : ")
-print(len(mot) >= long_len)
-```
-
-> Bonus : alternativement, afficher `"😱"` si le mot est long et ne rien afficher sinon.
-
-```python tags=["skip-execution"]
-long_len = int(input("Long, c'est combien de caractères ? "))
-mot = input("Saisir un mot :")
-print("😱" * (len(mot) >= long_len))
-```
-
-Jeu : pourquoi ça marche ?
-
-**Ne faites pas ça dans du vrai code**, on va voir dans le cours 3 comment faire mieux.
-
 ## Retour sur vos rendus
 
 Attention à ne pas confondre les rôles de `print` et `input`
@@ -190,7 +170,7 @@ print("banane" in texte)
 
 Quelques points de style
 
-- Pas d'espace entre le nom d'une fonction et les parenthèse : `print("Salut")` et non `print ("Salut")`, `int("2713")` et pas `int ("2713")`.
+- Pas d'espace entre le nom d'une fonction et les parenthèses : `print("Salut")` et non `print ("Salut")`, `int("2713")` et pas `int ("2713")`.
 - Quand la question demande un affichage, utilisez plutôt `print` que de simplement laisser Jupyter
   afficher le dernier résultat.
 - On peut terminer une chaîne de caractère par une espace :

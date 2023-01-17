@@ -711,24 +711,24 @@ Répondre à ces exercices directement dans le notebook, le sauvegarder sous un 
 Étant donné le paragraphe suivant
 
 ```python
-texte = "Toi dont le trône étincelle, ô immortelle" \
-        "Aphrodite, fille de Zeus, ourdisseuse de" \
-        "trames, je t'implore : ne laisse pas, ô" \
-        "souveraine, dégoûts ou chagrins affliger" \
-        "mon âme," \
-        "Mais viens ici, si jamais autrefois" \
-        "entendant de loin ma voix, tu m'as" \
-        "écoutée, quand, quittant la demeure" \
-        "dorée de ton père tu venais, Après avoir" \
-        "attelé ton char," \
-        "de beaux passereaux rapides" \
-        "t'entraînaient autour de la terre" \
-        "sombre,secouant leurs ailes serrées et du" \
+texte = "Toi dont le trône étincelle, ô immortelle " \
+        "Aphrodite, fille de Zeus, ourdisseuse de " \
+        "trames, je t'implore : ne laisse pas, ô " \
+        "souveraine, dégoûts ou chagrins affliger " \
+        "mon âme, " \
+        "Mais viens ici, si jamais autrefois " \
+        "entendant de loin ma voix, tu m'as " \
+        "écoutée, quand, quittant la demeure " \
+        "dorée de ton père tu venais, après avoir " \
+        "attelé ton char, " \
+        "de beaux passereaux rapides " \
+        "t'entraînaient autour de la terre " \
+        "sombre, secouant leurs ailes serrées et du " \
         "haut du ciel tirant droit à travers l'éther."
 ```
 
-Écrire un programme qui demande à l'utilisateurice de saisir un mot, puis vérifie si ce mot est dans
-le texte.
+Écrire un programme qui demande à l'utilisateurice de saisir un mot, puis affiche `True` si le mot
+est dans le texte (autrement dit s'il est inclus dans la variable `texte`) et `False` sinon.
 
 ```python
 ```
