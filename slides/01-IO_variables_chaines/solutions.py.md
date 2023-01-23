@@ -24,6 +24,7 @@ Cours 1 : corrections
 2022-01-25
 <!-- #endregion -->
 
+
 ## ⬜ Exo ⬜
 
 > Écrire dans la cellule ci-dessous un programme qui affiche votre prénom et votre nom de famille,
@@ -147,7 +148,8 @@ Attention à ne pas confondre les rôles de `print` et `input`
 
 ---
 
-Si une question vous paraît difficile, pensez à vous poser avec du papier et un crayon. Noter les entrées et les sorties du programme (sans détailler comment est fait le traitement) peut vous aider.
+Si une question vous paraît difficile, pensez à vous poser avec du papier et un crayon. Noter les
+entrées et les sorties du programme (sans détailler comment est fait le traitement) peut vous aider.
 
 ---
 
@@ -170,7 +172,8 @@ print("banane" in texte)
 
 Quelques points de style
 
-- Pas d'espace entre le nom d'une fonction et les parenthèses : `print("Salut")` et non `print ("Salut")`, `int("2713")` et pas `int ("2713")`.
+- Pas d'espace entre le nom d'une fonction et les parenthèses : `print("Salut")` et non `print
+  ("Salut")`, `int("2713")` et pas `int ("2713")`.
 - Quand la question demande un affichage, utilisez plutôt `print` que de simplement laisser Jupyter
   afficher le dernier résultat.
 - On peut terminer une chaîne de caractère par une espace :

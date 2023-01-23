@@ -16,12 +16,11 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 <!-- #region slideshow={"slide_type": "slide"} -->
-Cours 3 : Instructions conditionnelles
+Cours 2 : Instructions conditionnelles
 ======================================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-01-25
 <!-- #endregion -->
 
 Dans ce notebook , on présente les instructions conditionnelles `if`, `elif` et `else` et comment
@@ -493,10 +492,21 @@ Répondre à ces exercices directement dans le notebook, le sauvegarder sous un 
 ### Exercice 1
 
 
-Demander à l'utilisateurice d'entrer un nombre minimal de caractères pour qu'un mot soit considéré
-comme long. Puis lui demander de saisir un mot et afficher `"😱"` si le mot est long et `"😌"` sinon.
+Demander à l'utilisateurice d'entrer de saisir un mot, puis afficher `"😱"` si le mot fait plus de
+10 caractères et afficher `"😌"` sinon.
 
-### 🐉 Exercice 2 🐉
+### 📅 Exercice 2 📅
+
+Une année est bissextile si son numéro est divisible par $4$, sauf si c'est la dernière d'un siècle
+(i.e. elle est divisible par $100$, par exemple 1900), auquel cas, elle est bissextile
+seulement si son numéro est divisible par $400$.
+
+Écrire un programme qui indique si une année entrée par l'utilisateurice est bissextile ou non.
+
+**Indice** l'opérateur modulo `%`, qu'on a vu dans le cours 1 peut vous être utile. En particulier,
+un nombre $a$ est divisible par un nombre $b$ si et seulement si `a % b == 0`.
+
+### 🐉 Exercice 3 🐉
 
 Dans le jeu de rôle Donjons et Dragons, les personnages ont un alignement qui les positionne sur
 deux axes : loyal—neutre—chaotique et bon—neutre—mauvais. Le choix d'un alignement détermine les
@@ -530,17 +540,6 @@ qu'aura votre programme
 - Combien de branches conditionnelles y aura-t-il ?
 - Quelles conditions dépendent les unes des autres ?
 - Comment vais-je gérer les imbrications ?
-
-### 📅 Exercice 3 📅
-
-Une année est bissextile si son numéro est divisible par $4$, sauf si c'est la dernière d'un siècle
-(i.e. elle est divisible par $100$, par exemple 1900), auquel cas, elle est bissextile
-seulement si son numéro est divisible par $400$.
-
-Écrire un programme qui indique si une année entrée par l'utilisateurice est bissextile ou non.
-
-**Indice** l'opérateur modulo `%`, qu'on a vu dans le cours 1 peut vous être utile. En particulier,
-un nombre $a$ est divisible par un nombre $b$ si et seulement si `a % b == 0`.
 
 
 ### Réflexion

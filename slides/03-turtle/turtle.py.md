@@ -16,12 +16,11 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 <!-- #region slideshow={"slide_type": "slide"} -->
-Cours 2 : Dessiner avec `turtle`
+Cours 3 : Dessiner avec `turtle`
 ================================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-01-25
 <!-- #endregion -->
 
 Dans ce notebook :
@@ -32,7 +31,7 @@ Dans ce notebook :
 
 Matériel complémentaire : [une vidéo pertinente](https://youtu.be/FN2RM-CHkuI).
 
-Les exercices sont tirés du cours « Apprendre à programmer avec Python », donnée à l'Université
+Les exercices sont tirés du cours « Apprendre à programmer avec Python », donné à l'Université
 Sorbonne Nouvelle par Marine Delaborde et Pascal Amsili, que je remercie très chaleureusement.
 
 ## Thonny
@@ -118,8 +117,8 @@ d'édition de Thonny, au dessus de la console).
 
 ### Exercice 1
 
-Reproduire la forme suivante à l’aide des fonctions `turtle`. La ligne horizontale fait 100 pixels, la
-ligne verticale fait 50 pixels, l’angle est un angle droit :
+Reproduire la forme suivante à l’aide des fonctions `turtle`. La ligne horizontale fait 100 pixels,
+la ligne verticale fait 50 pixels, l’angle est un angle droit :
 
 ![Une ligne horizontale vers la droite avec au bout une ligne verticale vers le bas](images/ex1.png)
 
@@ -141,7 +140,7 @@ Reproduire la forme suivante à l’aide des fonctions `turtle` (escalier montan
 
 Dessiner un carré de 96 pixels de côté.
 
-![Escalier montant](images/ex4.png)
+![un carré de 96 pixels de côté](images/ex4.png)
 
 ### Exercice 5
 
@@ -152,7 +151,7 @@ Reproduire la forme suivante à l’aide des fonctions `turtle` (dimensions des 
 <!-- #region -->
 ## Scripts
 
-Un truc frustrant dans tout ça c'est de devoir écrire les instructions une par une et pas en bloc
+Un truc frustrant dans tout ça, c'est de devoir écrire les instructions une par une et pas en bloc
 comme dans les notebooks.
 
 <small>En fait on peut, mais chut</small>
@@ -205,9 +204,9 @@ cheminée).
 ## Et après ?
 
 On retrouvera la tortue dans des prochaines séances. Quelques notes pour celleux qui voudraient
-aller plus loin tout de suite, la documentation complète de `turtle` avec toutes ses est disponible
-à <https://docs.python.org/fr/3/library/turtle.html>. Attention, elle ne prend pas trop de
-pincettes.
+aller plus loin tout de suite, la documentation complète de `turtle` avec toutes ses commandes est
+disponible à <https://docs.python.org/fr/3/library/turtle.html>. Attention, elle ne prend pas trop
+de pincettes.
 
 Et qu'est-ce que c'est que cette histoire de `from turtle import *` ? C'est une histoire pour une
 prochaine fois.

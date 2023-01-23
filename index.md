@@ -8,7 +8,7 @@ layout: default
 
 ## Nouvelles
 
-- **2022-01-75** Premier cours de cette session le mardi 17 janvier 2023. *Be there and beware!*
+- **2022-01-15** Premier cours de cette session le mardi 17 janvier 2023. *Be there and beware!*
 
 
 ## Infos pratiques
@@ -64,6 +64,17 @@ téléchargé.
   [Utiliser les notebooks Jupyter](slides/00-introduction/notebooks.py.ipynb)
 - {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
   [Notebook IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
+  - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
+    [solutions](slides/01-IO_variables_chaines/solutions.py.ipynb)
+
+### 2022-01-24 : Instructions conditionnelles, `turtle` et scripts
+
+- {% notebook_badges slides/02-conditions/conditions.py.md %}
+  [Notebook Conditions](sslides/02-conditions/conditions.py.ipynb)
+- {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
+  [Notebook Turtle](slides/03-turtle/turtle.py.md)
+  - [solutions](slides/03-turtle/solutions.py)
+
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
 
