@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.6
+      jupytext_version: 1.14.4
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -92,19 +92,18 @@ mot = input("Saisir un mot : ")
 print(
   " " + mot + " "  in texte
   or " " + mot + "," in texte
-  or mot == "Toi
-  or mot == "
+  or mot == "Toi"
 )
 ```
 
 ### Exercice 2
 
 > Écrire un programme qui vérifie si le mot *banane* est contenue dans une entrée récupérée avec
-> `input`, en quelle que soit la casse.
+> `input`
 
 ```python tags=["skip-execution"]
 texte = input("Saisir un texte : ")
-print("banane" in texte.lower())
+print("banane" in texte)
 ```
 
 ### Exercice 3

@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.6
+      jupytext_version: 1.14.4
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -100,8 +100,8 @@ print("Ciao !")
 est donc exactement équivalent pour Python.
 
 ```python
-#talkative = True
-talkative = False
+talkative = True
+#talkative = False
 
 if talkative:
     print("On discute ?")
@@ -397,6 +397,8 @@ else:
 
 Et on peut continuer à imbriquer des blocs arbitrairement.
 
+### 🦾 Entraînement 🦾
+
 ```python tags=["skip-execution"]
 user_mood = input("Quelle est ton humeur: ")
 
@@ -410,8 +412,6 @@ else:
     print("💜")
 ```
 
-### 🦾 Entraînement 🦾
-
 Réécrire le code précédent en utilisant `elif` et une expression booléenne complexe, comme dans ce
 qui suit
 
@@ -422,6 +422,19 @@ if "chat" in test and "content" in test:
     print("Hello")
 else:
     print("bye")
+```
+
+```python
+user_mood = input("Quelle est ton humeur: ")
+
+if "heureu" in user_mood and "relax" in user_mood:
+    print("😄")
+    print("😌")
+elif "heureu" in user_mood:
+    print("😄")
+    print("🫂")
+else:
+    print("💜")
 ```
 
 ## Des conditions inattendues
@@ -467,7 +480,20 @@ Outre les booléens `True` et `False`, la plupart des objets en Python ont une v
 (*truthiness*). La plupart sont vrais, ceux qui sont faux étant en général d'une façon ou d'une
 autre vides, nuls… Nous verrons d'autres exemples.
 
-## 💬 Entraînement 💬 : un chatbot basique
+## Exercices
+
+Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
+`02_conditions_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
+`02_conditions_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche soir prochain via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
+(2023-01-29).
+
+### Exercice 1
+
+
+Demander à l'utilisateurice d'entrer de saisir un mot, puis afficher `"😱"` si le mot fait plus de
+10 caractères et afficher `"😌"` sinon.
+
+## 💬 Exercice 2 💬 : un chatbot basique
 
 Demandez à votre utilisateurice si son humeur est bavarde. Si la réponse n'est pas « oui »,
 souhaitez-lui une bonne journée. Sinon, demandez lui comment ça va et répondez différemment suivant
@@ -477,34 +503,9 @@ que sa réponse contient les mots
 - « mal » ou « mauvais » ou « horrible »
 - n'importe quoi d'autre
 
-## Exercices
+```python
 
-Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
-`02_conditions_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
-`02_conditions_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche soir prochain
-(2022-01-30).
-
-- De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
-  (clé d'inscription `rossum`)
-- À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
-
-
-### Exercice 1
-
-
-Demander à l'utilisateurice d'entrer de saisir un mot, puis afficher `"😱"` si le mot fait plus de
-10 caractères et afficher `"😌"` sinon.
-
-### 📅 Exercice 2 📅
-
-Une année est bissextile si son numéro est divisible par $4$, sauf si c'est la dernière d'un siècle
-(i.e. elle est divisible par $100$, par exemple 1900), auquel cas, elle est bissextile
-seulement si son numéro est divisible par $400$.
-
-Écrire un programme qui indique si une année entrée par l'utilisateurice est bissextile ou non.
-
-**Indice** l'opérateur modulo `%`, qu'on a vu dans le cours 1 peut vous être utile. En particulier,
-un nombre $a$ est divisible par un nombre $b$ si et seulement si `a % b == 0`.
+```
 
 ### 🐉 Exercice 3 🐉
 
@@ -516,7 +517,7 @@ classes possibles pour ce personnage :
 - Les antipaladins sont chaotiques mauvais
 - Les moines sont de n'importe quel alignement loyal
 - Les roublards sont de n'importe quel alignement qui n'est pas loyal
-- Les druides sont de n'importe quel alignement neutre (sur n'import lequel des deux axes)
+- Les druides sont de n'importe quel alignement neutre (sur n'importe lequel des deux axes)
 - Les guerriers peuvent être de n'importe quel alignement
 
 Écrire un programme qui demande de choisir un alignement et affiche les classes de personnages

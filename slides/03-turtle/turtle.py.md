@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.6
+      jupytext_version: 1.14.4
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -132,7 +132,7 @@ Reproduire la forme suivante à l’aide des fonctions `turtle` (les segments fo
 ### Exercice 3
 
 Reproduire la forme suivante à l’aide des fonctions `turtle` (escalier montant dont les marches font
-(45×45 pixels)).
+(45×45 pixels).
 
 ![Escalier montant](images/ex3.png)
 
