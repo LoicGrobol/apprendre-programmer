@@ -70,9 +70,9 @@ téléchargé.
 ### 2022-01-24 : Instructions conditionnelles, `turtle` et scripts
 
 - {% notebook_badges slides/02-conditions/conditions.py.md %}
-  [Notebook Conditions](sslides/02-conditions/conditions.py.ipynb)
-- {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
-  [Notebook Turtle](slides/03-turtle/turtle.py.md)
+  [Notebook Conditions](slides/02-conditions/conditions.py.ipynb)
+- {% notebook_badges slides/03-turtle/turtle.py.md %}
+  [Notebook Turtle](slides/03-turtle/turtle.py.ipynb)
   - [solutions](slides/03-turtle/solutions.py)
 
 
