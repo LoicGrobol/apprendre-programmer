@@ -25,14 +25,14 @@ Cours 5 : Corrections
 
 ## 🔄 Exo 🔄
 
-Voici une liste
+> Voici une liste
 
 ```python
 fruits = ["pomme", "poire", "kiwi", "maracuja"]
 ```
 
-Demandez à l'utilisateurice un nom de fruit et affichez `"😋"` s'il est dans la liste et `"🤨"`
-sinon.
+> Demandez à l'utilisateurice un nom de fruit et affichez `"😋"` s'il est dans la liste et `"🤨"`
+> sinon.
 
 ```python tags=["skip-execution"]
 reponse = input("Quel fruit ? ")
