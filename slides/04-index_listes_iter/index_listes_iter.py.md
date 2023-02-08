@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.6
+      jupytext_version: 1.14.4
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -58,6 +58,12 @@ print("Bonjour"[2])
 ```
 <!-- #endregion -->
 
+Testez en exécutant la cellule suivante
+
+```python
+print("Bonjour"[2])
+```
+
 ### Principe de base
 
 L'opération notée par des crochets, qu'on appelle en anglais _**indexing**_ (et qui en français n'a
@@ -69,7 +75,7 @@ caractères. Elle possède également un **ordre** : `"bestial"` et `"baliste"
 chose :
 
 ```python
-"bestial" == "baliste"
+"bestial" != "baliste"
 ```
 
 Ces deux propriétés font qu'il est possible d'accéder à n'importe lequel des caractères d'une chaîne
@@ -116,23 +122,13 @@ programmation. Tout le monde se plante de temps en temps, mais il faut le reteni
 Demandez un mot et un indice `i` à l'utilisateurice. Si le mot a un `i`-ème caractère, affichez ce caractère,
 sinon affichez un message d'erreur.
 
-Indice : vous savez déterminer la longueur d'une chaîne de caractères.
+**Indice** : vous savez déterminer la longueur d'une chaîne de caractères.
 
 ```python tags=["skip-execution"]
 mot = input("Dis-moi un mot : ")
 position = int(input("Dis-moi un nombre : "))
 
 # À vous de jouer : ajoutez du code ici pour répondre à la question.
-```
-
-```python tags=["skip-execution"]
-mot = input("Dis-moi un mot : ")
-position = int(input("Dis-moi un nombre : "))
-
-if position >= len(mot) or position < 0:
-    print("Indice", position, "incorrect pour un mot de longueur", len(mot))
-else:
-    print(mot[position])
 ```
 
 ### *Slices*
@@ -438,11 +434,11 @@ states.remove("New York")
 print(states)
 ```
 
-Pour supprimer un élément en donnant sa position on utilise `pop` :
+Pour supprimer le dernier élément, on utilise `pop` :
 
 ```python
 print(states)
-states.pop(1)
+states.pop()
 print(states)
 ```
 
