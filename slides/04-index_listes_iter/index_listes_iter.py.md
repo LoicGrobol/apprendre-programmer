@@ -21,7 +21,6 @@ Cours 4 : Indexation, listes et itération
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-02-01
 <!-- #endregion -->
 
 Dans ce notebook, on introduit les concepts suivants :

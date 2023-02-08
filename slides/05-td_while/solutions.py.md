@@ -21,7 +21,6 @@ Cours 5 : Corrections
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-02-21
 <!-- #endregion -->
 
 ## 🔄 Exo 🔄

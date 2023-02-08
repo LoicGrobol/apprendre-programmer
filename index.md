@@ -67,14 +67,6 @@ téléchargé.
   - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
     [solutions](slides/01-IO_variables_chaines/solutions.py.ipynb)
 
-### 2022-01-24 : Instructions conditionnelles, `turtle` et scripts
-
-- {% notebook_badges slides/02-conditions/conditions.py.md %}
-  [Notebook Conditions](slides/02-conditions/conditions.py.ipynb)
-- {% notebook_badges slides/03-turtle/turtle.py.md %}
-  [Notebook Turtle](slides/03-turtle/turtle.py.ipynb)
-  - [solutions](slides/03-turtle/solutions.py)
-
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
 
@@ -87,6 +79,32 @@ Pour les tablettes sous iOS ou Android, ça ne sera pas possible. Vous devriez p
 l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal, tenez-moi au
 courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
 
+
+### 2022-01-24 : Instructions conditionnelles, `turtle` et scripts
+
+- {% notebook_badges slides/02-conditions/conditions.py.md %}
+  [Notebook Conditions](slides/02-conditions/conditions.py.ipynb)
+- {% notebook_badges slides/03-turtle/turtle.py.md %}
+  [Notebook Turtle](slides/03-turtle/turtle.py.ipynb)
+  - [solutions](slides/03-turtle/solutions.py)
+
+### 2022-02-07 : Boucles
+
+À faire pour le prochain cours : suivre les notebooks suivants, faire les exercices **puis**
+vérifier avec les solutions. Je suis joignable par email si vous coincez, et on fera un
+récapitulatif quand on aura enfin un cours en présentiel.
+
+(Pensez vraiment — vraiment — **vraiment** à vous servir de [Python Tutor](https://pythontutor.com/)
+pour tous les exercices sur les boucles).
+
+- {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
+  [Notebook listes et boucle `for`](slides/04-index_listes_iter/index_listes_iter.py.ipynb)
+  - {% notebook_badges slides/04-index_listes_iter/solutions.py.md %}
+    [Solutions](slides/04-index_listes_iter/solutions.py.ipynb)
+- {% notebook_badges slides/05-td_while/td_while.py.md %}
+  [Notebook boucle `while`](slides/05-td_while/td_while.py.ipynb)
+  - {% notebook_badges slides/05-td_while/solutions.py.md %}
+    [Solutions](slides/05-td_while/solutions.py.ipynb)
 
 ## Ressources
 

@@ -21,7 +21,6 @@ Cours 5 : Exercices et compléments sur les boucles
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-02-08
 <!-- #endregion -->
 
 Dans ce notebook
@@ -85,8 +84,8 @@ matérialisé comme d'habitude par l'indentation tant qu'une certaine condition 
 qui ressemble à celle de l'instruction conditionnelle `if` est la suivante :
 
 ```python
-while condition:
-    # code that will be executed while condition is true
+while CONDITION:
+    # le code à exécuter tant que la condition est vérifiée, c-à-d est évaluée True
 ```
 
 <!-- #endregion -->

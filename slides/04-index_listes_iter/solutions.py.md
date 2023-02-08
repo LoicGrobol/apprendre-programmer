@@ -21,7 +21,6 @@ Cours 4 : Corrections
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-02-08
 <!-- #endregion -->
 
 ## 🔭 Entraînement 🔭
