@@ -826,6 +826,11 @@ cette liste à la fin.
 familles = ["Romanes", "Germaniques", "Balto-slaves", "Celtiques", "Indo-ariennes"]
 ```
 
+## Codingame
+
+- [Onboarding](https://www.codingame.com/training/easy/onboarding)
+- [Power of Thor E01](https://www.codingame.com/training/easy/power-of-thor-episode-1)
+
 ## Consignes pour le rendu
 
 Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme

@@ -462,16 +462,117 @@ for fam in familles:
 print(langues)
 ```
 
-## Consignes pour le rendu
+## Power of Thor
 
-Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
-`06_recapitulatif_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
-`06_recapitulatif_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche soir prochain
-(2022-02-20).
+> [Power of Thor E01](https://www.codingame.com/training/easy/power-of-thor-episode-1)
 
-- De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
-  (clé d'inscription `rossum`)
-- À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
+<!-- #region -->
 
-**Si vous avez plusieurs fichiers `ipynb`, mettez les dans un fichier zip pour pouvoir les déposer
-sur CEL.**
+On peut penser à une première version basique : on cherche d'abord à avoir la bonne abscisse, puis
+la bonne ordonnée :
+
+```python
+# Code original pour réupérer les positions
+light_x, light_y, initial_tx, initial_ty = [int(i) for i in input().split()]
+
+# **AJOUTS** on garde en mémoire la position actuelle
+current_tx = initial_tx
+current_ty = initial_ty
+
+while True:
+    # À conserver pour faire plaisir à CodinGame
+    remaining_turns = int(input())
+
+    if light_x > current_tx:
+        print("E")
+        current_tx = current_tx + 1
+    elif light_x < current_tx:
+        print("W")
+        current_tx = current_tx - 1
+    # Attention : les ordonnées vont de haut en bas
+    elif light_y > current_ty:
+        print("S")
+        current_ty = current_ty + 1
+    else:
+        print("N")
+        current_ty = current_ty - 1
+```
+
+Problème, ça ne marche pas pour le test 4 « *optimal angle* ». Ce qui cloche c'est qu'on utilise pas
+les diagonales, ce qui nous fait perdre du temps. On peut arranger ça en combinant les cas quand on
+doit changer à la fois d'abscisse et d'ordonnée :
+
+```python
+light_x, light_y, initial_tx, initial_ty = [int(i) for i in input().split()]
+
+current_tx = initial_tx
+current_ty = initial_ty
+
+while True:
+    remaining_turns = int(input())
+
+    if light_x > current_tx:
+        if light_y > current_ty:
+            print("SE")
+            current_ty = current_ty + 1
+        elif light_y < current_ty:
+            print("NE")
+            current_ty = current_ty - 1
+        else:
+            print("E")
+        current_tx = current_tx + 1
+    elif light_x < current_tx:
+        if light_y > current_ty:
+            print("SW")
+            current_ty = current_ty + 1
+        elif light_y < current_ty:
+            print("NW")
+            current_ty = current_ty - 1
+        else:
+            print("W")
+        current_tx = current_tx - 1
+    elif light_y > current_ty:
+        print("S")
+        current_ty = current_ty + 1
+    else:
+        print("N")
+        current_ty = current_ty - 1
+```
+
+Ce coup-ci ça marche, par contre, c'est très verbeux : on se répète beaucoup. Voici une solution
+plus compacte en déterminant indépendamment les déplacements sur chacun des axes et en combinant les
+résultats à la fin :
+
+```python
+light_x, light_y, initial_tx, initial_ty = [int(i) for i in input().split()]
+
+current_tx = initial_tx
+current_ty = initial_ty
+
+while True:
+    remaining_turns = int(input())
+    
+    if light_x > current_tx:
+        direction_ew = "E"
+        current_tx = current_tx + 1
+    elif light_x < current_tx:
+        direction_ew = "W"
+        current_tx = current_tx - 1
+    else:
+        direction_ew = ""
+    
+    if light_y > current_ty:
+        direction_sw = "S"
+        current_ty = current_ty + 1
+    elif light_y < current_ty
+        direction_sw = "N"
+        current_ty = current_ty - 1
+    else:
+        direction_sw = ""
+
+    print(direction_sw + direction_ew)
+```
+
+Comme d'habitude, il y a beaucoup d'autres solutions et en particulier des beaucoup plus compactes. C'est un bon entraînement de chercher la façon de résoudre ce problème en un minimum de caractères, on dit qu'on fait du *Code Golf*.
+
+<!-- #endregion -->
