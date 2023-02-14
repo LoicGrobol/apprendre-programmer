@@ -106,6 +106,16 @@ pour tous les exercices sur les boucles).
   - {% notebook_badges slides/05-td_while/solutions.py.md %}
     [Solutions](slides/05-td_while/solutions.py.ipynb)
 
+
+### 2022-02-15 : Récapitulatif
+
+Résumé des épisodes précédents, avec **plein** d'exos.
+
+- {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
+[Notebook récapitulatif](slides/06-recapitulatif/recapitulatif.py.ipynb)
+
+À rendre pour la prochaine fois : les exercices du notebook.
+
 ## Ressources
 
 ### Python général

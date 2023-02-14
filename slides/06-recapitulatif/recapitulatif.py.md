@@ -21,7 +21,7 @@ Cours 6 : TD récapitulatif
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-02-15
+2023-02-14
 <!-- #endregion -->
 
 Dans ce notebook
@@ -836,11 +836,7 @@ familles = ["Romanes", "Germaniques", "Balto-slaves", "Celtiques", "Indo-arienne
 Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
 `06_recapitulatif_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
 `06_recapitulatif_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche soir prochain
-(2022-02-20).
-
-- De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
-  (clé d'inscription `rossum`)
-- À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
+(2022-02-19).
 
 **Si vous avez plusieurs fichiers `ipynb`, mettez les dans un fichier zip pour pouvoir les déposer
 sur CEL.**
