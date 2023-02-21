@@ -56,7 +56,7 @@ Une autre option, si vous avez un compte Google est d'utiliser
 [Colaboratory](https://colab.research.google.com/) pour éditer les notebooks que vous avez
 téléchargé.
 
-### 2022-01-17 : Introduction, notebooks, entrées/sorties de bases et variables
+### 2023-01-17 : Introduction, notebooks, entrées/sorties de bases et variables
 
 - {% notebook_badges slides/00-introduction/introduction-slides.py.md %}
   [Slides Introduction](slides/00-introduction/introduction-slides.py.ipynb)
@@ -80,7 +80,7 @@ l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal
 courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
 
 
-### 2022-01-24 : Instructions conditionnelles, `turtle` et scripts
+### 2023-01-24 : Instructions conditionnelles, `turtle` et scripts
 
 - {% notebook_badges slides/02-conditions/conditions.py.md %}
   [Notebook Conditions](slides/02-conditions/conditions.py.ipynb)
@@ -88,7 +88,7 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
   [Notebook Turtle](slides/03-turtle/turtle.py.ipynb)
   - [solutions](slides/03-turtle/solutions.py)
 
-### 2022-02-07 : Boucles
+### 2023-02-07 : Boucles
 
 À faire pour le prochain cours : suivre les notebooks suivants, faire les exercices **puis**
 vérifier avec les solutions. Je suis joignable par email si vous coincez, et on fera un
@@ -104,17 +104,25 @@ pour tous les exercices sur les boucles).
 - {% notebook_badges slides/05-td_while/td_while.py.md %}
   [Notebook boucle `while`](slides/05-td_while/td_while.py.ipynb)
   - {% notebook_badges slides/05-td_while/solutions.py.md %}
-    [Solutions](slides/05-td_while/solutions.py.ipynb)
+    [Solutions](slides/05-td_while/solutions.py.ipynb)s
 
-
-### 2022-02-15 : Récapitulatif
+### 2023-02-14 : Récapitulatif
 
 Résumé des épisodes précédents, avec **plein** d'exos.
 
 - {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
 [Notebook récapitulatif](slides/06-recapitulatif/recapitulatif.py.ipynb)
+  - {% notebook_badges slides/06-recapitulatif/corrections.py.md %}
+[Notebook récapitulatif](slides/06-recapitulatif/corrections.py.ipynb)
 
 À rendre pour la prochaine fois : les exercices du notebook.
+
+### 2023-02-21 : Compléments sur les boucles et les séquences
+
+- {% notebook_badges slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md %}
+  [Notebook
+  récapitulatif](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.ipynb)
+
 
 ## Ressources
 
