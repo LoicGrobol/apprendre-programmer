@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.7
+      jupytext_version: 1.14.4
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -20,8 +20,6 @@ Cours 7 : Compléments sur les boucles et les séquences
 ======================================================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
-
-2022-02-22
 <!-- #endregion -->
 
 Dans ce notebook, des nouveaux outils pour travailler avec les boucles : les compteurs, les
@@ -353,8 +351,7 @@ servir pour s'entraîner à manipuler des `range`.
 
 Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
 `07_boucles_sequences_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
-`07_boucles_sequences_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche 2022-03-06 au soir.
-(2022-02-06).
+`07_boucles_sequences_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche 2023-02-26 au soir.
 
 - De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
   (clé d'inscription `rossum`)
@@ -362,8 +359,7 @@ Répondre à ces exercices directement dans le notebook, le sauvegarder sous un 
 
 Attention : **l'extension doit être `.ipynb`**.
 
-Cette fois-ci ils sont assez longs, ne vous y prenez pas au dernier moment et n'hésitez pas à
-revenir sur les cours et les corrigés précédents pour trouver des idées.
+N'hésitez pas à revenir sur les cours et les corrigés précédents pour trouver des idées.
 
 ### Consonnes
 
@@ -444,6 +440,9 @@ Merci de bien répondre à chacune de ces questions dans la cellule de texte ci-
 de l'exécuter avant de sauvegarder) : elles me permettent d'ajuster le cours en fonction de vos
 besoins, avec un peu de chance, elles devraient également vous aider à guider votre travail et à
 apprécier votre progression.
+
+
+
 
 
 

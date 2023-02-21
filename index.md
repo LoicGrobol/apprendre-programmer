@@ -113,15 +113,14 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 - {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
 [Notebook récapitulatif](slides/06-recapitulatif/recapitulatif.py.ipynb)
   - {% notebook_badges slides/06-recapitulatif/corrections.py.md %}
-[Notebook récapitulatif](slides/06-recapitulatif/corrections.py.ipynb)
+[NSolutionsf](slides/06-recapitulatif/corrections.py.ipynb)
 
 À rendre pour la prochaine fois : les exercices du notebook.
 
 ### 2023-02-21 : Compléments sur les boucles et les séquences
 
 - {% notebook_badges slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md %}
-  [Notebook
-  récapitulatif](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.ipynb)
+  [Notebook](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.ipynb)
 
 
 ## Ressources
