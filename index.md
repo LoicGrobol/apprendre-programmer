@@ -122,6 +122,10 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 - {% notebook_badges slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md %}
   [Notebook](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.ipynb)
 
+### 2023-03-07 : Itérables et dictionnaires
+
+- {% notebook_badges slides/08-iterables_dictionnaires/iterables_dictionnaires.py.md %}
+  [Notebook](slides/08-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
 
 ## Ressources
 

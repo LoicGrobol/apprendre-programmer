@@ -21,7 +21,6 @@ Cours 8 : Manipulations de chaînes, itérables composites et dictionnaires
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-03-15
 <!-- #endregion -->
 
 Dans ce notebook
@@ -114,6 +113,68 @@ print(text)
 ```python
 letters = ['P', 'y', 't', 'h', 'o', 'n']
 print(str.join("", letters))
+```
+
+### Changement de casse
+
+Un concept important en TAL est celui de « sac de mots ». Il s'agit d'un modèle sémantique très
+simple où on fait l'hypothèse que le sens d'un texte peut être représenté par la liste des mots
+qu'il contient et leurs nombres d'occurrence. Intuitivement, si un texte par d'animaux de compagnie,
+on s'attend à rencontre plus souvent les mots *chat* ou *chien* que s'il s'agit d'un texte sur la
+politique française.
+
+Certains mots, cependant, apparaissent à peu près avec la même fréquence dans tous les types de
+textes : *et*, *un*, *la*… On les appelle parfois « mots vides » ou « *stop words* », puisqu'ils
+n'apportent pas d'information pour ce modèle, et on commence en général par les enlever des textes à
+représenter.
+
+De même, pour beaucoup d'applications en linguistique, la casse (majuscules et minuscules) n'est pas
+informative. Par exemple pour enlever les *stop words* d'un texte, on veut les enlever peu importe
+leur casse (*Un*, *un*, *UN*…). Cependant, pour Python, *Un* et *un* des chaînes de caractères
+différentes.
+
+```python
+"un" == "UN"
+```
+
+Pour nous aider, il existe une façon de mettre tout en minuscules
+
+```python
+str.lower("UN")
+```
+
+```python
+"un" == str.lower("uN")
+```
+
+Les fonctions `str.upper` et `str.title` permettent d'autres normalisations.
+
+```python
+print("The uppercase of 'the' is '" + str.upper("the") + "'.")
+```
+
+```python
+print("The title version of 'hello world' is '" + str.title("hello world") + "'.")
+```
+
+Et il existe des fonctions pour vérifier si une chaîne de caractères est normalisée
+
+
+- `str.isupper` vérifie qu'une chaîne de caractères est en majusculese;
+- `str.islower` vérifie qu'une chaîne de caractères est en minuscules;
+- `str.istitle` vérifie qu'une chaîne de caractères est en casse de titre.
+
+
+```python
+str.isupper("HELLO WORLD!")
+```
+
+```python
+str.islower("hello world!")
+```
+
+```python
+str.istitle("Hello World!")
 ```
 
 ### Utiliser les méthodes de chaîne
@@ -234,7 +295,7 @@ Est-ce que vous voyez comment simuler `enumerate` en utilisant `zip` ?
 ### Tuples
 
 Un dernier point : c'est quoi exactement ces éléments que renvoient `zip` et `enumerate`, ça
-ressemble à des listes mais avec des parenthèses ?
+ressemble à des listes, mais avec des parenthèses ?
 
 ```python
 villes = ["Orléans", "Tours", "Nanterre"]
@@ -393,17 +454,15 @@ Quelle est la taille maximale que peut atteindre un dictionnaire dont toutes les
 
 ## Étude de cas : les codes ISO 639
 
-<!-- TODO: commencer plutôt par un Dict[str, str] et passer aux listes dans un second temps -->
-
 Voici un dictionnaire qui contient une liste de quelques langues indexées par leur code [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 ```python
 iso_639 = {
-    "ny": ["Chichewa", "Chewa", "Nyanja"], 
-    "zh": ["Chinese"], 
-    "cs": ["Czech"], 
-    "da": ["Danish"], 
-    "dv": ["Divehi", "Maldivian"],
+    "ny": "Chewa", 
+    "zh": "Chinese", 
+    "cs": "Czech", 
+    "da": "Danish", 
+    "dv": "Divehi",
 }
 ```
 
@@ -436,14 +495,14 @@ print("fr" in iso_639)
 On peut facilement ajouter un nouvel élément au dictionnaire :
 
 ```python
-iso_639["ru"] = ["Russian"]
+iso_639["ru"] = "Russian"
 print(iso_639)
 ```
 
 On peut aussi en supprimer, en utilisant le mot clé `del`
 
 ```python
-iso_639["fr"] = ["French"]
+iso_639["fr"] = "French"
 print(iso_639)
 del iso_639["fr"]
 print(iso_639)
@@ -465,12 +524,12 @@ for language in iso_639:
 Modifier la boucle `for` ci-dessous pour qu'elle affiche la sortie suivante :
 
 ```text
-ny -> ['Chichewa', 'Chewa', 'Nyanja']
-zh -> ['Chinese']
-cs -> ['Czech']
-da -> ['Danish']
-dv -> ['Divehi', 'Maldivian']
-ru -> ['Russian']
+ny -> 'Chichewa'
+zh -> 'Chinese'
+cs -> 'Czech'
+da -> 'Danish'
+dv -> 'Divehi'
+ru -> 'Russian'
 ```
 
 ```python
@@ -493,6 +552,8 @@ for pair in iso_639.items():
 ```
 
 Quel est le type de `pair` dans la boucle ci-dessus ?
+
+On peut aussi l'écrire ainsi :
 
 ```python
 for cle, valeur in iso_639.items():
@@ -571,19 +632,21 @@ Attention : **l'extension doit être `.ipynb`**.
 Voici deux listes.
 
 ```python
-text = ['a', 'infinity', 'reflection', 'with', 'like', 'big', 'briefly', 'into', 'children', 'which', 
-        'fruit', 'picking', 'there', 'try', 'little', 'around', 'appearances', 'appeared', 'all', 
-        'crossed', 'basis', 'improbability', 'their', 'discworld', 'black', 'to', 'death', 'future', 
-        'only', 'my', 'robe', 'things', 'for', 'it', 'existed', 'said', 'sake', 'sometimes', 'right', 
-        'way', 'that', 'country', 'chessboard', 'quoth', 'well', 'domestic', 'skull', 'wonderful', 
-        'hooded', 'or', 'empty', 'bottom', 'mirror', 'himself', 'rather', 'over', 'every', 'triangle', 
-        'roses', 'border', 'orbiting', 'was', 'from', 'show', 'be', 'pecked', 'bones', 'just', 'universe', 
-        'me', 'triangular', 'gets', 'worth', 'have', 'climbed', 'service', 'fluttered', 'top', 'but', 
-        'grey', 'claws', 'at', 'rats', 'creep', 'own', 'pattern', 'point', 'white', 'than', 'dark', 
-        'therefore', 'frame', 'this', 'not', 'the', 'could', 'mind', 'turtle', 'scrabble', 'better', 
-        'industries', 'looked', 'an', 'cherubs', 'life', 'anything', 'more', 'small', 'and', 'of', 'his', 
-        'on', 'skulls', 'elephants', 'in', 'thoughts', 'seen', 'nearest', 'expectantly', 'other', 'side', 
-        'shape', 'total', 'so', 'world', 'look', 'sun']
+text = [
+    'a', 'infinity', 'reflection', 'with', 'like', 'big', 'briefly', 'into', 'children', 'which', 
+    'fruit', 'picking', 'there', 'try', 'little', 'around', 'appearances', 'appeared', 'all', 
+    'crossed', 'basis', 'improbability', 'their', 'discworld', 'black', 'to', 'death', 'future', 
+    'only', 'my', 'robe', 'things', 'for', 'it', 'existed', 'said', 'sake', 'sometimes', 'right', 
+    'way', 'that', 'country', 'chessboard', 'quoth', 'well', 'domestic', 'skull', 'wonderful', 
+    'hooded', 'or', 'empty', 'bottom', 'mirror', 'himself', 'rather', 'over', 'every', 'triangle', 
+    'roses', 'border', 'orbiting', 'was', 'from', 'show', 'be', 'pecked', 'bones', 'just', 'universe', 
+    'me', 'triangular', 'gets', 'worth', 'have', 'climbed', 'service', 'fluttered', 'top', 'but', 
+    'grey', 'claws', 'at', 'rats', 'creep', 'own', 'pattern', 'point', 'white', 'than', 'dark', 
+    'therefore', 'frame', 'this', 'not', 'the', 'could', 'mind', 'turtle', 'scrabble', 'better', 
+    'industries', 'looked', 'an', 'cherubs', 'life', 'anything', 'more', 'small', 'and', 'of', 'his', 
+    'on', 'skulls', 'elephants', 'in', 'thoughts', 'seen', 'nearest', 'expectantly', 'other', 'side', 
+    'shape', 'total', 'so', 'world', 'look', 'sun'
+]
 
 words = ["shape", "linguistics", "every", "even", "world", "chessboard", "water", "sake"]
 ```
