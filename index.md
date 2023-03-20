@@ -120,12 +120,18 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 ### 2023-02-21 : Compléments sur les boucles et les séquences
 
 - {% notebook_badges slides/07-complements_boucles_sequences/complements_boucles_sequences.py.md %}
-  [Notebook](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.ipynb)
+  [Notebook boucles et
+  séquences](slides/07-complements_boucles_sequences/complements_boucles_sequences.py.ipynb)
 
 ### 2023-03-07 : Itérables et dictionnaires
 
-- {% notebook_badges slides/08-iterables_dictionnaires/iterables_dictionnaires.py.md %}
-  [Notebook](slides/08-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
+- {% notebook_badges slides/08-iterables_dictionnaires/iterables_dictionnaires.py.md %} [Notebook
+  itérables et dictionnaires](slides/08-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
+
+### 2023-03-21 : Fonctions
+
+- {% notebook_badges slides/09-fonctions/fonctions.py.md %}
+  [Notebook fonctions](slides/09-fonctions/fonctions.py.ipynb)
 
 ## Ressources
 

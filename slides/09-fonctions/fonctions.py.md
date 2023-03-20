@@ -21,7 +21,6 @@ Cours 9 : Fonctions
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-03-22
 <!-- #endregion -->
 
 Dans ce notebook
@@ -180,7 +179,7 @@ print("Et encore")
 ```
 
 Une fonction, c'est un bloc de code, une série d'instructions, un bout de programme auquel on donne
-un nom pour pouvoir le réutiliser. Dans le cellule ci-dessus, on a donné le nom `say_hello` à un
+un nom pour pouvoir le réutiliser. Dans la cellule ci-dessus, on a donné le nom `say_hello` à un
 morceau de code qui ne contient qu'une seule instruction `print("Bonjour")`.
 
 Par la suite, à chaque fois qu'on écrit l'instruction `say_hello()`, c'est `print("Bonjour")` qui
@@ -257,7 +256,7 @@ boucles()
 boucles()
 ```
 
-**REMARQUE IMPORTANTE** comme tous les noms que vous donnez en Python, que ce soit a des variables
+**REMARQUE IMPORTANTE** comme tous les noms que vous donnez en Python, que ce soit à des variables
 ou à des fonctions, Python n'attache aucune signification au nom d'une fonction : du point de vue de
 Python, les trois fonctions suivantes sont complètement équivalentes.
 
@@ -268,7 +267,7 @@ def f():
 def machin():
     print("machin")
 
-def une_fonction_nom_très_très_long():
+def une_fonction_avec_un_nom_très_très_long():
     print("machin")
     
 machin()
@@ -285,42 +284,26 @@ soit le nom que vous donnez.
 
 1\. Écrire un programme dans lequel
 
-- Vous définissez une fonction nommmée `dire_bonjour` qui affiche `"Bonjour les amis !"`.
-- Vous appellez trois fois cette fonction.
+- Vous définissez une fonction nommée `dire_bonjour` qui affiche `"Bonjour les amis !"`.
+- Vous appelez trois fois cette fonction.
 
 ```python
-def dire_bonjour():
-    print("Bonjour les amis !")
-
-dire_bonjour()
-dire_bonjour()
-dire_bonjour()
 ```
 
 2\. Écrire un programme dans lequel
 
-- Vous définissez une fonction (du nom que vous voulez) qui affiche mille fois `"spam"`
-- Vous appellez une fois cette fonction.
+- Vous définissez une fonction (du nom que vous voulez) qui affiche mille fois `"spam"`.
+- Vous appelez une fois cette fonction.
 
 ```python
-def spam():
-    for i in range(1000):
-        print("spam")
-
-spam()
 ```
 
 3\. Écrire un programme dans lequel
 
 - Vous définissez une fonction (du nom que vous voulez) qui affiche une fois `"spam"`
-- Vous appellez mille fois cette fonction.
+- Vous appelez mille fois cette fonction.
 
 ```python
-def spam2():
-    print("spam")
-    
-for i in range(1000):
-    spam2()
 ```
 
 4\. Refaire l'exercice 4 précédent, mais en utilisant une fonction pour les instructions qui
@@ -417,10 +400,7 @@ enumère([1, 2, 3, "carbone"])
 1\. Définir une fonction nommée `triple` qui accepte un argument, supposé être un nombre, et affiche
 son triple.
 
-```python
-def triple(n):
-    print(3*n)
-    
+```python  
 triple(4)
 triple(-16)
 triple(14)
@@ -430,20 +410,13 @@ triple(14)
 caractères, et affiche cette chaîne mise tout en majuscules.
 
 ```python
-def crier(chn):
-    s = str.upper(chn)
-    print(s)
-
-crier("wesh")
+crier("vive la révolution")
 ```
 
 3\. Définir une fonction nommée `produit` qui accepte deux arguments et affiche leur produit. Tester
 `produit(3, 4)` et `produit("spam ", 5)`.
 
 ```python
-def produit(a, b):
-    print(a*b)
-
 produit(3, 4)
 produit("spam ", 5)
 ```

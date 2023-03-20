@@ -20,8 +20,6 @@ Cours 10 : valeur de retour et accès aux fichiers
 =================================================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
-
-2022-03-29
 <!-- #endregion -->
 
 Dans ce notebook
@@ -439,19 +437,19 @@ Attention, le fichier n'est accessible que dans le bloc introduit par `with open
 Quand vous sortez du bloc, la variable `flux` n'est plus définie :
 
 ```python tag=["raises-exception"]
-with open("ada.txt", 'r') as flllux:
-    line = flllux.readline().strip()
+with open("ada.txt", 'r') as flux:
+    line = flux.readline().strip()
     print(line)
     
-line = flllux.readline()
+line = flux.readline()
 ```
 
 En revanche, si vous avez stocké sont contenu (ou une partie) dans une variable, ces valeurs restent
 accessibles (l'affectation les a copié en mémoire) :
 
 ```python
-with open("ada.txt", 'r') as flllux:
-    line = flllux.readline().strip()
+with open("ada.txt", 'r') as flux:
+    line = flux.readline().strip()
     print(line)
 
 print(line)
