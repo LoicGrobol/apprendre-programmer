@@ -104,7 +104,7 @@ pour tous les exercices sur les boucles).
 - {% notebook_badges slides/05-td_while/td_while.py.md %}
   [Notebook boucle `while`](slides/05-td_while/td_while.py.ipynb)
   - {% notebook_badges slides/05-td_while/solutions.py.md %}
-    [Solutions](slides/05-td_while/solutions.py.ipynb)s
+    [Solutions](slides/05-td_while/solutions.py.ipynb)
 
 ### 2023-02-14 : Récapitulatif
 
@@ -113,7 +113,7 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 - {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
 [Notebook récapitulatif](slides/06-recapitulatif/recapitulatif.py.ipynb)
   - {% notebook_badges slides/06-recapitulatif/corrections.py.md %}
-[NSolutionsf](slides/06-recapitulatif/corrections.py.ipynb)
+[Solutions](slides/06-recapitulatif/corrections.py.ipynb)
 
 À rendre pour la prochaine fois : les exercices du notebook.
 
@@ -132,6 +132,7 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 
 - {% notebook_badges slides/09-fonctions/fonctions.py.md %}
   [Notebook fonctions](slides/09-fonctions/fonctions.py.ipynb)
+  - {% notebook_badges slides/09-fonctions/solutions.py.md %} [Solutions](slides/09-fonctions/solutions.py.ipynb)
 
 ## Ressources
 
