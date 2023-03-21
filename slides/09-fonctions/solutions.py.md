@@ -200,7 +200,7 @@ left(90)
 
 ```python
 def dire_bonjour():
-    print("Bonjour le ami⋅es")
+    print("Bonjour les ami⋅es")
 
 dire_bonjour()
 dire_bonjour()
@@ -220,6 +220,13 @@ def spam1k():
         print("spam")
 
 spam1k()
+```
+
+```python
+def spam1k2():
+    print(1000*"spam\n")
+
+spam1k2()
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -255,10 +262,6 @@ def draw_square():
     left(90)
 
 shape("turtle")
-
-up()
-forward(30)
-down()
 
 color("red")
 draw_square()
