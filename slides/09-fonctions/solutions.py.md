@@ -320,7 +320,8 @@ caractères, et affiche cette chaîne mise tout en majuscules.
 
 ```python
 def crier(chaine):
-    print(chaine.upper())
+    resultat = str.upper(chaine)
+    print(resultat)
 
 crier("vive la révolution")
 ```
@@ -331,9 +332,8 @@ crier("vive la révolution")
 <!-- #endregion -->
 
 ```python
-def produit(a, b):
-    resultat = a*b
-    print(resultat)
+def produit(a, b): 
+    print(a*b)
 
 produit(3, 4)
 produit("spam ", 5)
@@ -355,4 +355,3 @@ def carré(c):
     left(90)
 ```
 <!-- #endregion -->
-

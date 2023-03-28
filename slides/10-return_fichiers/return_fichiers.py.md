@@ -80,18 +80,18 @@ longueur = len("anticonstitutionnellement")
 On a bien appelé la fonction `len`, qui n'affiche rien. Donc rien ne s'affiche.
 
 
-En revanche, on a bien fait quelque chose ici : on a donnée une valeur à la variable `longueur`.
+En revanche, on a bien fait quelque chose ici : on a donné une valeur à la variable `longueur`.
 
 ```python
 print(longueur)
 ```
 
 Autrement dit, `len` ne fait pas un affichage : elle transmet plutôt une information : la longueur
-de son argument.
+de son argument. On dit qu'elle a **retourné** ou **renvoyé** une valeur.
 
 
 
-Et nos fonctions, elles passent une information ?
+Et nos fonctions, elles renvoient quelque chose ?
 
 ```python
 def bonjour():
@@ -128,9 +128,8 @@ print(varbl)
 on a bien **renvoyé** une valeur.
 
 
-Renvoyer une valeur, c'est surtout utile quand on a des paramètres, on va pas se mentir (sinon on
-renvoie toujours la même chose, pas vraiment la peine de faire une fonction, une variable
-suffirait.
+Renvoyer une valeur, c'est surtout utile quand on a des paramètres, sinon on renvoie toujours la
+même chose, pas vraiment la peine de faire une fonction, une variable suffirait.
 
 ```python
 def somme(a, b):
@@ -200,6 +199,8 @@ triple du deuxième
 5\. Écrire une fonction qui accepte un argument, supposé être une liste de chaînes de caractères,
 qui renvoie la plus longue chaîne de la liste.
 
+
+### Solutions
 
 1\.
 
@@ -462,6 +463,24 @@ print(line)
 2\. Afficher la longueur en nombre de caractères de chacune des lignes du fichier
 [`ada.txt`](ada.txt).
 
+### Solution
+
+1\.
+
+```python
+with open("sous_dossier/maria.txt") as flux_lecture:
+    for line in flux_lecture:
+        print(line)
+```
+
+2\.
+
+```python
+with open("sous_dossier/maria.txt") as flux_lecture:
+    for line in flux_lecture:
+        print(len(line))
+```
+
 ## Écrire dans des fichiers
 
 Comme on l'a dit précédemment, le mode `"w"` ouvre les fichiers en écriture, en les créant si
@@ -536,3 +555,24 @@ with open("apprendre_a_programmer.txt", "r") as in_stream:
 2\. Écrire une fonction `copie`, avec comme argument deux chaînes de caractères `chemin_entree` et
 `chemin_sortie`, qui copie dans le fichier dont le chemin est `chemin_sortie` le contenu du fichier
 dont le chemin est `chemin_entree`.
+
+### Solutions
+
+1\.
+
+```python
+with open("ada.txt") as flux_lecture:
+    with open("sortie.txt", "w") as flux_ecriture:
+        for ligne in flux_lecture:
+            flux_ecriture.write(ligne)
+```
+
+2\.
+
+```python
+def copie(chemin_entree, chemin_sortie):
+    with open(chemin_entree) as flux_lecture:
+        with open(chemin_sortie, "w") as flux_ecriture:
+            for ligne in flux_lecture:
+                flux_ecriture.write(ligne)
+```
