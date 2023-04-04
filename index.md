@@ -139,12 +139,12 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 - {% notebook_badges slides/10-return_fichiers/return_fichiers.py.md %}
   [Slides retour et fichiers](slides/10-return_fichiers/return_fichiers.py.ipynb)
 
-### 2022-04-12 : Récapitulatif (en temps libre)
+### 2023-04-04 : Récapitulatif (en temps libre)
 
 - {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Exercices récapitulatifs
   2](slides/11-recapitulatif-2/recapitulatif-2.py.ipynb)
-- {% notebook_badges slides/11-recapitulatif-2/corrections.py.md %}
-  [Solutions](slides/11-recapitulatif-2/corrections.py.ipynb)
+  - {% notebook_badges slides/11-recapitulatif-2/corrections.py.md %}
+    [Solutions](slides/11-recapitulatif-2/corrections.py.ipynb)
 - {% notebook_badges assignment/projet-2023.py.md %}
   [Consignes mini-projet](assignment/projet-2023.py.ipynb)
 
