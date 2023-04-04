@@ -21,7 +21,6 @@ Corrections TD récapitulatif 2
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-04-13
 <!-- #endregion -->
 
 ## Compteurs et accumulateurs

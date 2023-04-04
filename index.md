@@ -134,10 +134,19 @@ Résumé des épisodes précédents, avec **plein** d'exos.
   [Notebook fonctions](slides/09-fonctions/fonctions.py.ipynb)
   - {% notebook_badges slides/09-fonctions/solutions.py.md %} [Solutions](slides/09-fonctions/solutions.py.ipynb)
 
-### 2022-03-29 : Valeurs de retour et accès à des fichiers
+### 2023-03-28 : Valeurs de retour et accès à des fichiers
 
 - {% notebook_badges slides/10-return_fichiers/return_fichiers.py.md %}
   [Slides retour et fichiers](slides/10-return_fichiers/return_fichiers.py.ipynb)
+
+### 2022-04-12 : Récapitulatif (en temps libre)
+
+- {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Exercices récapitulatifs
+  2](slides/11-recapitulatif-2/recapitulatif-2.py.ipynb)
+- {% notebook_badges slides/11-recapitulatif-2/corrections.py.md %}
+  [Solutions](slides/11-recapitulatif-2/corrections.py.ipynb)
+- {% notebook_badges assignment/projet-2023.py.md %}
+  [Consignes mini-projet](assignment/projet-2023.py.ipynb)
 
 ## Ressources
 

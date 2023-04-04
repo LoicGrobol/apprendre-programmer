@@ -20,8 +20,6 @@ Cours 11 : TD récapitulatif 2
 ============================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
-
-2022-04-12
 <!-- #endregion -->
 
 Dans ce notebook

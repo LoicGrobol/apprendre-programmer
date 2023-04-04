@@ -16,12 +16,12 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 
-Projet Apprendre à programmer 2022
+Projet Apprendre à programmer 2023
 ==================================
 
 ## Pratique
 
-- Projet à rendre le 3 mai 2022 *au plus tard*
+- Projet à rendre le 3 mai 2023 *au plus tard*
   - Si vous avez un problème, si vous êtes en retard, contactez-moi le plus tôt possible pour ce
     qu'il est possible d'arranger.
 - Projet individuel ou par groupe de deux personnes.
