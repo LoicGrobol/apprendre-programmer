@@ -147,6 +147,11 @@ Résumé des épisodes précédents, avec **plein** d'exos.
     [Solutions](slides/11-recapitulatif-2/corrections.py.ipynb)
 - {% notebook_badges assignment/projet-2023.py.md %}
   [Consignes mini-projet](assignment/projet-2023.py.ipynb)
+  - [`lexique.txt`](assignment/lexique.txt), pensez à l'uploader si vous travaillez dans Colab.
+
+### 2023-04-18 : Partiel
+
+- {% notebook_badges exams/exam-2023.py.md %} [Partiel](exams/exam-2023.py.ipynb)
 
 ## Ressources
 

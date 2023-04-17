@@ -152,7 +152,7 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 
 ### 2022-04-19 : Partiel
 
-- {% notebook_badges exams/exam-2022.py.md %} [Prtiel](exams/exam-2022.py.html)
+- {% notebook_badges exams/exam-2022.py.md %} [Partiel](exams/exam-2022.py.html)
 
 ## Ressources
 
