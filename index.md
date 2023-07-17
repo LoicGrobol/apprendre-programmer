@@ -155,12 +155,31 @@ Résumé des épisodes précédents, avec **plein** d'exos.
 
 ## Ressources
 
-### Python général
+- [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et
+  pour tous niveaux.
 
-Il y a beaucoup, beaucoup de ressources disponibles pour apprendre Python. Ce qui suit n'est qu'une
-sélection.
+### cours et tutoriels
 
-#### Livres
+- [Le tutoriel officiel](https://docs.python.org/fr/3/tutorial/) en français !
+- [Google's Python Class](https://developers.google.com/edu/python/). Guido a travaillé chez eux.
+  Pas [ce
+  Guido](http://vignette2.wikia.nocookie.net/pixar/images/1/10/Guido.png/revision/latest?cb=20140314012724),
+  [celui-là]
+- [Code Academy](https://www.codecademy.com/fr/learn/python)
+
+Plus avancés :
+
+- [Practical Python](https://dabeaz-course.github.io/practical-python/Notes/Contents.html)
+- [Python Mastery](https://github.com/dabeaz-course/python-mastery)
+
+### Jeux de développement
+
+- [Coding Game](https://www.codingame.com/home)
+- [newcoder.io](http://newcoder.io/). Des projets commentés, commencer par 'Data Visualization'
+(https://en.wikipedia.org/wiki/Guido_van_Rossum#/media/File:Guido_van_Rossum_OSCON_2006.jpg)
+- [Code combat](https://codecombat.com/)
+
+### Livres
 
 - *How to think like a computer scientist*, Jeffrey Elkner, Allen B. Downey, et Chris Meyers. Vous
   pouvez l'acheter. Vous pouvez aussi le lire
@@ -174,24 +193,6 @@ sélection.
 - *Programmation Efficace. Les 128 Algorithmes Qu'Il Faut Avoir Compris et Codés en Python au Cours
   de sa Vie*, Christoph Dürr et Jill-Jênn Vie. Si le cours vous paraît trop facile. Le code Python
   est clair, les difficultés sont commentées. Les algos sont très costauds.
-
-#### Web
-
-Il vous est vivement conseillé d'utiliser un (ou plus) des sites et tutoriels ci-dessous.
-
-- [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et
-  pour tous niveaux.
-- [Coding Game](https://www.codingame.com/home). Vous le retrouverez dans les exercices
-  hebdomadaires.
-- [Code Academy](https://www.codecademy.com/fr/learn/python)
-- [newcoder.io](http://newcoder.io/). Des projets commentés, commencer par 'Data Visualization'
-- [Google's Python Class](https://developers.google.com/edu/python/). Guido a travaillé chez eux.
-  Pas [ce
-  Guido](http://vignette2.wikia.nocookie.net/pixar/images/1/10/Guido.png/revision/latest?cb=20140314012724),
-  [celui-là](https://en.wikipedia.org/wiki/Guido_van_Rossum#/media/File:Guido_van_Rossum_OSCON_2006.jpg)
-- [Mooc Python](https://www.fun-mooc.fr/courses/inria/41001S03/session03/about#). Un mooc de
-  l'INRIA, carré.
-- [Code combat](https://codecombat.com/)
 
 ## Licences
 
