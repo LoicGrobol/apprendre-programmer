@@ -30,8 +30,7 @@ Apprendre à programmer : introduction
 
 - Loïc Grobol (il/iel) [<lgrobol@parisnanterre.fr>](mailto:loic.grobol@parisnanterre.fr)
 - PHILLIA / MoDyCo (Bâtiment Rémond, 4ème, bureau 404C)
-- *Office hours* le lundi matin, n'hésitez pas à passer y compris sans rendez-vous (mais je
-  préfère si vous m'envoyez un mail pour me prévenir)
+- *Office hours* : voir <https://loicgrobol.github.io/teaching/>
 - De manière générale, n'hésitez pas à m'écrire
 <!-- #endregion -->
 
@@ -45,10 +44,7 @@ Apprendre à programmer : introduction
 - **Quoi** « Apprendre à programmer », 4L6SC01P
 - **Où** Salle R05, bâtiment Ricœur, Université Paris Nanterre, 200 avenue de la République,
   Nanterre
-- **Quand** 12 séances, les mardis de 10:30 à 12:30, du 17/01 au 18/04
-  - Voir [le calendrier de
-    l'université](https://etudiants.parisnanterre.fr/calendrier-universitaire-2021-2022-1018180.kjsp)
-    pour les dates de vacances.
+- **Quand** 12 séances, les mardis de 10:30 à 12:30, du 16/01 au 16/04
 
 - → Travail sur machine systématique : amener de préférence un PC portable. Si c'est un problème,
   venez m'en parler et on trouvera une solution.
@@ -72,7 +68,7 @@ Connaissances :
 
 - Notion d'ordinateur, d'algorithme et de programme
 - Bases en langage Python :
-  - Notion de types primitifs : litéraux, expressions, variables
+  - Notion de types primitifs : littéraux, expressions, variables
   - Structures de données
   - Fonctions, module et sous-programmes
   - Lecture/écriture dans des fichiers

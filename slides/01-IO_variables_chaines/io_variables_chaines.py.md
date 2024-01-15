@@ -46,7 +46,7 @@ print("Hello, world!")
 Si vous voyez s'afficher quelque chose sous la cellule, bravo ! C'est un genre de tradition de
 commencer à apprendre à programmer en faisant afficher ce message.
 
-### 🥳 Exo 🥳
+## 🥳 Exo 🥳
 
 Stop à l'hégémonie de l'anglais ! Modifiez la cellule de code ci-dessous pour faire afficher un
 « bonjour, tout le monde ! » dans la langue de votre choix.

@@ -25,8 +25,8 @@ Cours 0 : Utiliser les notebooks Jupyter
 
 Vous avez réussi à ouvrir un notebook Jupyter.
 
-Clickez sur la cellule ci dessous (le cadre avec `print(…`) dans une police différente), puis
-cliquez sur “▸ *Run*” dans la barre d'outils.
+Cliquez sur la cellule ci-dessous (le cadre avec `print(…`) dans une police différente), puis
+ sur “▸ *Run*” dans la barre d'outils.
 
 ```python
 print("Hello, world!")
@@ -181,7 +181,9 @@ Certains exercices ne vous demandent pas d'écrire du code, mais une réponse en
 exercices, vous devrez modifier une cellule de texte. Ça fonctionne exactement pareil sauf qu'il
 vous faut double-cliquer pour modifier une cellule de texte
 
-Double-cliquez sur la cellule de texte ci-dessous pour passer en mode édition, écrire quelque chose (quelque chose de joli pour illuminer la journée de votre prof par exemple), puis exécutez-la. N'oubliez pas de sauvegarder.
+Double-cliquez sur la cellule de texte ci-dessous pour passer en mode édition, écrire quelque chose
+(quelque chose de joli pour illuminer la journée de votre prof par exemple), puis exécutez-la.
+N'oubliez pas de sauvegarder.
 
 
 *Replace this text by your own message*
