@@ -14,9 +14,9 @@ layout: default
 ## Infos pratiques
 
 - **Quoi** « Apprendre à programmer », 4L6SC01P
-- **Où** Salle N19, bâtiment Éphémère 2, Université Paris Nanterre, 200 avenue de la République,
+- **Où** Salle L209, bâtiment Ricœur, Université Paris Nanterre, 200 avenue de la République,
   Nanterre
-- **Quand** 12 séances, les mardis de 10:30 à 12:30, du 17/01 au 18/04
+- **Quand** 12 séances, les mardis de 10:30 à 12:30, du 16/01 au 16/04
   - Voir [le calendrier de
     l'université](https://etudiants.parisnanterre.fr/calendrier-universitaire/calendrier-universitaire-2023-2024)
     pour les dates de vacances.
@@ -58,8 +58,8 @@ téléchargé.
 
 ### 2023-01-16 : Introduction, notebooks, entrées/sorties de bases et variables
 
-- {% notebook_badges slides/00-introduction/introduction-slides.py.md %}
-  [Slides Introduction](slides/00-introduction/introduction-slides.py.ipynb)
+- {% notebook_badges slides/00-introduction/infos-slides.py.md %}
+  [Slides Informations](slides/00-introduction/infos-slides.py.ipynb)
 - {% notebook_badges slides/00-introduction/notebooks.py.md %}
   [Utiliser les notebooks Jupyter](slides/00-introduction/notebooks.py.ipynb)
 - {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
