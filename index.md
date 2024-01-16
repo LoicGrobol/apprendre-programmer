@@ -26,7 +26,7 @@ layout: default
 
 ## Liens utiles
 
-- [Espace Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7459)
+- [Espace Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7798)
   - Inscription libre avec la clé `rossum`
   - Attention, cet espace ne sert qu'aux dépôts de devoirs.
 - [Page du cours de l'an dernier]({{site.url}}{{site.baseurl}}/2023)
@@ -64,7 +64,6 @@ téléchargé.
   [Utiliser les notebooks Jupyter](slides/00-introduction/notebooks.py.ipynb)
 - {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
   [Notebook IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
-    [solutions](slides/01-IO_variables_chaines/solutions.py.ipynb)
 
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
