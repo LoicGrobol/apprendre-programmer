@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.14.4
+      jupytext_version: 1.16.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -123,7 +123,7 @@ Essentiellement à annoter votre code, afin d'en expliquer les points délicats 
 print("c'etait a megara, faubourg de carthage")
 ```
 
-CPensez à le faire judicieusement.
+Pensez à le faire judicieusement.
 
 ## Types de données élémentaires
 
@@ -139,7 +139,7 @@ IFrame('https://www.youtube.com/embed/A37-3lflh8I', width=700, height=350)
 Regardez la cellule de code suivante :
 
 ```python
-print("9", 9, 9.9)
+print("9", 9, 9.0, 9.9)
 ```
 
 Vous pouvez voir que les arguments de `print` sont colorés différemment. C'est parce que la
@@ -148,7 +148,7 @@ coloration syntaxique de Jupyter vous indique qu'ils sont de **types** différen
 ### Types numériques
 
 - Les *integers* (`int`) représentent des nombres *entiers*. Ainsi, `8`, `0`, `-1` and `-2713` sont
-  des `int` mais pas `3.14` ou `-1.333\.
+  des `int` mais pas `3.14`, `2.0` ou `-1.333`.
 - Les *floating point numbers* (`float`), « nombres en virgule flottante » représentent des nombres
   avec une partie entière et une partie fractionnaire.
 
@@ -201,7 +201,7 @@ On peut utiliser en Python les opérations arithmétiques classiques avec `int`s
 ```
 
 ```python
-# modulo(le reste dans la division euclidienne)
+# modulo (le reste dans la division euclidienne)
 115 % 2
 ```
 
@@ -351,6 +351,14 @@ print("Type d'origine:", type("55"))
 print("Nouveau type:", type(int("55")))
 ```
 
+```python
+int("55")
+```
+
+```python
+int("55") - 5
+```
+
 L'opération inverse — convertir un nombre en chaîne de caractères — se fait avec `str`
 
 ```python
@@ -497,6 +505,18 @@ partenaires = partenaire1 + " et " + partenaire2
 print(partenaires)
 ```
 
+
+```python
+a = 5
+b = a + 1
+print(b)
+```
+
+```python
+a = 5
+b = a
+print(b)
+```
 
 On peut redéfinir une variable en faisant référence à sa valeur actuelle
 
@@ -717,6 +737,7 @@ texte = "Toi dont le trône étincelle, ô immortelle " \
 est dans le texte (autrement dit s'il est inclus dans la variable `texte`) et `False` sinon.
 
 ```python
+
 ```
 
 ### Exercice 2
@@ -725,6 +746,7 @@ est dans le texte (autrement dit s'il est inclus dans la variable `texte`) et `F
 `input`.
 
 ```python
+
 ```
 
 ### Exercice 3

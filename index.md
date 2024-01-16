@@ -49,8 +49,8 @@ Une fois dans Binder, vous pouvez récupérer votre travail sous forme de fichie
 `File` →  `Download as` → `Notebook (ipynb)` et vous pouvez ouvrir un fichier ipynb qui est votre
 machine avec `File` → `Open…` → `Upload` (en haut à droite) → `Upload` (à côté du nom de fichier).
 
-Vous pouvez aussi les télécharger sous forme de fichier `.py` pour les ouvrir sur votre machine (par
-exemple avec Thonny).
+Vous pouvez aussi les télécharger pour les ouvrir sous votre machine, dans
+[Edupyter](https://www.edupyter.net/) ou [Visual Studio Code](https://code.visualstudio.com/).
 
 Une autre option, si vous avez un compte Google est d'utiliser
 [Colaboratory](https://colab.research.google.com/) pour éditer les notebooks que vous avez
