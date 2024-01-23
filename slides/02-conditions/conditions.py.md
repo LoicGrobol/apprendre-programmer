@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.14.4
+      jupytext_version: 1.16.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -140,6 +140,28 @@ donne les mêmes sorties si on lui donne les mêmes entrées), mais en utilisant
 Vous pouvez faire des tests dans la cellule de code ci-dessous :
 
 ```python
+talkative = False
+
+print("Tu aimes bavarder ?")
+answer = input()
+
+if answer == "oui":
+    talkative = True
+
+if talkative:
+    print("On discute ?")
+    
+print("Ravie de te connaître en tout cas.")
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+
+<details>
+<summary>Solutions</summary>
+
+En éliminant le premier test : 
+
+```python
 print("Tu aimes bavarder ?")
 answer = input()
 
@@ -151,6 +173,8 @@ if talkative:
 print("Ravie de te connaître en tout cas.")
 ```
 
+Sans créer de variable intermédiaire :
+
 ```python
 print("Tu aimes bavarder ?")
 answer = input()
@@ -161,6 +185,8 @@ if answer == "oui":
 print("Ravie de te connaître en tout cas.")
 ```
 
+En mettant directement `input()` dans le test :
+
 ```python
 print("Tu aimes bavarder ?")
 
@@ -169,6 +195,10 @@ if input() == "oui":
     
 print("Ravie de te connaître en tout cas.")
 ```
+
+</details>
+
+<!-- #endregion -->
 
 ### Des blocs plus longs
 
@@ -487,13 +517,13 @@ Répondre à ces exercices directement dans le notebook, le sauvegarder sous un 
 `02_conditions_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche soir prochain via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
 (2023-01-29).
 
-### Exercice 1
+### 😱 Exercice 1 😱
 
 
 Demander à l'utilisateurice d'entrer de saisir un mot, puis afficher `"😱"` si le mot fait plus de
 10 caractères et afficher `"😌"` sinon.
 
-## 💬 Exercice 2 💬 : un chatbot basique
+### 💬 Exercice 2 💬 : un chatbot basique
 
 Demandez à votre utilisateurice si son humeur est bavarde. Si la réponse n'est pas « oui »,
 souhaitez-lui une bonne journée. Sinon, demandez lui comment ça va et répondez différemment suivant
