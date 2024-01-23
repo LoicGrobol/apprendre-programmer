@@ -91,15 +91,17 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 ### Cours et tutoriels
 
-- [Le tutoriel officiel](https://docs.python.org/fr/3/tutorial/) en français !
+- [Le cours de France IOI](https://www.france-ioi.org/algo/chapters.php)
+- [Le cours d'OpenClassroom](https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python)
+- [Un MOOC](https://www.fun-mooc.fr/fr/cours/apprendre-a-coder-avec-python/) sur FUN
 - [Google's Python Class](https://developers.google.com/edu/python/). Guido a travaillé chez eux.
   Pas [ce
   Guido](http://vignette2.wikia.nocookie.net/pixar/images/1/10/Guido.png/revision/latest?cb=20140314012724),
   [celui-là]
-- [Code Academy](https://www.codecademy.com/fr/learn/python)
 
 Plus avancés :
 
+- [Le tutoriel officiel](https://docs.python.org/fr/3/tutorial/) en français !
 - [Practical Python](https://dabeaz-course.github.io/practical-python/Notes/Contents.html)
 - [Python Mastery](https://github.com/dabeaz-course/python-mastery)
 

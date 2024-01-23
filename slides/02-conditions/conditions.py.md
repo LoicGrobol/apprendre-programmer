@@ -132,7 +132,7 @@ Le code ci-dessus est un peu redondant : il y a plus d'instruction que ce qui 
 nécessaire, mais il devrait vous montrer clairement comment faire dépendre l'exécution du code d'une
 entrée.
 
-### 🐁 Exo 🐁
+### 🐁 Entraînement 🐁
 
 Pouvez-vous simplifier le code précédent de telle sorte qu'il soit équivalent (c'est-à-dire qu'il
 donne les mêmes sorties si on lui donne les mêmes entrées), mais en utilisant moins d'instructions ?
@@ -204,28 +204,40 @@ print("Ravie de te connaître en tout cas.")
 On a dit qu'on pouvait inclure plusieurs instructions dans le bloc de code qui suit `if`. Voici ce
 que ça donne :
 
+```python
+# Avant d'exécuter cette cellule, essayer de deviner les résultats en fonction des entrées
+
+answer = input("Tu aimes bavarder ?")
+
+if answer == "oui":
+    print("Top ! On discute, alors ?")
+    print("Moi j'aime le chocolat")
+    print("Et le calcul ! Tu savais que 2713 est un nombre premier ?")
+
+print("Ciao !")
+```
+
+Et même des `if`s imbriqués
+
 ```python tags=["skip-execution"]
 # Avant d'exécuter cette cellule, essayer de deviner les résultats en fonction des entrées
 
 answer = input("Tu aimes bavarder ?")
 
-if answer == "Oui":
+if answer == "oui":
     print("Top ! On discute, alors ?")
-    print("Tu aimes le chocolat ? Oui/Non")
+    print("Tu aimes le chocolat ? oui/non")
     answer2 = input()
-    if answer2 == "Non":
+    if answer2 == "non":
         print("Monstre !")
         print("Adieu !")
 print("Ciao !")
 ```
 
-Vous pouvez aussi voir qu'on peut non seulement mettre plusieurs instructions dans un bloc `if`,
-mais qu'on peut aussi les imbriquer.
-
 Comment Python sait-il à quel bloc appartient chaque instruction ? Avec la longueur des alinéas !
 L'**indentation** joue un rôle très important en Python (on y reviendra. Plusieurs fois.).
 
-### 🔎 Tests 🔎
+### 🔎 Entraînement 🔎
 
 Essayez d'exécuter le programme précédent avec différentes combinaisons d'entrée. Assurez-vous de
 bien comprendre à quelles conditions chacune des instructions est exécutée.
@@ -248,14 +260,14 @@ d'autres instructions si c'est « oui » ?.
 Voici une solution :
 
 ```python tags=["skip-execution"]
-print("Tu aimes le chocolat ? Oui/Non")
+print("Tu aimes le chocolat ? oui/non")
 answer = input()
-if answer == "Non":
-    print("Monstre !")
-    print("Adieu !")
-if answer == "Oui":
+if answer == "oui":
     print("On va bien s'entendre, alors !")
     print("Mon préféré c'est le chocolat aux noisettes.")
+if answer == "non":
+    print("Monstre !")
+    print("Adieu !")
 ```
 
 Mais c'est un peu redondant : puisque la réponse est soit `"Oui"` soit `"Non"`, si l'utilisateurice
@@ -274,14 +286,14 @@ else:
 Et en Python
 
 ```python tags=["skip-execution"]
-print("Tu aimes le chocolat ? Oui/Non")
+print("Tu aimes le chocolat ? oui/non")
 answer = input()
-if answer == "Non":
-    print("Monstre !")
-    print("Adieu !")
-else:
+if answer == "non":
     print("On va bien s'entendre, alors !")
     print("Mon préféré c'est le chocolat aux noisettes.")
+else:
+    print("Monstre !")
+    print("Adieu !")
 ```
 
 `else` est liée au `if` qui le précède et ne permet pas d'ajouter une condition. On peut donc avoir
@@ -305,10 +317,11 @@ if "rouge" in sentence:
 
 if "vert" in sentence:
     print("Vert !")
-
 else:
     print("Aucune couleur n'a été trouvée")
 ```
+
+On peut avoir des `else` dans un bloc conditionnel :
 
 ```python tags=["skip-execution"]
 answer = input("Tu aimes bavarder ?")
@@ -322,8 +335,11 @@ if answer == "Oui":
         print("Adieu !")
     else:
         print("Bravo")
+
 print("Ciao !")
 ```
+
+Ici le `else` est au même niveau d'indentation que le premier `if`, c'est donc à ce dernier qu'il est lié :
 
 ```python tags=["skip-execution"]
 answer = input("Tu aimes bavarder ?")
@@ -519,6 +535,34 @@ else:
 Outre les booléens `True` et `False`, la plupart des objets en Python ont une valeur de vérité
 (*truthiness*). La plupart sont vrais, ceux qui sont faux étant en général d'une façon ou d'une
 autre vides, nuls… Nous verrons d'autres exemples.
+
+```python
+print(bool("abc"))
+```
+
+Je vous recommande plutôt de faire les tests explicitement :
+
+```python
+s = "spam"
+
+if len(s) > 0:  # len() renvoie la longueur de la chaîne
+    print("machin")
+else:
+    print("bidule")
+```
+
+```python
+print(len("spam"))
+```
+
+```python
+i = 2
+
+if i != 0:
+    print("Vrai!")
+else:
+    print("Faux")
+```
 
 ## Exercices
 
