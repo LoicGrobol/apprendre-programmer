@@ -155,7 +155,6 @@ print("Ravie de te connaître en tout cas.")
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-
 <details>
 <summary>Solutions</summary>
 
@@ -455,6 +454,14 @@ else:
 ```
 
 ```python
+# Coder ici
+```
+
+<!-- #region -->
+<details>
+<summary>Solution</summary>
+
+```python
 user_mood = input("Quelle est ton humeur: ")
 
 if "heureu" in user_mood and "relax" in user_mood:
@@ -466,6 +473,9 @@ elif "heureu" in user_mood:
 else:
     print("💜")
 ```
+
+</details>
+<!-- #endregion -->
 
 ## Des conditions inattendues
 
