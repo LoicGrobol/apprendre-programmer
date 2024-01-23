@@ -59,11 +59,18 @@ téléchargé.
 ### 2023-01-16 : Introduction, notebooks, entrées/sorties de bases et variables
 
 - {% notebook_badges slides/00-introduction/infos-slides.py.md %}
-  [Slides Informations](slides/00-introduction/infos-slides.py.ipynb)
+  [Slides Informations]({{site.url}}{{site.baseurl}}/slides/00-introduction/infos-slides.py.ipynb)
 - {% notebook_badges slides/00-introduction/notebooks.py.md %}
-  [Utiliser les notebooks Jupyter](slides/00-introduction/notebooks.py.ipynb)
+  [Utiliser les notebooks Jupyter]({{site.url}}{{site.baseurl}}/slides/00-introduction/notebooks.py.ipynb)
 - {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
-  [Notebook IO et variables](slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
+  [Notebook IO et variables]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
+  - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/solutions.py.ipynb)
+
+### 2023-01-23 : Instructions conditionnelles
+
+- {% notebook_badges slides/02-conditions/conditions.py.md %}
+  [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
 
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
