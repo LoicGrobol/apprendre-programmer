@@ -16,12 +16,11 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 <!-- #region slideshow={"slide_type": "slide"} -->
-Cours 1 : corrections
+Cours 1 : Solutions
 =====================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2022-01-25
 <!-- #endregion -->
 
 
@@ -116,8 +115,8 @@ print("banane" in texte)
 ```python tags=["skip-execution"]
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
-age_2022 = 2022 - annee_int
-print("En 2022 tu auras", age_2022, "ans")
+age = 2024 - annee_int
+print("En 2024 tu auras", age, "ans")
 ```
 
 ou encore
@@ -125,8 +124,8 @@ ou encore
 ```python tags=["skip-execution"]
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
-age_2022 = 2022 - annee_int
-print("En 2022 tu auras " + str(age_2022) + " ans")
+age = 2024 - annee_int
+print("En 2024 tu auras " + str(age) + " ans")
 ```
 
 ou mieux
@@ -134,8 +133,8 @@ ou mieux
 ```python tags=["skip-execution"]
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
-age_2022 = 2022 - annee_int
-print(f"En 2022 tu auras {age_2022} ans")
+age = 2024 - annee_int
+print(f"En 2024 tu auras {age} ans")
 ```
 
 ## Retour sur vos rendus
@@ -181,8 +180,3 @@ Quelques points de style
 nom = "Loïc"
 print("Je m'appelle " + nom)
 ```
-
----
-
-Certaines consignes semblent avoir été mal comprises. On va collectivement essayer de mieux faire
-pour les suivantes.
