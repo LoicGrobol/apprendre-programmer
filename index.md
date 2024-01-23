@@ -67,12 +67,6 @@ téléchargé.
   - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
     [Solutions]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/solutions.py.ipynb)
 
-### 2023-01-23 : Instructions conditionnelles
-
-- {% notebook_badges slides/02-conditions/conditions.py.md %}
-  [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
-
-
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
 
 Installer aussi l'environnement [Thonny](https://thonny.org).
@@ -83,6 +77,12 @@ sophistiqué](https://boldidea.org/static/thonny/chromebook.html), mais c'est po
 Pour les tablettes sous iOS ou Android, ça ne sera pas possible. Vous devriez pouvoir suivre
 l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal, tenez-moi au
 courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
+
+### 2023-01-23 : Instructions conditionnelles
+
+- {% notebook_badges slides/02-conditions/conditions.py.md %}
+  [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
+
 
 ## Ressources
 
