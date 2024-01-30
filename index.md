@@ -87,6 +87,8 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 - {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
   [Slides Boucles et séquences]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/index_listes_iter.py.ipynb)
+  - {% notebook_badges slides/02-conditions/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}/}slides/02-conditions/solutions.py.ipynb)
 
 ## Ressources
 
