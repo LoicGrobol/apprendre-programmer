@@ -16,7 +16,7 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 <!-- #region slideshow={"slide_type": "slide"} -->
-Cours 4 : Indexation, listes et itération
+Cours 3 : Indexation, listes et itération
 =========================================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
@@ -562,8 +562,11 @@ small_cities = ["Stony Brook", "Provo"]
 # Codez ici
 ```
 
-Modifiez la cellule suivante de sorte à modifier `cities` pour que son contenu soit `["NYC", "LA",
-"Stony Brook", "Provo", "SF"]`
+**Ajoutez** des instructions à la cellule suivante de sorte à modifier `cities` pour que son contenu
+soit
+
+1. `["NYC", "LA", "SF", "Stony Brook", "Provo"]`.
+2. `["NYC", "LA", "Stony Brook", "Provo", "SF"]`.
 
 ## Exercice 2
 
@@ -615,7 +618,7 @@ documenter une langue :
 - Une fois que vous avez terminé, affichez la valeur de `traductions`.
 
 ```python
-
+# Codez ici
 ```
 
 ### Réflexion

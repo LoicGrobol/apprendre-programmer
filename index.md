@@ -83,6 +83,10 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 - {% notebook_badges slides/02-conditions/conditions.py.md %}
   [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
 
+### 2023-01-30 : Boucles et séquences
+
+- {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
+  [Slides Boucles et séquences]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/index_listes_iter.py.ipynb)
 
 ## Ressources
 
