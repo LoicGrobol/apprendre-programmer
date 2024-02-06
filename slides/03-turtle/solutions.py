@@ -63,3 +63,26 @@ left(90)
 forward(76)
 right(90)
 forward(100)
+
+# Exercice 7
+reset()
+
+# Maison
+right(90)
+forward(128)
+left(90)
+forward(128)
+left(90)
+forward(128)
+left(90)
+forward(128)
+
+# Toit
+right(120)
+forward(128)
+right(120)
+forward(128)
+
+# Cheminée
+up()
+backward(60)
