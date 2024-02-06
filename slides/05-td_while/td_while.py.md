@@ -25,11 +25,7 @@ Cours 5 : Exercices et compléments sur les boucles
 
 Dans ce notebook
 
-- Des exercices.
 - La boucle conditionnelle `while`.
-- Encore des exercices.
-- *Mutabilité* des listes.
-- Toujours des exercices ?
 
 ## 🔄 Exo 🔄
 
@@ -43,12 +39,7 @@ Demandez à l'utilisateurice un nom de fruit et affichez `"😋"` s'il est dans 
 sinon.
 
 ```python
-reponse = input("Quel fruit ? ")
 
-if reponse in fruits:
-    print("😋")
-else:
-    print("🤨")
 ```
 
 ## Blockly games
@@ -109,40 +100,6 @@ while n < 7:
     n = n + 1
 ```
 
-En Python, on préfère en général utiliser des boucles `for` — qui sont plus adaptée à l'organisation
-du langage — et les boucle `while` ont tendance à être moins utilisées. Cependant, on peut
-facilement simuler une boucle `for` avec une boucle `while`. Ainsi :
-
-```python
-l = ["spam", "spam", "lovely spam", "wonderful spam"]
-for s in l:
-    print(s)
-```
-
-est équivalent à
-
-```python
-l = ["spam", "spam", "lovely spam", "wonderful spam"]
-i = 0
-while i < len(l):
-    print(l[i])
-    i = i + 1
-```
-
-Inversement, il n'est pas évident de simuler le comportement suivant avec une boucle `for`
-
-```python tags=["skip-execution"]
-ingredients_disponibles = ["piment", "poireau", "champignon", "carotte"]
-ingredient = input("Donne-moi un ingrédient: ")
-
-while ingredient not in ingredients_disponibles:
-    ingredient = input("Donne-moi un ingrédient: ")
-    
-print("Ah, oui,", ingredient, "j'en ai")
-```
-
----
-
 Que se passe-t-il si la condition est fausse dès le début ?
 
 ```python
@@ -199,12 +156,12 @@ import random
 ```
 
 ```python
-random.randint(4, 8)
+random.randint(4, 8)  # Exécuter plusieurs fois cette cellule
 ```
 
 Écrivez un programme qui :
 
-- Choisit aléatoirement un nombre entre $1$ et $10$
+- Choisit aléatoirement un nombre entre $1$ et $16$
 - Demande à l'utilisateurice de deviner le nombre en lui proposant de réessayer tant que le nombre
   n'a pas été trouvé.
 
@@ -217,4 +174,39 @@ Essaie encore: 5
 Essaie encore: 7
 Essaie encore: 2
 Bravo! C'était bien 2
+```
+
+---
+
+En Python, on préfère en général utiliser des boucles `for` — qui sont plus adaptée à l'organisation
+du langage — et les boucle `while` ont tendance à être moins utilisées. Cependant, on peut
+facilement simuler une boucle `for` avec une boucle `while`. Ainsi :
+
+```python
+l = ["spam", "spam", "lovely spam", "wonderful spam"]
+for s in l:
+    print(s)
+```
+
+est équivalent à
+
+```python
+l = ["spam", "spam", "lovely spam", "wonderful spam"]
+i = 0
+while i < len(l):
+    print(l[i])
+    i = i + 1
+```
+
+Inversement, il n'est pas évident de simuler le comportement suivant avec une boucle `for`
+
+```python tags=["skip-execution"]
+ingredients_disponibles = ["piment", "poireau", "champignon", "carotte"]
+ingredient = input("Donne-moi un ingrédient: ")
+
+while ingredient not in ingredients_disponibles:
+    print("J'en ai pas !")
+    ingredient = input("Donne-moi un ingrédient: ")
+    
+print("Ah, oui,", ingredient, "j'en ai")
 ```

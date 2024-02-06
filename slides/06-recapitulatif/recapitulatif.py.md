@@ -235,7 +235,7 @@ $(-1)^{45+766}$ et $(512-256)\times\left(-\frac{3}{2}\right)$.
 ```
 
 2\. Construire et afficher une chaîne de caractères composée de $4096$ répétition des caractères
-`UPX>*`.
+`UPN<3`.
 
 ```python
 
@@ -347,11 +347,7 @@ print(str.title("hElLo"))
 résultat.
 
 ```python
-une_chaine = "Je reconnais"
-une_autre = "l'existence de"
-un_fruit = "kiwi"
-un_nombre = 4
-print(une_chaine, une_autre, 4*un_nombre, un_fruit)
+
 ```
 
 ## Variables
@@ -377,23 +373,18 @@ nombre = 1024 * 256
 print(nombre)
 ```
 
-```python
-message = "This is fine."
-fire = "🔥" * 1024
-affiche = fire + message + fire
-print(affiche)
-```
-
 > on peut également redéfinir une variable en affectant une deuxième fois au même nom
 
 ```python
 nom = "Université Paris X"
+print(nom)
 nom = "Université Paris Ouest"
+print(nom)
 nom = "Université Paris Nanterre"
 print(nom)
 ```
 
-1\. Compléter la cellule suivante afin d'afficher la valeur de la variable `spam`
+1\. Compléter la cellule suivante afin d'afficher le contenu de la variable `spam`
 
 ```python
 spam = "spam, spam, lovely spam"

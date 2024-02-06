@@ -56,7 +56,7 @@ Une autre option, si vous avez un compte Google est d'utiliser
 [Colaboratory](https://colab.research.google.com/) pour éditer les notebooks que vous avez
 téléchargé.
 
-### 2023-01-16 : Introduction, notebooks, entrées/sorties de bases et variables
+### 2024-01-16 : Introduction, notebooks, entrées/sorties de bases et variables
 
 - {% notebook_badges slides/00-introduction/infos-slides.py.md %}
   [Slides Informations]({{site.url}}{{site.baseurl}}/slides/00-introduction/infos-slides.py.ipynb)
@@ -78,17 +78,24 @@ Pour les tablettes sous iOS ou Android, ça ne sera pas possible. Vous devriez p
 l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal, tenez-moi au
 courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
 
-### 2023-01-23 : Instructions conditionnelles
+### 2024-01-23 : Instructions conditionnelles
 
 - {% notebook_badges slides/02-conditions/conditions.py.md %}
   [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
   - {% notebook_badges slides/02-conditions/solutions.py.md %}
     [Solutions]({{site.url}}{{site.baseurl}}/slides/02-conditions/solutions.py.ipynb)
 
-### 2023-01-30 : Boucles et séquences
+### 2024-01-30 : Boucles et séquences
 
 - {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
   [Slides Boucles et séquences]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/index_listes_iter.py.ipynb)
+
+### 2024-02-06 : TD `turtle` et boucle `while`
+
+- {% notebook_badges slides/03-turtle/turtle.py.md %}
+  [Notebook `turtle`]({{site.url}}{{site.baseurl}}/slides/03-turtle/turtle.py.ipynb)
+- {% notebook_badges slides/05-td_while/td_while.py.md %}
+  [Notebook `while`]({{site.url}}{{site.baseurl}}/slides/05-td_while/td_while.py.ipynb)
 
 ## Ressources
 
