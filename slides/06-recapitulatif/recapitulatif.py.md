@@ -252,55 +252,55 @@ résultats dans la cellule de texte en-dessous.
 
 
 
-1. 
+1\. 
 
    ```python
    True or True
    ```
 
-2. 
+2\. 
 
    ```python
    True or False
    ```
 
-3. 
+3\. 
 
    ```python
    False and False
    ```
 
-4. 
+4\. 
 
    ```python
    (False or True) and True
    ```
 
-5. 
+5\. 
 
    ```python
    False or (True and True)
    ```
 
-6. 
+6\. 
 
    ```python
    ("machin" in "truc") and (1 + 1 == 2)
    ```
 
-7. 
+7\. 
 
    ```python
    ("a" in "apples") or (1 + 1 == 5)
    ```
 
-8. 
+8\. 
 
    ```python
    ("apples" in "a") or (1 + 1 == 5)
    ```
 
-9. 
+9\. 
 
    ```python
    (("apple" in "apples") and (1 + 1 == 3)) or (5 < 10)
@@ -501,7 +501,7 @@ if 1+1 == 3:
    print("Mais pas cela")
 ```
 
-> La condition peut-être n'import quelle expression dont le résultat est un booléen
+> La condition peut-être n'importe quelle expression dont le résultat est un booléen
 
 ```python
 if "apple" not in "spam":
@@ -585,7 +585,7 @@ else:
    print("ok,,,")
 ```
 
-1\. Écrire un programme qui affiche `trop petit` si le résultat du calcul $\frac{2{^11}}{3}$ est
+1\. Écrire un programme qui affiche `trop petit` si le résultat du calcul $\frac{2^{11}}{3}$ est
 plus petit que $1000$ sans jamais afficher le résultat du calcul lui-même.
 
 ```python
