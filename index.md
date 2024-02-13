@@ -97,6 +97,13 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 - {% notebook_badges slides/05-td_while/td_while.py.md %}
   [Notebook `while`]({{site.url}}{{site.baseurl}}/slides/05-td_while/td_while.py.ipynb)
 
+### 2024-02-13 : Exercices récapitulatifs
+
+- {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
+  [Notebook exos]({{site.url}}{{site.baseurl}}/slides/06-recapitulatif/recapitulatif.py.ipynb)
+  - {% notebook_badges slides/06-recapitulatif/solutions.py.md %}
+    [Ssolutuions]({{site.url}}{{site.baseurl}}/slides/06-recapitulatif/solutions.py.ipynb)
+
 ## Ressources
 
 - [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et
