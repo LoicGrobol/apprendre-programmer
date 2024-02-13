@@ -820,13 +820,3 @@ familles = ["Romanes", "Germaniques", "Balto-slaves", "Celtiques", "Indo-arienne
 
 - [Onboarding](https://www.codingame.com/training/easy/onboarding)
 - [Power of Thor E01](https://www.codingame.com/training/easy/power-of-thor-episode-1)
-
-## Consignes pour le rendu
-
-Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
-`06_recapitulatif_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
-`06_recapitulatif_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche soir prochain
-(2022-02-19).
-
-**Si vous avez plusieurs fichiers `ipynb`, mettez les dans un fichier zip pour pouvoir les déposer
-sur CEL.**
