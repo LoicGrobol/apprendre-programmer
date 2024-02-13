@@ -37,7 +37,7 @@ et les corrections des exercices.
 
 Si vous avez suivi le bon lien, ce document est un *notebook interactif*, il contient des cellules
 de texte et des cellules de code exécutable. Exécuter la  cellule courante (celle en surbrillance)
-se fait en utilisant « run cell » dans le menu « cell », en utilisant le bouton ▶️ de la barre
+se fait en utilisant « *run cell* » dans le menu « *cell* », en utilisant le bouton ▶️ de la barre
 d'outils ou en appuyant simultanément sur les touches <kbd>ctrl</kbd> (ou
 <kbd>cmd</kbd>/<kbd>⌘</kbd> pour les Macs) et <kbd>entrée</kbd>/<kbd>↲</kbd> de votre clavier.
 
@@ -248,7 +248,7 @@ $(-1)^{45+766}$ et $(512-256)\times\left(-\frac{3}{2}\right)$.
 ```
 
 4\. Déterminer sans les exécuter les valeurs de retour des instructions suivantes, écrivez les
-résultats dans la cellule de texte en-dessous.
+résultats dans la cellule de texte en dessous.
 
 
 
