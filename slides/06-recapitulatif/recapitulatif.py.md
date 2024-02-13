@@ -21,7 +21,6 @@ Cours 6 : TD récapitulatif
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
-2023-02-14
 <!-- #endregion -->
 
 Dans ce notebook
