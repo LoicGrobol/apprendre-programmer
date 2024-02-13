@@ -19,7 +19,7 @@ jupyter:
 Cours 6 : Corrections
 =====================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
 
@@ -29,11 +29,11 @@ Cours 6 : Corrections
 > 1\. Écrire dans la cellule ci-dessous un programme qui affiche votre nom complet, comme ceci :
 > 
 > ```text
-> Loïc Grobol
+> Morgan Menis
 > ```
 
 ```python
-print("Loïc Grobol")
+print("Morgan Menis")
 ```
 
 > 2\. Écrire dans la cellule ci-dessous un programme qui affiche votre année et votre lieu de

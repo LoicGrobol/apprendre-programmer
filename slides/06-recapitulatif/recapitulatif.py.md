@@ -19,7 +19,7 @@ jupyter:
 Cours 6 : TD récapitulatif
 ==========================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
 
@@ -97,7 +97,7 @@ print("Une autre ligne")
 1\. Écrire dans la cellule ci-dessous un programme qui affiche votre nom complet, comme ceci :
 
 ```text
-Loïc Grobol
+Morgan Menis
 ```
 
 ```python
@@ -355,7 +355,7 @@ résultat.
 > d'affectation `=`
 
 ```python
-nom = "Loïc"
+nom = "Morgan"
 ```
 
 > une variable peut être utilisée partout où on peut utiliser une valeur littérale :
