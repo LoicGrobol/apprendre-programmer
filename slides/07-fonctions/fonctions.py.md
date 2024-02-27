@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.14.5
+      jupytext_version: 1.16.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -58,10 +58,10 @@ Thonny (où ils s'affichent dans la zone d'édition) et les exécuter avec le bo
 <!-- #region slideshow={"slide_type": "subslide"} -->
 Les commandes de base en `turtle` :
 
-- `forward(d)` avance de d pixels
-- `backward(d)` recule de d pixels
-- `left(a)` pivote vers la gauche de a degrés
-- `right(a)` pivote vers la droite de a degrés
+- `forward(d)` avance de `d` pixels
+- `backward(d)` recule de `d` pixels
+- `left(a)` pivote vers la gauche de `a` degrés
+- `right(a)` pivote vers la droite de `a` degrés
 - `up()` relève le crayon pour avancer sans dessiner
 - `down()` abaisse le crayon pour dessiner
 - `reset()` remet le dessin à zéro
@@ -594,4 +594,17 @@ print()
 ma_fonction(15)
 print()
 ma_fonction(a="machin")
+```
+
+```python
+def machin():
+    print(a)
+
+a = 15
+
+machin()
+
+a = 20
+
+machin()
 ```
