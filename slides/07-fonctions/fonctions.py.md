@@ -18,7 +18,7 @@ jupyter:
 <!-- LTeX: language=fr -->
 <!-- #endregion -->
 <!-- #region slideshow={"slide_type": "slide"} -->
-Cours 9 : Fonctions
+Cours 7 : Fonctions
 ===================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
@@ -50,7 +50,7 @@ donc travailler soit dans un environnement de programmation Python local (par ex
 sélectionner le mode Python `turtle`). Pour le fonctionnement de Thonny, vous pouvez revenir au
 [cours 2](../02-turtle/turtle.py.md).
 
-Rappel : c'est en général plus agréable dans ce genre de cas d'utiliser des **scripts**: des
+Rappel : c'est en général plus agréable dans ce genre de cas d'utiliser des **scripts** : des
 fichiers textes avec l'extension `.py` qui contiennent des programmes. Vous pouvez les ouvrir dans
 Thonny (où ils s'affichent dans la zone d'édition) et les exécuter avec le bouton ▶️.
 <!-- #endregion -->
@@ -115,7 +115,7 @@ Est-ce que vous avez trouvé ces exercices **désagréables** ?
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
-Moi oui ! On a du écrire quatre fois les mêmes instructions pour dessiner un carré. Certes on peut
+Moi oui ! On a dû écrire quatre fois les mêmes instructions pour dessiner un carré. Certes on peut
 faire des copier-coller, mais c'est pénible. Et il se passe quoi si on a plus de carrés ?
 <!-- #endregion -->
 
@@ -124,7 +124,7 @@ On aurait aussi peut-être pu s'en sortir avec une boucle, mais ça aurait été
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
-En fait ce qu'il faudrait c'est une façon de sauvegarder une suite d'instructions et de pouvoir les
+En fait ce qu'il faudrait, c'est une façon de sauvegarder une suite d'instructions et de pouvoir les
 exécuter quand on veut. Comme ça il ne nous serait plus resté que le code pour positionner la tortue
 au point de départ.
 <!-- #endregion -->
@@ -161,9 +161,9 @@ len("hello")
 len([1, 2, 3])
 ```
 
-```python
+<!-- ```python
 len({"Cats": "beautiful", "Python": "ton meilleur ami"})
-```
+``` -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 Vous connaissez `float`, et `int` et `str`
@@ -218,7 +218,8 @@ morceau de code qui ne contient qu'une seule instruction `print("Bonjour")`.
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
-Par la suite, à chaque fois qu'on écrit l'instruction `say_hello()`, ce morceau de code a été exécute. On dit qu'on a **appelé** la fonction `say_hello`.
+Par la suite, à chaque fois qu'on écrit l'instruction `say_hello()`, ce morceau de code a été
+exécute. On dit qu'on a **appelé** la fonction `say_hello`.
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -299,7 +300,8 @@ boucles()
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-En revanche les variables définies à l'intérieur d'une fonction ne sont pas accessibles à l'extérieur de celle-ci
+En revanche les variables définies à l'intérieur d'une fonction ne sont pas accessibles à
+l'extérieur de celle-ci
 <!-- #endregion -->
 
 ```python
@@ -382,9 +384,9 @@ dessinent un carré.
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## Des paramètres
 
-Les fonctions natives que vous connaissez – comme `print` — acceptent souvent des **paramètres** ou **arguments** :
-les deux appels suivants donnent des comportements différents parce qu'on a pas mis la même chose
-entre les parenthèses qui suivent `print`.
+Les fonctions natives que vous connaissez – comme `print` — acceptent souvent des **paramètres** ou
+**arguments** : les deux appels suivants donnent des comportements différents parce qu'on a pas mis
+la même chose entre les parenthèses qui suivent `print`.
 <!-- #endregion -->
 
 ```python
@@ -416,7 +418,7 @@ dire_un_machin("est un très beau chat")
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 Le principe est le suivant : au moment où on définit la fonction avec `def`, on peut donner dans les
-parenthèses une liste de noms de paramètres. Ces paramètres seront ensuite utilisable comme des
+parenthèses une liste de noms de paramètres. Ces paramètres seront ensuite utilisables comme des
 variables dans le corps de la fonction :
 <!-- #endregion -->
 
@@ -474,7 +476,17 @@ enumère([1, 2, 3, "carbone"])
 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## 😺 Entraînements 😺
+## 😺 Exercices 😺
+
+Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
+`07_fonctions_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
+`07_fonctions_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche 2024-03-03 au soir.
+
+- De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
+  (clé d'inscription `rossum`)
+- À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
+
+Attention : **l'extension doit être `.ipynb`**.
 
 (Pensez à tester vos fonctions)
 
@@ -483,6 +495,8 @@ son triple.
 <!-- #endregion -->
 
 ```python
+# Coder ici
+
 triple(4)
 triple(-16)
 triple(14)
@@ -494,6 +508,8 @@ caractères, et affiche cette chaîne mise tout en majuscules.
 <!-- #endregion -->
 
 ```python
+# Coder ici
+
 crier("vive la révolution")
 ```
 
@@ -503,6 +519,8 @@ crier("vive la révolution")
 <!-- #endregion -->
 
 ```python
+# Coder ici
+
 produit(3, 4)
 produit("spam ", 5)
 ```
@@ -510,7 +528,32 @@ produit("spam ", 5)
 <!-- #region slideshow={"slide_type": "subslide"} -->
 4\. Définir une fonction `carré`, qui accepte un argument `c`, supposé être un nombre entier et
 dessine à l'aide de `turtle` un carré de côté `c`.
+
+(Rappel : `turtle` ne marchera pas dans ce notebook, mais vous pouvez quand même coller votre code
+dans la cellule suivante une fois que vous l'avez bien testé.)
 <!-- #endregion -->
+
+```python
+# Coller votre code icitte
+```
+
+### Réflexion
+
+Quelques questions sur votre travail :
+
+- Combien de temps avez-vous passé à faire ces exercices ?
+- Combien de temps avez-vous passé à relire le cours (ou les cours précédents) ?
+- Avez-vous l'impression d'avoir bien mémorisé les concepts et les techniques vus jusqu'ici ?
+- Qu'est-ce qui vous paraît le plus compliqué ?
+- À votre avis, pourquoi ?
+
+Merci de bien répondre à chacune de ces questions dans la cellule de texte ci-dessous (n'oubliez pas
+de l'exécuter avant de sauvegarder) : elles me permettent d'ajuster le cours en fonction de vos
+besoins, avec un peu de chance, elles devraient également vous aider à guider votre travail et à
+apprécier votre progression.
+
+
+
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## (Optionnel) arguments nommés et valeurs par défaut
