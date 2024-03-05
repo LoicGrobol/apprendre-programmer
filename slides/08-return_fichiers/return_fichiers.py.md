@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.7
+      jupytext_version: 1.16.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -59,6 +59,17 @@ bonjour("Morgan")
 ```
 
 ```python
+def truc(i):
+    j = i + 5
+    k = 2*i
+    print(k)
+```
+
+```python
+truc(9)
+```
+
+```python
 def ssss(arg):
     bidule = arg*2
     for i in range(10):
@@ -94,7 +105,8 @@ Et nos fonctions, elles renvoient quelque chose ?
 
 ```python
 def bonjour():
-    print("Salut")
+    reponse = "Salut"
+    print(reponse)
     
 varbl = bonjour()
 ```
@@ -113,7 +125,8 @@ Comment on fait alors ? On leur donne une **valeur de retour** avec le mot-cl�
 
 ```python
 def renvoi():
-    return "Salut"
+    reponse = "Salut"
+    return reponse
 
 varbl = renvoi()
 ```
@@ -132,10 +145,19 @@ même chose, pas vraiment la peine de faire une fonction, une variable suffirait
 
 ```python
 def somme(a, b):
+    res = a+b
+    return res
+
+s = somme(5, 10)
+print(s)
+```
+
+```python
+def somme(a, b):
     return a+b
 
-a = somme(5, 10)
-print(a)
+s = somme(5, 10)
+print(s)
 ```
 
 Et comme d'habitude, vous pouvez mettre un appel de fonction partout où vous pouvez écrire une
@@ -159,7 +181,7 @@ def affiche(arg):
     print("Mon argument est " + arg)
 
 ret = affiche("thing")
-print(ret)
+print("ret vaut:", ret)
 ```
 
 Celle-ci n'**affiche** rien et **renvoie** quelque chose
@@ -169,7 +191,7 @@ def renvoie(arg):
     return "Mon argument est " + arg
 
 ret = renvoie("thing") # Ceci n'affiche rien
-print(ret)
+print("ret vaut:", ret)
 ```
 
 Celle-ci fait les deux
@@ -199,6 +221,10 @@ triple du deuxième
 qui renvoie la plus longue chaîne de la liste.
 
 
+```python
+
+```
+
 ### Solutions
 
 1\.
@@ -209,7 +235,6 @@ def mon_nombre_préféré():
 ```
 
 ```python
-print(mon_nombre_préféré())
 a = mon_nombre_préféré()
 print(a)
 ```
@@ -223,7 +248,8 @@ def double(nombre):
 ```
 
 ```python
-print(double(5))
+dbl = double(5)
+print(dbl)
 ```
 
 3\.
@@ -235,11 +261,11 @@ def trois(a, b):
 ```
 
 ```python
-ret=trois(7, 9)
+ret = trois(7, 9)
 ```
 
 ```python
-print(ret+10)
+print(ret)
 ```
 
 ```python
@@ -250,8 +276,8 @@ print(l)
 ```python
 def quatre(lst):
     print(lst[0])
-    i = len(lst) - 1
-    return lst[i]
+    i = lst[-1]
+    return i
 ```
 
 ```python
@@ -263,12 +289,23 @@ print(c)
 ```
 
 ```python
-def quatre(lst):
-    print(lst[0])
-    return lst[-1]
-
-c = quatre(["ab", "c", 2713])
 print(c)
+```
+
+```python
+def cinq(lst):
+    chaine_max = ""
+    len_max = 0
+    for chaine in lst:
+        if len(chaine) > len_max:
+            chaine_max = chaine
+            len_max = len(chaine)
+    return chaine_max
+```
+
+```python
+plus_longue = cinq(["abc", "a", "hallo", "truc", "oxygène", "p"])
+print(plus_longue)
 ```
 
 ```python
@@ -286,16 +323,6 @@ plus_longue = cinq(["abc", "a", "hallo", "truc", "oxygène", "p"])
 
 ```python
 print(plus_longue)
-```
-
-```python
-def cinq(lst):
-    res = ""
-    for i in range(len(lst)):
-        c = lst[i]
-        if len(c) > len(res):
-            res = c
-    return res
 ```
 
 ## Lire des fichiers
