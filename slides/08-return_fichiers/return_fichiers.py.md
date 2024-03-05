@@ -16,7 +16,7 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 <!-- #region slideshow={"slide_type": "slide"} -->
-Cours 10 : valeur de retour et accès aux fichiers
+Cours 8 : valeur de retour et accès aux fichiers
 =================================================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
@@ -88,7 +88,6 @@ print(longueur)
 
 Autrement dit, `len` ne fait pas un affichage : elle transmet plutôt une information : la longueur
 de son argument. On dit qu'elle a **retourné** ou **renvoyé** une valeur.
-
 
 
 Et nos fonctions, elles renvoient quelque chose ?
@@ -338,7 +337,7 @@ On fait bien la différence entre
   - Indique la position du fichier sur votre machine.
   - Une chaîne de caractères
   - `/home/lgrobol/monsupercorpus.txt`, ou
-    `C:\Users\Loïc\Documents\monsupercorpus.txt` (chemin **absolu**).
+    `C:\Users\Morgan\Documents\monsupercorpus.txt` (chemin **absolu**).
   - `ada.txt` ou `sous_dossier/ada.txt` (chemin **relatif** au notebook ou au script en cours)
 - Le **flux** `nom_du_flux`, qui est un objet Python qui permet d'interagir avec le fichier tant
   qu'il est ouvert.
@@ -458,7 +457,8 @@ print(line)
 
 ### 🍞 Entraînement 🍞
 
-1\. Afficher ligne par ligne le contenu du fichier [`sous_dossier/maria.txt`](sous_dossier/maria.txt).
+1\. Afficher ligne par ligne le contenu du fichier
+[`sous_dossier/maria.txt`](sous_dossier/maria.txt).
 
 2\. Afficher la longueur en nombre de caractères de chacune des lignes du fichier
 [`ada.txt`](ada.txt).
