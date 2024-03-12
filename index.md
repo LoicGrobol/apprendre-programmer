@@ -117,6 +117,11 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 - {% notebook_badges slides/08-return_fichiers/return_fichiers.py.md %}
   [Notebook retour et fichiers]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/return_fichiers.py.ipynb)
 
+### 2024-03-12 : Itérables et dictionnaires
+
+- {% notebook_badges slides/09-iterables_dictionnaires/iterables_dictionnaires.py.md %}
+  [Notebook retour et fichiers]({{site.url}}{{site.baseurl}}/slides/09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
+
 ## Ressources
 
 - [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et

@@ -313,7 +313,7 @@ for value in range(512, 1024):
 
 Bon, mais si on veut **vraiment** la liste de ces nombres ?
 
-On peut l'obtenir en utilisant la fonction `list` :
+On peut convertir un `range` en liste en utilisant la fonction `list` :
 
 ```python
 print("L'objet range:", range(10))

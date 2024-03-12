@@ -1,0 +1,555 @@
+---
+jupyter:
+  jupytext:
+    formats: ipynb,md
+    split_at_heading: true
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.13.7
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+<!-- LTeX: language=fr -->
+<!-- #region slideshow={"slide_type": "slide"} -->
+Cours 8 : Manipulations de chaînes, itérables composites et dictionnaires
+=========================================================================
+
+**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+
+<!-- #endregion -->
+
+Dans ce notebook
+
+- Des boucles plus agréables avec les itérables
+- Un nouveau type de données : les dictionnaires
+
+
+## Itérables
+
+### `range` : les intervalles entiers
+
+Comment faire pour afficher dix fois « Bonjour » ?
+
+Il y a une réponse simpliste : « je copie-colle `print("Hello")` dix fois ».
+
+Mais ce n'est pas très satisfaisant, non ?
+
+Une solution avec la boucle `for` :
+
+```python
+for _ in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+    print("Bonjour")
+```
+
+Mais ce n'est toujours pas très pratique d'écrire cette liste. Surtout pour ne rien en faire.
+Heureusement, il y a un outil pour nous faciliter la vie : la fonction `range` :
+
+```python
+for _ in range(10):
+    print("Bonjour")
+```
+
+Pas mal, non ?
+
+```python
+for i in range(10):
+    print(i)
+```
+
+Vous devinez ce que renvoie `range(10)` ? À votre avis que renverrait `range(16)` ?
+
+On teste ?
+
+```python
+lst = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(lst)
+```
+
+```python
+print(range(10))
+```
+
+Ah
+
+Ce n'est pas très informatif. Dans les temps anciens de la version 2 de Python, `range(n)` renvoyait
+la liste des entiers de $0$ à $n$. Depuis, les temps ont changé et `range` renvoie simplement un
+objet de type `range`.
+
+```python
+print(type(range(10)))
+```
+
+Vous pouvez itérer dessus :
+
+```python
+for i in range(16):
+    print(i)
+```
+
+Pourquoi `range` ne renvoie pas une liste ? Parce que ça ne servirait pas à grand-chose : vous
+connaissez déjà les valeurs des éléments d'un `range`, pas besoin d'indexer. En plus, ça permet
+d'éviter de stocker tous les éléments de la liste en mémoire, ça prend moins de place, votre machine
+est contente.
+
+Les objets de type `range` ne sont donc pas des **séquences**. En revanche on peut itérer dessus, ce
+sont donc des ✨**itérables**✨.
+
+En plus de la borne supérieure, on peut aussi spécifier la borne inférieure :
+
+```python
+for i in range(-2, 16):
+    print(i)
+```
+
+Les règles sont toujours les mêmes en Python : la borne inférieure est incluse, la borne supérieure
+est exclue.
+
+```python
+for value in range(512, 1024):
+    print(value)
+```
+
+Bon, mais si on veut **vraiment** la liste de ces nombres ?
+
+On peut convertir un `range` en liste en utilisant la fonction `list` :
+
+```python
+print("L'objet range:", range(10))
+print("La liste qui correspond:", list(range(10)))
+```
+
+Enfin, on peut également (mais c'est plus rarement utile) préciser le pas :
+
+```python
+for value in range(1, 10, 2):
+    print(value)
+```
+
+Un des usages très répandu de `range` est de permettre de parcourir à la fois une séquence et ses
+indices : au lieu de ça :
+
+```python
+mot = "linguistique"
+index = 0
+for lettre in mot:
+    print(lettre, " indice :", index)
+    index = index + 1
+```
+
+on peut écrire ça :
+
+```python
+mot = "linguistique"
+for index in range(len(mot)):
+    print(mot[index], " indice :", index)
+```
+
+qui est plus compact, et un peu plus agréable (on a plus à gérer manuellement le compteur).
+
+
+### `enumerate` : compter ses pas
+
+```python
+liste = ["le", "petit", "chat", "est", "content"]
+for truc in enumerate(liste):
+    print(truc)
+```
+
+La fonction `enumerate`, appliqué à une séquence renvoie un **itérable** (comme `range`) dont les
+éléments sont des couples `(indice, élément)` composés des éléments de la séquence. Ça permet de
+remplacer ceci :
+
+```python
+mot = "linguistique"
+for i in range(len(mot)):
+    print(mot[i], " indice :", i)
+```
+
+par ceci
+
+```python
+mot = "linguistique"
+for couple in enumerate(mot):
+    print(couple[1], " indice :", couple[0])
+```
+
+qui est *un peu* plus lisible. On peut aussi utiliser la syntaxe suivante :
+
+```python
+mot = "linguistique"
+for idx, lettre in enumerate(mot):
+    print(lettre, " indice :", idx)
+```
+
+C'est encore plus lisible et c'est le style recommandé en Python.
+
+### `zip` : la fermeture éclair
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+cp = ["45000", "37000", "92000"]
+for truc in zip(villes, cp):
+    print(truc)
+```
+
+`zip` permet d'itérer sur plusieurs séquences en parallèle
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+cp = ["45000", "37000", "92000"]
+appreciation = ["cool", "génial", "super"]
+for truc in zip(villes, cp, appreciation):
+    print(truc)
+```
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+annee = ["1991", "2014", "2021"]
+appreciation = ["cool", "génial", "super"]
+for truc in zip(villes, annee, appreciation):
+    print("Où:", truc[0], "Quand:", truc[1], "Comment:", truc[2])
+```
+
+Là aussi on peut utiliser cette nouvelle syntaxe pour que ce soit plus lisible :
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+annee = ["1991", "2014", "2021"]
+appreciation = ["cool", "génial", "super"]
+for ou, quand, comment in zip(villes, annee, appreciation):
+    print("Où:", ou, "Quand:", quand, "Comment:", comment)
+```
+
+Est-ce que vous voyez comment simuler `enumerate` en utilisant `zip` ?
+
+
+### Tuples
+
+Un dernier point : c'est quoi exactement ces éléments que renvoient `zip` et `enumerate`, ça
+ressemble à des listes, mais avec des parenthèses ?
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+annee = ["1991", "2014", "2021"]
+appreciation = ["cool", "génial", "super"]
+for truc in zip(villes, annee, appreciation):
+    print(type(truc))
+```
+
+Ce sont des `tuple`s, effectivement ça ressemble à des listes, mais pas tout à fait.
+
+```python
+un_tuple = (1, 2, 3, 4)
+print(un_tuple)
+print(type(un_tuple))
+```
+
+```python
+un_tuple = (1, "uh", "sense", 8, "machin", "truc")
+print(un_tuple[0])
+print(un_tuple[2:4])
+```
+
+La différence principale, c'est qu'ils sont **immutables**.
+
+Ceci ne pose pas de problème :
+
+```python
+une_liste = [1, "uh", "sense", 8, "machin", "truc"]
+une_liste[1] = "hey!"
+print(une_liste)
+```
+
+Ceci est une erreur
+
+```python tags=["raises-exception"]
+un_tuple = (1, "uh", "sense", 8, "machin", "truc")
+un_tuple[1] = "hey!"
+print(un_tuple)
+```
+
+## Dictionnaires
+
+On va faire une (brève) pause avec les boucles pour parler d'une nouvelle structure de données
+omniprésente en Python : les dictionnaires.
+
+On a vu des structures de données ordonnées comme les listes et les chaînes de caractères qui
+permettent d'accéder à leurs éléments *via* des indices numériques.
+
+Les dictionnaires sont une extension de ce concept à une situation où les indices ne sont pas des
+entiers, mais peuvent être des données arbitraires, on parle alors de **clés**.
+
+On crée un dictionnaire (du type `dict`) avec la syntaxe suivante :
+
+```python
+dico = {"éclair": "une pâtisserie", "Python": "un langage", "mot de passe": 2048, 8: "sense"}
+print(type(dico))
+print(dico)
+```
+
+Quand ils sont longs, on peut les noter sur plusieurs lignes :
+
+```python
+dico = {
+    "éclair": "une pâtisserie de forme longue et de courte durée",
+    "Python": "un langage de programmation créé par Guido van Rossum",
+    "mot de passe": 15331,
+    8: "the number of sensates in a cluster",
+}
+print(dico)
+```
+
+Dans la notation `{k: v}`, on dit que `k` est une **clé** et `v` est la **valeur** associée à `k`.
+On peut accéder à la valeur associé à une clé avec l'opération d'indexation dont vous avez
+l'habitude :
+
+```python
+dico = {"éclair": "une pâtisserie", "Python": "un langage", "mot de passe": 2048, 8: "sense"}
+v = dico["éclair"]
+print(v)
+print(dico["Python"])
+print(dico[8])
+```
+
+Et on peut ajouter un couple clé/valeur ou modifier le dictionnaire de la même façon
+
+```python
+mon_dictionnaire = {"machin": 3, "truc": "bidule"}
+print(mon_dictionnaire)
+mon_dictionnaire["machin"] = "chose"
+print(mon_dictionnaire)
+mon_dictionnaire["Horizon"] = "Zero Dawn"
+print(mon_dictionnaire)
+```
+
+Pour créer un dictionnaire vide, on utilise `dict()` :
+
+```python
+mon_dictionnaire = dict()
+print(mon_dictionnaire)
+mon_dictionnaire["machin"] = "chose"
+print(mon_dictionnaire)
+mon_dictionnaire["Horizon"] = "Zero Dawn"
+print(mon_dictionnaire)
+```
+
+### Clés et valeurs
+
+Les **valeurs** stockées dans un dictionnaire peuvent être n'importe quel objet, et une même valeur
+peut apparaître plusieurs fois
+
+```python
+mon_dict = {
+    "a": 1,
+    "b": [1, 2, 3, 4, "hello"],
+    "c": 1,
+    "d": {"un dict": "dans un dict !"},
+}
+```
+
+Les clés en revanche sont uniques (ou plus exactement, chaque clé n'est associée qu'à une seule
+valeur) :
+
+```python
+mon_dict = {
+    "a": "truc",
+    "b": "machin",
+    "a": "chose",
+}
+print(mon_dict)
+```
+
+De plus les clés ne peuvent pas être des objets **mutables** — dont on peut modifier la valeur —
+comme les listes ou les dictionnaires :
+
+```python tag=["raises-exception"]
+mon_dict = {
+    ["a", "b"]: "truc",
+    "b": "machin",
+}
+```
+
+À votre avis pourquoi ?
+
+Ça vous laisse quand même une grande latitude :
+
+```python
+int_keys = {37: "hello", 9: "world"}
+float_keys = {48.2: "hello", 3.0: "world"}
+string_keys = {"hello": "world", "goodbye": "earth"}
+bool_keys = {True: "hello", False: "world"}
+```
+
+Quelle est la taille maximale que peut atteindre un dictionnaire dont toutes les clés sont de type
+`bool`.
+
+## Étude de cas : les codes ISO 639
+
+Voici un dictionnaire qui contient une liste de quelques langues indexées par leur code [ISO
+639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+
+```python
+iso_639 = {
+    "ny": "Chewa", 
+    "zh": "Chinese", 
+    "cs": "Czech", 
+    "da": "Danish", 
+    "dv": "Divehi",
+    "br": "Breton",
+    "gcf": "Guadeloupean Creole French",
+}
+```
+
+### Accéder aux éléments
+
+On peut accéder aux listes de langues en utilisant leur clé
+
+```python
+print("La valeur de 'ny' est", iso_639["ny"])
+print("La valeur de 'da' est", iso_639["da"])
+```
+
+**Question** En utilisant ce dictionnaire, modifier la cellule suivante pour afficher la chaîne
+`"Chewa"`
+
+
+```python
+
+```
+
+Si on veut simplement tester si une clé est présente, on peut utiliser l'opérateur `in` :
+
+```python
+print("ny" in iso_639)
+print("fr" in iso_639)
+```
+
+### Ajouter et supprimer des éléments
+
+On peut facilement ajouter un nouvel élément au dictionnaire :
+
+```python
+iso_639["ru"] = "Russian"
+print(iso_639)
+```
+
+On peut aussi en supprimer, en utilisant le mot clé `del`
+
+```python
+iso_639["fr"] = "French"
+print(iso_639)
+del iso_639["fr"]
+print(iso_639)
+```
+
+### Parcourir un dictionnaire
+
+Les dictionnaires sont des **itérables**, et on peut les parcourir dans une boucle `for`.
+
+```python
+for language in iso_639:
+    print(language)
+```
+
+**Attention** : ce sont les **clés** qu'on parcourt
+
+### Entraînement
+
+Modifier la boucle `for` ci-dessous pour qu'elle affiche la sortie suivante :
+
+```text
+ny -> 'Chichewa'
+zh -> 'Chinese'
+cs -> 'Czech'
+da -> 'Danish'
+dv -> 'Divehi'
+ru -> 'Russian'
+```
+
+```python
+# Coder ici
+for language in iso_639:
+    print(language)
+```
+
+### Parcourir les paires clé/valeur
+
+Si on veut parcourir un dictionnaire en accédant aux couples clé/valeur (ce qui arrive souvent), on
+peut utiliser la méthode `items`.
+
+```python
+for pair in iso_639.items():
+    print("Paire:", pair)
+    print("Clé:", pair[0])
+    print("Valeur:", pair[1])
+    print()
+```
+
+Quel est le type de `pair` dans la boucle ci-dessus ?
+
+On peut aussi l'écrire ainsi :
+
+```python
+for cle, valeur in iso_639.items():
+    print("Clé:", cle)
+    print("Valeur:", valeur)
+    print()
+```
+
+
+### Créer un dictionnaire
+
+Une recette courante consiste à créer un dictionnaire dans une boucle à partir du contenu
+d'itérables, par exemple ici pour une liste de fruits avec leurs prix :
+
+```python
+fruits = ["pomme", "poire", "banane", "maracuja"]
+prix = [0.50, 0.75, 1.0, 1.2]
+tarifs = dict()
+for i in range(len(fruits)):
+    f = fruits[i]
+    p = prix[i]
+    tarifs[f] = p
+print(tarifs)
+```
+
+Qu'on peut écrire plus proprement soit comme ceci
+
+```python
+fruits = ["pomme", "poire", "banane", "maracuja"]
+prix = [0.50, 0.75, 1.0, 1.2]
+tarifs = dict()
+for i, f in enumerate(fruits):
+    tarifs[f] = prix[i]
+print(tarifs)
+```
+
+Ou encore mieux
+
+```python
+fruits = ["pomme", "poire", "banane", "maracuja"]
+prix = [0.50, 0.75, 1.0, 1.2]
+tarifs = dict()
+for f, p in zip(fruits, prix):
+    tarifs[f] = p
+print(tarifs)
+```
+
+On peut aussi le faire avec n'importe quelle expression
+
+```python
+mots = ["il", "y", "a", "un", "lama", "dans", "mon", "salon"]
+commence_par_une_voyelle = dict()
+for le_mot in mots:
+    if le_mot[0] in "aeiouyàéèêïôùÿ":
+        commence_par_une_voyelle[le_mot] = True
+    else:
+        commence_par_une_voyelle[le_mot] = False
+print(commence_par_une_voyelle)
+```
+
