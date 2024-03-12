@@ -16,7 +16,7 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 <!-- #region slideshow={"slide_type": "slide"} -->
-Cours 8 : Manipulations de chaînes, itérables composites et dictionnaires
+Cours 9 : Itérables et dictionnaires
 =========================================================================
 
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
