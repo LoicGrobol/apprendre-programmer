@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.7
+      jupytext_version: 1.16.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -552,4 +552,103 @@ for le_mot in mots:
         commence_par_une_voyelle[le_mot] = False
 print(commence_par_une_voyelle)
 ```
+
+## Exercices
+
+Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
+`09_iterables_Prénom_Nom.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
+`09_iterables._Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche 2024-03-17 au soir.
+
+- De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
+  (clé d'inscription `rossum`)
+- À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
+
+Attention : **l'extension doit être `.ipynb`**.
+
+N'hésitez pas à revenir sur les cours et les corrigés précédents pour trouver des idées.
+
+### Consonnes
+
+Voici une liste de voyelles
+
+```python
+voyelles = ["a","e","o","i","u", "y", "à", "â", "é", "è", "ê", "ë", "î", "ï", "ô", "ù", "ü", "ÿ"]
+```
+
+Écrire une fonction `compte_consonnes` qui prend un mot en argument et renvoie le nombre de
+consonnes (donc de lettre qui ne sont pas de voyelles) dans ce mot.
+
+```python
+
+```
+
+### 🍄 Accumuler dans une liste 🍄
+
+Écrire un programme qui demande à l'utilisateurice de saisir les uns après les autres ses cinq
+aliments préférés. Stocker ces réponses dans une liste, puis affichez les éléments de cette liste,
+chacun sur une ligne.
+
+```python
+
+```
+
+### ⚒️ N-grammes ⚒️
+
+Le concept de **n-gramme** est fondamental en TAL. Un n-gramme, c'st une suite de $n$ symboles. Par
+exemple dans le mot « banane », les 2-grammes (bigrammes) de caractères sont :
+
+- ba
+- an
+- na
+- ne
+
+Et dans le mot « linguiste », les 3-grammes (trigrammes) de caractères sont :
+
+- lin
+- ing
+- ngu
+- gui
+- uis
+- ist
+- ste
+
+1\. Écrire une fonction `get_bigrams` qui prend en argument un mot (sous forme d'une chaîne de
+caractères) et renvoie la liste de tous les bigrammes de caractères de ce mot.
+
+```python
+
+```
+
+2\. Écrire un programme une fonction `get_ngrams` qui prend en argument un mot e un entier `n` et
+renvoie la liste des n-grammes de caractères de ce mot.
+
+Indices :
+
+- Attention aux cas particuliers : que faire des `n` premiers et derniers caractères du mot ? Que
+  faire si le mot fait moins de n caractères…
+
+```python
+
+```
+
+### Réflexion
+
+Quelques questions sur votre travail :
+
+- Combien de temps avez-vous passé à faire ces exercices ?
+- Combien de temps avez-vous passé à relire le cours (ou les cours précédents) ?
+- Avez-vous l'impression d'avoir bien mémorisé les concepts et les techniques vus jusqu'ici ?
+- Qu'est-ce qui vous paraît le plus compliqué ?
+- À votre avis, pourquoi ?
+
+Merci de bien répondre à chacune de ces questions dans la cellule de texte ci-dessous (n'oubliez pas
+de l'exécuter avant de sauvegarder) : elles me permettent d'ajuster le cours en fonction de vos
+besoins, avec un peu de chance, elles devraient également vous aider à guider votre travail et à
+apprécier votre progression.
+
+
+
+
+
+
 
