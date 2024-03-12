@@ -35,7 +35,7 @@ Dans ce notebook
 
 Comment faire pour afficher dix fois « Bonjour » ?
 
-Il y a une réponse simpliste : « je copie-colle `print("Hello")` dix fois ».
+Il y a une réponse simpliste : « je copie-colle `print("Bonjour")` dix fois ».
 
 Mais ce n'est pas très satisfaisant, non ?
 
@@ -102,7 +102,7 @@ sont donc des ✨**itérables**✨.
 En plus de la borne supérieure, on peut aussi spécifier la borne inférieure :
 
 ```python
-for i in range(-2, 16):
+for i in range(2, 16):
     print(i)
 ```
 
@@ -121,6 +121,10 @@ On peut convertir un `range` en liste en utilisant la fonction `list` :
 ```python
 print("L'objet range:", range(10))
 print("La liste qui correspond:", list(range(10)))
+```
+
+```python
+list("abcxde")
 ```
 
 Enfin, on peut également (mais c'est plus rarement utile) préciser le pas :
@@ -146,7 +150,7 @@ on peut écrire ça :
 ```python
 mot = "linguistique"
 for index in range(len(mot)):
-    print(mot[index], " indice :", index)
+    print(mot[index], "indice :", index)
 ```
 
 qui est plus compact, et un peu plus agréable (on a plus à gérer manuellement le compteur).
@@ -155,9 +159,32 @@ qui est plus compact, et un peu plus agréable (on a plus à gérer manuellement
 ### `enumerate` : compter ses pas
 
 ```python
+for truc in enumerate("linguistique"):
+    print(truc)
+```
+
+```python
 liste = ["le", "petit", "chat", "est", "content"]
 for truc in enumerate(liste):
     print(truc)
+```
+
+```python
+liste = ["le", 2713, None, True, ["ab", "c"], "e"]
+for truc in enumerate(liste):
+    print(truc)
+```
+
+```python
+print(enumerate("linguistique"))
+```
+
+```python
+print(type(enumerate("linguistique")))
+```
+
+```python
+enumerate("linguistique")[5]
 ```
 
 La fonction `enumerate`, appliqué à une séquence renvoie un **itérable** (comme `range`) dont les
@@ -186,7 +213,7 @@ for idx, lettre in enumerate(mot):
     print(lettre, " indice :", idx)
 ```
 
-C'est encore plus lisible et c'est le style recommandé en Python.
+C'est encore plus lisible et c'est le style *Pythonic* (recommandé en Python).
 
 ### `zip` : la fermeture éclair
 
@@ -228,6 +255,12 @@ for ou, quand, comment in zip(villes, annee, appreciation):
 Est-ce que vous voyez comment simuler `enumerate` en utilisant `zip` ?
 
 
+```python
+mot = "linguistique"
+for couple in zip(range(len(mot)), mot):
+    print(couple[1], " indice :", couple[0])
+```
+
 ### Tuples
 
 Un dernier point : c'est quoi exactement ces éléments que renvoient `zip` et `enumerate`, ça
@@ -250,7 +283,7 @@ print(type(un_tuple))
 ```
 
 ```python
-un_tuple = (1, "uh", "sense", 8, "machin", "truc")
+un_tuple = (1, "uh", 8, (2, 7, 1, "a"), "machin", [1, 2], "truc")
 print(un_tuple[0])
 print(un_tuple[2:4])
 ```
@@ -261,6 +294,7 @@ Ceci ne pose pas de problème :
 
 ```python
 une_liste = [1, "uh", "sense", 8, "machin", "truc"]
+print(une_liste)
 une_liste[1] = "hey!"
 print(une_liste)
 ```
@@ -269,7 +303,22 @@ Ceci est une erreur
 
 ```python tags=["raises-exception"]
 un_tuple = (1, "uh", "sense", 8, "machin", "truc")
+print(un_tuple)
 un_tuple[1] = "hey!"
+print(un_tuple)
+```
+
+```python
+une_liste = [1, "uh", "sense", 8, "machin", "truc"]
+print(une_liste)
+une_liste.append("hey!")
+print(une_liste)
+```
+
+```python
+un_tuple = (1, "uh", "sense", 8, "machin", "truc")
+print(un_tuple)
+un_tuple.append("hey!")
 print(un_tuple)
 ```
 
@@ -348,8 +397,37 @@ mon_dict = {
     "a": 1,
     "b": [1, 2, 3, 4, "hello"],
     "c": 1,
-    "d": {"un dict": "dans un dict !"},
+    "d": {"un dict": "dans un dict !"},
 }
+print(mon_dict)
+```
+
+```python
+mon_dict = {
+    "a": 1,
+    "b": [1, 2, 3, 4, "hello"],
+    "c": 1,
+    "d": {"un dict": "dans un dict !"},
+}
+la_liste = mon_dict["b"]
+print(la_liste)
+print(la_liste[2])
+print((mon_dict["b"])[2])
+print(mon_dict["b"][2])
+```
+
+```python
+mon_dict = {
+    "a": 1,
+    "b": [1, 2, 3, 4, "hello"],
+    "c": 1,
+    "d": {"un dict": "dans un dict !", "a": "bcd"},
+}
+le_dico = mon_dict["d"]
+print(le_dico )
+print(le_dico["un dict"])
+print(mon_dict["d"])
+print(mon_dict["d"]["a"])
 ```
 
 Les clés en revanche sont uniques (ou plus exactement, chaque clé n'est associée qu'à une seule
@@ -463,7 +541,7 @@ for language in iso_639:
 Modifier la boucle `for` ci-dessous pour qu'elle affiche la sortie suivante :
 
 ```text
-ny -> 'Chichewa'
+ny -> 'Nyanja'
 zh -> 'Chinese'
 cs -> 'Czech'
 da -> 'Danish'
@@ -472,9 +550,58 @@ ru -> 'Russian'
 ```
 
 ```python
-# Coder ici
+iso_639 = {
+    "ny": "Chewa", 
+    "zh": "Chinese", 
+    "cs": "Czech", 
+    "da": "Danish", 
+    "dv": "Divehi",
+    "br": "Breton",
+    "gcf": "Guadeloupean Creole French",
+} 
 for language in iso_639:
+    # Modifier ici
     print(language)
+```
+
+```python
+iso_639 = {
+    "ny": "Chewa", 
+    "zh": "Chinese", 
+    "cs": "Czech", 
+    "da": "Danish", 
+    "dv": "Divehi",
+    "br": "Breton",
+    "gcf": "Guadeloupean Creole French",
+}
+iso_639["ny"] = "Nyanja"
+iso_639["ru"] = "Russian"
+del iso_639["br"]
+del iso_639["gcf"]
+for language in iso_639:
+    language_name = iso_639[language]
+    print(language, "->", "'" + language_name + "'")
+```
+
+Ou alternativement :
+
+```python
+iso_639 = {
+    "ny": "Chewa", 
+    "zh": "Chinese", 
+    "cs": "Czech", 
+    "da": "Danish", 
+    "dv": "Divehi",
+    "br": "Breton",
+    "gcf": "Guadeloupean Creole French",
+}
+iso_639["ny"] = "Nyanja"
+iso_639["ru"] = "Russian"
+del iso_639["br"]
+del iso_639["gcf"]
+for language in iso_639:
+    language_name = iso_639[language]
+    print(f"{language} -> '{language_name}'")
 ```
 
 ### Parcourir les paires clé/valeur
@@ -506,30 +633,6 @@ for cle, valeur in iso_639.items():
 
 Une recette courante consiste à créer un dictionnaire dans une boucle à partir du contenu
 d'itérables, par exemple ici pour une liste de fruits avec leurs prix :
-
-```python
-fruits = ["pomme", "poire", "banane", "maracuja"]
-prix = [0.50, 0.75, 1.0, 1.2]
-tarifs = dict()
-for i in range(len(fruits)):
-    f = fruits[i]
-    p = prix[i]
-    tarifs[f] = p
-print(tarifs)
-```
-
-Qu'on peut écrire plus proprement soit comme ceci
-
-```python
-fruits = ["pomme", "poire", "banane", "maracuja"]
-prix = [0.50, 0.75, 1.0, 1.2]
-tarifs = dict()
-for i, f in enumerate(fruits):
-    tarifs[f] = prix[i]
-print(tarifs)
-```
-
-Ou encore mieux
 
 ```python
 fruits = ["pomme", "poire", "banane", "maracuja"]
@@ -613,14 +716,14 @@ Et dans le mot « linguiste », les 3-grammes (trigrammes) de caractères so
 - ste
 
 1\. Écrire une fonction `get_bigrams` qui prend en argument un mot (sous forme d'une chaîne de
-caractères) et renvoie la liste de tous les bigrammes de caractères de ce mot.
+caractères) et renvoie la liste de tous les bigrammes de caractères de ce mot, sans doublons.
 
 ```python
 
 ```
 
-2\. Écrire un programme une fonction `get_ngrams` qui prend en argument un mot e un entier `n` et
-renvoie la liste des n-grammes de caractères de ce mot.
+2\. Écrire un programme une fonction `get_ngrams` qui prend en argument un mot et un entier `n` et
+renvoie la liste des n-grammes de caractères de ce mot, sans doublons.
 
 Indices :
 
