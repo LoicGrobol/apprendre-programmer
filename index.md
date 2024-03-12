@@ -120,7 +120,7 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 ### 2024-03-12 : Itérables et dictionnaires
 
 - {% notebook_badges slides/09-iterables_dictionnaires/iterables_dictionnaires.py.md %}
-  [Notebook retour et fichiers]({{site.url}}{{site.baseurl}}/slides/09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
+  [Notebook itérables et dictionnaires]({{site.url}}{{site.baseurl}}/slides/09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
 
 ## Ressources
 
