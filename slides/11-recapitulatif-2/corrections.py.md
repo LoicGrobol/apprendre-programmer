@@ -22,6 +22,79 @@ Corrections TD récapitulatif 2
 **Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
+## Fonctions
+
+
+1\.
+
+1.1 Définir une fonction nommée `bonjour`, qui affiche `"Bonjour"`.
+
+```python
+def bonjour():
+    print("Bonjour")
+
+bonjour()
+```
+
+1.2 Définir une fonction nommée `salut`, qui demande la saisie d'un nom, puis affiche une salutation
+en fonction, par exemple `"Salut, Morgan !`" si le nom saisi est `"Morgan"`.
+
+```python tags=["skip-execution"]
+def salut():
+    nom = input("Quel est ton nom: ")
+    print("Salut,", nom)
+
+salut()
+```
+
+2\. Définir une fonction nommée `double`, qui accepte un argument et affiche son double.
+
+```python
+def double(n):
+    print(2*n)
+
+double(43)
+double(-2)
+```
+
+3\. Définir une fonction nommée `somme` qui accepte deux arguments et affiche leur somme.
+
+```python
+def somme(a, b):
+    print(a+b)
+
+somme(5, 6)
+somme(13, 12)
+somme("hello", "world")
+```
+
+4\. Définir une fonction qui accepte un nombre comme argument et renvoie son double si ce nombre est
+positif et son carré s'il est négatif.
+
+```python
+def fun(n):
+    if n >= 0:
+        return 2*n
+    else:
+        return n**2
+
+print(fun(5))
+print(fun(-20))
+```
+
+5\. Définir une fonction qui accepte une chaîne de caractères comme argument et renvoie la chaîne
+mise en majuscule si elle commence par une voyelle, et `False` sinon.
+
+```python
+def weird(chaine):
+    if chaine[0].lower() in voyelles:
+        return chaine.upper()
+    else:
+        return False
+
+print(weird("An Dro"))
+print(weird("Hanter Dro"))
+```
 
 ## Compteurs et accumulateurs
 
