@@ -222,7 +222,8 @@ paragraphe = ["c'", 'est', 'devenu', 'une', 'banalité', "l'", 'ordinateur', "s'
 def compte_4(lst):
     # Coder ici
 
-compte_4(paragraphe)
+s = compte_4(paragraphe)
+print(s)
 ```
 
 1.2 Même question pour les mots de plus de $6$ caractères
@@ -233,7 +234,8 @@ paragraphe = ["c'", 'est', 'devenu', 'une', 'banalité', "l'", 'ordinateur', "s'
 def compte_6(lst):
     # Coder ici
 
-compte_6(paragraphe)
+c = compte_6(paragraphe)
+print(c)
 ```
 
 2\.
@@ -251,7 +253,7 @@ temperatures = [62.8, 26.6, 60.3, 60.4, 59.4, 45.1, 49, 55.3, 70.7, 63.5,
 # Coder ici
 ```
 
-2.2 Écrire une fonction qui prend en argument une liste de nombres et renvoie la somme de ces nombres
+2.2 Écrire une fonction qui prend en argument une liste de nombres et **renvoie** la somme de ces nombres
 
 ```python
 temperatures = [62.8, 26.6, 60.3, 60.4, 59.4, 45.1, 49, 55.3, 70.7, 63.5,
@@ -263,7 +265,7 @@ temperatures = [62.8, 26.6, 60.3, 60.4, 59.4, 45.1, 49, 55.3, 70.7, 63.5,
 def somme(liste):
     # Coder ici
 
-somme(temperatures)
+print(somme(temperatures))
 ```
 
 2.3 Même question que 2.2, mais uniquement pour les températures de plus de $50$.
@@ -278,7 +280,7 @@ temperatures = [62.8, 26.6, 60.3, 60.4, 59.4, 45.1, 49, 55.3, 70.7, 63.5,
 def somme_50(liste):
     # Coder ici
 
-somme(temperatures)
+print(somme_50(temperatures))
 ```
 
 3\. Écrire un programme qui compte le nombre de mots commençant par une voyelle dans le paragraphe
