@@ -129,7 +129,7 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
   - {% notebook_badges slides/11-recapitulatif-2/solutions.py.md %} [Notebook
     solutions]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/solutions.py.md)
 - {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Notebook
-  exos]({{site.url}}{{site.baseurl}}/slides/slides/11-recapitulatif-2/recapitulatif-2.py.ipynb)
+  exos]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/recapitulatif-2.py.ipynb)
 
 
 ## Ressources
