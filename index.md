@@ -114,13 +114,18 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 ### 2024-03-05 : Valeurs de retour et accès aux fichiers
 
-- {% notebook_badges slides/08-return_fichiers/return_fichiers.py.md %}
-  [Notebook retour et fichiers]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/return_fichiers.py.ipynb)
+- {% notebook_badges slides/08-return_fichiers/return_fichiers.py.md %} [Notebook retour et
+  fichiers]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/return_fichiers.py.ipynb)
 
 ### 2024-03-12 : Itérables et dictionnaires
 
-- {% notebook_badges slides/09-iterables_dictionnaires/iterables_dictionnaires.py.md %}
-  [Notebook itérables et dictionnaires]({{site.url}}{{site.baseurl}}/slides/09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
+- {% notebook_badges slides/09-iterables_dictionnaires/iterables_dictionnaires.py.md %} [Notebook itérables et
+  dictionnaires]({{site.url}}{{site.baseurl}}/slides/09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
+
+### 2024-03-19 : Récapitulatif 2
+
+- {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Notebook exos]({{site.url}}{{site.baseurl}}/slides/slides/11-recapitulatif-2/recapitulatif-2.py.ipynb)
+
 
 ## Ressources
 
