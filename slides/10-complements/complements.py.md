@@ -23,8 +23,6 @@ Cours 10 : Compléments
 
 <!-- #endregion -->
 
-Dans ce notebook, tous les trucs qu'on a pas vu dans le cours faute de temps.
-
 ## Compléments
 
 ## Encore des manipulations de chaînes 😤
