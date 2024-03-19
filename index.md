@@ -124,13 +124,12 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 ### 2024-03-19 : Récapitulatif 2
 
-- {% notebook_badges slides/10-complements/complements.md %} [Notebook
+- {% notebook_badges slides/10-complements/complements.py.md %} [Notebook
   compléments]({{site.url}}{{site.baseurl}}/slides/10-complements/complements.ipynb)
-  - {% notebook_badges slides/11-recapitulatif-2/solutions.py.md %} [Notebook
-    solutions]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/solutions.py.md)
 - {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Notebook
   exos]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/recapitulatif-2.py.ipynb)
-
+  - {% notebook_badges slides/11-recapitulatif-2/solutions.py.md %} [Notebook
+    solutions]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/solutions.py.ipynb)
 
 ## Ressources
 
@@ -145,7 +144,7 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 - [Google's Python Class](https://developers.google.com/edu/python/). Guido a travaillé chez eux.
   Pas [ce
   Guido](http://vignette2.wikia.nocookie.net/pixar/images/1/10/Guido.png/revision/latest?cb=20140314012724),
-  [celui-là]
+  [celui-là](https://en.wikipedia.org/wiki/Guido_van_Rossum)
 
 Plus avancés :
 
@@ -157,7 +156,7 @@ Plus avancés :
 
 - [Coding Game](https://www.codingame.com/home)
 - [newcoder.io](http://newcoder.io/). Des projets commentés, commencer par 'Data Visualization'
-(https://en.wikipedia.org/wiki/Guido_van_Rossum#/media/File:Guido_van_Rossum_OSCON_2006.jpg)
+
 - [Code combat](https://codecombat.com/)
 
 ### Livres
