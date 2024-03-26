@@ -1,11 +1,15 @@
-ipywidgets
+ipywidgets >= 8, < 9
 jedi-language-server
 jinja2 >= 3.0.0, < 3.2.0
-jupyterlab
+jupyter-server >= 2, < 3
+jupyterlab >= 4, < 5
 jupyterlab-rise
-jupytext
-nbconvert
-nbtutor
+jupytext >= 1.16, < 1.17
+notebook >= 7, < 8
+nbconvert >= 7.16, < 7.17
 pyright
 RISE
 ruff
+
+# https://github.com/mwouts/jupytext/issues/1051
+nbclassic >= 1, < 2

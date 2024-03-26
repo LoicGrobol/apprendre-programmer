@@ -1,1 +1,2 @@
+pip install -U -r requirements.txt --upgrade-strategy=eager
 jupyter lab build --minimize=False
