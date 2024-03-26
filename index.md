@@ -26,7 +26,7 @@ layout: default
 
 ## Liens utiles
 
-- {% notebook_badges assignment/projet-2022.py.md %} [Consignes mini-projet](assignment/projet-2024.py.ipynb)
+- {% notebook_badges assignment/projet-2024.py.md %} [Consignes mini-projet](assignment/projet-2024.py.ipynb)
 - [Espace Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7798)
   - Inscription libre avec la clé `rossum`
   - Attention, cet espace ne sert qu'aux dépôts de devoirs.
@@ -135,7 +135,7 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 ### 2024-03-26 : Résumé
 
 - {% notebook_badges slides/12-wrap/wrapup.py.md %} [Notebook résumé](slides/12-wrap/wrapup.py.ipynb)
-- {% notebook_badges assignment/projet-2022.py.md %} [Consignes mini-projet](assignment/projet-2024.py.ipynb)
+- {% notebook_badges assignment/projet-2024.py.md %} [Consignes mini-projet](assignment/projet-2024.py.ipynb)
 
 ## Ressources
 
