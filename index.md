@@ -138,6 +138,10 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
   - {% notebook_badges slides/12-wrap/solutions.py.md %} [Notebook résumé](slides/12-wrap/solutions.py.ipynb)
 - {% notebook_badges assignment/projet-2024.py.md %} [Consignes mini-projet](assignment/projet-2024.py.ipynb)
 
+### 2023-04-18 : Partiel
+
+- {% notebook_badges exams/exam-2024.py.md %} [Partiel](exams/exam-2024.py.ipynb)
+
 ## Ressources
 
 - [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et
