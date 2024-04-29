@@ -135,12 +135,16 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 ### 2024-03-26 : Résumé
 
 - {% notebook_badges slides/12-wrap/wrapup.py.md %} [Notebook résumé](slides/12-wrap/wrapup.py.ipynb)
-  - {% notebook_badges slides/12-wrap/solutions.py.md %} [Notebook résumé](slides/12-wrap/solutions.py.ipynb)
+  - {% notebook_badges slides/12-wrap/solutions.py.md %} [Solutions](slides/12-wrap/solutions.py.ipynb)
 - {% notebook_badges assignment/projet-2024.py.md %} [Consignes mini-projet](assignment/projet-2024.py.ipynb)
 
 ### 2023-04-18 : Partiel
 
 - {% notebook_badges exams/exam-2024.py.md %} [Partiel](exams/exam-2024.py.ipynb)
+
+### 2023-04-29 : Examen terminal
+
+- {% notebook_badges exams/exam-2024-term.py.md %} [Partiel](exams/exam-2024-term.py.ipynb)
 
 ## Ressources
 
