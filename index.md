@@ -141,12 +141,12 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 - {% notebook_badges assignment/projet-2024.py.md %} [Consignes
   mini-projet]({{site.url}}{{site.baseurl}}/assignment/projet-2024.py.ipynb)
 
-### 2023-04-18 : Partiel
+### 2024-04-09 : Partiel
 
 - {% notebook_badges exams/exam-2024.py.md %}
   [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2024.py.ipynb)
 
-### 2023-04-29 : Examen terminal
+### 2024-04-29 : Examen terminal
 
 - {% notebook_badges exams/exam-2024-term.py.md %}
   [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2024-term.py.ipynb)
