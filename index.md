@@ -151,6 +151,11 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 - {% notebook_badges exams/exam-2024-term.py.md %}
   [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2024-term.py.ipynb)
 
+### 2024-06-21 : Examen de rattrapage
+
+- {% notebook_badges exams/exam-2024-supp.py.md %}
+  [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2024-supp.py.ipynb)
+
 ## Ressources
 
 - [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et
