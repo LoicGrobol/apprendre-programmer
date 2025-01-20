@@ -752,7 +752,7 @@ est dans le texte (autrement dit s'il est inclus dans la variable `texte`) et `F
 ### Exercice 3
 
 Dans une nouvelle cellule ci-dessous, écrire un programme qui demande à son utilisateurice son année
-de naissance et affiche l'âge qu'aura cette personne en 2022.
+de naissance et affiche l'âge qu'aura cette personne en 2048.
 
 Indice : `int`
 

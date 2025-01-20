@@ -108,15 +108,15 @@ print("banane" in texte)
 ### Exercice 3
 
 > Écrire un programme qui demande à son utilisateurice son année de naissance et affiche l'âge
-> qu'aura cette personne en 2022.
+> qu'aura cette personne en 2048.
 >
 > Indice : `int`
 
 ```python tags=["skip-execution"]
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
-age = 2024 - annee_int
-print("En 2024 tu auras", age, "ans")
+age = 2048 - annee_int
+print("En 2048 tu auras", age, "ans")
 ```
 
 ou encore
@@ -124,8 +124,8 @@ ou encore
 ```python tags=["skip-execution"]
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
-age = 2024 - annee_int
-print("En 2024 tu auras " + str(age) + " ans")
+age = 2048 - annee_int
+print("En 2048 tu auras " + str(age) + " ans")
 ```
 
 ou mieux
@@ -133,8 +133,8 @@ ou mieux
 ```python tags=["skip-execution"]
 annee_str = input("Tu es né⋅e quand ? ")
 annee_int = int(annee_str)
-age = 2024 - annee_int
-print(f"En 2024 tu auras {age} ans")
+age = 2048 - annee_int
+print(f"En 2048 tu auras {age} ans")
 ```
 
 ## Retour sur vos rendus
