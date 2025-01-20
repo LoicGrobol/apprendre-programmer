@@ -1,6 +1,7 @@
 ---
 title: Informations et cours
 layout: default
+permalink: /2024/
 ---
 
 <!-- LTeX: language=fr" -->
@@ -8,7 +9,7 @@ layout: default
 
 ## Nouvelles
 
-- **2024-01-20** Premier cours de cette session le mardi 21 janvier 2025. *Be there and beware!*
+- **2024-01-16** Premier cours de cette session le mardi 17 janvier 2024. *Be there and beware!*
 
 
 ## Infos pratiques
@@ -16,18 +17,21 @@ layout: default
 - **Quoi** « Apprendre à programmer », 4L6SC01P
 - **Où** Salle L209, bâtiment Ricœur, Université Paris Nanterre, 200 avenue de la République,
   Nanterre
-- **Quand** 12 séances, les mardis de 10:30 à 12:30, du 21/01 au 15/04
-  - Voir le calendrier de l'université pour les dates de vacances.
+- **Quand** 12 séances, les mardis de 10:30 à 12:30, du 16/01 au 16/04
+  - Voir [le calendrier de
+    l'université](https://etudiants.parisnanterre.fr/calendrier-universitaire/calendrier-universitaire-2023-2024)
+    pour les dates de vacances.
 - **Contact** Loïc Grobol [`<lgrobol@parisnanterre.fr>`](mailto:lgrobol@parisnanterre.fr)
-- **Dépôt des exercices** de préférence sur Cours en Ligne (à venir) (clé d'inscription `rossum`) ou
-  par email (voir ci-dessus.)
+- **Dépôt des exercices** de préférence [sur Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7459) (clé d'inscription `rossum`)
+  ou par email (voir ci-dessus.)
 
 ## Liens utiles
 
-<!-- - [Espace Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7798)
+- {% notebook_badges assignment/projet-2024.py.md %} [Consignes mini-projet](assignment/projet-2024.py.ipynb)
+- [Espace Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7798)
   - Inscription libre avec la clé `rossum`
-  - Attention, cet espace ne sert qu'aux dépôts de devoirs. -->
-- [Page du cours de l'an dernier]({{site.url}}{{site.baseurl}}/2024)
+  - Attention, cet espace ne sert qu'aux dépôts de devoirs.
+- [Page du cours de l'an dernier]({{site.url}}{{site.baseurl}}/2023)
 - [Le dépôt Github du cours](https://github.com/LoicGrobol/apprendre-programmer/) contient toutes
   les sources permettant de générer le matériel du cours.
 - Lien Binder de secours :
@@ -54,7 +58,7 @@ Une autre option, si vous avez un compte Google est d'utiliser
 [Colaboratory](https://colab.research.google.com/) pour éditer les notebooks que vous avez
 téléchargé.
 
-### 2025-01-21 : Introduction, notebooks, entrées/sorties de bases et variables
+### 2024-01-16 : Introduction, notebooks, entrées/sorties de bases et variables
 
 - {% notebook_badges slides/00-introduction/infos-slides.py.md %}
   [Slides Informations]({{site.url}}{{site.baseurl}}/slides/00-introduction/infos-slides.py.ipynb)
@@ -62,6 +66,8 @@ téléchargé.
   [Utiliser les notebooks Jupyter]({{site.url}}{{site.baseurl}}/slides/00-introduction/notebooks.py.ipynb)
 - {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
   [Notebook IO et variables]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
+  - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/solutions.py.ipynb)
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
 
@@ -73,6 +79,83 @@ sophistiqué](https://boldidea.org/static/thonny/chromebook.html), mais c'est po
 Pour les tablettes sous iOS ou Android, ça ne sera pas possible. Vous devriez pouvoir suivre
 l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal, tenez-moi au
 courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
+
+### 2024-01-23 : Instructions conditionnelles
+
+- {% notebook_badges slides/02-conditions/conditions.py.md %}
+  [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
+  - {% notebook_badges slides/02-conditions/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}}/slides/02-conditions/solutions.py.ipynb)
+
+### 2024-01-30 : Boucles et séquences
+
+- {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
+  [Slides Boucles et séquences]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/index_listes_iter.py.ipynb)
+
+### 2024-02-06 : TD `turtle` et boucle `while`
+
+- {% notebook_badges slides/03-turtle/turtle.py.md %}
+  [Notebook `turtle`]({{site.url}}{{site.baseurl}}/slides/03-turtle/turtle.py.ipynb)
+  - [Solutions]({{site.url}}{{site.baseurl}}/slides/03-turtle/solutions.py)
+- {% notebook_badges slides/05-td_while/td_while.py.md %}
+  [Notebook `while`]({{site.url}}{{site.baseurl}}/slides/05-td_while/td_while.py.ipynb)
+  - {% notebook_badges slides/05-td_while/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}}/slides/05-td_while/solutions.py.ipynb)
+
+### 2024-02-13 : Exercices récapitulatifs
+
+- {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
+  [Notebook exos]({{site.url}}{{site.baseurl}}/slides/06-recapitulatif/recapitulatif.py.ipynb)
+  - {% notebook_badges slides/06-recapitulatif/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}}/slides/06-recapitulatif/solutions.py.ipynb)
+
+### 2024-02-27 : Fonctions
+
+- {% notebook_badges slides/07-fonctions/fonctions.py.md %}
+  [Notebook fonctions]({{site.url}}{{site.baseurl}}/slides/07-fonctions/fonctions.py.ipynb)
+
+### 2024-03-05 : Valeurs de retour et accès aux fichiers
+
+- {% notebook_badges slides/08-return_fichiers/return_fichiers.py.md %} [Notebook retour et
+  fichiers]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/return_fichiers.py.ipynb)
+
+### 2024-03-12 : Itérables et dictionnaires
+
+- {% notebook_badges slides/09-iterables_dictionnaires/iterables_dictionnaires.py.md %} [Notebook itérables et
+  dictionnaires]({{site.url}}{{site.baseurl}}/slides/09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
+
+### 2024-03-19 : Récapitulatif 2
+
+- {% notebook_badges slides/10-complements/complements.py.md %} [Notebook
+  compléments]({{site.url}}{{site.baseurl}}/slides/10-complements/complements.py.ipynb)
+- {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Notebook
+  exos]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/recapitulatif-2.py.ipynb)
+  - {% notebook_badges slides/11-recapitulatif-2/solutions.py.md %} [Notebook
+    solutions]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/solutions.py.ipynb)
+
+### 2024-03-26 : Résumé
+
+- {% notebook_badges slides/12-wrap/wrapup.py.md %} [Notebook
+  résumé]({{site.url}}{{site.baseurl}}/slides/12-wrap/wrapup.py.ipynb)
+  - {% notebook_badges slides/12-wrap/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}}/slides/12-wrap/solutions.py.ipynb)
+- {% notebook_badges assignment/projet-2024.py.md %} [Consignes
+  mini-projet]({{site.url}}{{site.baseurl}}/assignment/projet-2024.py.ipynb)
+
+### 2024-04-09 : Partiel
+
+- {% notebook_badges exams/exam-2024.py.md %}
+  [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2024.py.ipynb)
+
+### 2024-04-29 : Examen terminal
+
+- {% notebook_badges exams/exam-2024-term.py.md %}
+  [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2024-term.py.ipynb)
+
+### 2024-06-21 : Examen de rattrapage
+
+- {% notebook_badges exams/exam-2024-supp.py.md %}
+  [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2024-supp.py.ipynb)
 
 ## Ressources
 
