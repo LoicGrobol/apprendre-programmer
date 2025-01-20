@@ -1,5 +1,4 @@
-[comment]: <> "LTeX: language=fr"
-<!-- markdownlint-disable MD003 MD025 MD033 -->
+<!-- LTeX: language=fr -->
 
 Apprendre à programmer
 ======================
@@ -22,17 +21,17 @@ Pour travailler au développement de ce cours :
 1. Créer un environnement virtuel et l'activer
 2. Installer les dépendances
 
-   ```console
+   ```bash
    pip install -U -r requirements.txt
    ```
 
 3. Démarrer jupyter
 
-   ```console
+   ```bash
    jupyter notebook
    ```
 
-   Idéalement ça devrait aussi marcher avec jupyterlab [mais ce n'est pas encore le cas pour les slides](https://github.com/damianavila/RISE/pull/381)
+   Idéalement ça devrait aussi marcher avec jupyterlab
 4. On peut alors modifier les fichiers markdown dans jupyter comme si c'étaient des notebooks grâce
    à la magie de [jupytext](https://github.com/mwouts/jupytext)
 
@@ -49,6 +48,8 @@ Autres éléments magiques :
     [`_config.yml`](config.yml).
 
 ## Générer le site en local
+
+Penser à activer Mise si besoin
 
 Dependencies:
 
@@ -85,15 +86,17 @@ le mettre à jour quand on change les dépendances ici **tout en lui laissant `n
 
 ## Licences
 
-[![CC BY Licence badge](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+[![CC BY Licence
+badge](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 
-Copyright © 2023 Loïc Grobol [\<loic.grobol@gmail.com\>](mailto:loic.grobol@gmail.com)
+Copyright © 2025 L. Grobol [\<lgrobol@tuta.com\>](mailto:lgrobol@tuta.com)
 
 Sauf indication contraire, les fichiers présents dans ce dépôt sont distribués selon les termes de
 la licence [Creative Commons Attribution 4.0
 International](https://creativecommons.org/licenses/by/4.0/).
 
-Un résumé simplifié de cette licence est disponible à <https://creativecommons.org/licenses/by/4.0/>.
+Un résumé simplifié de cette licence est disponible à
+<https://creativecommons.org/licenses/by/4.0/>.
 
 Le texte intégral de cette licence est disponible à
 <https://creativecommons.org/licenses/by/4.0/legalcode>
