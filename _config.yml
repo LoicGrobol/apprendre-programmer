@@ -8,6 +8,7 @@ url: "https://loicgrobol.github.io/"
 baseurl: "/apprendre-programmer/"
 repository: "loicgrobol/apprendre-programmer"
 environ_repository: "loicgrobol/apprendre-programmer-environ"
+binder_host: "https://notebooks.gesis.org/binder"
 repo_branch: "main"
 
 exclude:

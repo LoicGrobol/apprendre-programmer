@@ -6,6 +6,10 @@ module Jekyll
       end
   
       def render(context)
+          if context['site'].key?("binder_host")
+            binder_host = context['site'].key?("binder_host")
+          else
+            binder_host = "https://mybinder.org"
           if context['site'].key?("environ_repository")
             repo_dir = context['site']['repository'].split("/").last
             if @notebook_path.end_with?(".md")
@@ -20,12 +24,12 @@ module Jekyll
             )
             urlpath_escaped = ERB::Util.url_encode(urlpath)
             res = (
-               "[![Launch in Binder badge](https://mybinder.org/badge_logo.svg)]" +
-               "(https://mybinder.org/v2/gh/#{context['site']['environ_repository']}/#{context['site']['repo_branch']}" +
+               "[![Launch in Binder badge](#{binder_host}/badge_logo.svg)]" +
+               "(#{binder_host}/v2/gh/#{context['site']['environ_repository']}/#{context['site']['repo_branch']}" +
                "?urlpath=git-pull#{urlpath_escaped})"
             )
          else
-            res = "[![Launch in Binder badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/#{context['site']['repository']}/#{context['site']['repo_branch']}?urlpath=tree/#{@notebook_path})"
+            res = "[![Launch in Binder badge](#{binder_host}/badge_logo.svg)](#{binder_host}/v2/gh/#{context['site']['repository']}/#{context['site']['repo_branch']}?urlpath=tree/#{@notebook_path})"
          end
          return res
       end
@@ -40,7 +44,7 @@ module Jekyll
       end
   
       def render(context)
-         res = "[![Launch in Binder badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/#{context['site']['repository']}/#{context['site']['repo_branch']}?urlpath=tree/#{@notebook_path})"
+         res = "[![Launch in Binder badge](#{binder_host}/badge_logo.svg)]#{binder_host}/v2/gh/#{context['site']['repository']}/#{context['site']['repo_branch']}?urlpath=tree/#{@notebook_path})"
          return res
       end
    end
