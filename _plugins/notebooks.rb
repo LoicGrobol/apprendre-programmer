@@ -6,10 +6,7 @@ module Jekyll
       end
   
       def render(context)
-          if context['site'].key?("binder_host")
-            binder_host = context['site'].key?("binder_host")
-          else
-            binder_host = "https://mybinder.org"
+          binder_host = context['site'].fetch("binder_host", "https://mybinder.org")
           if context['site'].key?("environ_repository")
             repo_dir = context['site']['repository'].split("/").last
             if @notebook_path.end_with?(".md")
@@ -44,6 +41,7 @@ module Jekyll
       end
   
       def render(context)
+         binder_host = context['site'].fetch("binder_host", "https://mybinder.org")
          res = "[![Launch in Binder badge](#{binder_host}/badge_logo.svg)]#{binder_host}/v2/gh/#{context['site']['repository']}/#{context['site']['repo_branch']}?urlpath=tree/#{@notebook_path})"
          return res
       end
