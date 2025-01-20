@@ -31,7 +31,7 @@ layout: default
 - [Le dépôt Github du cours](https://github.com/LoicGrobol/apprendre-programmer/) contient toutes
   les sources permettant de générer le matériel du cours.
 - Lien Binder de secours :
-  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LoicGrobol/apprendre-programmer/main)
+  [![Binder]({{site.binder_host}}/badge_logo.svg)]({{site.binder_host}}/v2/gh/LoicGrobol/apprendre-programmer/main)
 
 
 ## Séances
