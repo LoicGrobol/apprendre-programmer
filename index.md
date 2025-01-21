@@ -19,14 +19,15 @@ layout: default
 - **Quand** 12 séances, les mardis de 10:30 à 12:30, du 21/01 au 15/04
   - Voir le calendrier de l'université pour les dates de vacances.
 - **Contact** Loïc Grobol [`<lgrobol@parisnanterre.fr>`](mailto:lgrobol@parisnanterre.fr)
-- **Dépôt des exercices** de préférence sur Cours en Ligne (à venir) (clé d'inscription `rossum`) ou
-  par email (voir ci-dessus.)
+- **Dépôt des exercices** de préférence sur [Cours en
+  Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7736) (à venir) (clé d'inscription
+  `rossum`) ou par email (voir ci-dessus.)
 
 ## Liens utiles
 
-<!-- - [Espace Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7798)
+- [Espace Cours en Ligne](](https://coursenligne.parisnanterre.fr/course/view.php?id=7736))
   - Inscription libre avec la clé `rossum`
-  - Attention, cet espace ne sert qu'aux dépôts de devoirs. -->
+  - Attention, cet espace ne sert qu'aux dépôts de devoirs.
 - [Page du cours de l'an dernier]({{site.url}}{{site.baseurl}}/2024)
 - [Le dépôt Github du cours](https://github.com/LoicGrobol/apprendre-programmer/) contient toutes
   les sources permettant de générer le matériel du cours.
@@ -46,6 +47,8 @@ les versions interactives sur Binder.
 Une fois dans Binder, vous pouvez récupérer votre travail sous forme de fichier ipynb dans le menu
 `File` →  `Download as` → `Notebook (ipynb)` et vous pouvez ouvrir un fichier ipynb qui est votre
 machine avec `File` → `Open…` → `Upload` (en haut à droite) → `Upload` (à côté du nom de fichier).
+
+Vous pouvez aussi utiliser [Basthon](https://notebook.basthon.fr/).
 
 Vous pouvez aussi les télécharger pour les ouvrir sous votre machine, dans
 [Edupyter](https://www.edupyter.net/) ou [Visual Studio Code](https://code.visualstudio.com/).
