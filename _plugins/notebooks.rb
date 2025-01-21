@@ -6,6 +6,7 @@ module Jekyll
       end
   
       def render(context)
+          return "" # Temp hotfix
           binder_host = context['site'].fetch("binder_host", "https://mybinder.org")
           if context['site'].key?("environ_repository")
             repo_dir = context['site']['repository'].split("/").last

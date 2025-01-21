@@ -8,7 +8,7 @@ layout: default
 
 ## Nouvelles
 
-- **2024-01-20** Premier cours de cette session le mardi 21 janvier 2025. *Be there and beware!*
+- **2025-01-20** Premier cours de cette session le mardi 21 janvier 2025. *Be there and beware!*
 
 
 ## Infos pratiques
@@ -37,7 +37,7 @@ layout: default
 
 ## Séances
 
-**ATTENTION** : Les liens hypertextes ci-dessous mènent vers des versions statiques des notebooks.
+<!-- **ATTENTION** : Les liens hypertextes ci-dessous mènent vers des versions statiques des notebooks.
 C'est pratique en cas de problème, mais pour suivre le cours et faire les exercices, il faut ouvrir
 les versions interactives sur Binder.
 
@@ -46,9 +46,15 @@ les versions interactives sur Binder.
 
 Une fois dans Binder, vous pouvez récupérer votre travail sous forme de fichier ipynb dans le menu
 `File` →  `Download as` → `Notebook (ipynb)` et vous pouvez ouvrir un fichier ipynb qui est votre
-machine avec `File` → `Open…` → `Upload` (en haut à droite) → `Upload` (à côté du nom de fichier).
+machine avec `File` → `Open…` → `Upload` (en haut à droite) → `Upload` (à côté du nom de fichier). -->
 
-Vous pouvez aussi utiliser [Basthon](https://notebook.basthon.fr/).
+Pour utiliser un notebook :
+
+- Télécharger le fichier notebook (`.ipynb`) en cliquant sur le lien.
+- Ouvrir [Basthon](https://notebook.basthon.fr/).
+- Charger le notebook dans Basthon (`Fichier` → `Ouvrir`).
+- Vous pouvez ensuite télécharger le notebook avec vos modifications (`Fichier` → `Enregistrer
+  Sous`).
 
 Vous pouvez aussi les télécharger pour les ouvrir sous votre machine, dans
 [Edupyter](https://www.edupyter.net/) ou [Visual Studio Code](https://code.visualstudio.com/).

@@ -70,17 +70,20 @@ d'entre eux contient des exercices et ce sera à vous d'écrire vos solutions di
 
 Il y a beaucoup de façons d'interagir avec des *notebooks* :
 
-- Vous être probablement en train de lire ceci via *Binder*, qui est un moyen rapide et pratique d'y
+- Vous être probablement en train de lire ceci via *Basthon*, qui est un moyen rapide et pratique d'y
   accéder (les liens seront directement sur la page du cours et vous n'avez pas besoin
   d'inscription).
-  - Pour chaque notebook du cours, cliquer sur le badge
+  <!-- - Pour chaque notebook du cours, cliquer sur le badge
     [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LoicGrobol/apprendre-programmer/main)
     vous emmène sur une instance de Binder avec le notebook déjà chargé
   - Attention : si vous restez trop longtemps sans exécuter de code dans Binder, votre session se
     coupe ! Vous pouvez toujours sauvegarder le notebook sur votre machine, mais si vous le
-    recharger sur Binder, il faudra le ré-uploader
-- Vous pouvez installer [Edupyter](https://www.edupyter.net/) sur votre machine, qui vous donnera
-  accès à Jupyter et à l'éditeur de code Thonny, dont on se servira plus tard dans le cours.
+    recharger sur Binder, il faudra le ré-uploader -->
+- Vous pouvez installer [Edupyter](https://www.edupyter.net/) (Windows) sur votre machine, qui vous
+  donnera accès à Jupyter et à l'éditeur de code Thonny, dont on se servira plus tard dans le cours
+  ; ou encore [Visual Studio Code](https://code.visualstudio.com/) (Windows, Mac et Linux, mais
+  [plus compliqué à prendre en
+  main](https://code.visualstudio.com/docs/datascience/jupyter-notebooks))
 - Si vous avez un compte Google, vous pouvez aussi y accéder dans [Google
   Colaboratory](https://colab.research.google.com), pour ça, il faut télécharger à partir du
   **lien** sur la page du cours le fichier `.ipynb`, puis le charger (avec *upload*) dans Colab
@@ -94,7 +97,8 @@ from IPython.display import IFrame
 IFrame('https://www.youtube.com/embed/inN8seMm7UI', width=700, height=350)
 ```
 
-Quelle que soit la plateforme que vous utilisez, je vous recommande très fortement de toujours sauvegarder vos notebooks dans un dossier sur votre machine (ou une clé ou…) pour ne pas les perdre.
+Quelle que soit la plateforme que vous utilisez, je vous recommande très fortement de toujours
+sauvegarder vos notebooks dans un dossier sur votre machine (ou une clé ou…) pour ne pas les perdre.
 
 Pour rendre vos exercices, passez par l'espace Cours en Ligne du cours (voir la page principale) :
 une fois que vous avez rempli vos réponses aux exercices d'un notebook, vous le téléchargez sur
@@ -145,7 +149,8 @@ Ou vous pouvez utiliser <kbd>echap</kbd>+<kbd>M</kbd> pour passer une cellule en
 ### Formater du Markdown
 
 
-En mode Markdown, `*du texte entre deux astérisques*` est affiché en *italiques*. `**et quatres astériques**` font du **gras.**
+En mode Markdown, `*du texte entre deux astérisques*` est affiché en *italiques*. `**et quatres
+astériques**` font du **gras.**
 
 Mettre du texte entre accents graves sert à signaler du `code` et les `#` servent à faire des titres.
 
@@ -159,11 +164,13 @@ Mettre du texte entre accents graves sert à signaler du `code` et les `#` serve
 
 ### 👶 Exo 👶
 
-La cellule ci-dessous contient du code. Ne vous préoccupez pas de ce qu'il signifie pour l'instant, on s'entraîne juste !
+La cellule ci-dessous contient du code. Ne vous préoccupez pas de ce qu'il signifie pour l'instant,
+on s'entraîne juste !
 
 1\. Cliquer sur la cellule pour la sélectionner, puis exécutez-la pour voir son résultat.
 
-2\. Sélectionnez-la à nouveau, et dans la ligne `x = 5`, remplacez 5 par 10, puis exécutez-la à nouveau pour voir le nouveau résultat
+2\. Sélectionnez-la à nouveau, et dans la ligne `x = 5`, remplacez 5 par 10, puis exécutez-la à
+nouveau pour voir le nouveau résultat.
 
 ```python
 x = 5
