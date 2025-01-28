@@ -25,6 +25,8 @@ layout: default
 
 ## Liens utiles
 
+- Prendre rendez-vous pour des *office hours* en visio : [mon
+  calendrier](https://calendar.app.google/N9oW2c9BzhXsWrrv9)
 - [Espace Cours en Ligne](](https://coursenligne.parisnanterre.fr/course/view.php?id=7736))
   - Inscription libre avec la clé `rossum`
   - Attention, cet espace ne sert qu'aux dépôts de devoirs.
@@ -53,6 +55,7 @@ Pour utiliser un notebook :
 - Télécharger le fichier notebook (`.ipynb`) en cliquant sur le lien.
 - Ouvrir [Basthon](https://notebook.basthon.fr/).
 - Charger le notebook dans Basthon (`Fichier` → `Ouvrir`).
+- Faites-y ce que vous avez à faire :-)
 - Vous pouvez ensuite télécharger le notebook avec vos modifications (`Fichier` → `Enregistrer
   Sous`).
 
@@ -71,6 +74,8 @@ téléchargé.
   [Utiliser les notebooks Jupyter]({{site.url}}{{site.baseurl}}/slides/00-introduction/notebooks.py.ipynb)
 - {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
   [Notebook IO et variables]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
+  - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
+      [Solutions]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/solutions.py.ipynb)
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
 
@@ -82,6 +87,13 @@ sophistiqué](https://boldidea.org/static/thonny/chromebook.html), mais c'est po
 Pour les tablettes sous iOS ou Android, ça ne sera pas possible. Vous devriez pouvoir suivre
 l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal, tenez-moi au
 courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
+
+### 2025-01-28 : Instructions conditionnelles
+
+- {% notebook_badges slides/02-conditions/conditions.py.md %}
+  [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
+  - {% notebook_badges slides/02-conditions/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}}/slides/02-conditions/solutions.py.ipynb)
 
 ## Ressources
 

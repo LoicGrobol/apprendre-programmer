@@ -158,7 +158,7 @@ print("Ravie de te connaître en tout cas.")
 <details>
 <summary>Solutions</summary>
 
-En éliminant le premier test : 
+En éliminant le premier test :
 
 ```python
 print("Tu aimes bavarder ?")
@@ -532,8 +532,8 @@ else:
     print("bidule")
 ```
 
-Outre les booléens `True` et `False`, la plupart des objets en Python ont une valeur de vérité
-(*truthiness*). La plupart sont vrais, ceux qui sont faux étant en général d'une façon ou d'une
+Outre les booléens `True` et `False`, la plupart des objets en Python ont une *véracité*
+(*truthiness*). La plupart sont vrais, ceux qui sont faux sont en général d'une façon ou d'une
 autre vides, nuls… Nous verrons d'autres exemples.
 
 ```python
