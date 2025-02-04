@@ -230,7 +230,7 @@ str.find("Une pomme", "n")
 ```
 
 ```python
-str.find("Une pomme", "pom")
+str.find("Une pomme", "omm")
 ```
 
 ```python
