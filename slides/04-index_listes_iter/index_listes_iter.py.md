@@ -121,7 +121,7 @@ programmation. Tout le monde se plante de temps en temps, mais il faut le reteni
 Demandez un mot et un indice `i` à l'utilisateurice. Si le mot a un `i`-ème caractère, affichez ce caractère,
 sinon affichez un message d'erreur.
 
-**Indice** : vous savez déterminer la longueur d'une chaîne de caractères.
+**Indice** : vous savez déterminer la longueur d'une chaîne de caractères avec `len`.
 
 ```python tags=["skip-execution"]
 ```
@@ -243,7 +243,7 @@ Si la sous-chaîne est présente plusieurs fois, seule la première sera prise e
 str.find("rock and roll", "ro")
 ```
 
-**Note** Les fonctions comme `find`, `upper`… sont plus précisément des **méthodes**, c'est-à-dire
+**Note** Les fonctions comme `str.find` sont plus précisément des **méthodes**, c'est-à-dire
 des fonctions attachées à un type d'objet en particulier (ici les chaînes de caractères). On peut
 les appeler via leur type (`str`) ou via un objet :
 
@@ -251,7 +251,19 @@ les appeler via leur type (`str`) ou via un objet :
 "Une pomme".find("pom")
 ```
 
-On reviendra plus en détails sur ces notions plus tard dans le cours.
+En voici une autre :
+
+```python
+str.upper("Une pomme")
+```
+
+```python
+"Une pomme".upper()
+```
+
+On reviendra plus en détails sur ces notions plus tard dans le cours. En attendant, vous trouverez
+la liste des méthodes de chaînes de caractères dans [la documentation de
+Python](https://docs.python.org/3/library/stdtypes.html#string-methods).
 
 ## Listes
 
@@ -358,9 +370,45 @@ ma_liste= ["J', aime, les, épinards"]
 print(len(ma_liste))
 ```
 
+### `in`
+
+```python
+34 in [1, 2, 34, 54, 'abc']
+```
+
+```python
+"truc" in [1, 2, 34, 54, 'abc']
+```
+
 ### Modifier des listes
 
 Les listes sont **mutables**, on peut les modifier avec les méthodes suivantes
+
+### Modifier une valeur existante
+
+On peut modifier un élément de la liste en utilisant son indice
+
+```python
+cities = ["NYC", "LA"]
+print(cities)
+cities[0] = "SF"
+print(cities)
+```
+
+```python
+cities = ["NYC", "LA"]
+print(cities)
+cities[-1] = "SF"
+print(cities)
+```
+
+Attention, l'indice en question doit exister
+
+```python ["skip-execution"]
+cities = ["NYC", "LA"]
+print(cities)
+cities[2] = "SF"
+```
 
 #### `append`
 
@@ -371,7 +419,6 @@ ma_liste = [1, 2, 3]
 ma_liste.append("un de plus")         
 print(ma_liste)
 ```
-
 
 ```python
 one_list = [1, 2, 3]
@@ -455,24 +502,20 @@ states.pop()
 print(states)
 ```
 
-On peut aussi modifier la valeur d'un élément par position de la façon suivante :
+Ou à une position arbitraire
 
 ```python
-cities = ["NYC", "LA"]
-print(cities)
-cities[0] = "SF"
-print(cities)
+states = ["California", "New York", "Arizona", "New York"]
+print(states)
+states.pop(3)
+print(states)
 ```
 
-### `in`
+### C'est tout ?
 
-```python
-34 in [1, 2, 34, 54, 'abc']
-```
-
-```python
-"truc" in [1, 2, 34, 54, 'abc']
-```
+Non ! Vous trouverez
+la liste des méthodes de liste dans [la documentation de
+Python](https://docs.python.org/3/library/stdtypes.html#lists).
 
 ### 🛠️ Entraînement 🛠️
 
@@ -636,7 +679,7 @@ words = ["soleil", "lune", "terre", "eau", "nourriture", "ciel"]
 Imaginez que vous êtes un⋅e linguiste de terrain en train de collecter du vocabulaire pour
 documenter une langue :
 
-- Créez une liste vide dans une variable `traduction`.
+- Créez une liste vide dans une variable `traductions`.
 - Pour chacun des mots de la liste `words`, demandez à l'utilisateurice d'entrer sa traduction et
   sauvegardez cette entrée dans `traductions`.
 - Une fois que vous avez terminé, affichez la valeur de `traductions`.
