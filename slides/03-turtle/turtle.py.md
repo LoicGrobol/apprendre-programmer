@@ -113,7 +113,7 @@ commandes de base :
 ## 🐢 Exo 🐢
 
 (Pour garder trace des instructions que vous utilisez, vous pouvez les copier-coller dans la zone
-d'édition de Thonny, au dessus de la console).
+d'édition de Thonny, au-dessus de la console).
 
 ### Exercice 1
 
@@ -140,7 +140,7 @@ Reproduire la forme suivante à l’aide des fonctions `turtle` (escalier montan
 
 Dessiner un carré de 96 pixels de côté.
 
-![un carré de 96 pixels de côté](images/ex4.png)
+![Un carré de 96 pixels de côté](images/ex4.png)
 
 ### Exercice 5
 
@@ -165,7 +165,7 @@ Les notebooks c'est très bien pour faire des démonstrations ou du travail expl
 - Ce n'est pas exécutable de manière autonome.
 - Le format des fichiers n'est pas très ergonomique, ce qui apporte un certain nombre de
   complications.
-- `turtle` n'y marche pas très bien 😠
+- `turtle` n'y marche pas très bien
 
 Un autre façon d'utiliser Python c'est avec des **scripts** : des fichiers contenant des programmes
 exécutables directement sur vos machines. Le volet d'édition de Thonny sert à écrire des scripts :
@@ -180,14 +180,12 @@ right(90)
 forward(50)
 ```
 
-Sauvegarder sur votre machine dans un fichier (l'extension conventionnelle est `.py`), puis cliquez
-sur le bouton ▶️.
+Sauvegarder sur votre machine dans un fichier avec l'extension `.py`, puis cliquez sur le bouton ▶️.
 
 <!-- #endregion -->
 
 Les notebooks et les scripts ont chacun leurs avantages et leurs inconvénients, mais il est
-important de savoir utiliser les deux. À l'avenir on alternera donc entre les deux pour vous y
-habituer.
+important de savoir utiliser les deux.
 
 ### Exercice 6
 

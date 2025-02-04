@@ -54,7 +54,7 @@ Les boucles **itératives** `for` permettent de parcourir une séquence, en acc�
 les uns à la suite des autres et en exécutant à chaque itération (chaque « tour ») une même série
 d'instructions.
 
-La boucle **conditionnelle** `while` (« tant que ») permet elle aussi de répéter plusieurs fois une
+La boucle **conditionnelle** `while` (« tant que ») permet, elle aussi de répéter plusieurs fois une
 série d'instructions, mais au lieu d'être contrôlée par une séquence, elle est contrôlée par une
 condition :
 

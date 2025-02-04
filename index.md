@@ -93,6 +93,11 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 - {% notebook_badges slides/02-conditions/conditions.py.md %}
   [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
 
+### 2025-02-04 : Boucles et séquences
+
+- {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
+  [Slides Boucles et séquences]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/index_listes_iter.py.ipynb)
+
 ## Ressources
 
 - [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et
@@ -118,7 +123,6 @@ Plus avancés :
 
 - [Coding Game](https://www.codingame.com/home)
 - [newcoder.io](http://newcoder.io/). Des projets commentés, commencer par 'Data Visualization'
-
 - [Code combat](https://codecombat.com/)
 
 ### Livres
@@ -141,7 +145,7 @@ Plus avancés :
 [![CC BY Licence
 badge](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 
-Copyright © 2023 Loïc Grobol [\<loic.grobol@gmail.com\>](mailto:loic.grobol@gmail.com)
+Copyright © 2025 L. Grobol [\<lgrobol@tuta.com\>](mailto:lgrobol@tuta.com)
 
 Sauf indication contraire, les fichiers présents dans ce dépôt sont distribués selon les termes de
 la licence [Creative Commons Attribution 4.0
