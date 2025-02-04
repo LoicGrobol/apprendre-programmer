@@ -590,8 +590,24 @@ for <nom-de-variable> in <sequence>:
     …
 ```
 
-Notez bien les `:` à la fin de la ligne `for`. Là encore, c'est comme pour `if`.
+Notez bien, comme pour `if`, les `:` à la fin de la ligne `for`.
 
+### 👉 Entraînement 👉
+
+Voici une liste de nombres :
+
+```python
+letters = [2, -1, 7, -3, 1, -1, 3, -2]
+```
+
+À l'aide d'une boucle `for`, affichez les carrés de ces nombres chacun sur une nouvelle ligne.
+Affichez `FIN` à la fin.
+
+```python
+
+```
+
+### Combinaisons
 
 On peut combiner boucles et tests
 
@@ -629,8 +645,8 @@ small_cities = ["Stony Brook", "Provo"]
 # Codez ici
 ```
 
-**Ajoutez** des instructions à la cellule suivante de sorte à modifier `cities` pour que son contenu
-soit
+**Ajoutez** des instructions ne contenant pas le caractère `"` à la cellule précédente de sorte à
+modifier `cities` pour que son contenu soit
 
 1. `["NYC", "LA", "SF", "Stony Brook", "Provo"]`.
 2. `["NYC", "LA", "Stony Brook", "Provo", "SF"]`.
