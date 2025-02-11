@@ -92,11 +92,22 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 - {% notebook_badges slides/02-conditions/conditions.py.md %}
   [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
+  - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
+      [Solutions]({{site.url}}{{site.baseurl}}/slides/02-conditions/solutions.py.ipynb)
 
 ### 2025-02-04 : Boucles et séquences
 
 - {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
   [Slides Boucles et séquences]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/index_listes_iter.py.ipynb)
+  - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
+      [Solutions]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/solutions.py.ipynb)
+
+### 2025-02-11 : TD `turtle` et boucle `while`
+
+- {% notebook_badges slides/03-turtle/turtle.py.md %}
+  [Notebook `turtle`]({{site.url}}{{site.baseurl}}/slides/03-turtle/turtle.py.ipynb)
+- {% notebook_badges slides/05-td_while/td_while.py.md %}
+  [Notebook `while`]({{site.url}}{{site.baseurl}}/slides/05-td_while/td_while.py.ipynb)
 
 ## Ressources
 
