@@ -104,9 +104,8 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 ### 2025-02-11 : TD `turtle` et boucle `while`n=
 
-- {% notebook_badges slides/03-turtle/turtle.py.md %}
-  [Notebook `turtle`]({{site.url}}{{site.baseurl}}/slides/03-turtle/turtle.py.ipynb)
-  - [Images](https://github.com/LoicGrobol/apprendre-programmer/tree/main/slides/03-turtle/images)
+- [`turtle`]({{site.url}}{{site.baseurl}}/slides/03-turtle/turtle.py.html) (ceci n'est pas un
+  notebook, cliquez juste sur le lien)
 - {% notebook_badges slides/05-td_while/td_while.py.md %}
   [Notebook `while`]({{site.url}}{{site.baseurl}}/slides/05-td_while/td_while.py.ipynb)
 
