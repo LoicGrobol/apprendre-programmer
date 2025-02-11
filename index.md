@@ -102,10 +102,11 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
   - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
       [Solutions]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/solutions.py.ipynb)
 
-### 2025-02-11 : TD `turtle` et boucle `while`
+### 2025-02-11 : TD `turtle` et boucle `while`n=
 
 - {% notebook_badges slides/03-turtle/turtle.py.md %}
   [Notebook `turtle`]({{site.url}}{{site.baseurl}}/slides/03-turtle/turtle.py.ipynb)
+  - [Images](https://github.com/LoicGrobol/apprendre-programmer/tree/main/slides/03-turtle/images)
 - {% notebook_badges slides/05-td_while/td_while.py.md %}
   [Notebook `while`]({{site.url}}{{site.baseurl}}/slides/05-td_while/td_while.py.ipynb)
 
