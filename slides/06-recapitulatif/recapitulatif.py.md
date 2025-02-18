@@ -785,15 +785,28 @@ l.append(1)
 print(l)
 ```
 
-7\. Afficher les carrés des nombres $n$ tels que $15 < n ⩽ 30$.
+7\. Afficher les carrés des nombres $n$ tels que $15 ⩽ n < 30$.
 
 ```python
 
 ```
 
-8\. Même question mais uniquement pour les nombres pairs.
+8\. Même question que l'exercice précédent mais pour $15 < n ⩽ 30$.
 
 ```python
+
+```
+
+9\. Même question que l'exercice précedent mais uniquement pour les nombres pairs.
+
+```python
+
+```
+
+10\. Même question que l'exercice précédent mais à rebour. Il y a au moins trois solutions possibles.
+
+```python
+
 
 ```
 
