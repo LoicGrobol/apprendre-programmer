@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.7
+      jupytext_version: 1.16.7
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -409,6 +409,55 @@ print(
     + lst[-2][-1] + lst[-5]
     + lst[-1]
 )
+```
+
+
+7\. Afficher les carrés des nombres $n$ tels que $15 ⩽ n < 30$.
+
+```python
+for n in range(15, 30):
+    print(n*n)
+```
+
+8\. Même question que l'exercice précédent, mais pour $15 < n ⩽ 30$.
+
+```python
+for n in range(16, 31):
+    print(n*n)
+```
+
+9\. Même question que l'exercice précédent, mais uniquement pour les nombres pairs.
+
+```python
+for n in range(16, 31, 2):
+    print(n*n)
+```
+
+10\. Même question que l'exercice précédent, mais à rebours. Il y a au moins trois solutions possibles.
+
+```python
+for n in range(30, 15, -1):
+    print(n*n)
+```
+
+```python
+l = list(range(16, 31))
+for n in l[::-1]:
+    print(n*n)
+```
+
+Ou directement
+
+```python
+for n in range(16, 31)[::-1]:
+    print(n*n)
+```
+
+Ou encore
+
+```python
+for n in reversed(range(16, 31)):
+    print(n*n)
 ```
 
 ## Édition de listes

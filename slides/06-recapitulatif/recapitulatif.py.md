@@ -772,7 +772,7 @@ range(12, 100)[10]
 
 > mais pas toutes :
 
-```python
+```python tags=["raises-exception"]
 r = range(16)
 r.append(1)  # Erreur: `range has no attribute 'append'
 ```
@@ -791,19 +791,19 @@ print(l)
 
 ```
 
-8\. Même question que l'exercice précédent mais pour $15 < n ⩽ 30$.
+8\. Même question que l'exercice précédent, mais pour $15 < n ⩽ 30$.
 
 ```python
 
 ```
 
-9\. Même question que l'exercice précedent mais uniquement pour les nombres pairs.
+9\. Même question que l'exercice précédent mais uniquement pour les nombres pairs.
 
 ```python
 
 ```
 
-10\. Même question que l'exercice précédent mais à rebour. Il y a au moins trois solutions possibles.
+10\. Même question que l'exercice précédent, mais à rebours. Il y a au moins trois solutions possibles.
 
 ```python
 
