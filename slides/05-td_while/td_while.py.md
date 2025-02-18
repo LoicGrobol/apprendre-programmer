@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.1
+      jupytext_version: 1.16.7
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -60,9 +60,10 @@ condition :
 
 ```python
 nombre = 0
-while nombre <= 10:
+while nombre < 10:
     print(nombre)
     nombre = nombre + 1
+print("Terminé!")
 ```
 
 Pouvez-vous expliquer le comportement de cette cellule ?
@@ -119,8 +120,10 @@ while False:
 Et dans ce cas ? **Attention, réfléchissez avant d'exécuter la cellule.**
 
 ```python tags=["skip-execution"]
+n = 0
 while True:
-    print("spam")
+    print("spam", n)
+    n = n + 1
 ```
 
 Vous pouvez interrompre l'exécution en appuyant deux fois sur `i`. Redémarrez ensuite le kernel.

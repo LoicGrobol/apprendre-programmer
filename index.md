@@ -102,12 +102,19 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
   - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
       [Solutions]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/solutions.py.ipynb)
 
-### 2025-02-11 : TD `turtle` et boucle `while`n=
+### 2025-02-11 : TD `turtle` et boucle `while` 
 
 - [`turtle`]({{site.url}}{{site.baseurl}}/slides/03-turtle/turtle.py.html) (ceci n'est pas un
   notebook, cliquez juste sur le lien)
 - {% notebook_badges slides/05-td_while/td_while.py.md %}
   [Notebook `while`]({{site.url}}{{site.baseurl}}/slides/05-td_while/td_while.py.ipynb)
+
+### 2025-02-18 : Exercices récapitulatifs
+
+- {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
+  [Notebook exos]({{site.url}}{{site.baseurl}}/slides/06-recapitulatif/recapitulatif.py.ipynb)
+  - {% notebook_badges slides/06-recapitulatif/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}}/slides/06-recapitulatif/solutions.py.ipynb)
 
 ## Ressources
 
