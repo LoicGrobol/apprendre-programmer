@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.7
+      jupytext_version: 1.16.7
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -737,6 +737,65 @@ print()
 ```
 
 Bonus : en utilisant que des nombres strictement négatifs.
+
+
+> La fonction `range` permet de créer une sorte de liste légère contenant des nombres consécutifs. Si vous lui donner un seul paramètre `stop`, cet objet contiendra les entiers de `0` (inclus) à `stop` (exclus).
+
+```python
+for i in range(8):
+    print(i)
+```
+
+> Avec deux paramètres `start` et `stop`, la borne inférieure devient `start` :
+
+```python
+for nbre in range(21, 31):
+    print(nbre)
+```
+
+> Le troisième paramètre (optionnel), donne le pas, comme pour l'extraction de sous-séquence :
+
+```python
+for t in range(11, 2000, 100):
+    print(t)
+```
+
+> Un objet `range` n'est pas une liste, même s'il partage certaines fonctionnalités
+
+```python
+len(range(2, 21))
+```
+
+```python
+range(12, 100)[10]
+```
+
+> mais pas toutes :
+
+```python
+r = range(16)
+r.append(1)  # Erreur: `range has no attribute 'append'
+```
+
+> Mais on peut les convertir si on en a besoin :
+
+```python
+l = list(range(8))
+l.append(1)
+print(l)
+```
+
+7\. Afficher les carrés des nombres $n$ tels que $15 < n ⩽ 30$.
+
+```python
+
+```
+
+8\. Même question mais uniquement pour les nombres pairs.
+
+```python
+
+```
 
 ## Édition de listes
 
