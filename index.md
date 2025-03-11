@@ -120,6 +120,9 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 - {% notebook_badges slides/07-fonctions/fonctions.py.md %}
   [Notebook fonctions]({{site.url}}{{site.baseurl}}/slides/07-fonctions/fonctions.py.ipynb)
+  - [`Version html pour avoir les
+  images`]({{site.url}}{{site.baseurl}}}/slides/07-fonctions/fonctions.py.html) (ceci n'est pas un
+  notebook, cliquez juste sur le lien)
 
 ## Ressources
 
