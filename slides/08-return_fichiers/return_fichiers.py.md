@@ -33,8 +33,7 @@ Santo. Merci à lui.
 
 ## Valeur de retour
 
-Pour l'instant, les fonctions qu'on a définies affichent toujours quelque chose. Ce n'est pas une
-obligation :
+Pour l'instant, les fonctions qu'on a définies affichent toujours quelque chose.
 
 ```python
 def f():
@@ -68,6 +67,8 @@ def truc(i):
 ```python
 truc(9)
 ```
+
+Ce n'est pas une obligation :
 
 ```python
 def ssss(arg):
@@ -109,16 +110,12 @@ def bonjour():
     print(reponse)
     
 varbl = bonjour()
-```
-
-Pas vraiment :
-
-```python
 print(varbl)
 ```
 
-Elles passent en fait toutes la valeur `None` : un objet spécial de Python qui signifie
-littéralement « rien ».
+
+Oui : elles passent en fait toutes la valeur `None` : un objet spécial de Python qui signifie
+littéralement « rien », ce qui n'est donc pas très utile.
 
 
 Comment on fait alors ? On leur donne une **valeur de retour** avec le mot-clé `return` :
