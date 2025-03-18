@@ -268,7 +268,7 @@ Utiliser des variables
 def calculer():
     un_nombre = 2713
     print(2*un_nombre)
-    
+
 calculer()
 ```
 
@@ -308,7 +308,7 @@ l'extérieur de celle-ci
 def calculer():
     un_nombre = 2713
     print(2*un_nombre)
-    
+
 calculer()
 print(un_nombre)
 ```
@@ -480,10 +480,9 @@ enumère([1, 2, 3, "carbone"])
 
 Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
 `07_fonctions_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
-`07_fonctions_Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche 2024-03-03 au soir.
+`07_fonctions_Morgan_Lefeuvre.ipynb`) et me le transmettre
 
-- De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
-  (clé d'inscription `rossum`)
+- De préférence via Cours en Ligne (voir la page du cours)
 - À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
 
 Attention : **l'extension doit être `.ipynb`**.

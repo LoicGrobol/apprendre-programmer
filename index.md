@@ -124,6 +124,11 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
   images`]({{site.url}}{{site.baseurl}}/slides/07-fonctions/fonctions.py.html) (ceci n'est pas un
   notebook, cliquez juste sur le lien)
 
+### 2025-03-18 : Valeurs de retour et accès aux fichiers
+
+- {% notebook_badges slides/08-return_fichiers/return_fichiers.py.md %} [Notebook retour et
+  fichiers]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/return_fichiers.py.ipynb)
+
 ## Ressources
 
 - [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et
