@@ -128,6 +128,7 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 - {% notebook_badges slides/08-return_fichiers/return_fichiers.py.md %} [Notebook retour et
   fichiers]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/return_fichiers.py.ipynb)
+  - [`ada.txt`]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/ada.txt)
 
 ## Ressources
 

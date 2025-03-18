@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.1
+      jupytext_version: 1.16.7
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -292,33 +292,14 @@ print(c)
 ```python
 def cinq(lst):
     chaine_max = ""
-    len_max = 0
     for chaine in lst:
-        if len(chaine) > len_max:
+        if len(chaine) > len(chaine_max):
             chaine_max = chaine
-            len_max = len(chaine)
     return chaine_max
 ```
 
 ```python
 plus_longue = cinq(["abc", "a", "hallo", "truc", "oxygène", "p"])
-print(plus_longue)
-```
-
-```python
-def cinq(lst):
-    res = ""
-    for c in lst:
-        if len(c) > len(res):
-            res = c
-    return res
-```
-
-```python
-plus_longue = cinq(["abc", "a", "hallo", "truc", "oxygène", "p"])
-```
-
-```python
 print(plus_longue)
 ```
 
