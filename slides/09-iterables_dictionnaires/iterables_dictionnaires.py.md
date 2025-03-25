@@ -31,6 +31,30 @@ Dans ce notebook
 
 ## Itérables
 
+### Entraînement
+
+Écrire une fonction `index_chars` qui prend en argument une chaîne de caractères et affiche chacun
+des caractères de la chaîne sur une nouvelle ligne, précédé de sa position dans la chaîne. Par
+exemple pour `"linguistique"`:
+
+```text
+0 l
+1 i
+2 n
+3 g
+4 u
+5 i
+6 s
+7 t
+8 i
+9 q
+10 u
+11 e
+```
+
+```python
+```
+
 ### `range` : les intervalles entiers
 
 Comment faire pour afficher dix fois « Bonjour » ?
@@ -153,7 +177,17 @@ for index in range(len(mot)):
     print(mot[index], "indice :", index)
 ```
 
-qui est plus compact, et un peu plus agréable (on a plus à gérer manuellement le compteur).
+qui est plus compact, et *un peu* plus agréable (on a plus à gérer manuellement le compteur).
+
+Pour notre fonction précédente ça donne donc
+
+```python
+def index_chars(s):
+    for index in range(len(s)):
+        print(index, mot[index])
+
+index_chars("Anaouder")
+```
 
 
 ### `enumerate` : compter ses pas
@@ -213,13 +247,23 @@ for idx, lettre in enumerate(mot):
     print(lettre, " indice :", idx)
 ```
 
-C'est encore plus lisible et c'est le style *Pythonic* (recommandé en Python).
+C'est *vraiment* plus lisible. C'est le style *pythonique* (recommandé en Python). Pour notre fonction, la meilleure solution c'est donc
+
+```python
+def index_chars(s):
+    for i, c in enumerate(s):
+        print(i, c)
+
+index_chars("Anaouder")
+```
+
 
 ### `zip` : la fermeture éclair
 
 ```python
 villes = ["Orléans", "Tours", "Nanterre"]
 cp = ["45000", "37000", "92000"]
+
 for truc in zip(villes, cp):
     print(truc)
 ```
@@ -230,6 +274,7 @@ for truc in zip(villes, cp):
 villes = ["Orléans", "Tours", "Nanterre"]
 cp = ["45000", "37000", "92000"]
 appreciation = ["cool", "génial", "super"]
+
 for truc in zip(villes, cp, appreciation):
     print(truc)
 ```
@@ -238,6 +283,7 @@ for truc in zip(villes, cp, appreciation):
 villes = ["Orléans", "Tours", "Nanterre"]
 annee = ["1991", "2014", "2021"]
 appreciation = ["cool", "génial", "super"]
+
 for truc in zip(villes, annee, appreciation):
     print("Où:", truc[0], "Quand:", truc[1], "Comment:", truc[2])
 ```
@@ -248,6 +294,7 @@ Là aussi on peut utiliser cette nouvelle syntaxe pour que ce soit plus lisible�
 villes = ["Orléans", "Tours", "Nanterre"]
 annee = ["1991", "2014", "2021"]
 appreciation = ["cool", "génial", "super"]
+
 for ou, quand, comment in zip(villes, annee, appreciation):
     print("Où:", ou, "Quand:", quand, "Comment:", comment)
 ```
@@ -257,6 +304,7 @@ Est-ce que vous voyez comment simuler `enumerate` en utilisant `zip` ?
 
 ```python
 mot = "linguistique"
+
 for couple in zip(range(len(mot)), mot):
     print(couple[1], " indice :", couple[0])
 ```
@@ -270,6 +318,7 @@ ressemble à des listes, mais avec des parenthèses ?
 villes = ["Orléans", "Tours", "Nanterre"]
 annee = ["1991", "2014", "2021"]
 appreciation = ["cool", "génial", "super"]
+
 for truc in zip(villes, annee, appreciation):
     print(type(truc))
 ```
@@ -315,7 +364,7 @@ une_liste.append("hey!")
 print(une_liste)
 ```
 
-```python
+```python tags=["raises-exception"]
 un_tuple = (1, "uh", "sense", 8, "machin", "truc")
 print(un_tuple)
 un_tuple.append("hey!")
@@ -324,7 +373,7 @@ print(un_tuple)
 
 ## Dictionnaires
 
-On va faire une (brève) pause avec les boucles pour parler d'une nouvelle structure de données
+On va faire une pause avec les boucles pour parler d'une nouvelle structure de données
 omniprésente en Python : les dictionnaires.
 
 On a vu des structures de données ordonnées comme les listes et les chaînes de caractères qui
@@ -354,7 +403,7 @@ print(dico)
 ```
 
 Dans la notation `{k: v}`, on dit que `k` est une **clé** et `v` est la **valeur** associée à `k`.
-On peut accéder à la valeur associé à une clé avec l'opération d'indexation dont vous avez
+On peut accéder à la valeur associée à une clé avec l'opération d'indexation dont vous avez
 l'habitude :
 
 ```python
@@ -389,7 +438,7 @@ print(mon_dictionnaire)
 
 ### Clés et valeurs
 
-Les **valeurs** stockées dans un dictionnaire peuvent être n'importe quel objet, et une même valeur
+Les **valeurs** stockées dans un dictionnaire peuvent être n'importe quel objet et une même valeur
 peut apparaître plusieurs fois
 
 ```python
@@ -457,14 +506,15 @@ mon_dict = {
 Ça vous laisse quand même une grande latitude :
 
 ```python
-int_keys = {37: "hello", 9: "world"}
+int_keys = {13: "hello", 12: "world"}
 float_keys = {48.2: "hello", 3.0: "world"}
 string_keys = {"hello": "world", "goodbye": "earth"}
 bool_keys = {True: "hello", False: "world"}
+tuple_keys = {("a", "b"): "hello", 2713: "world"}
 ```
 
 Quelle est la taille maximale que peut atteindre un dictionnaire dont toutes les clés sont de type
-`bool`.
+`bool` ?
 
 ## Étude de cas : les codes ISO 639
 
@@ -538,7 +588,20 @@ for language in iso_639:
 
 ### Entraînement
 
-Modifier la boucle `for` ci-dessous pour qu'elle affiche la sortie suivante :
+En utilisant la variable suivante,
+
+```python
+iso_639 = {
+    "ny": "Chewa", 
+    "zh": "Chinese", 
+    "cs": "Czech", 
+    "da": "Danish", 
+    "dv": "Divehi",
+    "br": "Breton",
+}
+```
+
+Modifier la cellule ci-dessous pour qu'elle affiche la sortie suivante :
 
 ```text
 ny -> 'Nyanja'
@@ -550,58 +613,9 @@ ru -> 'Russian'
 ```
 
 ```python
-iso_639 = {
-    "ny": "Chewa", 
-    "zh": "Chinese", 
-    "cs": "Czech", 
-    "da": "Danish", 
-    "dv": "Divehi",
-    "br": "Breton",
-    "gcf": "Guadeloupean Creole French",
-} 
 for language in iso_639:
     # Modifier ici
     print(language)
-```
-
-```python
-iso_639 = {
-    "ny": "Chewa", 
-    "zh": "Chinese", 
-    "cs": "Czech", 
-    "da": "Danish", 
-    "dv": "Divehi",
-    "br": "Breton",
-    "gcf": "Guadeloupean Creole French",
-}
-iso_639["ny"] = "Nyanja"
-iso_639["ru"] = "Russian"
-del iso_639["br"]
-del iso_639["gcf"]
-for language in iso_639:
-    language_name = iso_639[language]
-    print(language, "->", "'" + language_name + "'")
-```
-
-Ou alternativement :
-
-```python
-iso_639 = {
-    "ny": "Chewa", 
-    "zh": "Chinese", 
-    "cs": "Czech", 
-    "da": "Danish", 
-    "dv": "Divehi",
-    "br": "Breton",
-    "gcf": "Guadeloupean Creole French",
-}
-iso_639["ny"] = "Nyanja"
-iso_639["ru"] = "Russian"
-del iso_639["br"]
-del iso_639["gcf"]
-for language in iso_639:
-    language_name = iso_639[language]
-    print(f"{language} -> '{language_name}'")
 ```
 
 ### Parcourir les paires clé/valeur
@@ -722,8 +736,8 @@ caractères) et renvoie la liste de tous les bigrammes de caractères de ce mot,
 
 ```
 
-2\. Écrire un programme une fonction `get_ngrams` qui prend en argument un mot et un entier `n` et
-renvoie la liste des n-grammes de caractères de ce mot, sans doublons.
+2\. Écrire une fonction `get_ngrams` qui prend en argument un mot et un entier `n` et renvoie la
+liste des n-grammes de caractères de ce mot, sans doublons.
 
 Indices :
 

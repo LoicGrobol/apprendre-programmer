@@ -130,6 +130,12 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
   fichiers]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/return_fichiers.py.ipynb)
   - [`ada.txt`]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/ada.txt)
 
+
+### 2025-03-25 : Itérables et dictionnaires
+
+- {% notebook_badges slides/09-iterables_dictionnaires/iterables_dictionnaires.py.md %} [Notebook itérables et
+  dictionnaires]({{site.url}}{{site.baseurl}}/slides/09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
+
 ## Ressources
 
 - [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et

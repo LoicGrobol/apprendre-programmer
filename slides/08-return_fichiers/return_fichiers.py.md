@@ -423,17 +423,17 @@ pouvez utiliser la méthode `readline()`.
 ```python
 with open("ada.txt", "r") as in_stream:
     line = in_stream.readline()
-    print(line)
+    print(line.strip())
     line = in_stream.readline()
-    print(line)
+    print(line.strip())
 ```
 
 Vous pouvez aussi récupérer en un coup tout le contenu du fichier dans une variable avec `read`
 
 ```python
 with open("ada.txt", "r") as stream:
-    line = stream.read()
-    print(line)
+    everythingg = stream.read()
+    print(everythingg)
 ```
 
 ### Portée
@@ -520,7 +520,8 @@ with open("apprendre_a_programmer.txt", "r") as in_stream:
 ```python
 with open("apprendre_a_programmer.txt", "w") as out_stream:
     out_stream.write("Clairement, le meilleur cours de la licence SDL.\n")
-    out_stream.write("Dans trois semaines, y en aura plus.\n")
+    out_stream.write("Dans trois semaines, y en aura plus.")
+    out_stream.write("\n")
 
 with open("apprendre_a_programmer.txt", "r") as in_stream:
     print(in_stream.read())
