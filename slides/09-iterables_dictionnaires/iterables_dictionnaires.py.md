@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.1
+      jupytext_version: 1.16.7
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -53,6 +53,23 @@ exemple pour `"linguistique"`:
 ```
 
 ```python
+def index_chars(s):
+    i = 0
+    for c in s:
+        print(i, c)
+        i = i + 1
+
+index_chars("Anaouder")
+```
+
+```python
+def index_chars(s):
+    i = 0
+    while i < len(s):
+        print(i, s[i])
+        i = i + 1
+
+index_chars("Anaouder")
 ```
 
 ### `range` : les intervalles entiers
@@ -242,6 +259,12 @@ for couple in enumerate(mot):
 qui est *un peu* plus lisible. On peut aussi utiliser la syntaxe suivante :
 
 ```python
+a, b = 1, 2
+print(a)
+print(b)
+```
+
+```python
 mot = "linguistique"
 for idx, lettre in enumerate(mot):
     print(lettre, " indice :", idx)
@@ -259,6 +282,14 @@ index_chars("Anaouder")
 
 
 ### `zip` : la fermeture éclair
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+cp = ["45000", "37000", "92000"]
+
+for i, v in enumerate(villes):
+    print(v, cp[i])
+```
 
 ```python
 villes = ["Orléans", "Tours", "Nanterre"]
@@ -307,6 +338,24 @@ mot = "linguistique"
 
 for couple in zip(range(len(mot)), mot):
     print(couple[1], " indice :", couple[0])
+```
+
+Un truc récent en Python 3.12 (?), le paramètre `strict`.
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+annee = ["1991", "2014", "2021", "2024"]
+
+for v, a in zip(villes, annee):
+    print (a, v)
+```
+
+```python
+villes = ["Orléans", "Tours", "Nanterre"]
+annee = ["1991", "2014", "2021", "2024"]
+
+for v, a in zip(villes, annee, strict=True):
+    print (a, v)
 ```
 
 ### Tuples
@@ -402,6 +451,14 @@ dico = {
 print(dico)
 ```
 
+```python
+l = [
+    "machin",
+    "truc",
+    "chose",
+]
+```
+
 Dans la notation `{k: v}`, on dit que `k` est une **clé** et `v` est la **valeur** associée à `k`.
 On peut accéder à la valeur associée à une clé avec l'opération d'indexation dont vous avez
 l'habitude :
@@ -434,6 +491,10 @@ mon_dictionnaire["machin"] = "chose"
 print(mon_dictionnaire)
 mon_dictionnaire["Horizon"] = "Zero Dawn"
 print(mon_dictionnaire)
+```
+
+```python jupyter={"outputs_hidden": true}
+locals()
 ```
 
 ### Clés et valeurs
@@ -535,7 +596,7 @@ iso_639 = {
 
 ### Accéder aux éléments
 
-On peut accéder aux listes de langues en utilisant leur clé
+On peut accéder aux noms de langues en utilisant leur clé
 
 ```python
 print("La valeur de 'ny' est", iso_639["ny"])
@@ -547,7 +608,7 @@ print("La valeur de 'da' est", iso_639["da"])
 
 
 ```python
-
+print(iso_639["ny"])
 ```
 
 Si on veut simplement tester si une clé est présente, on peut utiliser l'opérateur `in` :
@@ -604,18 +665,35 @@ iso_639 = {
 Modifier la cellule ci-dessous pour qu'elle affiche la sortie suivante :
 
 ```text
-ny -> 'Nyanja'
-zh -> 'Chinese'
-cs -> 'Czech'
-da -> 'Danish'
-dv -> 'Divehi'
-ru -> 'Russian'
+ny -> Nyanja
+zh -> Chinese
+cs -> Czech
+da -> Danish
+dv -> Divehi
+ru -> Russian
 ```
 
 ```python
 for language in iso_639:
     # Modifier ici
     print(language)
+```
+
+```python
+for language in iso_639:
+    print(language, "->", iso_639[language])
+```
+
+```python
+for language in iso_639:
+    print(f"{language} -> '{iso_639[language]}'")
+```
+
+```python
+var = 1234
+s = f"la valeur est {var}, super"
+print(s)
+print(f"la valeur est {var+12}, super")
 ```
 
 ### Parcourir les paires clé/valeur
@@ -674,7 +752,7 @@ print(commence_par_une_voyelle)
 
 Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
 `09_iterables_Prénom_Nom.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
-`09_iterables._Morgan_Lefeuvre.ipynb`) et me le transmettre avant dimanche 2024-03-17 au soir.
+`09_iterables._Morgan_Lefeuvre.ipynb`) et me le transmettre
 
 - De préférence via [Cours en Ligne](https://coursenligne.parisnanterre.fr/course/view.php?id=7694)
   (clé d'inscription `rossum`)
