@@ -19,7 +19,7 @@ jupyter:
 Cours 11 : TD récapitulatif 2
 ============================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 <!-- #endregion -->
 
 Dans ce notebook

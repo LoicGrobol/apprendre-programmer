@@ -144,6 +144,12 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 - {% notebook_badges slides/10-complements/complements.py.md %} [Notebook
   compléments]({{site.url}}{{site.baseurl}}/slides/10-complements/complements.py.ipynb)
 
+Mini-projet:
+
+- {% notebook_badges assignment/projet-2025.py.md %} [Consignes
+  mini-projet]({{site.url}}{{site.baseurl}}/assignment/projet-2025.py.ipynb)
+  -[Lexique]({{site.url}}{{site.baseurl}}/assignment/lexique.txt)
+
 
 ## Ressources
 

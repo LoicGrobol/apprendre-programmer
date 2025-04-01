@@ -16,12 +16,12 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 
-Projet Apprendre à programmer 2024
+Projet Apprendre à programmer 2025
 ==================================
 
 ## Pratique
 
-- Projet à rendre le 3 mai 2024 *au plus tard*
+- Projet à rendre le 2 mai 2025 *au plus tard*
   - Si vous avez un problème, si vous êtes en retard, contactez-moi le plus tôt possible pour ce
     qu'il est possible d'arranger.
 - Projet individuel ou par groupe de deux personnes.
@@ -83,21 +83,11 @@ Vous pouvez le faire soit complètement par vos propres moyens, soit en réponda
 suivantes, voire en faisant un peu des deux. Pour aller plus loin, vous pouvez en plus essayer
 d'implémenter les [règles facultatives](#regles-facultatives).
 
-Vous pouvez travailler directement dans ce notebook pour répondre aux questions :
-
-- Soit dans Binder
-  - N'oubliez pas de bien télécharger votre travail sous forme de notebook.
-  - Vous pouvez rouvrir un notebook que vous avez téléchargé en allant dans « *File* » → « *Open* »
-    → « *Upload* »
-- Soit, si vous vous sentez à l'aise et que votre machine le permet, en utilisant Anaconda (voir par
-  exemple [ce
-  tutoriel](https://openclassrooms.com/fr/courses/4452741-decouvrez-les-librairies-python-pour-la-data-science/5559646-installez-jupyter-sur-votre-propre-ordinateur)).
-
-L'autre option — **que je vous recommande** —, c'est d'écrire un script en Python, soit dans un
-environnement de développement sur votre machine (comme Thonny) soit dans
-[repl.it](https://repl.it). Dans ce cas, écrivez simplement un script `.py` qui démarre le jeu quand
-on le lance. Vous pouvez indiquer les parties du code qui correspondent aux questions en écrivant
-des commentaires `#`.
+Vous pouvez travailler directement dans ce notebook pour répondre aux questions, **mais** je vous
+recommande plutôt d'écrire un script en Python, soit dans un environnement de développement sur votre
+machine (comme Thonny) soit dans [repl.it](https://repl.it). Dans ce cas, écrivez simplement un
+script `.py` qui démarre le jeu quand on le lance. Vous pouvez indiquer les parties du code qui
+correspondent aux questions en écrivant des commentaires `#`.
 
 ### 1. Comparer une proposition au mot secret
 
@@ -119,7 +109,7 @@ Pour vous aider : un rappel sur deux façons de construire des chaînes de car
 
 ```python
 s = "abc"
-print(s+"d")
+print(s + "d")
 ```
 
 ```python
