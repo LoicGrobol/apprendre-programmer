@@ -1,15 +1,16 @@
 ---
 jupyter:
   jupytext:
+    custom_cell_magics: kql
     formats: ipynb,md
     split_at_heading: true
     text_representation:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.1
+      jupytext_version: 1.11.2
   kernelspec:
-    display_name: Python 3 (ipykernel)
+    display_name: cours-prog
     language: python
     name: python3
 ---
@@ -220,7 +221,7 @@ print(text)
 
 ### Immutabilité des chaînes de caractères
 
-String indexes cannot be reassigned, i.e. the existent parts of the string cannot be modified directly:
+Les chaînes de caractères sont *immutables*, comme les tuples. On ne peut pas modifier leur contenu :
 
 
 ```python
@@ -228,9 +229,8 @@ string = "hello"
 string[-1] = "a"
 ```
 
-If we have a task to "mask" all vowels from a text, we will need to create a new string based on the old one.
-
-**Practice** can you think of how to do it?
+Si on veut faire quelque chose comme retirer toutes les voyelles d'une chaîne, il va falloir trouver
+une autre solution. Essayez de le faire dans la cellule suivante.
 
 
 ```python
@@ -249,32 +249,18 @@ text = "This is a sentence that should contain no vowels."
 vowels = "aoiue"
 text = "This is a sentence that should contain no vowels."
 
-masked_text = ""
+masked_text = []
 for char in text:
     if char not in vowels:
-        masked_text += char
-    else:
-        masked_text += "*"
-print(masked_text)
+        masked_text.append(char)
+print("".join(masked_text))
 ```
 </details>
 <!-- #endregion -->
 
-**Practice:** You are given a string `alphabet` that contains all English letters, and a string `text`.
-
-
-```python
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-text = "A chessboard appeared, but it was triangular, and so big that only the nearest point could be seen."
-```
-
-Write code that makes this string lowercase and deletes punctuations from the text.
-
-```python
-
-```
-
 ## Mutabilité des listes
+
+Un dernier tour sur cette idée étrange.
 
 Les méthodes de listes qu'on a vu **modifient** les listes directement (*in-place*).
 
@@ -313,6 +299,10 @@ print("a vaut ", a)
 print("b vaut ", b)
 ```
 
+Allez dans Python tutor pour voir pourquoi : l'idée c'est que `b = a` ne fait pas une nouvelle copie
+de la liste (comme c'est une opération lente et coûteuse ce n'est pas ce qu'on veut en général),
+mais fait pointer `b` vers la même zone mémoire que `a`.
+
 Pour faire une **copie** indépendante d'une liste, on peut utiliser la fonction `list` :
 
 ```python
@@ -332,3 +322,37 @@ a[1] = 2713
 print("a vaut ", a)
 print("b vaut ", b)
 ```
+
+ou encore le module `copy`
+
+```python
+import copy
+
+a = [1, 2, 3]
+b = copy.copy(a)
+a[1] = 2713
+print("a vaut ", a)
+print("b vaut ", b)
+```
+
+Attention en revanche au cas des listes imbriquées.
+
+```python
+a = [1, [1, 2], 3]
+b = list(a)
+a[1].append(3)
+print("a vaut ", a)
+print("b vaut ", b)
+```
+
+Pour ce genre de cas il y a le **très** lent `copy.deepcopy`, dont vous ne devriez presque jamais avoir à vous servir :
+
+```python
+a = [1, [1, 2], 3]
+b = copy.deepcopy(a)
+a[1].append(3)
+print("a vaut ", a)
+print("b vaut ", b)
+```
+
+Attention pour certains objets compliqués, même `deepcopy` ne marchera pas et il faudra éventuellement les recréer manuellement.

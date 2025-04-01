@@ -135,14 +135,14 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 - {% notebook_badges slides/09-iterables_dictionnaires/iterables_dictionnaires.py.md %} [Notebook itérables et
   dictionnaires]({{site.url}}{{site.baseurl}}/slides/09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
 
-### 2024-04-01 : Récapitulatif 2
+### 2025-04-01 : Récapitulatif 2
 
-<!-- - {% notebook_badges slides/10-complements/complements.py.md %} [Notebook -->
-  compléments]({{site.url}}{{site.baseurl}}/slides/10-complements/complements.py.ipynb)
 - {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Notebook
   exos]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/recapitulatif-2.py.ipynb)
   - {% notebook_badges slides/11-recapitulatif-2/solutions.py.md %} [Notebook
     solutions]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/solutions.py.ipynb)
+- {% notebook_badges slides/10-complements/complements.py.md %} [Notebook
+  compléments]({{site.url}}{{site.baseurl}}/slides/10-complements/complements.py.ipynb)
 
 
 ## Ressources
