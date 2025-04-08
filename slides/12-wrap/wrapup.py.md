@@ -45,11 +45,11 @@ Cours 12 : résumé
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
-2707+3*2
+2707 + 3 * 2
 ```
 
 ```python slideshow={"slide_type": "fragment"}
-(2707+3)*2
+(2707 + 3) * 2
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -158,7 +158,7 @@ Vous avez une fonction à compléter (ça vous apprendra à écrire des fonction
 
 À chaque fois j'essaierai d'ajouter une cellule avec des tests qui vous permettront de valider votre
 code. Écrivez votre code dans la cellule de la fonction (et enlevez `pass`), exécutez cette cellule
-(bouton 'Run' ou ctrl + Enter) puis exécutez la cellule de test.
+(bouton « ⏵ Run » ou <kbd>ctrl</kbd> + <kbd>⏎</kbd>) puis exécutez la cellule de test.
 
 L'objectif est que vous soyez autonome pour valider ces exos (et accessoirement de vous familiariser
 avec les tests).
@@ -180,9 +180,10 @@ assert square(-2) == 4
 ## Opérateurs de comparaison
 
 - `<` inférieur strict / `<=` inférieur ou égal
-- `>` supérieur strict  / `>=` supérieur ou égal
+- `>` supérieur strict / `>=` supérieur ou égal
 - `==` égal / `!=` différent
-- `is` identité (pour les objets surtout)/ `is not` non identité
+- `is` identité / `is not` non identité (attention la différence avec `==` est subtile, mais
+  importante)
 
 Lire [la doc](https://docs.python.org/3/library/stdtypes.html#comparisons).
 <!-- #endregion -->
@@ -224,8 +225,8 @@ Il y a quelques pièges, mais on y reviendra
 - L'affectation des variables se fait à l'aide du symbole `=`  
 - Si la variable est placée à droite du symbole `=`, sa *valeur* est affectée à la variable placée à
   gauche.
-- Les noms de variable sont composés de caractères alphabétiques (min ou maj), des chiffres et de
-  l'underscore.
+- Les noms de variable sont composés de caractères alphabétiques (avec la propriété Unicode « L
+  (Letter) ») des chiffres et de l'underscore.
 - Les noms de variable sont choisis par læ programmeureuse, ils doivent être le plus clair possible. Il
   est conseillé de suivre la [PEP 8](https://www.python.org/dev/peps/pep-0008/).,
 <!-- #endregion -->
@@ -247,7 +248,7 @@ je-ne-suis-pas-une-variable = 2
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-- À part ça, seuls les mots réservés sont interdits.
+- À part ça, seuls les mots-clés réservés sont interdits :
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -265,7 +266,7 @@ print(z̷̫̻̘̞̫͓̩̮͐̄̀̇̐̅̈́̂̊͂̚͜͝͝ā̷̛̏̈́͒͋̃́̄̿͋͛
 ```
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
-MAIS ON NE LE FAIT PAS
+(mais on ne le fait pas, pitié)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -325,7 +326,7 @@ square("test")
 
 <!-- #region slideshow={"slide_type": "-"} -->
 - Les chaînes de caractères sont entourées de quotes simples `'` ou doubles `"`
-- Si votre mot contient une apostrophe, entourez-le de guillemets `"`
+- Si votre chaîne de caractères contient l'un, utilisez l'autre pour la délimiter :
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -432,7 +433,8 @@ words = "bonjour ça va ?".split(' ')
 Sauf que :
 
 - Concaténation avec `+` [comme n'importe quelle
-  séquence](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations) **à éviter**
+  séquence](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations) **à éviter
+  parce que c'est lent**
 - [f-string](https://docs.python.org/3/library/string.html#formatstrings)
 - Interpolation avec [`format()`](https://docs.python.org/3/library/functions.html#format)
 - Et encore d'autres dont on ne parlera pas.
@@ -440,12 +442,15 @@ Sauf que :
 
 ```python slideshow={"slide_type": "subslide"}
 name = "Morgan"
-coffee_price = 0.6
+coffee_price = 0.6  # On est clairement pas à Paris
 
+# Évitez ça
 print("Tiens salut " + name + ". T'aurais pas " + str(coffee_price*2) + " euros pour 2 cafés ?")
 
+# Faites plutôt ça, c'est plus lisible
 print(f"Tiens salut {name}. T'aurais pas {coffee_price*2} euros pour 2 cafés ?")
 
+# Ou ça à la rigueurs
 print("Tiens salut {}. T'aurais pas {} euros pour 2 cafés ?".format(name, coffee_price*2))
 ```
 
@@ -469,7 +474,8 @@ c'est la galère.
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-Pour concaténer beaucoup de chaînes il vaut mieux utiliser `join`
+Pour concaténer beaucoup de chaînes il vaut mieux les mettre dans une liste (éventuellement
+construite itérativement, les listes sont optimisées pour ça) et utiliser `join`
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -477,7 +483,7 @@ print(" 👏 ".join(["On", "ne", "concatène", "pas", "des", "chaînes", "de", "
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-Attention aussi à la concaténation implicite
+Attention aussi à la concaténation implicite :
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -503,8 +509,8 @@ assert say_hello("Lucky", "Luke") == "Hello Lucky Luke !"
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-Un objet de type `str` (string, chaîne de caractères quoi) est *immutable*, on ne peut pas modifier
-sa valeur.
+Un objet de type `str` (*string*, chaîne de caractères) est *immutable*, on ne peut pas modifier sa
+valeur :
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -522,13 +528,13 @@ chaine[1] = "y"
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "-"} -->
-- Les listes sont des *séquences* (comme `str` qui sont des séquences de *caractères) d'objets
-  *arbitraires*.
-- Les *séquences* sont des structures de données indicées qui peuvent contenir des éléments de
+- Les listes sont des *séquences d'objets arbitraires*. (comme les `str` sont spécifiquement des
+  séquences de *caractères*)
+- Les *séquences* sont des structures de données *indicées* qui peuvent contenir des éléments de
   différents types
-- Les *séquences* sont des *itérables*, les listes aussi donc
+- Les *séquences* sont des *itérables* (on peut s'en servir dans une boucle `for`)
 - Les éléments d'une liste peuvent être modifiés (*mutable*)
-- On accède à un élément par son indice (de 0 à n-1, n étant le nombre d'éléments)
+- On accède à un élément par son indice (de `0` à `n-1`, `n` étant le nombre d'éléments)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -581,15 +587,15 @@ def change_char(s, idx):
 assert isinstance(change_char("maison", 3), str)
 assert change_char("maison", 3) == "maizon"
 assert change_char("maison", 0) == "zaison"
-```ç
+```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### Les dictionnaires
 
-- Un dictionnaire est une structure de données associative de type 'clé' → 'valeur'
+- Un dictionnaire est une structure de données associative de type `clé: valeur`
 - Les données ne sont pas ordonnées comme dans les listes
 - On accède à une valeur par sa clé
-- Les clés sont uniques : on ne peut pas associer deux valeurs à une même clé
+- Les clés sont uniques : on ne peut pas associer deux valeurs à une même clé
 - `keys()` renvoie la liste des clés, `values()` la liste des valeurs
 <!-- #endregion -->
 
@@ -656,12 +662,14 @@ else:  # si besoin
 
   `False` `None` `0` (et les nombres qui lui sont égaux) `""` `()` `[]` `{}`
 
-- Tout le reste<sup>1</sup> sera évalué comme `True`
+- Tout le reste<sup>1</sup> sera évalué comme `True`. On parle de « *truthiness* », en français
+  peut-être « véridicité » ?
 
-  Vous pouvez écrire `if var` ou `while my_list` plutôt que `if var != ""` ou `while my_list != []`
+  Vous *pourriez* écrire `if var` ou `while my_list` plutôt que `if var != ""` ou `while
+  len(my_list) == 0`, mais je vous recommande de ne pas faire ça pour garder votre code plus
+  lisible.
 
-<sup>1</sup> <small>Sauf les objets dont vous avez construit les classes. Voir les diapos à venir
-sur Classes et objets.</small>
+<sup>1</sup> <small>Sauf si vous avez défini un type d'objets qui fonctionne différemment.</small>
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -677,24 +685,26 @@ else:
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## Les boucles
 
-- Les boucles `while` nécessitent que la valeur utilisée dans la condition d'arrêt soit modifiée
-  dans le corps de la boucle.
+- Les boucles `while` répètent un bloc d'instruction tant qu'une certaine expression est vraie (ou
+  véridique).
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
 i = 1
-while i < 5:
+while i < 5:  # À chqaue passage ici, on évalue `i < 5`, si c'est truthy on exécute le bloc, sinon on le saute
     print(i)
-    i = i + 1 
+    i = i + 1
+    # Ici on retourne au début du bloc
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-- Les boucles `for` s'appliquent sur les *séquences* (`list`, `str`, `tuple`) et plus généralement
-  sur les *itérables* [voir doc](https://docs.python.org/3/glossary.html#term-iterable)
-- Les *itérables* sont des objets issus de classes qui implémentent la méthode `__iter__()` et/ou
-  `__getitem__()`
-- L'instruction `continue` permet de passer à l'itération suivante
-- L'instruction `break` permet de quitter la boucle en cours
+- Les boucles `for` permettent de parcourir des
+  [*itérables*](https://docs.python.org/3/glossary.html#term-iterable), et notamment des *séquences*
+  (`list`, `str`, `tuple`)
+- Les *itérables* sont des objets issus de classes qui ont une méthode `__iter__()` (Les séquences
+  implémentent la méthode `__getitem__()`, dans ce cas Python crée automatiquement `__iter__()`).
+- L'instruction `continue` force le passage à l'itération suivante
+- L'instruction `break` force la sortie de la boucle en cours
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -716,8 +726,8 @@ for key, value in couleurs.items():
         break
 ```
 
-- `zip` permet de boucler sur plusieurs séquences
-- Si les séquences sont de tailles différentes `zip` s'arrête à la longueur la plus petite
+- `zip` permet de boucler sur plusieurs itérables en parallèle
+- S'ils sont de tailles différentes `zip` s'arrête à la longueur la plus petite
 
 ```python slideshow={"slide_type": "subslide"}
 noms = ['einstein', 'planck', 'turing', 'curie', 'bohr', 'shannon']
@@ -726,6 +736,22 @@ parcours = ['pro', 'r&d', 'r&d', 'pro', 'pro', 'r&d']
 for nom, fac, parcours in zip(noms, facs, parcours):
     print(f"{nom} est inscrit en {parcours} à {fac}")
 ```
+
+Si vous savez que vos itérables ont la même longueur (c'est le cas en général), vous pouvez le dire à Python avec l'option
+`strict=True`, qui dans ce cas vous signalera par une erreur si c'est n'est pas le cas (ce qui vous
+permettra donc de repérer le bug et de le corriger !).
+
+```python slideshow={"slide_type": "subslide"} tags=["raises-exception"]
+noms = ['einstein', 'planck', 'turing', 'curie', 'bohr', 'shannon']
+facs = ['inalco', 'p3', 'p10', 'inalco', 'p3', 'inalco']
+parcours = ['pro', 'r&d', 'r&d', 'pro', 'pro']
+for nom, fac, parcours in zip(noms, facs, parcours; strict=True):
+    print(f"{nom} est inscrit en {parcours} à {fac}")
+```
+
+Et si vous savez qu'ils sont de longueurs différentes, vous devriez aussi passer `strict=False`, qui
+ne changera rien pour Python (puisque c'est la valeur par défaut), mais signalera aux gens qui
+liront votre code (et en premier lieu vous-même) que ce qui se passe à cet endroit est inhabituel.
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### ☕ Exos 6 ☕
@@ -789,6 +815,7 @@ assert caracteristiques(6, 3, 2) == "pas un triangle"
 assert caracteristiques(2, 6, 3) == "pas un triangle"
 ```
 
+(Le terme technique pour « quelconque » serait *scalène*)
 <!-- #region slideshow={"slide_type": "subslide"} -->
 
 #### 2. La parité
@@ -821,7 +848,7 @@ assert is_even(0) == True
    nombre de minutes et `S` le nombre de secondes.
 
 On ne gèrera ici pas les cas incohérents comme un nombre de secondes négatif ou une heure mal
-formatée.
+formatée. Il faudra sans doute utiliser l'opérateur reste `%`…
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -1044,20 +1071,11 @@ y[0] = 4
 ```
 
 ```python
-display(x)
+print(x)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-Si ce qu'on veut copier est une liste, on peut utiliser
-<!-- #endregion -->
-
-```python
-x = [1, 2, 3]
-y = x[:]
-```
-
-<!-- #region slideshow={"slide_type": "subslide"} -->
-ou
+Si ce qu'on veut copier est une liste, on peut utiliser `list()` :
 <!-- #endregion -->
 
 ```python
@@ -1065,6 +1083,16 @@ y = list(x)
 y[0] = 4
 x
 ```
+
+<!-- #region slideshow={"slide_type": "subslide"} -->
+ou, plus court (et un peu plus rapide), mais plus mystérieux :
+<!-- #endregion -->
+
+```python
+x = [1, 2, 3]
+y = x[:]
+```
+
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 Il y a d'autres façons de faire. Pour les objets complexes on peut regarder du côté du module
@@ -1182,7 +1210,7 @@ cebuano = {'i':'ako', 'you_sg':'ikaw', 'he':'siya', 'we':'kita', 'you_pl':'kamo'
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
-d = {'Perl':'Larry Wall', 'Python':'Guido Van Rossum', 'C++':'Bjarne Stroustrup'}
+d = {'Perl': 'Larry Wall', 'Python': 'Guido Van Rossum', 'C++': 'Bjarne Stroustrup'}
 d['Perl']
 ```
 
@@ -1252,7 +1280,7 @@ Faites la même chose avec un dictionnaire
 - Ouverture
   - `open` est une fonction qui accepte de nombreux arguments : lire [la
     doc](https://docs.python.org/3/library/functions.html#open)
-  - `open` renvoie un objet de type `file`
+  - `open` renvoie un objet dit *file-like*.
   - Le plus souvent elle s'emploie de la manière suivante :
 
     ```python
@@ -1260,8 +1288,8 @@ Faites la même chose avec un dictionnaire
         read_data = in_stream.read()
     ```
 
-    L'utilisation du mot clé `with` garantit la fermeture du fichier même si une exception est
-    soulevée.
+    L'utilisation du mot clé `with` garantit la fermeture du fichier quoi qu'il arrive. Si vous
+    faites autrement, vous risquez que le fichier reste ouvert si votre programme plante.
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -1281,13 +1309,8 @@ Voir [la doc](https://docs.python.org/3/library/functions.html#open) pour les d�
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## Les fichiers : lecture
 
-- `read(size=-1)` lit les `size` premiers octets (mode `b`) ou caractères (mode `t`). Si `size < 0`,
-  lit tout le fichier.
-- `readline(size=-1)` lit au plus `size` caractères ou jusqu'à la fin de ligne. Si `size < 0`, lit
-  toute la ligne. Il est conseillé de ne pas toucher à `size`.
-- `readlines(hint=-1)` lit `hint` lignes du fichier. Si `hint` < 0, lit toutes les lignes du
-  fichier.
-- Un objet `file` est un itérable ! C'est la façon Pythonique de faire :
+Un objet *file-like* ouvert en lecture est un itérable ! La façon Pythonique de le parcourir, c'est
+une boucle `for` :
 <!-- #endregion -->
 
 ```python
@@ -1305,6 +1328,15 @@ with open("data/demo.txt") as in_stream:
         print(line.strip())
 ```
 
+Autres options qui peuvent servir dans certains cas (mais à éviter si possible) :
+
+- `read(size=-1)` lit les `size` premiers octets (mode `b`) ou caractères (mode `t`). Si `size < 0`,
+  lit tout le fichier.
+- `readline(size=-1)` lit au plus `size` caractères ou jusqu'à la fin de ligne. Si `size < 0`, lit
+  toute la ligne. Il est conseillé de ne pas toucher à `size`.
+- `readlines(hint=-1)` lit `hint` lignes du fichier. Si `hint` < 0, lit toutes les lignes du
+  fichier.
+
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## Les fichiers : écriture et fermeture
 
@@ -1320,7 +1352,7 @@ with open("demo.txt", 'w') as out_stream:
 
 Attention, `write` n'ajoute pas de fin de ligne `\n` à votre place.
 <!-- #region slideshow={"slide_type": "subslide"} -->
-- `sys.stdin`, `sys.stdout` et `sys.stderr` sont des objets de type `file`
+- `sys.stdin`, `sys.stdout` et `sys.stderr` sont des objets *file-like*.
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -1448,9 +1480,14 @@ re.sub(r'e|é', 'i', 'éléphanteau')
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## `\w`
 
-`\w` est la classe prédéfinie des caractères alphanumériques, c'est-à-dire à tous les caractères qui
-ont la propriété Unicode `Letter` d'après le module `unicodedata` (sauf si le motif est compilé
-en binaire ou si l'option `re.ASCII` est activée)
+`\w` est la classe prédéfinie des caractères alphanumériques, ceux pour lesquels
+`str.isalnum` renvoie `True`, ainsi que l'underscore `_`. **Ce n'est pas une catégorie
+Unicode propre**. En principe, c'est l'ensemble des caractères qui peuvent apparaître dans un
+identifiant (nom de variable, de module etc.) en Python.
+<!-- c'est-à-dire à tous les caractères qui
+ont la propriété Unicode `Letter`, ce que Python détermine à l'aide de son module
+[`unicodedata`](https://docs.python.org/3/library/unicodedata.html) (sauf si le motif est compilé en
+binaire ou si l'option `re.ASCII` est activée) -->
 <!-- #endregion -->
 
 ```python
@@ -1461,6 +1498,18 @@ if re.search(r"\w", "馬青區團長成中央代表"):
 ```python
 if re.search(r"\w", "هيلاري كلينتون"):
     print("Yeah !")
+```
+
+`re` n'a malheureusement [pour l'instant](https://github.com/python/cpython/issues/95555) pas de
+support des [propriétés Unicode](https://en.wikipedia.org/wiki/Unicode_character_property) qu'on
+trouve dans d'autres moteurs de regex avec `\p{}`. Il faut pour ça passer par le package tiers (mais
+très bien maintenu et très utilisé) [`regex`](https://pypi.org/project/regex/), qu'il faudra donc
+installer (par exemple avec [pip](https://realpython.com/what-is-pip/)).
+
+```python
+import regex
+
+print(regex.findall(r"\p{L}", "_1a234bé€γ"))
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->

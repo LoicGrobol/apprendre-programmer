@@ -150,6 +150,12 @@ Mini-projet:
   mini-projet]({{site.url}}{{site.baseurl}}/assignment/projet-2025.py.ipynb)
   -[Lexique]({{site.url}}{{site.baseurl}}/assignment/lexique.txt)
 
+### 2025-04-08 : Résumé
+
+- {% notebook_badges slides/12-wrap/wrapup.py.md %} [Notebook
+  résumé]({{site.url}}{{site.baseurl}}/slides/12-wrap/wrapup.py.ipynb)
+  - {% notebook_badges slides/12-wrap/solutions.py.md %}
+    [Solutions]({{site.url}}{{site.baseurl}}/slides/12-wrap/solutions.py.ipynb)
 
 ## Ressources
 
