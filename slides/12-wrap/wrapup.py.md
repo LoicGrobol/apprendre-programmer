@@ -121,6 +121,7 @@ ma_nouvelle_fonction(2715)
 def mon_incroyable_retour(nombre):
     return nombre + 3
 
+
 def mon_incroyable_affichage(nombre):
     print(nombre + 3)
 ```
@@ -167,7 +168,7 @@ avec les tests).
 ```python slideshow={"slide_type": "subslide"}
 def square(num):
     """Renvoie le nombre donné en argument au carré."""
-    pass # Votre code ici
+    pass  # Votre code ici
 ```
 
 ```python slideshow={"slide_type": "-"}
@@ -195,7 +196,7 @@ Lire [la doc](https://docs.python.org/3/library/stdtypes.html#comparisons).
 ```python slideshow={"slide_type": "-"}
 def on_fait_la_taille(moi, toi):
     """Vrai ssi `moi` est plus grand que `toi`"""
-    pass # Votre code ici
+    pass  # Votre code ici
 ```
 
 ```python slideshow={"slide_type": "-"}
@@ -253,6 +254,7 @@ je-ne-suis-pas-une-variable = 2
 
 ```python slideshow={"slide_type": "fragment"}
 import keyword
+
 print(keyword.kwlist)
 ```
 
@@ -288,7 +290,6 @@ print(z̷̫̻̘̞̫͓̩̮͐̄̀̇̐̅̈́̂̊͂̚͜͝͝ā̷̛̏̈́͒͋̃́̄̿͋͛
 
 ```python slideshow={"slide_type": "-"}
 type("Hello")
-
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -310,7 +311,7 @@ pas de type `int`
 ```python slideshow={"slide_type": "-"}
 def square(num):
     """Renvoie le nombre donné en argument au carré."""
-    pass # Votre code ici
+    pass  # Votre code ici
 ```
 
 ```python slideshow={"slide_type": "-"}
@@ -383,8 +384,8 @@ print(spam[-1])
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
-print(spam[0:3]) # 3 premiers éléments
-print(spam[-3:]) # 3 derniers éléments
+print(spam[0:3])  # 3 premiers éléments
+print(spam[-3:])  # 3 derniers éléments
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -392,7 +393,7 @@ print(spam[-3:]) # 3 derniers éléments
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
-if 'u' in spam:
+if "u" in spam:
     print(f"Il y a un u dans {spam}")
 ```
 
@@ -420,7 +421,7 @@ doc](https://docs.python.org/3/library/stdtypes.html#string-methods)
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
-words = "bonjour ça va ?".split(' ')
+words = "bonjour ça va ?".split(" ")
 "-".join(words)
 ```
 
@@ -445,13 +446,23 @@ name = "Morgan"
 coffee_price = 0.6  # On est clairement pas à Paris
 
 # Évitez ça
-print("Tiens salut " + name + ". T'aurais pas " + str(coffee_price*2) + " euros pour 2 cafés ?")
+print(
+    "Tiens salut "
+    + name
+    + ". T'aurais pas "
+    + str(coffee_price * 2)
+    + " euros pour 2 cafés ?"
+)
 
 # Faites plutôt ça, c'est plus lisible
-print(f"Tiens salut {name}. T'aurais pas {coffee_price*2} euros pour 2 cafés ?")
+print(f"Tiens salut {name}. T'aurais pas {coffee_price * 2} euros pour 2 cafés ?")
 
 # Ou ça à la rigueurs
-print("Tiens salut {}. T'aurais pas {} euros pour 2 cafés ?".format(name, coffee_price*2))
+print(
+    "Tiens salut {}. T'aurais pas {} euros pour 2 cafés ?".format(
+        name, coffee_price * 2
+    )
+)
 ```
 
 **Si possible utiliser des *f-strings*** (c'est presque toujours possible).
@@ -464,7 +475,7 @@ une chaîne intermédiaire à chaque étape.
 ```python slideshow={"slide_type": "fragment"}
 s1 = "Tiens salut " + name
 s2 = s1 + ". T'aurais pas "
-s3 = s2 + str(coffee_price*2)
+s3 = s2 + str(coffee_price * 2)
 s4 = s3 + " euros pour 2 cafés ?"
 ```
 
@@ -479,7 +490,22 @@ construite itérativement, les listes sont optimisées pour ça) et utiliser `jo
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
-print(" 👏 ".join(["On", "ne", "concatène", "pas", "des", "chaînes", "de", "caractères", "avec", "+"]))
+print(
+    " 👏 ".join(
+        [
+            "On",
+            "ne",
+            "concatène",
+            "pas",
+            "des",
+            "chaînes",
+            "de",
+            "caractères",
+            "avec",
+            "+",
+        ]
+    )
+)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -487,7 +513,7 @@ Attention aussi à la concaténation implicite :
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
-spam = ("Hello, " "there")
+spam = "Hello, there"
 ham = ("General ", "Kenobi")
 print(spam)
 print(ham)
@@ -552,7 +578,7 @@ Les listes, elles, sont *mutables*
 
 ```python slideshow={"slide_type": "fragment"} editable=true
 stack = list("Pithon")
-stack[1] = 'y'
+stack[1] = "y"
 stack
 ```
 
@@ -580,7 +606,7 @@ def change_char(s, idx):
     """In the given string, change the char at given index for 'z' and return the modified str
     ex: change("maison", 2) -> mazson
     """
-    pass # votre code ici
+    pass  # votre code ici
 ```
 
 ```python slideshow={"slide_type": "-"}
@@ -600,8 +626,8 @@ assert change_char("maison", 0) == "zaison"
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
-couleurs = {'a':'noir', 'e':'blanc', 'i':'rouge', 'u':'vert', 'o':'bleu'}
-couleurs['i'] = "pourpre"
+couleurs = {"a": "noir", "e": "blanc", "i": "rouge", "u": "vert", "o": "bleu"}
+couleurs["i"] = "pourpre"
 couleurs
 ```
 
@@ -628,8 +654,8 @@ couleurs.items()
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
-voyelles = ('a', 'e', 'i', 'o', 'u', 'y')
-my_var = tuple('Perl')
+voyelles = ("a", "e", "i", "o", "u", "y")
+my_var = tuple("Perl")
 my_var
 ```
 
@@ -691,7 +717,9 @@ else:
 
 ```python slideshow={"slide_type": "-"}
 i = 1
-while i < 5:  # À chqaue passage ici, on évalue `i < 5`, si c'est truthy on exécute le bloc, sinon on le saute
+while (
+    i < 5
+):  # À chqaue passage ici, on évalue `i < 5`, si c'est truthy on exécute le bloc, sinon on le saute
     print(i)
     i = i + 1
     # Ici on retourne au début du bloc
@@ -714,7 +742,7 @@ for item in "aeiouy":
 
 ```python slideshow={"slide_type": "subslide"}
 for item in couleurs:
-    if item == 'i':
+    if item == "i":
         continue
     print(item)
 ```
@@ -722,7 +750,7 @@ for item in couleurs:
 ```python slideshow={"slide_type": "subslide"}
 for key, value in couleurs.items():
     print(key, value)
-    if key == 'i':
+    if key == "i":
         break
 ```
 
@@ -730,9 +758,9 @@ for key, value in couleurs.items():
 - S'ils sont de tailles différentes `zip` s'arrête à la longueur la plus petite
 
 ```python slideshow={"slide_type": "subslide"}
-noms = ['einstein', 'planck', 'turing', 'curie', 'bohr', 'shannon']
-facs = ['inalco', 'p3', 'p10', 'inalco', 'p3', 'inalco']
-parcours = ['pro', 'r&d', 'r&d', 'pro', 'pro', 'r&d']
+noms = ["einstein", "planck", "turing", "curie", "bohr", "shannon"]
+facs = ["inalco", "p3", "p10", "inalco", "p3", "inalco"]
+parcours = ["pro", "r&d", "r&d", "pro", "pro", "r&d"]
 for nom, fac, parcours in zip(noms, facs, parcours):
     print(f"{nom} est inscrit en {parcours} à {fac}")
 ```
@@ -776,19 +804,23 @@ liront votre code (et en premier lieu vous-même) que ce qui se passe à cet end
 ```python slideshow={"slide_type": "subslide"}
 def la_plus_grande(longueur1, longueur2, longueur3):
     """Renvoie la plus grande longueur."""
-    pass # TODO: codez !
+    pass  # TODO: codez !
+
 
 def est_equilateral(longueur1, longueur2, longueur3):
     """Renvoie True si un triangle est équilatéral, False sinon."""
-    pass # TODO: codez !
+    pass  # TODO: codez !
+
 
 def est_isocele(longueur1, longueur2, longueur3):
     """Renvoie True si un triangle est isocele, False sinon."""
-    pass # TODO: codez !
+    pass  # TODO: codez !
+
 
 def est_triangle(longueur1, longueur2, longueur3):
     """Renvoie True si les longueurs données font bien un triangle, False sinon."""
-    pass # TODO: codez !
+    pass  # TODO: codez !
+
 
 def caracteristiques(longueur1, longueur2, longueur3):
     """Renvoie les caractéristiques d'un triangle.
@@ -800,11 +832,11 @@ def caracteristiques(longueur1, longueur2, longueur3):
 
     Affiche `pas un triangle` si les longueurs données ne font pas un triangle.
     """
-    pass # TODO: codez !
+    pass  # TODO: codez !
 ```
 
 ```python slideshow={"slide_type": "subslide"}
-assert caracteristiques(1, 1, 1) ==  ("equilatéral", 1)
+assert caracteristiques(1, 1, 1) == ("equilatéral", 1)
 assert caracteristiques(1, 1, 2) == ("isocèle", 2)
 assert caracteristiques(1, 2, 1) == ("isocèle", 2)
 assert caracteristiques(2, 1, 1) == ("isocèle", 2)
@@ -859,7 +891,9 @@ def secondes(heure):
     On suppose que l'heure est bien formattée. On aura toujours un nombre
     d'heures valide, un nombre de minutes valide et un nombre de secondes valide.
     """
-    pass # TODO: codez !
+    pass  # TODO: codez !
+
+
 def heures(secondes):
     """Prend un nombre de secondes (entier) et le convertit en heures, minutes
     et secondes sous le format `H:M:S` où `H` est le nombre d'heures,
@@ -867,7 +901,7 @@ def heures(secondes):
 
     On suppose que secondes est positif ou nul (secondes >= 0).
     """
-    pass # TODO: codez !
+    pass  # TODO: codez !
 ```
 
 ```python slideshow={"slide_type": "subslide"}
@@ -877,8 +911,8 @@ assert heures(60) == "0:1:0"
 assert heures(66) == "0:1:6"
 assert heures(3600) == "1:0:0"
 assert heures(86466) == "24:1:6"
-assert secondes('0:0:0') == 0
-assert secondes('6:6:6') == 21966
+assert secondes("0:0:0") == 0
+assert secondes("6:6:6") == 21966
 assert secondes(heures(86466)) == 86466
 assert heures(secondes("24:1:1")) == "24:1:1"
 ```
@@ -988,14 +1022,28 @@ def tokenize(sentence):
     Returns:
         list
     """
-    pass # À vous
+    pass  # À vous
 ```
 
 ```python
-assert tokenize("je suis né dans le gris par accident") == \
-    ['je', 'suis', 'né', 'dans', 'le', 'gris', 'par', 'accident']
-assert tokenize("tout mon cœur est resté là-bas") == \
-    ['tout', 'mon', 'cœur', 'est', 'resté', ['là', 'bas']]
+assert tokenize("je suis né dans le gris par accident") == [
+    "je",
+    "suis",
+    "né",
+    "dans",
+    "le",
+    "gris",
+    "par",
+    "accident",
+]
+assert tokenize("tout mon cœur est resté là-bas") == [
+    "tout",
+    "mon",
+    "cœur",
+    "est",
+    "resté",
+    ["là", "bas"],
+]
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -1009,15 +1057,15 @@ assert tokenize("tout mon cœur est resté là-bas") == \
 <!-- #endregion -->
 
 ```python
-[i ** 2 for i in range(10)]
+[i**2 for i in range(10)]
 ```
 
 ```python slideshow={"slide_type": "subslide"}
-[i ** 2 for i in range(10) if i % 2 == 0]
+[i**2 for i in range(10) if i % 2 == 0]
 ```
 
 ```python slideshow={"slide_type": "subslide"}
-[(i, j) for i in range(2) for j in ['a', 'b']]
+[(i, j) for i in range(2) for j in ["a", "b"]]
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -1029,8 +1077,8 @@ retenir que les noms composés
 
 ```python
 words = tokenize("De-ci de-là, cahin-caha, va trottine, va chemine, va petit âne")
-compounds = [] # ← modifiez ça
-assert compounds == [['De', 'ci'], ['de', 'là,'], ['cahin', 'caha,']]
+compounds = []  # ← modifiez ça
+assert compounds == [["De", "ci"], ["de", "là,"], ["cahin", "caha,"]]
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -1040,7 +1088,7 @@ La boucle `for` est particulièrement adaptée pour parcourir les itérables et 
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
-voyelles = ['a', 'e', 'i', 'o', 'u']
+voyelles = ["a", "e", "i", "o", "u"]
 for item in voyelles:
     print(item)
 ```
@@ -1150,7 +1198,7 @@ ens0
 ```
 
 ```python
-ens1 = {'le', 'guépard', 'le', 'poursuit'}
+ens1 = {"le", "guépard", "le", "poursuit"}
 ens1
 ```
 
@@ -1182,12 +1230,40 @@ tagalog et le cebuano, trouvez les mots en commun.
 <!-- #endregion -->
 
 ```python
-tagalog = {'i':'ako', 'you_sg':'ikaw', 'he':'siya', 'we':'tayo', 'you_pl':'kayo', 'they':'sila',\
-           'this':'ito', 'that':'iyan', 'here':'dito', 'there':'doon', 'who':'sino',\
-           'what':'ano', 'where':'saan', 'when':'kailan', 'how':'paano'}
-cebuano = {'i':'ako', 'you_sg':'ikaw', 'he':'siya', 'we':'kita', 'you_pl':'kamo', 'they':'sila',\
-           'this':'kiri', 'that':'kana', 'here':'diri', 'there':'diha', 'who':'kinsa',\
-           'what':'unsa', 'where':'asa', 'when':'kanus-a', 'how':'unsaon'}
+tagalog = {
+    "i": "ako",
+    "you_sg": "ikaw",
+    "he": "siya",
+    "we": "tayo",
+    "you_pl": "kayo",
+    "they": "sila",
+    "this": "ito",
+    "that": "iyan",
+    "here": "dito",
+    "there": "doon",
+    "who": "sino",
+    "what": "ano",
+    "where": "saan",
+    "when": "kailan",
+    "how": "paano",
+}
+cebuano = {
+    "i": "ako",
+    "you_sg": "ikaw",
+    "he": "siya",
+    "we": "kita",
+    "you_pl": "kamo",
+    "they": "sila",
+    "this": "kiri",
+    "that": "kana",
+    "here": "diri",
+    "there": "diha",
+    "who": "kinsa",
+    "what": "unsa",
+    "where": "asa",
+    "when": "kanus-a",
+    "how": "unsaon",
+}
 # Votre code ici
 ```
 
@@ -1210,16 +1286,16 @@ cebuano = {'i':'ako', 'you_sg':'ikaw', 'he':'siya', 'we':'kita', 'you_pl':'kamo'
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
-d = {'Perl': 'Larry Wall', 'Python': 'Guido Van Rossum', 'C++': 'Bjarne Stroustrup'}
-d['Perl']
+d = {"Perl": "Larry Wall", "Python": "Guido Van Rossum", "C++": "Bjarne Stroustrup"}
+d["Perl"]
 ```
 
 ```python
-d['Ruby']
+d["Ruby"]
 ```
 
 ```python
-d.setdefault('Ruby', 'je sais pas')
+d.setdefault("Ruby", "je sais pas")
 d
 ```
 
@@ -1241,6 +1317,7 @@ Son implémentation le rend plus rapide qu'un dictionnaire utilisé avec la fonc
 
 ```python slideshow={"slide_type": "subslide"}
 import collections
+
 lexique = [("couvent", "/kuv/"), ("couvent", "/kuvã/")]
 dico = collections.defaultdict(list)
 for ortho, phon in lexique:
@@ -1256,8 +1333,9 @@ dico
 
 ```python
 from collections import Counter
+
 cnt = Counter()
-lst = ['le', 'guépard', 'le', 'poursuit']
+lst = ["le", "guépard", "le", "poursuit"]
 for item in lst:
     cnt[item] += 1
 display(cnt)
@@ -1344,7 +1422,7 @@ Autres options qui peuvent servir dans certains cas (mais à éviter si possible
 
 <!-- #endregion -->
 ```python slideshow={"slide_type": "-"}
-with open("demo.txt", 'w') as out_stream:
+with open("demo.txt", "w") as out_stream:
     for item in ["spam", "ham", "ægget"]:
         out_stream.write(item)
         out_stream.write("\n")
@@ -1391,11 +1469,13 @@ Pour le dire vite il y a deux façons de l'utiliser : reader/writer ou DictRead
 import csv
 
 swadesh_light = []
-with open('data/austronesian_swadesh.csv') as csvfile:
-    reader = csv.reader(csvfile, delimiter=',', quotechar='"') # à l'ouverture je spécifie les séparateur de champ et de chaîne  
-    for row in reader: # l'objet reader est un itérable
+with open("data/austronesian_swadesh.csv") as csvfile:
+    reader = csv.reader(
+        csvfile, delimiter=",", quotechar='"'
+    )  # à l'ouverture je spécifie les séparateur de champ et de chaîne
+    for row in reader:  # l'objet reader est un itérable
         swadesh_light.append(row[0:3])
-        print(' | '.join(row[0:3])) # row est une liste de chaînes de caractères
+        print(" | ".join(row[0:3]))  # row est une liste de chaînes de caractères
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -1403,11 +1483,11 @@ with open('data/austronesian_swadesh.csv') as csvfile:
 <!-- #endregion -->
 
 ```python
-with open('swadesh_light.csv', 'w') as csvfile:
-    writer = csv.writer(csvfile, delimiter='|',quotechar='"')
-    #writer.writerows(swadesh_light) ici on écrit tout en une fois
+with open("swadesh_light.csv", "w") as csvfile:
+    writer = csv.writer(csvfile, delimiter="|", quotechar='"')
+    # writer.writerows(swadesh_light) ici on écrit tout en une fois
     for item in swadesh_light:
-        writer.writerow(item) # writerow reçoit une liste de chaînes
+        writer.writerow(item)  # writerow reçoit une liste de chaînes
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -1418,11 +1498,10 @@ S'il n'y a pas de ligne d'en-tête on peut utiliser une liste `fieldnames` en pa
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
-with open('data/austronesian_swadesh.csv') as csvfile:
-    reader = csv.DictReader(csvfile, delimiter=',',quotechar='"')
-    for row in reader: # ici row est un dictionnaire
-         print(f"{row['Ilocano']} | {row['Malagasy']}")
-
+with open("data/austronesian_swadesh.csv") as csvfile:
+    reader = csv.DictReader(csvfile, delimiter=",", quotechar='"')
+    for row in reader:  # ici row est un dictionnaire
+        print(f"{row['Ilocano']} | {row['Malagasy']}")
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -1433,13 +1512,14 @@ paramètre `fieldnames` est obligatoire.
 <!-- #endregion -->
 
 ```python
-with open('swadesh_light.csv', 'w') as csvfile:
-    fieldnames = ['english', 'ilocano']
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter='|',quotechar='$')
+with open("swadesh_light.csv", "w") as csvfile:
+    fieldnames = ["english", "ilocano"]
+    writer = csv.DictWriter(
+        csvfile, fieldnames=fieldnames, delimiter="|", quotechar="$"
+    )
     writer.writeheader()
     for num, en, ilo in swadesh_light:
-        writer.writerow({'english': en, 'ilocano': ilo})
-
+        writer.writerow({"english": en, "ilocano": ilo})
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -1459,12 +1539,12 @@ import re
 
 a minima vous devez connaître les fonctions :
 
-- `findall` : trouve toutes les occurences du motif, retourne une liste de chaînes trouvées
+- `findall` : trouve toutes les occurrences du motif, retourne une liste de chaînes trouvées
 - `search` : trouve le motif, retourne un objet `Match`, `None` sinon
 - `match` : détermine si le motif est présent au début de la chaîne, retourne un objet `Match`,
   `None` sinon
 - `split` : découpe une chaîne selon un motif, retourne une liste de chaînes
-- `sub` : remplace les occurences d'un motif par une chaîne de remplacement
+- `sub` : remplace les occurrences d'un motif par une chaîne de remplacement
 - `compile` : compilation d'un motif (pattern), retourne un objet `Pattern`
 <!-- #endregion -->
 
@@ -1474,7 +1554,7 @@ if re.search(r"(\w|\s)+", "Un léopard me pourchasse"):
 ```
 
 ```python
-re.sub(r'e|é', 'i', 'éléphanteau')
+re.sub(r"e|é", "i", "éléphanteau")
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -1530,17 +1610,15 @@ def get_austro_words(langue1, langue2, words):
     """
     # votre code
 
-    
-assert get_austro_words('Malay', 'Malagasy', ['new', 'old', 'good']) == \
-    {
-        'Malay':['baharu', 'lama', 'bagus, baik'],
-        'Malagasy':['vaovao', 'onta, hantitra', 'tsara']
-    }
-assert get_austro_words('Malay', 'Balinese', ['new', 'old', 'good']) == \
-    {
-        'Malay':['baharu', 'lama', 'bagus, baik'],
-        'Balinese':[]
-    }
+
+assert get_austro_words("Malay", "Malagasy", ["new", "old", "good"]) == {
+    "Malay": ["baharu", "lama", "bagus, baik"],
+    "Malagasy": ["vaovao", "onta, hantitra", "tsara"],
+}
+assert get_austro_words("Malay", "Balinese", ["new", "old", "good"]) == {
+    "Malay": ["baharu", "lama", "bagus, baik"],
+    "Balinese": [],
+}
 ```
 
 2\. Pour chaque mot du Cebuano de la liste [Swadesh austronésienne](data/swadesh_light.csv), trouvez
