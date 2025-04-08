@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.15.2
+      jupytext_version: 1.17.0
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -20,7 +20,7 @@ jupyter:
 Cours 12 : résumé
 =================
 
-**Loïc Grobol** [\<lgrobol@parisnanterre.fr\>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [\<lgrobol@parisnanterre.fr\>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
 
@@ -550,7 +550,7 @@ stack = list()
 Les listes, elles, sont *mutables*
 <!-- #endregion -->
 
-```python slideshow={"slide_type": "fragment"}
+```python slideshow={"slide_type": "fragment"} editable=true
 stack = list("Pithon")
 stack[1] = 'y'
 stack
@@ -564,14 +564,14 @@ C'est même le prototype d'une séquence mutable, elles servent à tout, partout
 Quelques fonctions utiles pour des listes de nombres
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 lst = [2, 7, 1, 3]
 print(max(lst))
 print(min(lst))
 print(sum(lst))
 ```
 
-<!-- #region slideshow={"slide_type": "subslide"} -->
+<!-- #region slideshow={"slide_type": "subslide"} editable=true -->
 ### ✍️ Exo 5 ✍️
 <!-- #endregion -->
 

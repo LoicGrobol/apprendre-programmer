@@ -1,4 +1,5 @@
 ipywidgets
+jupyter-ruff
 jupyterlab
 jupyterlab-rise
 jupytext
