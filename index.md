@@ -157,6 +157,11 @@ Mini-projet:
   - {% notebook_badges slides/12-wrap/solutions.py.md %}
     [Solutions]({{site.url}}{{site.baseurl}}/slides/12-wrap/solutions.py.ipynb)
 
+### 2025-04-22 : Partiel
+
+- {% notebook_badges exams/exam-2025.py.md %}
+  [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2025.py.ipynb)
+
 ## Ressources
 
 - [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et
