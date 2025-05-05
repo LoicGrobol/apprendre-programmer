@@ -16,7 +16,7 @@ jupyter:
 ---
 
 <!-- LTeX: language=fr -->
-Partiel Apprendre à programmer 2025
+Examen Apprendre à programmer 2025
 ===================================
 
 ## ATTENTION
@@ -55,8 +55,9 @@ devrez écrire un programme en Python. Vous avez plusieurs possibilités pour tr
   également rendre vos réponses sur papier. On aura dans ce cas un peu plus d'indulgence à l'égard
   des coquilles.
 
-À part si vous composez sur papier, votre rendu (notebook au format `ipynb` ou script `py`) est à
-déposer sur Cours en Ligne ou, en cas de problème, à envoyer à`<lgrobol@parisnanterre.fr>`.
+À part si vous composez sur papier, votre rendu (notebook au format `ipynb` ou script `py`) à
+déposer sur [Cours en Ligne](https://coursenligne.parisnanterre.fr/course) (suivre le lien), ou en
+dernier recours à `<lgrobol@parisnanterre.fr>`.
 
 **Tous les documents, papiers et numériques sont autorisés.**
 
@@ -66,48 +67,45 @@ Vous avez deux heures. Bon courage.
 
 ## Questions
 
-1\. Écrire un programme qui affiche la chaîne de caractères `Bonjour les gens!`.
+1\. Écrire un programme qui affiche la chaîne de caractères `Be not afraid!`.
 
 ```python
 # Codez ici
 ```
 
-2\. Construire et afficher une chaîne de caractères contenant `stay spicy` suivie de $256$ fois
-`🌶️`.
+2\. Construire et afficher une chaîne de caractères contenant `keep cool` suivie de $128$ fois `☃️`.
 
 ```python
 # Codez ici
 ```
 
-3\. Écrire un programme qui calcule et affiche le résultat du calcul suivant $\frac{3-12+3}{4}$.
+3\. Écrire un programme qui calcule et affiche le résultat du calcul suivant $\frac{3*12+2}{3}$.
 
 ```python
 # Codez ici
 ```
 
-4\. Créer une variable nommée `slogan` contenant la chaîne de caractères `AUCUNE RÉVOLUTION N’AURA
-LIEU SANS CHANGEMENT RADICAL DE L'IDÉE QU'ON SE FAIT DU RÉEL`, puis, à l'aide d'une opération sur
-les chaînes de caractères, mettez le contenu de `slogan` en minuscules et stockez cette nouvelle
-chaîne dans une variable nommée `slopti`. Enfin, affichez le contenu de `slopti`.
+4\. Créer une variable `slogan` contenant la chaîne de caractères `AUCUNE RÉVOLUTION N’AURA LIEU
+SANS CHANGEMENT RADICAL DE L'IDÉE QU'ON SE FAIT DU RÉEL`, puis, à l'aide d'une opération sur les
+chaînes de caractères, mettez le contenu de `slogna` en minuscules et stockez cette nouvelle chaîne
+dans une variable `sloganed`. Enfin, affichez le contenu de `sloganed`.
 
 ```python
 # Codez ici
 ```
 
-5\. Écrire un programme qui demande la saisie d'une chaîne de caractères, puis qui affiche
-`ok..` si cette chaîne contient le mot « argent » et affiche `naw` dans le cas contraire.
-Votre programme doit contenir exactement quatre fois le caractère `i`.
+5\. Écrire un programme qui demande la saisie d'une chaîne de caractères, puis qui affiche `quel
+enfer` si cette chaîne contient le mot « travail » et affiche `super` dans le cas contraire. Votre
+programme doit contenir exactement quatre fois le caractère `i`.
 
 ```python
 # Codez ici
-
 ```
 
 (il y a une solution à seulement trois `i`, mais ne cherchez pas avant d'avoir fini les autres
 questions)
 
-6\. Écrire un programme qui demande la saisie d'un nombre, puis qui affiche le double du cube de ce
-nombre.
+6\. Écrire un programme qui demande la saisie d'un nombre, puis qui affiche le quadruple de ce nombre.
 
 ```python
 # Codez ici
@@ -116,8 +114,8 @@ nombre.
 7\.
 
 7.1 En utilisant uniquement les chaînes de caractères déjà définies (pas forcément toutes) dans la
-cellule-ci dessous, modifiez cette cellule pour stocker dans une variable nommée `cite` la chaîne
-de caractères `l’environnement c’est aussi ce que créent les sociétés`, puis affichez `cite`.
+cellule-ci dessous, modifiez cette cellule pour afficher exactement `l’environnement c’est aussi ce que créent
+les sociétés`.
 
 ```python
 lst = ["l'", "c'est aussi ce que", "créent", "les", "sociétés",  "environnement", " "]
@@ -131,15 +129,15 @@ lst = ["l'", [["c'est aussi ce que"]], "créent", ["les", "sociétés",  "enviro
 # Codez ici
 ```
 
-8\. Afficher sur des lignes séparées les triples des nombres de la liste suivante, en écrivant une
-seule fois `print` et une seule fois `3`.
+8\. Afficher sur des lignes séparées les cubes des nombres de la liste suivante, en écrivant une
+seule fois `print` et une fois `**`.
 
 ```python
 lst = [21, 1, 1901, 2, 7, -16]
 # Codez ici
 ```
 
-9\. Écrire un programme qui compte le nombre de mots commençant par `t` dans la
+9\. Écrire un programme qui compte le nombre de mots finissant par `n` dans la
 liste suivante, puis affiche ce nombre
 
 ```python
@@ -150,7 +148,7 @@ text = [ "once", "a", "person", "acknowledges", "that", "they", "possess", "some
 # Codez ici
 ```
 
-10\. Écrire un programme qui compte le nombre de consonnes dans le texte ci-dessous, puis affiche ce
+10\. Écrire un programme qui compte le nombre de voyelles dans le texte ci-dessous, puis affiche ce
 nombre
 
 ```python
@@ -162,7 +160,7 @@ voyelles = ["a", "e", "i", "o", "u", "y"]
 # Codez ici
 ```
 
-11\. Écrire un programme qui stocke dans une liste tous les mots finissant par une consonne dans le
+11\. Écrire un programme qui stocke dans une liste tous les mots finissant par une voyelle dans le
 texte ci-dessous, puis affiche cette liste.
 
 ```python
@@ -174,17 +172,17 @@ voyelles = ["a", "e", "i", "o", "u", "y"]
 # Codez ici
 ```
 
-12\. Écrire une fonction nommée `suzie` qui affiche la chaîne de caractères `tastes like chicken`.
-Appeler cette fonction trois fois.
+12\. Écrire une fonction nommée `suzie` qui affiche la chaîne de caractères `Striped`. Appeler cette
+fonction trois fois.
 
 ```python
 # Coder ici
 ```
 
 13\. Écrire une fonction nommée `mine` acceptant un argument `n`, supposé être un nombre entier
-positif. Cette fontion doit afficher le `n`-ième mot du texte suivant si un tel mot existe et
+positif. Cette fonction doit afficher le `n`-ième mot du texte suivant si un tel mot existe et
 afficher `ERREUR` si `n` est trop grand ou trop petit. Appeler cette fonction avec les valeurs `0`,
-`1`, `-15` et `2022` pour `n`.
+`-1`, `15` et `2024` pour `n`.
 
 ```python
 text = [ "once", "a", "person", "acknowledges", "that", "they", "possess", "some", "form", "of", 
@@ -194,16 +192,16 @@ text = [ "once", "a", "person", "acknowledges", "that", "they", "possess", "some
 # Codez ici
 ```
 
-14\. Écrire une fonction `ma_fonction` à deux arguments `a` et `b`, qui affiche `a` et renvoie
-`a+b`. Appeler cette fonction pour `a=12` et `b=13` et pour `a="Bonjour"` et `b=[1,2,3]`.
+14\. Écrire une fonction `ma_fonction` à deux arguments `a` et `z`, qui affiche `a` et renvoie
+`a-z`. Appeler cette fonction pour `a=15` et `z=12` et pour `a="Bonjour"` et `z=[1,2,3]`.
 
 ```python
 # Coder ici
 ```
 
-15\. Écrire en utilisant exactement quatre fois la lettre `e` une fonction `notre_fonction` à un
-argument `lst`, supposé être une liste de chaînes de caractères, qui renvoie la plus longue chaîne de
-cette liste. Appeler cette fonction avec comme valeur pour `lst` la liste `machin` suivante.
+15\. Écrire en utilisant exactement quatre fois la lettre `e` une fonction `ta_fonction` à un
+argument `lst`, supposé être une liste de chaînes de caractères, qui renvoie la plus longue chaîne
+de cette liste. Appeler cette fonction avec comme valeur pour `lst` la liste `machin` suivante.
 
 ```python
 machin = [ "once", "a", "person", "acknowledges", "that", "they", "possess", "some", "form", "of", 

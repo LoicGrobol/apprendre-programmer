@@ -162,6 +162,13 @@ Mini-projet:
 - {% notebook_badges exams/exam-2025.py.md %}
   [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2025.py.ipynb)
 
+
+### 2025-54-05 : Examen terminal
+
+- {% notebook_badges exams/exam-2024-term.py.md %}
+  [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2025-term.py.ipynb)
+
+
 ## Ressources
 
 - [Real Python](https://realpython.com), des cours et des tutoriels souvent de très bonne qualité et
