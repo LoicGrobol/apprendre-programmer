@@ -5,11 +5,9 @@ layout: default
 
 <!-- LTeX: language=fr" -->
 
-
 ## Nouvelles
 
 - **2025-01-20** Premier cours de cette session le mardi 21 janvier 2025. *Be there and beware!*
-
 
 ## Infos pratiques
 
@@ -35,7 +33,6 @@ layout: default
   les sources permettant de générer le matériel du cours.
 - Lien Binder de secours :
   [![Binder]({{site.binder_host}}/badge_logo.svg)]({{site.binder_host}}/v2/gh/LoicGrobol/apprendre-programmer/main)
-
 
 ## Séances
 
@@ -102,7 +99,7 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
   - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
       [Solutions]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/solutions.py.ipynb)
 
-### 2025-02-11 : TD `turtle` et boucle `while` 
+### 2025-02-11 : TD `turtle` et boucle `while`
 
 - [`turtle`]({{site.url}}{{site.baseurl}}/slides/03-turtle/turtle.py.html) (ceci n'est pas un
   notebook, cliquez juste sur le lien)
@@ -160,14 +157,17 @@ Mini-projet:
 ### 2025-04-22 : Partiel
 
 - {% notebook_badges exams/exam-2025.py.md %}
-  [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2025.py.ipynb)
+  [Sujet du partiel]({{site.url}}{{site.baseurl}}/exams/exam-2025.py.ipynb)
 
+### 2025-04-05 : Examen terminal
 
-### 2025-54-05 : Examen terminal
+- {% notebook_badges exams/exam-2025-term.py.md %}
+  [Sujet d'examen]({{site.url}}{{site.baseurl}}/exams/exam-2025-term.py.ipynb)
 
-- {% notebook_badges exams/exam-2024-term.py.md %}
-  [Partiel]({{site.url}}{{site.baseurl}}/exams/exam-2025-term.py.ipynb)
+### 2025-06-25 : Rattrapage
 
+- {% notebook_badges exams/exam-2024-rattrapage.py.md %}
+  [Sujet d'examen]({{site.url}}{{site.baseurl}}/exams/exam-2025-rattrapage.py.ipynb)
 
 ## Ressources
 
