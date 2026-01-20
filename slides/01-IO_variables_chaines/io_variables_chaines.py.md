@@ -128,13 +128,7 @@ Pensez à le faire judicieusement.
 ## Types de données élémentaires
 
 Les **types de données** sont des éléments fondamentaux de la programmation. On va les aborder en
-étudiant les types **primitifs** de Python dans la suite. Si vous aimez les vidéos, vous pouvez
-aussi regarder celle qui apparaît quand vous exécutez la cellule suivante
-
-```python
-from IPython.display import IFrame
-IFrame('https://www.youtube.com/embed/A37-3lflh8I', width=700, height=350)
-```
+étudiant les types **primitifs** de Python dans la suite.
 
 Regardez la cellule de code suivante :
 
