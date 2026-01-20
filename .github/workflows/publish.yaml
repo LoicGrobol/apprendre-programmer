@@ -25,7 +25,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: ["3.13"]
+        python-version: ["3.14"]
 
     steps:
       - name: Checkout repo
@@ -34,7 +34,7 @@ jobs:
       - name: Install uv 🐍
         uses: astral-sh/setup-uv@v3
         with:
-          cache-dependency-glob: "**/requirements.txt"
+          cache-dependency-glob: "**/requirements*.lst"
           cache-suffix: ${{ github.job }}
           enable-cache: true
 
