@@ -5,7 +5,7 @@ title: Apprendre à programmer
 emojicon: 🐍
 
 url: "https://loicgrobol.github.io"
-baseurl: "/apprendre-programmer/"
+baseurl: "/apprendre-programmer"
 repository: "loicgrobol/apprendre-programmer"
 repo_branch: "main"
 
