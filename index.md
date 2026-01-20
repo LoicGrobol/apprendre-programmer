@@ -63,9 +63,9 @@ téléchargé.
 ### 2026-01-22 : Introduction, notebooks, entrées/sorties de bases et variables
 
 - {% notebook_badges 00-introduction/infos-slides.py.ipynb %}
-  [Slides Informations]({{site.url}}{{site.baseurl}}/slides/00-introduction/infos-slides.py.ipynb)
+  [Notebook Informations]({{site.url}}{{site.baseurl}}/notebooks/00-introduction/infos-slides.py.ipynb)
 - {% notebook_badges 00-introduction/notebooks.py.ipynb %}
-  [Utiliser les notebooks Jupyter]({{site.url}}{{site.baseurl}}/slides/00-introduction/notebooks.py.ipynb)
+  [Utiliser les notebooks Jupyter]({{site.url}}{{site.baseurl}}/notebook/00-introduction/notebooks.py.ipynb)
 - {% notebook_badges 01-IO_variables_chaines/io_variables_chaines.py.ipynb %}
   [Notebook IO et variables]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
 

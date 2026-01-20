@@ -20,4 +20,5 @@ include:
 
 keep_files:
   - "jupyterlite"
+  - "notebooks"
 

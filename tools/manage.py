@@ -44,6 +44,9 @@ def _build(build_dir: pathlib.Path, source_dir: pathlib.Path):
     shutil.copytree(
         build_dir / "jupyterlite", source_dir / "_site" / "jupyterlite", dirs_exist_ok=True
     )
+    shutil.copytree(
+        build_dir / "notebooks", source_dir / "_site" / "notebooks", dirs_exist_ok=True
+    )
 
 
 def get_all_gitignores(base_dir: pathlib.Path) -> tuple[list[str], list[pathlib.Path]]:

@@ -67,6 +67,7 @@ bundle install
 Regenerate:
 
 ```bash
+pyton tools/manage.py build
 bundle exec jekyll build
 bundle exec jekyll serve
 ```
