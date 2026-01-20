@@ -8,7 +8,7 @@ module Jekyll
   
       def render(context)
          
-         res = "[![Open in Jupyterlite badge](#{context['site']['url']}#{context['site']['baseurl']}/assets/badge-launch.svg)](#{context['site']['url']}#{context['site']['baseurl']}jupyterlite/notebooks/index.html?path=#{@notebook_path_escaped})"
+         res = "[![Open in Jupyterlite badge](#{context['site']['url']}#{context['site']['baseurl']}/assets/badge-launch.svg)](#{context['site']['url']}#{context['site']['baseurl']}/jupyterlite/notebooks/index.html?path=#{@notebook_path_escaped})"
          # binder_host = context['site'].fetch("binder_host", "https://mybinder.org")
          # if context['site'].key?("environ_repository")
          #    repo_dir = context['site']['repository'].split("/").last
