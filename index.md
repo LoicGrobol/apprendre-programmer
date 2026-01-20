@@ -65,13 +65,13 @@ téléchargé.
 
 ### 2025-01-21 : Introduction, notebooks, entrées/sorties de bases et variables
 
-- {% notebook_badges slides/00-introduction/infos-slides.py.md %}
+- {% notebook_badges 00-introduction/infos-slides.py.ipynb %}
   [Slides Informations]({{site.url}}{{site.baseurl}}/slides/00-introduction/infos-slides.py.ipynb)
-- {% notebook_badges slides/00-introduction/notebooks.py.md %}
+- {% notebook_badges 00-introduction/notebooks.py.ipynb %}
   [Utiliser les notebooks Jupyter]({{site.url}}{{site.baseurl}}/slides/00-introduction/notebooks.py.ipynb)
-- {% notebook_badges slides/01-IO_variables_chaines/io_variables_chaines.py.md %}
+- {% notebook_badges 01-IO_variables_chaines/io_variables_chaines.py.ipynb %}
   [Notebook IO et variables]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
-  - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
+  - {% notebook_badges 01-IO_variables_chaines/solutions.py.ipynb %}
       [Solutions]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/solutions.py.ipynb)
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
@@ -87,35 +87,35 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 ### 2025-01-28 : Instructions conditionnelles
 
-- {% notebook_badges slides/02-conditions/conditions.py.md %}
+- {% notebook_badges 02-conditions/conditions.py.ipynb %}
   [Slides Instructions conditionnelles]({{site.url}}{{site.baseurl}}/slides/02-conditions/conditions.py.ipynb)
-  - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
+  - {% notebook_badges 01-IO_variables_chaines/solutions.py.ipynb %}
       [Solutions]({{site.url}}{{site.baseurl}}/slides/02-conditions/solutions.py.ipynb)
 
 ### 2025-02-04 : Boucles et séquences
 
-- {% notebook_badges slides/04-index_listes_iter/index_listes_iter.py.md %}
+- {% notebook_badges 04-index_listes_iter/index_listes_iter.py.ipynb %}
   [Slides Boucles et séquences]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/index_listes_iter.py.ipynb)
-  - {% notebook_badges slides/01-IO_variables_chaines/solutions.py.md %}
+  - {% notebook_badges 01-IO_variables_chaines/solutions.py.ipynb %}
       [Solutions]({{site.url}}{{site.baseurl}}/slides/04-index_listes_iter/solutions.py.ipynb)
 
 ### 2025-02-11 : TD `turtle` et boucle `while`
 
 - [`turtle`]({{site.url}}{{site.baseurl}}/slides/03-turtle/turtle.py.html) (ceci n'est pas un
   notebook, cliquez juste sur le lien)
-- {% notebook_badges slides/05-td_while/td_while.py.md %}
+- {% notebook_badges 05-td_while/td_while.py.ipynb %}
   [Notebook `while`]({{site.url}}{{site.baseurl}}/slides/05-td_while/td_while.py.ipynb)
 
 ### 2025-02-18 : Exercices récapitulatifs
 
-- {% notebook_badges slides/06-recapitulatif/recapitulatif.py.md %}
+- {% notebook_badges 06-recapitulatif/recapitulatif.py.ipynb %}
   [Notebook exos]({{site.url}}{{site.baseurl}}/slides/06-recapitulatif/recapitulatif.py.ipynb)
-  - {% notebook_badges slides/06-recapitulatif/solutions.py.md %}
+  - {% notebook_badges 06-recapitulatif/solutions.py.ipynb %}
     [Solutions]({{site.url}}{{site.baseurl}}/slides/06-recapitulatif/solutions.py.ipynb)
 
 ### 2025-03-11 : Fonctions
 
-- {% notebook_badges slides/07-fonctions/fonctions.py.md %}
+- {% notebook_badges 07-fonctions/fonctions.py.ipynb %}
   [Notebook fonctions]({{site.url}}{{site.baseurl}}/slides/07-fonctions/fonctions.py.ipynb)
   - [`Version html pour avoir les
   images`]({{site.url}}{{site.baseurl}}/slides/07-fonctions/fonctions.py.html) (ceci n'est pas un
@@ -123,50 +123,50 @@ courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre
 
 ### 2025-03-18 : Valeurs de retour et accès aux fichiers
 
-- {% notebook_badges slides/08-return_fichiers/return_fichiers.py.md %} [Notebook retour et
+- {% notebook_badges 08-return_fichiers/return_fichiers.py.ipynb %} [Notebook retour et
   fichiers]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/return_fichiers.py.ipynb)
   - [`ada.txt`]({{site.url}}{{site.baseurl}}/slides/08-return_fichiers/ada.txt)
 
 ### 2025-03-25 : Itérables et dictionnaires
 
-- {% notebook_badges slides/09-iterables_dictionnaires/iterables_dictionnaires.py.md %} [Notebook itérables et
+- {% notebook_badges 09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb %} [Notebook itérables et
   dictionnaires]({{site.url}}{{site.baseurl}}/slides/09-iterables_dictionnaires/iterables_dictionnaires.py.ipynb)
 
 ### 2025-04-01 : Récapitulatif 2
 
-- {% notebook_badges slides/11-recapitulatif-2/recapitulatif-2.py.md %} [Notebook
+- {% notebook_badges 11-recapitulatif-2/recapitulatif-2.py.ipynb %} [Notebook
   exos]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/recapitulatif-2.py.ipynb)
-  - {% notebook_badges slides/11-recapitulatif-2/solutions.py.md %} [Notebook
+  - {% notebook_badges 11-recapitulatif-2/solutions.py.ipynb %} [Notebook
     solutions]({{site.url}}{{site.baseurl}}/slides/11-recapitulatif-2/solutions.py.ipynb)
-- {% notebook_badges slides/10-complements/complements.py.md %} [Notebook
+- {% notebook_badges 10-complements/complements.py.ipynb %} [Notebook
   compléments]({{site.url}}{{site.baseurl}}/slides/10-complements/complements.py.ipynb)
 
 Mini-projet:
 
-- {% notebook_badges assignment/projet-2025.py.md %} [Consignes
+- {% notebook_badges assignment/projet-2025.py.ipynb %} [Consignes
   mini-projet]({{site.url}}{{site.baseurl}}/assignment/projet-2025.py.ipynb)
   -[Lexique]({{site.url}}{{site.baseurl}}/assignment/lexique.txt)
 
 ### 2025-04-08 : Résumé
 
-- {% notebook_badges slides/12-wrap/wrapup.py.md %} [Notebook
+- {% notebook_badges 12-wrap/wrapup.py.ipynb %} [Notebook
   résumé]({{site.url}}{{site.baseurl}}/slides/12-wrap/wrapup.py.ipynb)
-  - {% notebook_badges slides/12-wrap/solutions.py.md %}
+  - {% notebook_badges 12-wrap/solutions.py.ipynb %}
     [Solutions]({{site.url}}{{site.baseurl}}/slides/12-wrap/solutions.py.ipynb)
 
 ### 2025-04-22 : Partiel
 
-- {% notebook_badges exams/exam-2025.py.md %}
+- {% notebook_badges exams/exam-2025.py.ipynb %}
   [Sujet du partiel]({{site.url}}{{site.baseurl}}/exams/exam-2025.py.ipynb)
 
 ### 2025-04-05 : Examen terminal
 
-- {% notebook_badges exams/exam-2025-term.py.md %}
+- {% notebook_badges exams/exam-2025-term.py.ipynb %}
   [Sujet d'examen]({{site.url}}{{site.baseurl}}/exams/exam-2025-term.py.ipynb)
 
 ### 2025-06-25 : Rattrapage
 
-- {% notebook_badges exams/exam-2024-rattrapage.py.md %}
+- {% notebook_badges exams/exam-2024-rattrapage.py.ipynb %}
   [Sujet d'examen]({{site.url}}{{site.baseurl}}/exams/exam-2025-rattrapage.py.ipynb)
 
 ## Ressources

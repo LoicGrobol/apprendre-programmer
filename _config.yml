@@ -16,7 +16,9 @@ exclude:
 
 include:
   - _pages
-  - _build/jupyterlite
   - "*.py.html"
   - "pdf_slides/*"
+
+keep_files:
+  - "jupyterlite/"
 
