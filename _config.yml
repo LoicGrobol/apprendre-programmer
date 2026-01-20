@@ -4,7 +4,7 @@ title: Apprendre à programmer
 # description: Contenus pour le cours « Apprendre à programmer », L3 SDL parcours LCN, université Paris Nanterre
 emojicon: 🐍
 
-url: "https://loicgrobol.github.io/"
+url: "https://loicgrobol.github.io"
 baseurl: "/apprendre-programmer/"
 repository: "loicgrobol/apprendre-programmer"
 environ_repository: "loicgrobol/apprendre-programmer-environ"
