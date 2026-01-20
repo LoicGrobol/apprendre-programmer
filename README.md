@@ -49,12 +49,12 @@ Autres éléments magiques :
 
 ## Générer le site en local
 
-Penser à activer Mise si besoin
+Penser à activer asdf si besoin
 
 Dependencies:
 
 - Ruby
-  - Bundle
+- Bundle
 
 Setup:
 

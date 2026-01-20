@@ -12,11 +12,11 @@ binder_host: "https://notebooks.gesis.org/binder"
 repo_branch: "main"
 
 exclude:
-  - "*.py.md"
   - "**/local"
 
 include:
   - _pages
+  - _build/jupyterlite
   - "*.py.html"
   - "pdf_slides/*"
 

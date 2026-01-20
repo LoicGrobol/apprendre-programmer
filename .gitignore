@@ -1,4 +1,6 @@
 local
+.vscode
+_build
 
 # npm and jekyll cache
 vendor

@@ -44,15 +44,13 @@ jobs:
       - name: Install dependencies 💁🏻
         run: |
             source .venv/bin/activate
-            uv pip install --upgrade -r requirements.txt
+            uv pip install --upgrade -r requirements.lst
+            uv pip install --upgrade -r requirements-dev.lst
       
       - name: Build slides 📚
         run: |
           source .venv/bin/activate
-          shopt -s globstar
-          jupytext --to ipynb ${{ github.workspace }}/**/*.py.md
-          jupyter nbconvert --execute --allow-errors --to html ${{ github.workspace }}/**/*.py.ipynb
-          # jupyter nbconvert --to slides ${{ github.workspace }}/slides/**/*-slides.py.ipynb
+          python tools/manage.py build
       
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
@@ -65,10 +63,16 @@ jobs:
         uses: actions/configure-pages@v5.0.0
 
       - name: Build with Jekyll 🔨
-        run: bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }} # defaults output to '/_site'
+        run: bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }} --destination "_site"
+      
+      - name: Install Jupyter Lite  📚
+        run: |
+          cp _build/jupyterlite _site/jupyterlite
 
       - name: Upload artifact ⬆️
-        uses: actions/upload-pages-artifact@v3 # This will automatically upload an artifact from the '/_site' directory
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
 
   # Deployment job
   deploy:
