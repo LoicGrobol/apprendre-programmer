@@ -67,7 +67,7 @@ jobs:
       
       - name: Install Jupyter Lite  📚
         run: |
-          cp _build/jupyterlite _site/jupyterlite
+          cp -r _build/jupyterlite _site/jupyterlite
 
       - name: Upload artifact ⬆️
         uses: actions/upload-pages-artifact@v4
