@@ -28,8 +28,8 @@ Apprendre à programmer : introduction
 <!-- #region slideshow={"slide_type": "slide"} -->
 # Bonjour
 
-- Loïc Grobol (il/iel) [<lgrobol@parisnanterre.fr>](mailto:loic.grobol@parisnanterre.fr)
-- PHILLIA / MoDyCo (Bâtiment Rémond, 4ème, bureau 404C)
+- L. Grobol (il/iel) [<lgrobol@parisnanterre.fr>](mailto:loic.grobol@parisnanterre.fr)
+- PHILLIA / MoDyCo (Bâtiment Rémond, 4ème, bureau 403C)
 - *Office hours* : voir <https://loicgrobol.github.io/teaching/>
 - De manière générale, n'hésitez pas à m'écrire
 <!-- #endregion -->

@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "base64"
 gem "csv"
-gem "jekyll", "~> 4.3"
+gem "jekyll", "~> 4.4"
 
 gem "jekyll-theme-primer"
 gem "jekyll-redirect-from"
