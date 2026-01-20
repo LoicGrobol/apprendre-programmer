@@ -65,9 +65,9 @@ téléchargé.
 - {% notebook_badges 00-introduction/infos-slides.py.ipynb %}
   [Notebook Informations]({{site.url}}{{site.baseurl}}/notebooks/00-introduction/infos-slides.py.ipynb)
 - {% notebook_badges 00-introduction/notebooks.py.ipynb %}
-  [Utiliser les notebooks Jupyter]({{site.url}}{{site.baseurl}}/notebook/00-introduction/notebooks.py.ipynb)
+  [Utiliser les notebooks Jupyter]({{site.url}}{{site.baseurl}}/notebooks/00-introduction/notebooks.py.ipynb)
 - {% notebook_badges 01-IO_variables_chaines/io_variables_chaines.py.ipynb %}
-  [Notebook IO et variables]({{site.url}}{{site.baseurl}}/slides/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
+  [Notebook IO et variables]({{site.url}}{{site.baseurl}}/notebooks/01-IO_variables_chaines/io_variables_chaines.py.ipynb)
 
 À rendre pour la prochaine fois : exercices du notebook « IO et variables ».
 
