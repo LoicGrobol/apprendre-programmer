@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.14.4
+      jupytext_version: 1.19.0
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -19,36 +19,35 @@ jupyter:
 Cours 1 : Solutions
 =====================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
-
 
 ## ⬜ Exo ⬜
 
 > Écrire dans la cellule ci-dessous un programme qui affiche votre prénom et votre nom de famille,
 > séparés par une ligne vide, comme ceci :
-> 
+>
 > ```text
-> Loïc
+> Ada
 > 
-> Grobol
+> Lovelace
 > ```
 
 ```python
-print("Loïc")
+print("Ada")
 print("")
-print("Grobol")
+print("Lovelace")
 ```
 
 ```python
-print("Loïc")
+print("Ada")
 print()
-print("Grobol")
+print("Lovelace")
 ```
 
 ```python
-print("Loïc\n\nGrobol")
+print("Ada\n\Lovelace")
 ```
 
 <!-- #region -->
@@ -177,6 +176,6 @@ Quelques points de style
 - On peut terminer une chaîne de caractère par une espace :
 
 ```python
-nom = "Loïc"
+nom = "Morgan"
 print("Je m'appelle " + nom)
 ```

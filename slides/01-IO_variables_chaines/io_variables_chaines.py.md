@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.6
+      jupytext_version: 1.19.0
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -19,7 +19,7 @@ jupyter:
 Cours 1 : Entrée/Sortie, variables et manipulations de chaînes de caractères
 ===========================================================================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
 
@@ -97,9 +97,9 @@ print("Alex")
 séparés par une ligne vide, comme ceci :
 
 ```text
-Loïc
+Ada
 
-Grobol
+Lovelace
 ```
 
 ### Commentaires
@@ -127,9 +127,9 @@ Pensez à le faire judicieusement.
 
 ## Types de données élémentaires
 
-Les **types de données** sont des éléments fondamentaux de la programmation. On va les aborder
-en étudiant les types **primitifs** de Python dans la suite. Si vous aimez les vidéos, vous pouvez
-aussi regardez celle qui apparaît quand vous exécutez la cellule suivante
+Les **types de données** sont des éléments fondamentaux de la programmation. On va les aborder en
+étudiant les types **primitifs** de Python dans la suite. Si vous aimez les vidéos, vous pouvez
+aussi regarder celle qui apparaît quand vous exécutez la cellule suivante
 
 ```python
 from IPython.display import IFrame
@@ -148,11 +148,11 @@ coloration syntaxique de Jupyter vous indique qu'ils sont de **types** différen
 ### Types numériques
 
 - Les *integers* (`int`) représentent des nombres *entiers*. Ainsi, `8`, `0`, `-1` and `-2713` sont
-  des `int` mais pas `3.14`, `2.0` ou `-1.333`.
+  des `int`, mais pas `3.14`, `2.0` ou `-1.333`.
 - Les *floating point numbers* (`float`), « nombres en virgule flottante » représentent des nombres
   avec une partie entière et une partie fractionnaire.
 
-La distinction entre les deux est importante : ils sont stockés différemments dans la mémoire de
+La distinction entre les deux est importante : ils sont stockés différemment dans la mémoire de
 votre machine. Ainsi, en utilisant la fonction `type`, qui renvoie le type de son argument, on peut
 constater que `8` est un `int` et `8.5` un `float` :
 
@@ -258,7 +258,7 @@ Revenons aux types, avec le type le plus important pour nous, linguistes, TAList
 
 Les *chaînes de caractères* (`str`, *strings*) sont… des séquences de caractères, comme `"machin"`,
 `'Bonjour, tout le monde !'` ou `"supercalifragillisticexpialidocious"`. Elles sont notées entre
-simple quotes `'` ou double quotes `"`. Vous pouvez choisir l'une ou l'autre option.
+simple *quotes* `'` ou double *quotes* `"`. Vous pouvez choisir l'une ou l'autre option.
 
 ```python
 type("La linguistique est fantastique.")
@@ -428,7 +428,7 @@ qu'on réserve dans la mémoire de la machine, avec un nom qui nous permet de la
 ceci :
 
 ```python
-nom = "Loïc"
+nom = "Morgan"
 print("Salut, ", nom)
 ```
 
@@ -455,9 +455,9 @@ qui *affectent* une valeur à une variable.
 Si on affecte plusieurs valeurs successivement à une variable, elle change de valeur à chaque fois.
 
 ```python
-nom = "Loïc"
+nom = "Bran"
 print(nom)
-nom = "Alex"
+nom = "Lus"
 print(nom)
 nom = "Morgan"
 print(nom)
@@ -593,7 +593,7 @@ Elles peuvent se construire à l'aide d'opérateurs de comparaison :
 
 **Attention** il y a bien **deux** signes « égal », pour le différencier de l'opérateur d'affectation
 
-L'opérateur inverse, qui vérifie la différence, est `!=` (≠ en ASCII art quoi)
+L'opérateur inverse, qui vérifie la différence, est `!=` (≠ en ASCII art quoi).
 
 ```python
 1 != 10

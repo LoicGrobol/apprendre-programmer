@@ -16,19 +16,19 @@ def _build(build_dir: pathlib.Path, source_dir: pathlib.Path):
     source_dir = source_dir.resolve()
 
     notebooks_target_dir = build_dir / "notebooks"
-    notebooks_target_dir.mkdir()
+    notebooks_target_dir.mkdir(exist_ok=True)
     for d in (source_dir / "slides").glob("*/"):
-        shutil.copytree(d, notebooks_target_dir / d.name)
-    subprocess.run(
-        [
+        shutil.copytree(d, notebooks_target_dir / d.name, dirs_exist_ok=True)
+    subprocess.run(  # noqa: S603
+        [  # noqa: S607
             "jupytext",
             "--to",
             "ipynb",
             *notebooks_target_dir.glob("**/*.py.md"),
         ]
     )
-    subprocess.run(
-        [
+    subprocess.run(  # noqa: S603
+        [  # noqa: S607
             "jupyter",
             "lite",
             "build",
@@ -41,15 +41,18 @@ def _build(build_dir: pathlib.Path, source_dir: pathlib.Path):
         ],
         cwd=build_dir,
     )
+    shutil.copytree(
+        build_dir / "jupyterlite", source_dir / "_site" / "jupyterlite", dirs_exist_ok=True
+    )
 
 
-def get_all_gitignores(dir: pathlib.Path) -> tuple[list[str], list[pathlib.Path]]:
+def get_all_gitignores(base_dir: pathlib.Path) -> tuple[list[str], list[pathlib.Path]]:
     # First try to find a .git
-    root = dir.resolve()
+    root = base_dir.resolve()
     while not (root / ".git").exists():
         # Filesystem root: abort mission
         if root.parent == root:
-            root = dir
+            root = base_dir
             break
         root = root.parent
     gitignores = list(root.glob("**/*.gitignore"))
@@ -59,7 +62,7 @@ def get_all_gitignores(dir: pathlib.Path) -> tuple[list[str], list[pathlib.Path]
         with f.open() as in_stream:
             for p in in_stream:
                 if p and not p.isspace() and not p.startswith("#"):
-                    patterns.append(os.path.join(prefix, p.strip()))
+                    patterns.append(os.path.join(prefix, p.strip()))  # noqa: PTH118
     return patterns, gitignores
 
 

@@ -1,5 +1,5 @@
 click
-jupyterlite-core
+jupyterlite[all]
 jupyterlite-pyodide-kernel
 livereload
 pathspec

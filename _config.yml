@@ -7,12 +7,11 @@ emojicon: 🐍
 url: "https://loicgrobol.github.io"
 baseurl: "/apprendre-programmer/"
 repository: "loicgrobol/apprendre-programmer"
-environ_repository: "loicgrobol/apprendre-programmer-environ"
-binder_host: "https://notebooks.gesis.org/binder"
 repo_branch: "main"
 
 exclude:
   - "**/local"
+  - "slides"
 
 include:
   - _pages
@@ -20,5 +19,5 @@ include:
   - "pdf_slides/*"
 
 keep_files:
-  - "jupyterlite/"
+  - "jupyterlite"
 
