@@ -35,7 +35,7 @@ def _build(build_dir: pathlib.Path, source_dir: pathlib.Path):
             "--contents",
             str(build_dir / "notebooks"),
             "--lite-dir",
-            str(source_dir / "_jupyterlite"),
+            str(source_dir / "_jupyterlsite"),
             "--output-dir",
             str(build_dir / "jupyterlite"),
         ],

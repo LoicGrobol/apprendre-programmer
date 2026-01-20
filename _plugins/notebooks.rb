@@ -7,7 +7,7 @@ module Jekyll
       end
   
       def render(context)
-         return "[![Open in Jupyterlite badge](#{context['site']['url']}#{context['site']['baseurl']}/assets/badge-launch.svg)](#{context['site']['url']}#{context['site']['baseurl']}/jupyterlite/notebooks/index.html?path=#{@notebook_path_escaped})"
+         return "[![Open in Jupyterlite badge](#{context['site']['url']}#{context['site']['baseurl']}/assets/badge-launch.svg)](#{context['site']['url']}#{context['site']['baseurl']}jupyterlite/notebooks/index.html?path=#{@notebook_path_escaped})"
       end
    end
 end
