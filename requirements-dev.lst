@@ -4,3 +4,4 @@ jupyterlite-pyodide-kernel
 livereload
 pathspec
 pyinotify
+staticjinja
