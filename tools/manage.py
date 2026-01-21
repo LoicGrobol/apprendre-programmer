@@ -4,21 +4,26 @@ import pathlib
 import shutil
 import subprocess
 import sys
+import tomllib
 
 import click
 import pathspec
 from livereload import Server
+from staticjinja import Site
 
 
-def _build(build_dir: pathlib.Path, source_dir: pathlib.Path):
-    build_dir = build_dir.resolve()
-    build_dir.mkdir(exist_ok=True, parents=True)
-    source_dir = source_dir.resolve()
+def _build_site(build_dir: pathlib.Path, source_dir: pathlib.Path):
+    with (source_dir / "config.toml").open("rb") as in_stream:
+        config = tomllib.load(in_stream)
 
+
+def _build_jl(build_dir: pathlib.Path, jupyterlite_dir: pathlib.Path, notebooks_dir: pathlib.Path):
     notebooks_target_dir = build_dir / "notebooks"
     notebooks_target_dir.mkdir(exist_ok=True)
-    for d in (source_dir / "notebooks").glob("*/"):
+
+    for d in notebooks_dir.glob("*/"):
         shutil.copytree(d, notebooks_target_dir / d.name, dirs_exist_ok=True)
+
     subprocess.run(  # noqa: S603
         [  # noqa: S607
             "jupytext",
@@ -35,18 +40,28 @@ def _build(build_dir: pathlib.Path, source_dir: pathlib.Path):
             "--contents",
             str(build_dir / "notebooks"),
             "--lite-dir",
-            str(source_dir / "_jupyterlsite"),
+            jupyterlite_dir,
             "--output-dir",
             str(build_dir / "jupyterlite"),
         ],
         cwd=build_dir,
     )
-    shutil.copytree(
-        build_dir / "jupyterlite", source_dir / "_site" / "jupyterlite", dirs_exist_ok=True
-    )
-    shutil.copytree(
-        build_dir / "notebooks", source_dir / "_site" / "notebooks", dirs_exist_ok=True
-    )
+    # JupyterLite stop polluting my build dir >:[
+    (build_dir / ".jupyterlite.doit").unlink()
+
+
+def _build(build_dir: pathlib.Path, no_jl: bool, source_dir: pathlib.Path):
+    build_dir = build_dir.resolve()
+    build_dir.mkdir(exist_ok=True, parents=True)
+    source_dir = source_dir.resolve()
+
+    _build_site(build_dir=build_dir, source_dir=source_dir / "site")
+    if not no_jl:
+        _build_jl(
+            build_dir=build_dir,
+            jupyterlite_dir=source_dir / "jupyterlite",
+            notebooks_dir=source_dir / "notebooks",
+        )
 
 
 def get_all_gitignores(base_dir: pathlib.Path) -> tuple[list[str], list[pathlib.Path]]:
@@ -92,12 +107,13 @@ def serve(build_dir: pathlib.Path):
 )
 @click.option(
     "--build-dir",
+    default=pathlib.Path.cwd() / "_build",
+    show_default=True,
     type=click.Path(writable=True, file_okay=False, path_type=pathlib.Path),
 )
-def build(build_dir: pathlib.Path | None, source_dir: pathlib.Path):
-    if build_dir is None:
-        build_dir = source_dir / "_build"
-    _build(build_dir=build_dir, source_dir=source_dir)
+@click.option("--no-jl", default=False, is_flag=True)
+def build(build_dir: pathlib.Path, no_jl: bool, source_dir: pathlib.Path):
+    _build(build_dir=build_dir, no_jl=no_jl, source_dir=source_dir)
 
 
 @cli.command(help="Watch and serve the site")
@@ -107,11 +123,11 @@ def build(build_dir: pathlib.Path | None, source_dir: pathlib.Path):
 )
 @click.option(
     "--build-dir",
+    default=pathlib.Path.cwd() / "_build",
+    show_default=True,
     type=click.Path(writable=True, file_okay=False, path_type=pathlib.Path),
 )
-def watch(build_dir: pathlib.Path | None, source_dir: pathlib.Path):
-    if build_dir is None:
-        build_dir = source_dir / "_build"
+def watch(build_dir: pathlib.Path, source_dir: pathlib.Path):
     ignore_patterns, gitignores = get_all_gitignores(source_dir)
     if ignore_patterns:
         ps = pathspec.PathSpec.from_lines("gitwildmatch", ignore_patterns)
@@ -137,11 +153,11 @@ def watch(build_dir: pathlib.Path | None, source_dir: pathlib.Path):
 )
 @click.option(
     "--build-dir",
+    default=pathlib.Path.cwd() / "_build",
+    show_default=True,
     type=click.Path(writable=True, file_okay=False, path_type=pathlib.Path),
 )
-def clean(build_dir: pathlib.Path | None, source_dir: pathlib.Path):
-    if build_dir is None:
-        build_dir = source_dir / "_build"
+def clean(build_dir: pathlib.Path, source_dir: pathlib.Path):
     for p in [build_dir]:
         if p == source_dir:
             raise ValueError(f"Attempting to clean source dir {source_dir}")
