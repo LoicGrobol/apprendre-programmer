@@ -57,7 +57,7 @@ def render_md(
     return outer_template.render({**context, "content": content}), permalink
 
 
-def _build_site(
+def build_site(
     build_dir: pathlib.Path,
     source_dir: pathlib.Path,
     config_overrides: dict[str, Any] | None = None,
@@ -67,6 +67,9 @@ def _build_site(
 
     if config_overrides is not None:
         config.update(config_overrides)
+
+    print(f"{source_dir / 'assets'} → {build_dir / 'assets'}", file=sys.stderr)
+    shutil.copytree(source_dir / "assets", build_dir / "assets", dirs_exist_ok=True)
 
     context = {"site": config}
 
@@ -92,7 +95,7 @@ def _build_site(
         target.write_text(content)
 
 
-def _build_jl(build_dir: pathlib.Path, jupyterlite_dir: pathlib.Path, notebooks_dir: pathlib.Path):
+def build_jl(build_dir: pathlib.Path, jupyterlite_dir: pathlib.Path, notebooks_dir: pathlib.Path):
     notebooks_target_dir = build_dir / "notebooks"
     notebooks_target_dir.mkdir(exist_ok=True)
 
@@ -135,13 +138,13 @@ def _build(
     build_dir.mkdir(exist_ok=True, parents=True)
     source_dir = source_dir.resolve()
 
-    _build_site(
+    build_site(
         build_dir=build_dir,
         config_overrides=config_overrides,
         source_dir=source_dir / "site",
     )
     if not jl:
-        _build_jl(
+        build_jl(
             build_dir=build_dir,
             jupyterlite_dir=source_dir / "jupyterlite",
             notebooks_dir=source_dir / "notebooks",
