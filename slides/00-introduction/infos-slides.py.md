@@ -66,9 +66,8 @@ Apprendre à programmer : introduction
 
 Connaissances :
 
-- Notion d'ordinateur, d'algorithme et de programme
 - Bases en langage Python :
-  - Notion de types primitifs : littéraux, expressions, variables
+  - Types primitifs : littéraux, expressions, variables
   - Structures de données
   - Fonctions, module et sous-programmes
   - Lecture/écriture dans des fichiers
