@@ -7,7 +7,7 @@ layout: default
 
 ## Nouvelles
 
-- **2025-01-20** Premier cours de cette session le mardi 21 janvier 2025. *Be there and beware!*
+- **2025-01-20** Premier cours de cette session le mardi 22 janvier 2026. *Be there and beware!*
 
 ## Infos pratiques
 
@@ -76,9 +76,8 @@ Installer aussi l'environnement [Thonny](https://thonny.org).
 Pour installer Thonny sous ChromeOS, c'est [un peu plus
 sophistiqué](https://boldidea.org/static/thonny/chromebook.html), mais c'est possible.
 
-Pour les tablettes sous iOS ou Android, ça ne sera pas possible. Vous devriez pouvoir suivre
-l'essentiel du cours avec [`repl.it`](https://repl.it), mais ce n'est pas idéal, tenez-moi au
-courant si vous n'avez pas le choix et je ferai de mon mieux pour vous permettre de suivre.
+Pour les tablettes sous iOS ou Android, ça ne sera pas possible. Tenez-moi au courant si vous n'avez
+pas le choix et je ferai de mon mieux pour vous permettre de suivre.
 
 ## Ressources
 
@@ -127,7 +126,7 @@ Plus avancés :
 [![CC BY Licence
 badge](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 
-Copyright © 2025 L. Grobol [\<lgrobol@tuta.com\>](mailto:lgrobol@tuta.com)
+Copyright © 2026 L. Grobol [\<lgrobol@tuta.com\>](mailto:lgrobol@tuta.com)
 
 Sauf indication contraire, les fichiers présents dans ce dépôt sont distribués selon les termes de
 la licence [Creative Commons Attribution 4.0
