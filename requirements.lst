@@ -1,10 +1,7 @@
-ipywidgets
-jupyter-ruff
-jupyterlab
-jupyterlab-rise
-jupytext
-notebook
-nbconvert
-regex
-RISE
-ruff
+click
+jupyterlite[all]
+jupyterlite-pyodide-kernel
+livereload
+pathspec
+pyinotify
+staticjinja

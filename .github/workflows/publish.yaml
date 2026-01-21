@@ -38,19 +38,17 @@ jobs:
           cache-suffix: ${{ github.job }}
           enable-cache: true
 
-      - name: Create base venv 🐙
-        run: uv venv --python ${{ matrix.python-version }}
-
-      - name: Install dependencies 💁🏻
+      - name: Create base venv with dependencies 🐙
         run: |
-            source .venv/bin/activate
-            uv pip install --upgrade -r requirements.lst
-            uv pip install --upgrade -r requirements-dev.lst
-      
+          uv venv --python ${{ matrix.python-version }} --no-project
+          source .venv/bin/activate
+          uv pip install --upgrade --requirements requirements.lst
+          uv pip install --upgrade --requirements src/notebooks/requirements.lst
+   
       - name: Build slides 📚
         run: |
           source .venv/bin/activate
-          python tools/manage.py build "src/""
+          python tools/manage.py build "src/"
 
       - name: Setup Pages
         id: pages
