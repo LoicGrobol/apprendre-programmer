@@ -17,7 +17,7 @@ def _build(build_dir: pathlib.Path, source_dir: pathlib.Path):
 
     notebooks_target_dir = build_dir / "notebooks"
     notebooks_target_dir.mkdir(exist_ok=True)
-    for d in (source_dir / "slides").glob("*/"):
+    for d in (source_dir / "notebooks").glob("*/"):
         shutil.copytree(d, notebooks_target_dir / d.name, dirs_exist_ok=True)
     subprocess.run(  # noqa: S603
         [  # noqa: S607
@@ -88,7 +88,6 @@ def serve(build_dir: pathlib.Path):
 @cli.command(help="Build the site")
 @click.argument(
     "source_dir",
-    default=pathlib.Path.cwd(),
     type=click.Path(exists=True, file_okay=False, path_type=pathlib.Path),
 )
 @click.option(
@@ -104,7 +103,6 @@ def build(build_dir: pathlib.Path | None, source_dir: pathlib.Path):
 @cli.command(help="Watch and serve the site")
 @click.argument(
     "source_dir",
-    default=pathlib.Path.cwd(),
     type=click.Path(exists=True, file_okay=False, path_type=pathlib.Path),
 )
 @click.option(

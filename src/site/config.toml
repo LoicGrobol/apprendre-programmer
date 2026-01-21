@@ -1,0 +1,8 @@
+title = "Apprendre à programmer"
+description = "Contenus pour le cours « Apprendre à programmer », L3 SDL, Université Paris Nanterre"
+emojicon = "🐍"
+
+url = "https://loicgrobol.github.io"
+baseurl = "/apprendre-programmer"
+repository = "loicgrobol/apprendre-programmer"
+repo_branch = "main"

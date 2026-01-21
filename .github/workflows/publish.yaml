@@ -50,20 +50,13 @@ jobs:
       - name: Build slides 📚
         run: |
           source .venv/bin/activate
-          python tools/manage.py build
-      
-      - name: Setup Ruby 💎
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          python tools/manage.py build "src/""
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5.0.0
 
-      - name: Build with Jekyll 🔨
-        run: bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }} --destination "_site"
+      # TODO: generate here! 
 
       - name: Upload artifact ⬆️
         uses: actions/upload-pages-artifact@v4

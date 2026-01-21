@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Informations et cours | Apprendre à programmer</title>
+
     <meta property="og:title" content="Informations et cours" />
     <meta property="og:locale" content="en_US" />
     <meta name="description" content="Contenus pour le cours « Apprendre à programmer » de la L3 SDL, parcours LCN, Université Paris Nanterre." />
@@ -14,9 +15,7 @@
     <meta property="og:url" content="http://localhost:4000/apprendre-programmer/" />
     <meta property="og:site_name" content="Apprendre à programmer" />
     <meta property="og:type" content="website" />
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"WebSite","description":"Contenus pour le cours « Apprendre à programmer » de la L3 SDL, parcours LCN, Université Paris Nanterre.","headline":"Informations et cours","name":"Apprendre à programmer","url":"http://localhost:4000/apprendre-programmer/"}
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","description":"Contenus pour le cours « Apprendre à programmer » de la L3 SDL, parcours LCN, Université Paris Nanterre.","headline":"Informations et cours","name":"Apprendre à programmer","url":"http://localhost:4000/apprendre-programmer/"}</script>
 
     <link rel="stylesheet" href=""/assets/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/apprendre-programmer/assets/favicon.ico" />
@@ -26,13 +25,13 @@
     {%- if site.title -%}
       <header>
         <span class="title">
-          {%- if site.emojicon -%}
-            {{ site.emojicon }}
-          {%- endif -%}
-            <a href="{{ "/" | absolute_url }}">{{ site.title }}</a>
-          {%- if site.emojicon -%}
-            {{ site.emojicon }}
-          {%- endif -%}
+        {%- if site.emojicon -%}
+          {{ site.emojicon }}
+        {%- endif -%}
+          <a href="{{ "/" | absolute_url }}">{{ site.title }}</a>
+        {%- if site.emojicon -%}
+          {{ site.emojicon }}
+        {%- endif -%}
         </span>
       </header>
     {%- endif -%}
