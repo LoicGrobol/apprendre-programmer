@@ -23,19 +23,15 @@ from mdit_py_plugins.front_matter import front_matter_plugin
 def render_md(
     source_file: pathlib.Path,
     environment: j2.Environment,
+    source_root: pathlib.Path,
     context: dict[str, Any] | None = None,
 ) -> tuple[str, str | None]:
     if context is None:
         context = {}
 
-    layout = context.get("default_layout", "default")
+    layout = "default"
 
-    # Ridiculous
-    inner_template = j2.Environment(
-        loader=FileSystemLoader(source_file.parent),
-        autoescape=j2.select_autoescape(),
-        auto_reload=False,
-    ).get_template(source_file.name)
+    inner_template = environment.get_template(str(source_file.relative_to(source_root)))
     markdown_content = inner_template.render(context)
     md = (
         MarkdownIt("commonmark", renderer_cls=RendererHTML)
@@ -52,7 +48,7 @@ def render_md(
     else:
         permalink = None
 
-    outer_template = environment.get_template(f"{layout}.html")
+    outer_template = environment.get_template(f"templates/{layout}.html.jinja")
     content = md.render(markdown_content)
     return outer_template.render({**context, "content": content}), permalink
 
@@ -71,22 +67,35 @@ def build_site(
     print(f"{source_dir / 'assets'} → {build_dir / 'assets'}", file=sys.stderr)
     shutil.copytree(source_dir / "assets", build_dir / "assets", dirs_exist_ok=True)
 
-    context = {"site": config}
-
     env = j2.Environment(
-        loader=FileSystemLoader(source_dir / "templates"),
+        loader=FileSystemLoader(source_dir),
         autoescape=j2.select_autoescape(),
         auto_reload=False,
     )
+    env.globals["site"] = config
+
+    # Horrible hack to auto-import macros
+    env.globals.update(
+        {
+            k: v
+            for k, v in env.get_template("templates/macros.jinja").module.__dict__.items()
+            if not k.startswith("_")
+        }
+    )
 
     contents_dir = source_dir / "contents"
-    for f in contents_dir.glob("**/*.md"):
-        content, permalink = render_md(source_file=f, environment=env, context=context)
+    for f in contents_dir.glob("**/*.md.jinja"):
+        print(f"Processing {f}", file=sys.stderr)
+        content, permalink = render_md(
+            source_file=f,
+            source_root=source_dir,
+            environment=env,
+        )
         if permalink is None:
-            target = build_dir / f.relative_to(contents_dir)
+            target = build_dir / f.relative_to(contents_dir).with_suffix("html")
         else:
             if permalink.endswith("/"):
-                permalink = f"{permalink}/index.html"
+                permalink = f"{permalink}index.html"
             if permalink.startswith("/"):
                 target = build_dir / permalink[1:]
             else:
@@ -132,7 +141,6 @@ def _build(
     build_dir: pathlib.Path,
     source_dir: pathlib.Path,
     config_overrides: dict[str, Any] | None = None,
-    jl: bool = False,
 ):
     build_dir = build_dir.resolve()
     build_dir.mkdir(exist_ok=True, parents=True)
@@ -143,12 +151,11 @@ def _build(
         config_overrides=config_overrides,
         source_dir=source_dir / "site",
     )
-    if not jl:
-        build_jl(
-            build_dir=build_dir,
-            jupyterlite_dir=source_dir / "jupyterlite",
-            notebooks_dir=source_dir / "notebooks",
-        )
+    build_jl(
+        build_dir=build_dir,
+        jupyterlite_dir=source_dir / "jupyterlite",
+        notebooks_dir=source_dir / "notebooks",
+    )
 
 
 def get_all_gitignores(base_dir: pathlib.Path) -> tuple[list[str], list[pathlib.Path]]:
@@ -187,9 +194,8 @@ def cli():
     show_default=True,
     type=click.Path(writable=True, file_okay=False, path_type=pathlib.Path),
 )
-@click.option("--jl / --no-jl", default=True)
-def build(build_dir: pathlib.Path, jl: bool, source_dir: pathlib.Path):
-    _build(build_dir=build_dir, jl=jl, source_dir=source_dir)
+def build(build_dir: pathlib.Path, source_dir: pathlib.Path):
+    _build(build_dir=build_dir, source_dir=source_dir)
 
 
 @cli.command(help="Watch and serve the site")
@@ -209,28 +215,27 @@ def build(build_dir: pathlib.Path, jl: bool, source_dir: pathlib.Path):
     default=False,
 )
 def serve(build_dir: pathlib.Path, port: int, source_dir: pathlib.Path, watch: bool):
-    ignore_patterns, gitignores = get_all_gitignores(source_dir)
-    if ignore_patterns:
-        ps = pathspec.PathSpec.from_lines("gitwildmatch", ignore_patterns)
-        # TODO: update these when gitignores themselves change?
-
-        ignore = ps.match_file
-    else:
-        ignore = None
-
     cmd = functools.partial(
         _build,
         build_dir=build_dir,
         source_dir=source_dir,
-        config_overrides={"url": f"http://localhost:{port}"},
+        config_overrides={"domain": f"http://localhost:{port}", "baseurl": ""},
     )
     cmd()
     server = Server()
-    # TODO: doesn't seem to work because liverload is passing full paths and pathspec is expecting
-    # paths relative to the repo root
     if watch:
+        # TODO: doesn't seem to work because liverload is passing full paths and pathspec is expecting
+        # paths relative to the repo root
+        ignore_patterns, gitignores = get_all_gitignores(source_dir)
+        if ignore_patterns:
+            ps = pathspec.PathSpec.from_lines("gitwildmatch", ignore_patterns)
+            # TODO: update these when gitignores themselves change?
+
+            ignore = ps.match_file
+        else:
+            ignore = None
         server.watch(source_dir, cmd, delay=2, ignore=ignore)
-    server.serve(root=build_dir)
+    server.serve(port=port, root=build_dir)
 
 
 @cli.command(help="Cleanup build files etc.")

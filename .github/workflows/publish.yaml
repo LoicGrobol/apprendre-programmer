@@ -44,22 +44,20 @@ jobs:
           source .venv/bin/activate
           uv pip install --upgrade --requirements requirements.lst
           uv pip install --upgrade --requirements src/notebooks/requirements.lst
-   
-      - name: Build slides 📚
-        run: |
-          source .venv/bin/activate
-          python tools/manage.py build "src/"
-
+          
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5.0.0
 
-      # TODO: generate here! 
+      - name: Build slides 📚
+        run: |
+          source .venv/bin/activate
+          python tools/manage.py build "src"
 
       - name: Upload artifact ⬆️
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _site
+          path: _build
 
   # Deployment job
   deploy:
