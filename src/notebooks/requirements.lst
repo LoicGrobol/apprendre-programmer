@@ -1,0 +1,10 @@
+ipywidgets
+jupyter-ruff
+jupyterlab
+jupyterlab-rise
+jupytext
+notebook
+nbconvert
+regex
+RISE
+ruff

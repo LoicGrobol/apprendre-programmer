@@ -1,6 +1,0 @@
-click
-jupyterlite[all]
-jupyterlite-pyodide-kernel
-livereload
-pathspec
-pyinotify

@@ -38,37 +38,26 @@ jobs:
           cache-suffix: ${{ github.job }}
           enable-cache: true
 
-      - name: Create base venv 🐙
-        run: uv venv --python ${{ matrix.python-version }}
-
-      - name: Install dependencies 💁🏻
+      - name: Create base venv with dependencies 🐙
         run: |
-            source .venv/bin/activate
-            uv pip install --upgrade -r requirements.lst
-            uv pip install --upgrade -r requirements-dev.lst
-      
-      - name: Build slides 📚
-        run: |
+          uv venv --python ${{ matrix.python-version }} --no-project
           source .venv/bin/activate
-          python tools/manage.py build
-      
-      - name: Setup Ruby 💎
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-
+          uv pip install --upgrade --requirements requirements.lst
+          uv pip install --upgrade --requirements src/notebooks/requirements.lst
+          
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5.0.0
 
-      - name: Build with Jekyll 🔨
-        run: bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }} --destination "_site"
+      - name: Build slides 📚
+        run: |
+          source .venv/bin/activate
+          python tools/manage.py build "src"
 
       - name: Upload artifact ⬆️
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _site
+          path: _build
 
   # Deployment job
   deploy:
