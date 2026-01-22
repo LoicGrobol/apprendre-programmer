@@ -42,9 +42,9 @@ Apprendre à programmer : introduction
 ### Infos pratiques
 
 - **Quoi** « Apprendre à programmer », 4L6SC01P
-- **Où** Salle R05, bâtiment Ricœur, Université Paris Nanterre, 200 avenue de la République,
+- **Où** Salle L209, bâtiment Ricœur, Université Paris Nanterre, 200 avenue de la République,
   Nanterre
-- **Quand** 12 séances, les jeudis de 10:30 à 12:30
+- **Quand** 12 séances, les jeudis de 10:40 à 12:40
 
 - → Travail sur machine systématique : amener de préférence un PC portable. Si c'est un problème,
   venez m'en parler et on trouvera une solution.

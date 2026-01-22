@@ -15,7 +15,7 @@ permalink: /2025/
 - **Quoi** « Apprendre à programmer », 4L6SC01P
 - **Où** Salle L209, bâtiment Ricœur, Université Paris Nanterre, 200 avenue de la République,
   Nanterre
-- **Quand** 12 séances, les mardis de 10:30 à 12:30, du 21/01 au 15/04
+- **Quand** 12 séances, les mardis de 10:40 à 12:40, du 21/01 au 15/04
   - Voir le calendrier de l'université pour les dates de vacances.
 - **Contact** Loïc Grobol [`<lgrobol@parisnanterre.fr>`](mailto:lgrobol@parisnanterre.fr)
 - **Dépôt des exercices** de préférence sur [Cours en
