@@ -68,17 +68,11 @@ Les *notebooks* sont à la fois **le matériel de cours** et le support pour **v
 d'entre eux contient des exercices et ce sera à vous d'écrire vos solutions directement dans le
 *notebook *et de le sauvegarder.
 
-Il y a beaucoup de façons d'interagir avec des *notebooks* :
+Il y a beaucoup de façons d'interagir avec des *notebooks* Jupyter :
 
-- Vous être probablement en train de lire ceci via *Basthon*, qui est un moyen rapide et pratique d'y
-  accéder (les liens seront directement sur la page du cours et vous n'avez pas besoin
+- Vous êtes probablement en train de lire ceci dans Jupyter Lite, qui est un moyen rapide et
+  pratique d'y accéder (les liens seront directement sur la page du cours et vous n'avez pas besoin
   d'inscription).
-  <!-- - Pour chaque notebook du cours, cliquer sur le badge
-    [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LoicGrobol/apprendre-programmer/main)
-    vous emmène sur une instance de Binder avec le notebook déjà chargé
-  - Attention : si vous restez trop longtemps sans exécuter de code dans Binder, votre session se
-    coupe ! Vous pouvez toujours sauvegarder le notebook sur votre machine, mais si vous le
-    recharger sur Binder, il faudra le ré-uploader -->
 - Vous pouvez installer [Edupyter](https://www.edupyter.net/) (Windows) sur votre machine, qui vous
   donnera accès à Jupyter et à l'éditeur de code Thonny, dont on se servira plus tard dans le cours
   ; ou encore [Visual Studio Code](https://code.visualstudio.com/) (Windows, Mac et Linux, mais
@@ -90,15 +84,12 @@ Il y a beaucoup de façons d'interagir avec des *notebooks* :
   - Les sauvegardes se font automatiquement dans votre espace Drive
   - La version de Python de Colab est un peu ancienne, normalement ça ne pose pas de problème pour
     ce cours, mais attention.
-  - Pour en savoir plus, vous pouvez exécuter la cellule suivante pour voir une vidéo d'explications
+  - Pour en savoir plus : [une vidéo d'explications](https://www.youtube.com/embed/inN8seMm7UI)
 
-```python
-from IPython.display import IFrame
-IFrame('https://www.youtube.com/embed/inN8seMm7UI', width=700, height=350)
-```
 
 Quelle que soit la plateforme que vous utilisez, je vous recommande très fortement de toujours
-sauvegarder vos notebooks dans un dossier sur votre machine (ou une clé ou…) pour ne pas les perdre.
+*télécharger* vos notebooks dans un dossier sur votre machine (ou une clé ou…) pour ne pas les
+perdre.
 
 Pour rendre vos exercices, passez par l'espace Cours en Ligne du cours (voir la page principale) :
 une fois que vous avez rempli vos réponses aux exercices d'un notebook, vous le téléchargez sur
@@ -109,10 +100,10 @@ Ligne.
 
 Les *notebooks* sont divisés en cellule, certaines (comme celle-ci) contiennent du texte au format
 [Markdown](https://fr.wikipedia.org/wiki/Markdown) et d'autres contiennent du code en Python. Vous
-pouvez modifier et *exécuter* les cellules de code et vous pouvez modifier et formatter les cellules
+pouvez modifier et *exécuter* les cellules de code et vous pouvez modifier et formater les cellules
 de texte.
 
-Pour exécuter une cellule, il faut cliquer dessus, puis sur le bouton « ▸ *Run* » (ou sur le bouton
+Pour exécuter une cellule, il faut cliquer dessus, puis sur le bouton « ▸ » (ou sur le bouton
 ▸ à gauche de la cellule dans Colab) :
 
 ```python
@@ -126,9 +117,9 @@ raccourcis clavier dans Jupyter, n'hésitez pas à explorer !
 
 Vous pouvez facilement créer de nouvelles cellules :
 
-- À l'aide du menu « *Insert* ».
+- À l'aide du bouton « + » dans la barre d'outils.
 - En utilisant le raccourci <kbd>echap</kbd>+<kbd>B</kbd> pour insérer une cellule en dessous de la
-  cellule actuelle (ou <kbd>echap</kbd>+<kbd>A</kbd> pour le faire au dessus), puis en appuyant sur
+  cellule actuelle (ou <kbd>echap</kbd>+<kbd>A</kbd> pour le faire au-dessus), puis en appuyant sur
   <kbd>↩</kbd> pour entrer en mode édition.
 
 (Précisément : <kbd>echap</kbd> vous passe en mode « commande », puis <kbd>B</kbd> lance la commande
@@ -139,7 +130,7 @@ Vous pouvez facilement créer de nouvelles cellules :
 ### Code vs. Markdown
 
 La barre d'outils vous indique si vous êtes en mode « Code » ou « Markdown », et vous pouvez
-utiliser la boîte déroulate pour changer de mode.
+utiliser la boîte déroulante pour changer de mode.
 
 Ou vous pouvez utiliser <kbd>echap</kbd>+<kbd>M</kbd> pour passer une cellule en mode Markdown ou
 <kbd>echap</kbd>+<kbd>Y</kbd> pour la passer en mode code (n'oubliez pas de rappuyer sur
@@ -177,10 +168,11 @@ x = 5
 print(x*2 + 1)
 ```
 
-Si vous ne vous êtes pas trompé⋅e, vous devriez maintenant voir `21` sous la cellule. Sauvegarder le notebook :
+Si vous ne vous êtes pas trompé⋅e, vous devriez maintenant voir `21` sous la cellule. Téléchargez le
+notebook :
 
+- *File* > *Download* dans Jupyter Lite
 - *File* > *Save* dans Colab
-- *File* > *Download as* > *Notebook* dans Binder
 
 ### ✏️ Exo ✏️
 
@@ -196,4 +188,4 @@ N'oubliez pas de sauvegarder.
 *Replace this text by your own message*
 
 
-Déposez ensuite le fichier ipynb que vous venez de télécharger sur Cours En Ligne.
+Retéléchargez ensuite le notebook et déposez-le sur Cours En Ligne.
