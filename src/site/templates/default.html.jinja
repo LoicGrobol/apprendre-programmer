@@ -2,20 +2,25 @@
 <html lang="{{ page.lang | default(site.lang) | default("en-US") }}">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default(site.description) }}" />
 
-    <title>Informations et cours | Apprendre à programmer</title>
+    <title>{{ page.title }} | {{ site.title }}</title>
 
-    <meta property="og:title" content="Informations et cours" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="description" content="Contenus pour le cours « Apprendre à programmer » de la L3 SDL, parcours LCN, Université Paris Nanterre." />
-    <meta property="og:description" content="Contenus pour le cours « Apprendre à programmer » de la L3 SDL, parcours LCN, Université Paris Nanterre." />
-    <link rel="canonical" href="{{ site.domain }}{{ site.baseurl }}" />
-    <meta property="og:url" content="{{ site.domain }}{{ site.baseurl }}" />
-    <meta property="og:site_name" content="Apprendre à programmer" />
+    <meta property="og:description" content="{{ page.description | default(site.description) }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:type" content="website" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","description":"Contenus pour le cours « Apprendre à programmer » de la L3 SDL, parcours LCN, Université Paris Nanterre.","headline":"Informations et cours","name":"Apprendre à programmer","url":"http://localhost:4000/apprendre-programmer/"}</script>
+
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"WebSite",
+        "description":"{{ page.description | default(site.description) }}",
+        "headline":"{{ page.title }}",
+        "name":"{{ site.title }}",
+      }
+    </script>
 
     <link rel="stylesheet" href="{{ site.domain }}{{ site.baseurl }}/assets/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.domain }}{{ site.baseurl }}/assets/favicon.ico" />
