@@ -235,7 +235,7 @@ def serve(build_dir: pathlib.Path, port: int, source_dir: pathlib.Path, watch: b
         else:
             ignore = None
         server.watch(source_dir, cmd, delay=2, ignore=ignore)
-    server.serve(port=port, root=build_dir)
+    server.serve(host="localhost", port=port, root=build_dir)
 
 
 @cli.command(help="Cleanup build files etc.")
