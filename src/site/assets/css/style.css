@@ -6,7 +6,7 @@
     --font-sans: "Atkinson Hyperlegible", ui-sans-serif, sans-serif;
     --font-serif: Libertinus, ui-serif, serif;
     --font-mono: Fantastque Sans Mono, Fira Mono, Julia Mono, ui-monospace, monospace;
-    --grey-borders: rgb(233, 235, 238)
+    --grey-borders: rgb(233, 235, 238);
 }
 
 p {
@@ -75,19 +75,19 @@ pre {
     margin-top: 0;
     margin-bottom: 0;
     overflow: auto;
-    padding: 1em;
+    padding: 0.5em;
     word-wrap: normal;
 }
 
 pre code,
 pre tt {
-    display: inline;
-    max-width: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
     background-color: transparent;
     border: 0;
+    display: inline;
+    max-width: auto;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
     white-space: pre;
 }
 
@@ -161,7 +161,6 @@ header .title {
     background-color: #e1e4e8;
     border: 0;
 }
-
 
 .container h1,
 .container h2,
