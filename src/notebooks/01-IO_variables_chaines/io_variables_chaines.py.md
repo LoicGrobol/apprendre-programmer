@@ -378,6 +378,20 @@ Et vice-versa, mais qu'est-ce que ça va donner d'après vous ?
 int(7.9)
 ```
 
+Finalement, si ce que vous voulez, c'est la *longueur* de la chaîne, vous pouvez l'avoir avec la
+fonction `len` :
+
+```python
+len("Bonjour")
+```
+
+Attention à ne pas confondre :
+
+```python
+print(int("31") + 3)
+print(len("31") + 3)
+```
+
 ### Booléens
 
 Un dernier type : les **booléens** (*boolean*, `bool`), qui ne peuvent prendre que deux valeurs

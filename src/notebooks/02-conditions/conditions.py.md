@@ -9,7 +9,7 @@ jupyter:
       format_version: '1.3'
       jupytext_version: 1.19.0
   kernelspec:
-    display_name: Python 3 (ipykernel)
+    display_name: apprendre-programmer-site (3.14.0)
     language: python
     name: python3
 ---
@@ -253,28 +253,55 @@ suivi par un bloc ? Essayez ces différentes options dans la cellule suivante.
 
 ## `else`
 
-Reprenons le code précédent : dans le deuxième `if`, on pose une question dont la réponse est soit
-« oui », soit « non », mais on exécute du code que si c'est « non ». Comment faire pour exécuter
-d'autres instructions si c'est « oui » ?.
+Considérez le programme suivant
 
-Voici une solution :
+```python
+print("Bonjour !")
+s = input("C'est quoi ton fruit préféré ?")
 
-```python tags=["skip-execution"]
-print("Tu aimes le chocolat ? oui/non")
-answer = input()
-if answer == "oui":
-    print("On va bien s'entendre, alors !")
-    print("Mon préféré c'est le chocolat aux noisettes.")
-if answer == "non":
-    print("Monstre !")
-    print("Adieu !")
+if "banane" in s:
+    print("Oh moi aussi !")
+
+print("Salut !")
 ```
 
-Mais c'est un peu redondant : puisque la réponse est soit `"Oui"` soit `"Non"`, si l'utilisateurice
-a répondu correctement et qu'on sait que la réponse n'est pas `"Non"`, c'est forcément que c'est
-`"Oui"` et on a donc pas besoin du deuxième test. Il nous faudrait juste une instruction « sinon ».
+Comment faire pour afficher quelque chose uniquement dans le cas où la condition `if "banane" in s` n'est pas vérifiée ?
 
-Cette instruction c'est `else`. Voici comment on l'utilise. D'abord en pseudo-code
+On peut faire comme ça :
+
+```python tags=["skip-execution"]
+print("Bonjour !")
+s = input("C'est quoi ton fruit préféré ?")
+
+if "banane" in s:
+    print("Oh moi aussi !")
+
+if not ("banane" in s):
+    print("Oh ! Moi c'est les bananes !")
+
+print("Salut !")
+
+```
+
+Ou encore (rappellez vous de la séance précédente) :
+
+```python
+print("Bonjour !")
+s = input("C'est quoi ton fruit préféré ?")
+
+if "banane" in s:
+    print("Oh moi aussi !")
+
+if "banane" not in s:
+    print("Oh ! Moi c'est les bananes !")
+
+print("Salut !")
+
+```
+
+Mais c'est un peu redondant : on a besoin de refaire un test dont on connaît déjà le résultat. Il nous faudrait plutôt une façon de compléter notre premier « si » par un « sinon ».
+
+Python nous propose pour ça l'instruction `else`. Voici comment on l'utilise. D'abord en pseudo-code
 
 ```text
 if condition:
@@ -285,15 +312,17 @@ else:
 
 Et en Python
 
-```python tags=["skip-execution"]
-print("Tu aimes le chocolat ? oui/non")
-answer = input()
-if answer == "non":
-    print("On va bien s'entendre, alors !")
-    print("Mon préféré c'est le chocolat aux noisettes.")
+```python
+print("Bonjour !")
+s = input("C'est quoi ton fruit préféré ?")
+
+if "banane" in s:
+    print("Oh moi aussi !")
 else:
-    print("Monstre !")
-    print("Adieu !")
+    print("Oh ! Moi c'est les bananes !")
+
+print("Salut !")
+
 ```
 
 `else` est liée au `if` qui le précède et ne permet pas d'ajouter une condition. On peut donc avoir
@@ -323,7 +352,7 @@ else:
 
 On peut avoir des `else` dans un bloc conditionnel :
 
-```python tags=["skip-execution"]
+```python
 answer = input("Tu aimes bavarder ?")
 
 if answer == "Oui":
@@ -353,15 +382,13 @@ if answer == "Oui":
         print("Adieu !")
 else:
     print("Dommage")
+
 print("Ciao !")
 ```
 
 ## `elif`
 
-Comme on l'a vu précédemment, des `if` peuvent être imbriqués. Imaginez par exemple qu'on veuille
-tester une condition, mais seulement si une première condition est fausse. Comment faire ?
-
-Le plus simple est d'utiliser une combinaison de `if` et `else` :
+Comme on l'a vu précédemment, des `if` peuvent être imbriqués. Que fait alors la cellule suivante ?
 
 ```python
 sentence = "Les idées vertes incolores dorment furieusement"
@@ -374,10 +401,32 @@ else:
     else:
         if "incolore" in sentence:
             print("Incolore !")
+
+print("Finito")
 ```
 
-Il est assez fréquent de rencontrer ce type de structures, et même plus profondément imbriquée, ce
+Il est assez fréquent de rencontrer ce type de structures, et même plus profondément imbriquées, ce
 qui rend le code plus difficile à lire.
+
+```python
+sentence = "Les idées vertes incolores dorment furieusement"
+
+if "rouge" in sentence:
+    print("Rouge !")
+else:
+    if "vert" in sentence:
+        print("Vert !")
+    else:
+        if "bleu" in sentence:
+            print("Bleu !")
+        else:
+            if "violet" in sentence:
+                print("Violet !")
+            else:
+                if "incolore" in sentence:
+                    print("Incolore !")
+```
+
 
 Il y a cependant une alternative : `elif` (« sinon, si »), qui nous permet de réécrire le code
 précédent plus lisiblement :
@@ -406,9 +455,8 @@ elif condition3:
 ⋮
 ```
 
-Évidemment, ça n'a du sens que si vous voulez tester des conditions mutuellement exclusives. Si vous
-voulez tester indépendamment lesquels de ces mots apparaissent dans la phrase, il faut des blocs
-`if` différents :
+En revanche attention : si vous voulez tester indépendamment lesquels de ces mots apparaissent dans
+la phrase, il faut des blocs `if` différents . Comparez avec la cellule suivante :
 
 ```python
 sentence = "Les idées vertes incolores dorment furieusement"
