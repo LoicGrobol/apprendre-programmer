@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.1
+      jupytext_version: 1.19.0
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -19,7 +19,7 @@ jupyter:
 Cours 3 : Séquences et boucles
 ==============================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
 
@@ -124,6 +124,7 @@ sinon affichez un message d'erreur.
 **Indice** : vous savez déterminer la longueur d'une chaîne de caractères avec `len`.
 
 ```python tags=["skip-execution"]
+
 ```
 
 ### *Slices*
