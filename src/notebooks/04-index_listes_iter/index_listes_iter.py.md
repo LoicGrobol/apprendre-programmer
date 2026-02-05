@@ -123,9 +123,33 @@ sinon affichez un message d'erreur.
 
 **Indice** : vous savez déterminer la longueur d'une chaîne de caractères avec `len`.
 
-```python tags=["skip-execution"]
+```python
 
 ```
+
+<!-- #region -->
+<details><summary>Solution</summary>
+
+```python
+mot = input("Donne moi un mot:")
+i = int(input("Donne moi un indice:"))
+if i >= len(mot):
+    print("Pas d'indice", i, "dans ce mot")
+else:
+    print(mot[i])
+```
+
+Ou, de façon équivalente
+
+```python
+mot = input("Donne moi un mot:")
+i = int(input("Donne moi un indice:"))
+if i < len(mot):
+    print(mot[i])
+else:
+    print("Pas d'indice", i, "dans ce mot")
+```
+<!-- #endregion -->
 
 ### *Slices*
 
@@ -183,8 +207,8 @@ On peut également faire des tranches avec des indices négatifs, Même si ça d
 de tête :
 
 ```python
-print("Pomme"[-4:-1])
-print("Pomme"[1:4])
+print("Bonjour"[-4:-1])
+print("Bonjour"[3:6])
 ```
 
 En revanche, ceci est fréquent
@@ -227,7 +251,7 @@ La fonction `str.find(chaine, sous_chaine)` renvoie l'indice de départ de `sous
 `chaine` ou `-1` si on ne l'y trouve pas.
 
 ```python
-str.find("Une pomme", "n")
+str.find("Une pomme", "m")
 ```
 
 ```python
@@ -235,7 +259,7 @@ str.find("Une pomme", "omm")
 ```
 
 ```python
-str.find("Une pomme", "poi")
+str.find("Une pomme", "z")
 ```
 
 Si la sous-chaîne est présente plusieurs fois, seule la première sera prise en compte :
@@ -248,8 +272,17 @@ str.find("rock and roll", "ro")
 des fonctions attachées à un type d'objet en particulier (ici les chaînes de caractères). On peut
 les appeler via leur type (`str`) ou via un objet :
 
+
+Ceci
+
 ```python
 "Une pomme".find("pom")
+```
+
+est équivalent à :
+
+```python
+str.find("Une pomme", "pom")
 ```
 
 En voici une autre :
@@ -318,7 +351,17 @@ print(type(l))
 Comme les chaînes de caractères, les listes sont **ordonnées**
 
 ```python
+[1, 2, 3] == [1, 2, 3]
+```
+
+```python
 [1, 2, 3] == [3, 1, 2]
+```
+
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+a == b
 ```
 
 Elles sont donc également indicées :
@@ -335,7 +378,7 @@ print(ma_liste[1:4])
 Et on peut obtenir leur longueur
 
 ```python
-ma_liste= ["J'", "aime", "les", "épinards"]
+ma_liste = ["J'", "aime", "les", "épinards"]
 len(ma_liste)
 ```
 
@@ -349,19 +392,29 @@ len([1, "machin", [0, 2]])
 
 ```python
 ma_liste = [1, "machin", [9, 2]]
-print(ma_liste[2][0])
+a = ma_liste[2]
+print(a[1])
+```
+
+C'est équivalent à
+
+```python
+ma_liste = [1, "machin", [9, 2]]
+print((ma_liste[2])[1])
 ```
 
 Enfin, une liste peut avoir un seul élément
 
 ```python
 une_autre_liste = ["tout seul"]
+print(une_autre_liste)
 ```
 
 voire être vide
 
 ```python
 une_autre_liste = []
+print(une_autre_liste)
 ```
 
 Attention donc à bien identifier les éléments : qu'affiche la cellule suivante ?
@@ -374,11 +427,11 @@ print(len(ma_liste))
 ### `in`
 
 ```python
-34 in [1, 2, 34, 54, 'abc']
+34 in [1, 2, 34, 54, "abc"]
 ```
 
 ```python
-"truc" in [1, 2, 34, 54, 'abc']
+"truc" in [1, 2, 34, 54, "abc"]
 ```
 
 ### Modifier des listes
@@ -417,6 +470,7 @@ cities[2] = "SF"
 
 ```python
 ma_liste = [1, 2, 3]
+print(ma_liste)
 ma_liste.append("un de plus")         
 print(ma_liste)
 ```
@@ -429,6 +483,16 @@ print(one_list)
 ```
 
 Combien d'éléments a `one_list` ?
+
+
+On pourrait aussi écrire ça (mais on le fait pas)
+
+```python
+ma_liste = [1, 2, 3]
+print(ma_liste)
+list.append(ma_liste, "un de plus")         
+print(ma_liste)
+```
 
 ```python
 print(one_list, "a", len(one_list), "éléments")
@@ -479,7 +543,7 @@ On évite en général de s'en servir quand on peut utiliser `append` à la plac
 
 ```python
 states = ["California", "New York", "Arizona"]
-states.remove("Arizona")
+states.remove("New York")
 print(states)
 ```
 
@@ -508,7 +572,7 @@ Ou à une position arbitraire
 ```python
 states = ["California", "New York", "Arizona", "New York"]
 print(states)
-states.pop(3)
+states.pop(2)
 print(states)
 ```
 
@@ -533,6 +597,26 @@ de la liste
 ```python
 
 ```
+
+<!-- #region -->
+<details><summary>Solution</summary>
+
+```python
+letters = ["d", "b", "c", "n"]
+letters.insert(3, "x")
+print(letters)
+letters.remove("c")
+print(letters)
+letters.append("e")
+print(letters)
+letters.pop(2)
+print(letters)
+letters[1] = "o"
+print(letters)
+```
+</details>
+<!-- #endregion -->
+
 
 ## Boucle `for`
 
@@ -572,6 +656,18 @@ for i in [1, 2, 3, 4, 5]:
 print("hello")
 ```
 
+Et celle-ci ?
+
+```python
+nombres = [2, 7, 1, 3]
+
+for truc in nombres:
+    machin =3*truc
+    print(j)
+
+print("adios")
+```
+
 ---
 
 Le mot-clé `for` permet de définir une **boucle** (spécifiquement une boucle d'itérateur) : un bloc
@@ -607,6 +703,20 @@ Affichez `FIN` à la fin.
 ```python
 
 ```
+
+<!-- #region -->
+<details><summary>Solution</summary>
+
+```python
+for i in letters:
+    j = i*i
+    print(j)
+
+print("FIN")
+```
+
+</details>
+<!-- #endregion -->
 
 ### Combinaisons
 
@@ -718,3 +828,4 @@ Quelques questions sur votre travail :
 Merci de bien répondre à chacune de ces questions : elles me permettent d'ajuster le cours en
 fonction de vos besoins, avec un peu de chance, elles devraient également vous aider à guider votre
 travail et à apprécier votre progression.
+<!-- #endregion -->
