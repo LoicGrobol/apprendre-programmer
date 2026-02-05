@@ -90,45 +90,43 @@ else:
     print("💜")
 ```
 
-## 💬 Entraînement 💬 : un chatbot basique
+## Exercices
 
-Demandez à votre utilisateurice si son humeur est bavarde. Si la réponse n'est pas « oui »,
-souhaitez-lui une bonne journée. Sinon, demandez lui comment ça va et répondez différemment suivant
-que sa réponse contient les mots
+### Exercice 1
 
-- « bien » ou « bon »
-- « mal » ou « mauvais » ou « horrible »
-- n'importe quoi d'autres
+
+> Demander à l'utilisateurice d'entrer de saisir un mot, puis afficher `"😱"` si le mot fait plus de
+10 caractères et afficher `"😌"` sinon.
+
+```python tags=["skip-execution"]
+mot = input("Saisir un mot :")
+if len(mot) >= 10:
+    print("😱")
+else:
+    print("😌")
+```
+
+## 💬 Exercice 2 💬 : un chatbot basique
+
+> Demandez à votre utilisateurice si son humeur est bavarde. Si la réponse n'est pas « oui »,
+> souhaitez-lui une bonne journée. Sinon, demandez lui comment ça va et répondez différemment
+> suivant que sa réponse contient les mots
+> 
+> - « bien » ou « bon »
+> - « mal » ou « mauvais » ou « horrible »
+> - n'importe quoi d'autres
 
 ```python tags=["skip-execution"]
 talkative = input("Es-tu d'humeur bavarde ? ")
 
-if talkative.lower() == "oui":
-    mood = input("Et de quelle humeur es-tu ? ").lower()
+if talkative == "oui":
+    mood = input("Et de quelle humeur es-tu ? ")
     if "bien" in mood or "bon" in mood:
         print("Ah, top, ça fait plaisir !")
     elif "mal" in mood or "mauvais" in mood:
         print("Oh non, je suis vraiment désolé⋅e !")
     else:
         print("Je ne sais pas ce que ça veut dire, pardon.")
-```
-
-## Exercices
-
-### Exercice 1
-
-
-> Demander à l'utilisateurice d'entrer un nombre minimal de caractères pour qu'un mot soit considéré
-> comme long. Puis lui demander de saisir un mot et afficher `"😱"` si le mot est long et `"😌"`
-> sinon.
-
-```python tags=["skip-execution"]
-long_len = int(input("Long, c'est combien de caractères ? "))
-mot = input("Saisir un mot :")
-if len(mot) >= long_len:
-    print("😱")
-else:
-    print("😌")
 ```
 
 ### 🐉 Exercice 2 🐉
@@ -189,91 +187,4 @@ if law == "chaotique" and moral == "mauvais":
 # Imbriquer ceci dans les tests précédents nous obligerait à dupliquer du code
 if law == "neutre" or moral == "neutre":
     print("- Druide")
-```
-
-
-### 📅 Exercice 3 📅
-
-> Une année est bissextile si son numéro est divisible par $4$, sauf si c'est la dernière d'un siècle
-> (i.e. elle est divisible par $100$, par exemple 1900), auquel cas, elle est bissextile
-> seulement si son numéro est divisible par $400$.
-> 
-> Écrire un programme qui indique si une année entrée par l'utilisateurice est bissextile ou non.
-> 
-> **Indice** l'opérateur modulo `%`, qu'on a vu dans le cours 1 peut vous être utile. En particulier,
-> un nombre $a$ est divisible par un nombre $b$ si et seulement si `a % b == 0`.
-
-
-```python tags=["skip-execution"]
-year = int(input("On parle de quelle année ? "))
-
-divisible_par_4 = (year % 4 == 0)
-
-if divisible_par_4:
-    divisible_par_100 = (year % 100 == 0)
-    if divisible_par_100:
-        divisible_par_400 = (year % 400 == 0)
-        if divisible_par_400:
-            print("Bissextile !")
-        else:
-            print("Non-bissextile")
-    else:
-        print("Bissextile !")
-else:
-    print("Non-bissextile")
-```
-
-On peut faire plus compact sans les variables
-
-```python tags=["skip-execution"]
-year = int(input("On parle de quelle année ? "))
-
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("Bissextile !")
-        else:
-            print("Non-bissextile")
-    else:
-        print("Bissextile !")
-else:
-    print("Non-bissextile")
-```
-
-On peut aussi combiner les conditions
-
-```python tags=["skip-execution"]
-year = int(input("On parle de quelle année ? "))
-
-divisible_par_4 = (year % 4 == 0)
-divisible_par_100 = (year % 100 == 0)
-divisible_par_400 = (year % 400 == 0)
-
-if divisible_par_4 and (not divisible_par_100 or divisible_par_400):
-    print("Bissextile !")
-else:
-    print("Non-bissextile")
-```
-
-et resupprimer les variables
-
-```python tags=["skip-execution"]
-year = int(input("On parle de quelle année ? "))
-
-if (year % 4 == 0) and ((year % 100 != 0) or (year % 400 == 0)):
-    print("Bissextile !")
-else:
-    print("Non-bissextile")
-```
-
-voire exploiter le fait que `0` est le seul entier `False`, mais ça devient vraiment
-désagréable
-
-```python tags=["skip-execution"]
-year = int(input("On parle de quelle année ? "))
-
-if not year % 4 and (year % 100 or not year % 400):
-    print("Bissextile !")
-else:
-    print("Non-bissextile")
 ```

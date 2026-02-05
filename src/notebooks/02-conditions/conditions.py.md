@@ -7,9 +7,9 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.19.0
+      jupytext_version: 1.19.1
   kernelspec:
-    display_name: apprendre-programmer-site (3.14.0)
+    display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
