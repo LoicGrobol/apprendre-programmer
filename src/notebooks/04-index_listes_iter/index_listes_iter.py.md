@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.19.0
+      jupytext_version: 1.19.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -706,6 +706,16 @@ Affichez `FIN` à la fin.
 
 <!-- #region -->
 <details><summary>Solution</summary>
+
+```python
+for n in [2, -1, 7, -3, 1, -1, 3, -2]:
+    m = n*n
+    print(m)
+
+print("FIN")
+```
+
+Ou, ce qui est équivalent :
 
 ```python
 for i in letters:

@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.7
+      jupytext_version: 1.19.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -19,7 +19,7 @@ jupyter:
 Cours 5 : Exercices et compléments sur les boucles
 ==================================================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
 
@@ -181,9 +181,9 @@ Bravo! C'était bien 2
 
 ---
 
-En Python, on préfère en général utiliser des boucles `for` — qui sont plus adaptée à l'organisation
-du langage — et les boucle `while` ont tendance à être moins utilisées. Cependant, on peut
-facilement simuler une boucle `for` avec une boucle `while`. Ainsi :
+En Python, on préfère en général utiliser des boucles `for` — qui sont plus adaptées à
+l'organisation du langage — et les boucle `while` ont tendance à être moins utilisées. Cependant, on
+peut facilement simuler une boucle `for` avec une boucle `while`. Ainsi :
 
 ```python
 l = ["spam", "spam", "lovely spam", "wonderful spam"]
