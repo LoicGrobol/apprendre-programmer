@@ -41,7 +41,8 @@ débutant⋅es, mais complet et qui offre de nombreuses fonctionnalités utiles,
 avancées.
 
 Si vous n'avez pas encore installé [Thonny](https://thonny.org/), faites-le tout de suite en suivant
-le lien dans cette phrase.
+le lien dans cette phrase. Si vous ne pouvez vraiment pas l'installer, allez voir à la toute fin du
+notebook comment faire sans.
 
 Au démarrage de Thonny, la fenêtre affiche deux blocs, un bloc avec un onglet d'édition de texte
 dont on va bientôt parler, et un bloc nommé « Console » qui affiche quelque chose comme
@@ -208,3 +209,25 @@ de pincettes.
 
 Et qu'est-ce que c'est que cette histoire de `from turtle import *` ? C'est une histoire pour une
 prochaine fois.
+
+## Turtle dans un notebook
+
+Si jamais vous ne pouvez pas installer de logiciels (par exemple sur une machine de la fac), vous
+pouvez faire les exercices en 
+
+1\. Installant la version notebook de Turtle en exécutant la cellule suivante :
+
+```python
+%pip install colabturtleplus
+from ColabTurtlePlus.Turtle import *
+```
+
+prenant exemple sur la cellule suivante pour dessiner :
+
+```python
+from ColabTurtlePlus.Turtle import *
+clearscreen()
+setup(300, 300)
+shape("turtle")
+forward(100)
+```
