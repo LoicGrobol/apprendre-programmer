@@ -213,7 +213,7 @@ prochaine fois.
 ## Turtle dans un notebook
 
 Si jamais vous ne pouvez pas installer de logiciels (par exemple sur une machine de la fac), vous
-pouvez faire les exercices en 
+pouvez faire les exercices en :
 
 1\. Installant la version notebook de Turtle en exécutant la cellule suivante :
 
