@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default(site.lang) | default(" en-US") }}">
+<html lang="{{ page.lang | default(site.lang) | default("en-US") }}">
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="{{ page.description | default(site.description) }}" />
 
 	<title>{{ page.title }} | {{ site.title }}</title>
@@ -23,8 +22,8 @@
       }
     </script>
 
-	<link rel="stylesheet" href="{{ site.domain }}{{ site.baseurl }}/assets/css/style.css">
 	<link rel="icon" type="image/svg+xml" href="{{ site.domain }}{{ site.baseurl }}/assets/favicon.svg" />
+	<link rel="stylesheet" href="{{ site.domain }}{{ site.baseurl }}/assets/css/style.css">
 </head>
 
 <body>
