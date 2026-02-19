@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.7
+      jupytext_version: 1.19.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -48,14 +48,9 @@ chacune des méthodes proposées
 print("Salut à toi !")
 ```
 
-Si rien ne se passe, vous n'êtes probablement pas dans le bon environnement : cliquez sur le bouton
-suivant : [![Launch in Binder
-badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LoicGrobol/apprendre-programmer/main?urlpath=tree/slides/06-recapitulatif/recapitulatif.py.md).
-
-
 En cliquant sur les cellules de code, vous pouvez également modifier leur valeur : remplacez le
 point d'exclamation par un point d'interrogation dans la cellule suivante et exécutez-la pour voir
-ce qui se passe
+ce qui se passe :
 
 ```python
 print("Salut à toi !")
@@ -68,7 +63,6 @@ Les cellules de texte sont écrites en
 [Markdown](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html),
 ce qui vous permet de les formater. N'oubliez pas de sauvegarder vos modifications en les exécutant
 (comme les cellules de code).
-
 
 ## Sorties
 
