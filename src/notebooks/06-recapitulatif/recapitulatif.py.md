@@ -130,7 +130,7 @@ print("hello             world")
 
 ## Types de base et opérations
 
-> **Rappel** : les données manipulées par Python sont **typée**. Vous pouvez déterminer le type
+> **Rappel** : les données manipulées par Python sont **typées**. Vous pouvez déterminer le type
 > d'une donnée avec la fonction `type`
 
 ```python
@@ -346,13 +346,13 @@ résultat.
 ## Variables
 
 > **Rappel** : une **variable** est un nom donné à une valeur. On crée une variable avec l'opérateur
-> d'affectation `=`
+> d'affectation `=`.
 
 ```python
 nom = "Morgan"
 ```
 
-> une variable peut être utilisée partout où on peut utiliser une valeur littérale :
+> Une variable peut être utilisée partout où on peut utiliser une valeur littérale :
 
 ```python
 print(nom)
@@ -484,7 +484,7 @@ qu'aura cette personne en 2050.
 
 ## Instruction conditionnelle `if`
 
-> **Rappel** : l'instruction `if` permet de n'exécuter certaines instructions que si une si une
+> **Rappel** : l'instruction `if` permet de n'exécuter certaines instructions si et seulement si
 > condition (un booléen) est vraie (`True`) :
 
 ```python
@@ -669,7 +669,7 @@ print(sublst[0])
 print(lst[2][0])
 ```
 
-> Pour se faciliter la vie, quand on a une séquence on peut également accéder aux éléments en
+> Pour se faciliter la vie, quand on a une séquence, on peut également accéder aux éléments en
 > partant de la fin :
 
 ```python
@@ -733,7 +733,9 @@ print()
 Bonus : en utilisant que des nombres strictement négatifs.
 
 
-> La fonction `range` permet de créer une sorte de liste légère contenant des nombres consécutifs. Si vous lui donner un seul paramètre `stop`, cet objet contiendra les entiers de `0` (inclus) à `stop` (exclus).
+> La fonction `range` permet de créer une sorte de liste légère contenant des nombres consécutifs.
+> Si vous lui donnez un seul paramètre `stop`, cet objet contiendra les entiers de `0` (inclus) à
+> `stop` (exclus).
 
 ```python
 for i in range(8):
@@ -791,7 +793,7 @@ print(l)
 
 ```
 
-9\. Même question que l'exercice précédent mais uniquement pour les nombres pairs.
+9\. Même question que l'exercice précédent, mais uniquement pour les nombres pairs.
 
 ```python
 
