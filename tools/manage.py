@@ -15,6 +15,7 @@ from jinja2.loaders import FileSystemLoader
 from livereload import Server
 from markdown_it import MarkdownIt
 from markdown_it.renderer import RendererHTML
+from mdit_py_plugins.anchors import anchors_plugin
 from mdit_py_plugins.footnote import footnote_plugin
 from mdit_py_plugins.front_matter import front_matter_plugin
 
@@ -35,8 +36,9 @@ def render_md(
     markdown_content = inner_template.render(context)
     md = (
         MarkdownIt("commonmark", renderer_cls=RendererHTML)
-        .use(front_matter_plugin)
+        .use(anchors_plugin)
         .use(footnote_plugin)
+        .use(front_matter_plugin)
         .enable("table")
     )
     tokens = md.parse(markdown_content)
@@ -64,8 +66,10 @@ def build_site(
     if config_overrides is not None:
         config.update(config_overrides)
 
-    print(f"{source_dir / 'assets'} → {build_dir / 'assets'}", file=sys.stderr)
-    shutil.copytree(source_dir / "assets", build_dir / "assets", dirs_exist_ok=True)
+    if (assets_src := source_dir / "assets").exists():
+        assets_target = build_dir / "assets"
+        print(f"{assets_src} → {assets_target}", file=sys.stderr)
+        shutil.copytree(assets_src, assets_target, dirs_exist_ok=True)
 
     env = j2.Environment(
         loader=FileSystemLoader(source_dir),

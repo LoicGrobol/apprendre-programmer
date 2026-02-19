@@ -5,8 +5,10 @@
     --accent-color: #6f00ff;
     --font-sans: Atkinson Hyperlegible Next, ui-sans-serif, sans-serif;
     --font-serif: Libertinus, ui-serif, serif;
-    --font-mono: Fantasque Sans Mono, Atkinson Hyperlegible Mono, Julia Mono, ui-monospace, monospace;
+    --font-mono:
+        Fantasque Sans Mono, Atkinson Hyperlegible Mono, Julia Mono, ui-monospace, monospace;
     --grey-borders: rgb(233, 235, 238);
+    --blockquote-grey: rgb(4, 35, 11);
 }
 
 p {
@@ -17,7 +19,7 @@ p {
 blockquote {
     margin: 0;
     padding: 0 1em;
-    color: #6a737d;
+    color: var(--blockquote-grey);
     border-left: 0.25em solid var(--grey-borders);
 
     > :first-child {
@@ -71,7 +73,7 @@ kbd {
 
 pre {
     border-radius: 3px;
-    font-family: var(--font-mono);;
+    font-family: var(--font-mono);
     margin-top: 0;
     margin-bottom: 0;
     overflow: auto;
@@ -93,7 +95,7 @@ pre tt {
 
 a {
     color: var(--accent-color);
-    text-decoration: none;
+    text-decoration: underline dotted;
 
     &:hover,
     &:focus {
@@ -101,16 +103,30 @@ a {
     }
 }
 
-header .title {
-    margin-top: 2em;
-    margin-bottom: 1.5em;
+#banner {
     line-height: 1.25;
+    margin-bottom: 1.5rem;
     padding-bottom: 0.3em;
-    font-size: 2em;
+    #title {
+        font-size: 2em;
+        a {
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+    #subtitle {
+        font-size: 1.25em;
+        max-width: 28em;
+        text-align: left;
+    }
 }
 
 .container {
     font-family: var(--font-sans);
+    hyphens: auto;
     line-height: 1.5;
     margin-bottom: 2rem;
     margin-left: auto;
@@ -119,6 +135,7 @@ header .title {
     max-width: 90rex;
     padding-left: 2rem;
     padding-right: 2rem;
+    text-align: justify;
     word-wrap: break-word;
 }
 
@@ -156,8 +173,8 @@ header .title {
 .container hr {
     background-color: #e1e4e8;
     border: 0;
-    height: 0.25em;
-    margin: 2em 0;
+    height: 0.25rem;
+    margin: 2rem 0;
     padding: 0;
 }
 
@@ -169,8 +186,8 @@ header .title {
 .container h6 {
     font-weight: normal;
     line-height: 1.25;
-    margin-bottom: 0.75em;
-    margin-top: 1.25em;
+    margin-bottom: 0.75rem;
+    margin-top: 1.25rem;
 }
 .container h1 tt,
 .container h1 code,
@@ -229,7 +246,7 @@ header .title {
     margin-top: 1em;
 }
 .container li + li {
-    margin-top: 0.25em;
+    margin-top: 0.25rem;
 }
 .container dl {
     padding: 0;
@@ -241,8 +258,8 @@ header .title {
     padding: 0;
 }
 .container dl dd {
-    margin-bottom: 1em;
-    padding: 0 1em;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
 }
 
 .container table {
@@ -275,10 +292,10 @@ header .title {
     max-width: 100%;
 }
 .container img[align="right"] {
-    padding-left: 1.25em;
+    padding-left: 1.25rem;
 }
 .container img[align="left"] {
-    padding-right: 1.25em;
+    padding-right: 1.25rem;
 }
 
 .container code,
