@@ -33,7 +33,7 @@ Dans ce notebook
 Il y a des rappels pour chacune des notions, mais n'hésitez pas à aller relire les cours précédents
 et les corrections des exercices.
 
-## Rappel : usage du notebook
+## Rappel : usage des notebooks
 
 Si vous avez suivi le bon lien, ce document est un *notebook interactif*, il contient des cellules
 de texte et des cellules de code exécutable. Exécuter la  cellule courante (celle en surbrillance)
@@ -48,7 +48,7 @@ chacune des méthodes proposées
 print("Salut à toi !")
 ```
 
-En cliquant sur les cellules de code, vous pouvez également modifier leur valeur : remplacez le
+En cliquant sur les cellaules de code, vous pouvez également modifier leur valeur : remplacez le
 point d'exclamation par un point d'interrogation dans la cellule suivante et exécutez-la pour voir
 ce qui se passe :
 
