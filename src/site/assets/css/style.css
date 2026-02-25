@@ -3,10 +3,11 @@
 
 :root {
     --accent-color: #6f00ff;
-    --font-sans: Atkinson Hyperlegible Next, ui-sans-serif, sans-serif;
-    --font-serif: Libertinus, ui-serif, serif;
+    --font-sans: OpenMoji, Atkinson Hyperlegible Next, ui-sans-serif, sans-serif;
+    --font-serif: OpenMoji, Libertinus, ui-serif, serif;
     --font-mono:
-        Fantasque Sans Mono, Atkinson Hyperlegible Mono, Julia Mono, ui-monospace, monospace;
+        OpenMoji, Fantasque Sans Mono, Atkinson Hyperlegible Mono, Julia Mono, ui-monospace,
+        monospace;
     --grey-borders: rgb(233, 235, 238);
     --blockquote-grey: rgb(4, 35, 11);
 }
