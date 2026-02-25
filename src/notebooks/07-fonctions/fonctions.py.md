@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.7
+      jupytext_version: 1.19.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -21,7 +21,7 @@ jupyter:
 Cours 7 : Fonctions
 ===================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
 
@@ -46,9 +46,8 @@ peinture.
 <!-- #region slideshow={"slide_type": "subslide"} -->
 `turtle` ne marche pas vraiment dans l'interface Jupyter Notebook. Pour ce qui suit, vous devrez
 donc travailler soit dans un environnement de programmation Python local (par exemple
-[Thonny](https://thonny.org/)), soit avec l'environnement en ligne [repl.it](repl.it) (pensez à bien
-sélectionner le mode Python `turtle`). Pour le fonctionnement de Thonny, vous pouvez revenir au
-[cours 2](../02-turtle/turtle.py.md).
+[Thonny](https://thonny.org/)). Pour le fonctionnement de Thonny, vous pouvez revenir au [cours
+3](../03-turtle/turtle.py.md).
 
 Rappel : c'est en général plus agréable dans ce genre de cas d'utiliser des **scripts** : des
 fichiers textes avec l'extension `.py` qui contiennent des programmes. Vous pouvez les ouvrir dans
@@ -477,15 +476,6 @@ enumère([1, 2, 3, "carbone"])
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## 😺 Exercices 😺
-
-Répondre à ces exercices directement dans le notebook, le sauvegarder sous un nom de la forme
-`07_fonctions_PRENOM_NOM.ipynb` (pour Morgan Lefeuvre par exemple, ce serait
-`07_fonctions_Morgan_Lefeuvre.ipynb`) et me le transmettre
-
-- De préférence via Cours en Ligne (voir la page du cours)
-- À défaut, par mail, à `<lgrobol@parisnanterre.fr>`
-
-Attention : **l'extension doit être `.ipynb`**.
 
 (Pensez à tester vos fonctions)
 
