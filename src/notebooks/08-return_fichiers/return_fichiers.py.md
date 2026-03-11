@@ -222,7 +222,9 @@ qui renvoie la plus longue chaîne de la liste.
 
 ```
 
-### Solutions
+<!-- #region slideshow={"slide_type": "slide"} -->
+<details>
+<summary>Solutions</summary>
 
 1\.
 
@@ -302,6 +304,11 @@ def cinq(lst):
 plus_longue = cinq(["abc", "a", "hallo", "truc", "oxygène", "p"])
 print(plus_longue)
 ```
+
+</details>
+
+<!-- #endregion -->
+
 
 ## Lire des fichiers
 
@@ -562,7 +569,9 @@ with open("apprendre_a_programmer.txt", "r") as in_stream:
 `chemin_sortie`, qui copie dans le fichier dont le chemin est `chemin_sortie` le contenu du fichier
 dont le chemin est `chemin_entree`.
 
-### Solutions
+<!-- #region slideshow={"slide_type": "slide"} -->
+<details>
+<summary>Solutions</summary>
 
 1\.
 
@@ -582,3 +591,6 @@ def copie(chemin_entree, chemin_sortie):
             for ligne in flux_lecture:
                 flux_ecriture.write(ligne)
 ```
+</details>
+
+<!-- #endregion -->
