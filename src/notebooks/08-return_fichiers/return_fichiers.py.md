@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.7
+      jupytext_version: 1.19.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -99,7 +99,7 @@ print(longueur)
 ```
 
 Autrement dit, `len` ne fait pas un affichage : elle transmet plutôt une information : la longueur
-de son argument. On dit qu'elle a **retourné** ou **renvoyé** une valeur.
+de son argument. On dit qu'elle a **renvoyé** (*return*) une valeur.
 
 
 Et nos fonctions, elles renvoient quelque chose ?
@@ -397,7 +397,7 @@ Vous voyez ?
 
 Les lignes sont toutes terminées par le caractère `"\n"` « fin de ligne ».
 
-En général on ne veut pas de ce caractère quand on traite les informations dans un fichier. On
+En général, on ne veut pas de ce caractère quand on traite les informations dans un fichier. On
 l'enlève donc avec la méthode de chaînes de caractères `strip()`, qui supprime les espaces (y
 compris les fins de lignes) en début et fin de chaîne.
 
@@ -449,8 +449,8 @@ with open("ada.txt", 'r') as flux:
 line = flux.readline()
 ```
 
-En revanche, si vous avez stocké sont contenu (ou une partie) dans une variable, ces valeurs restent
-accessibles (l'affectation les a copié en mémoire) :
+En revanche, si vous avez stocké son contenu (ou une partie) dans une variable, ces valeurs restent
+accessibles (l'affectation les a copiées en mémoire) :
 
 ```python
 with open("ada.txt", 'r') as flux:
