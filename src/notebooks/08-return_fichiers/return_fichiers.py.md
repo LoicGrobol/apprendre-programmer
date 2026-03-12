@@ -572,6 +572,18 @@ dont le chemin est `chemin_entree`.
 
 1\.
 
+Une solution qui marche, mais risque de manger de la mémoire inutilement
+
+```python
+with open("ada.txt") as flux_lecture:
+    source = flux_lecture.read()
+    
+with open("sortie.txt", "w") as flux_ecriture:
+    flux_ecriture.write(source)
+```
+
+On peut faire mieux en imbriquant nos `with` :
+
 ```python
 with open("ada.txt") as flux_lecture:
     with open("sortie.txt", "w") as flux_ecriture:
