@@ -19,7 +19,7 @@ jupyter:
 Cours 8 : valeur de retour et accès aux fichiers
 =================================================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 <!-- #endregion -->
 
 Dans ce notebook
@@ -110,9 +110,12 @@ def bonjour():
     print(reponse)
     
 varbl = bonjour()
-print(varbl)
 ```
 
+
+```python
+print(varbl)
+```
 
 Oui : elles passent en fait toutes la valeur `None` : un objet spécial de Python qui signifie
 littéralement « rien », ce qui n'est donc pas très utile.
@@ -149,16 +152,12 @@ s = somme(5, 10)
 print(s)
 ```
 
-```python
-def somme(a, b):
-    return a+b
-
-s = somme(5, 10)
-print(s)
-```
-
 Et comme d'habitude, vous pouvez mettre un appel de fonction partout où vous pouvez écrire une
 valeur littérale :
+
+```python
+print(len("abc"))
+```
 
 ```python
 print(somme(12, 75))
@@ -267,10 +266,7 @@ ret = trois(7, 9)
 print(ret)
 ```
 
-```python
-l=[ret, 2, ret]
-print(l)
-```
+4\.
 
 ```python
 def quatre(lst):
@@ -287,9 +283,7 @@ c = quatre(["ab", "c", 2713])
 print(c)
 ```
 
-```python
-print(c)
-```
+5\.
 
 ```python
 def cinq(lst):
@@ -373,11 +367,6 @@ with open("ada.txt", "r") as flux_lecture:
     print(type(flux_lecture))
 ```
 
-```python
-with open("sous_dossier/maria.txt", "r") as flux_lecture:
-    print(type(flux_lecture))
-```
-
 Les flux vers des fichiers ouverts en lecture sont des itérables : on peut les parcourir à l'aide de
 la boucle de parcours `for`. Les éléments de l'itérable sont les lignes du fichier sous forme de
 chaînes de caractères.
@@ -395,7 +384,8 @@ with open("ada.txt", "r") as flux:
     lst = []
     for ligne in flux:
         lst.append(ligne)
-lst
+
+print(lst)
 ```
 
 Vous voyez ?
@@ -449,10 +439,10 @@ Attention, le fichier n'est accessible que dans le bloc introduit par `with open
 Quand vous sortez du bloc, la variable `flux` n'est plus définie :
 
 ```python tag=["raises-exception"]
-with open("ada.txt", 'r') as flux:
+with open("ada.txt", "r") as flux:
     line = flux.readline().strip()
     print(line)
-    
+
 line = flux.readline()
 ```
 
@@ -460,7 +450,7 @@ En revanche, si vous avez stocké son contenu (ou une partie) dans une variable,
 accessibles (l'affectation les a copiées en mémoire) :
 
 ```python
-with open("ada.txt", 'r') as flux:
+with open("ada.txt", "r") as flux:
     line = flux.readline().strip()
     print(line)
 
@@ -475,6 +465,10 @@ print(line)
 2\. Afficher la longueur en nombre de caractères de chacune des lignes du fichier
 [`ada.txt`](ada.txt).
 
+```python
+
+```
+
 ### Solution
 
 1\.
@@ -488,7 +482,7 @@ with open("sous_dossier/maria.txt") as flux_lecture:
 2\.
 
 ```python
-with open("sous_dossier/maria.txt") as flux_lecture:
+with open("ada.txt") as flux_lecture:
     for line in flux_lecture:
         print(len(line))
 ```
@@ -519,7 +513,9 @@ Attention aussi : si vous voulez des retours à la ligne, il faudra les donner
 with open("apprendre_a_programmer.txt", "w") as out_stream:
     out_stream.write("Clairement, le meilleur cours de la licence SDL.")
     out_stream.write("Dans trois semaines, y en aura plus.")
+```
 
+```python
 with open("apprendre_a_programmer.txt", "r") as in_stream:
     print(in_stream.read())
 ```
@@ -527,7 +523,8 @@ with open("apprendre_a_programmer.txt", "r") as in_stream:
 ```python
 with open("apprendre_a_programmer.txt", "w") as out_stream:
     out_stream.write("Clairement, le meilleur cours de la licence SDL.\n")
-    out_stream.write("Dans trois semaines, y en aura plus.")
+    out_stream.write("Dans trois semaines, ")
+    out_stream.write("y en aura plus.")
     out_stream.write("\n")
 
 with open("apprendre_a_programmer.txt", "r") as in_stream:
