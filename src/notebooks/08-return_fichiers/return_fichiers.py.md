@@ -73,7 +73,7 @@ Ce n'est pas une obligation :
 ```python
 def ssss(arg):
     bidule = arg*2
-    for i in range(10):
+    for i in [0, 1, 2, 3, 4, 5]:
         bidule = bidule + i
         
 ssss(3)

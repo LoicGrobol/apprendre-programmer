@@ -16,8 +16,8 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 <!-- #region slideshow={"slide_type": "slide"} -->
-Cours 5 : Exercices et compléments sur les boucles
-==================================================
+Cours 5 : Compléments sur les boucles
+=====================================
 
 **L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
@@ -212,4 +212,112 @@ while ingredient not in ingredients_disponibles:
     ingredient = input("Donne-moi un ingrédient: ")
     
 print("Ah, oui,", ingredient, "j'en ai")
+```
+
+
+### `range` : les intervalles entiers
+
+Comment faire pour afficher dix fois « Bonjour » ?
+
+Il y a une réponse simpliste : « je copie-colle `print("Bonjour")` dix fois ».
+
+Mais ce n'est pas très satisfaisant, non ?
+
+Une solution avec la boucle `for` :
+
+```python
+for a in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+    print("Bonjour")
+```
+
+Mais ce n'est toujours pas très pratique d'écrire cette liste. Surtout pour ne rien en faire.
+Heureusement, il y a un outil pour nous faciliter la vie : la fonction `range` :
+
+```python
+for truc in range(10):
+    print("Bonjour")
+```
+
+Pas mal, non ?
+
+**Note de style** dans la cellule précédente, on utilise jamais la valeur de `truc`. En Python,
+quand on doit donner un nom à une variable qu'on utilise par ailleurs pas, la convention est de
+l'appeler `_`. Vous trouverez donc souvent des trucs écrits comme.
+
+```python
+for _ in range(10):
+    print("Bonjour")
+```
+
+```python
+for i in range(10):
+    print(i)
+```
+
+Vous devinez ce que renvoie `range(10)` ? À votre avis que renverrait `range(16)` ?
+
+On teste ?
+
+```python
+lst = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(lst)
+```
+
+```python
+print(range(10))
+```
+
+Ce n'est pas très informatif. Dans les temps anciens de la version 2 de Python, `range(n)` renvoyait
+la liste des entiers de $0$ à $n$. Depuis, les temps ont changé et `range` renvoie simplement un
+objet de type `range`.
+
+```python
+print(type(range(10)))
+```
+
+Pourquoi `range` ne renvoie pas une liste ? Parce que ça permet d'éviter de stocker tous les
+éléments de la liste en mémoire, ça prend moins de place, votre machine est contente.
+
+Mais vous pouvez quand même itérer dessus :
+
+```python
+for i in range(16):
+    print(i)
+```
+
+On dit que les objets de type `range` sont des ✨**itérables**✨.
+
+En plus de la borne supérieure, on peut aussi spécifier la borne inférieure :
+
+```python
+for i in range(2, 16):
+    print(i)
+```
+
+Les règles sont toujours les mêmes en Python : la borne inférieure est incluse, la borne supérieure
+est exclue.
+
+```python
+for value in range(512, 1024):
+    print(value)
+```
+
+Bon, mais si on veut **vraiment** la liste de ces nombres ?
+
+On peut convertir un `range` en liste en utilisant la fonction `list` :
+
+```python
+print("L'objet range:", range(10))
+print("La liste qui correspond:", list(range(10)))
+```
+
+```python
+list("abcxde")
+```
+
+Enfin, on peut également (mais c'est plus rarement utile) préciser le pas :
+
+```python
+for value in range(1, 10, 2):
+    print(value)
 ```

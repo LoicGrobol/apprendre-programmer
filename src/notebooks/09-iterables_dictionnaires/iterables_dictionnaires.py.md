@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.7
+      jupytext_version: 1.19.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -19,7 +19,7 @@ jupyter:
 Cours 9 : Itérables et dictionnaires
 =========================================================================
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
 
@@ -27,7 +27,6 @@ Dans ce notebook
 
 - Des boucles plus agréables avec les itérables
 - Un nouveau type de données : les dictionnaires
-
 
 ## Itérables
 
@@ -53,24 +52,10 @@ exemple pour `"linguistique"`:
 ```
 
 ```python
-def index_chars(s):
-    i = 0
-    for c in s:
-        print(i, c)
-        i = i + 1
 
-index_chars("Anaouder")
 ```
 
-```python
-def index_chars(s):
-    i = 0
-    while i < len(s):
-        print(i, s[i])
-        i = i + 1
-
-index_chars("Anaouder")
-```
+<!-- TODO: changer la section suivante en rappel pour l'an prochain : on l'a fait dans le cours while -->
 
 ### `range` : les intervalles entiers
 
@@ -83,7 +68,7 @@ Mais ce n'est pas très satisfaisant, non ?
 Une solution avec la boucle `for` :
 
 ```python
-for _ in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+for a in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
     print("Bonjour")
 ```
 
@@ -91,11 +76,20 @@ Mais ce n'est toujours pas très pratique d'écrire cette liste. Surtout pour ne
 Heureusement, il y a un outil pour nous faciliter la vie : la fonction `range` :
 
 ```python
-for _ in range(10):
+for truc in range(10):
     print("Bonjour")
 ```
 
 Pas mal, non ?
+
+**Note de style** dans la cellule précédente, on utilise jamais la valeur de `truc`. En Python,
+quand on doit donner un nom à une variable qu'on utilise par ailleurs pas, la convention est de
+l'appeler `_`. Vous trouverez donc souvent des trucs écrits comme.
+
+```python
+for _ in range(10):
+    print("Bonjour")
+```
 
 ```python
 for i in range(10):
@@ -115,8 +109,6 @@ print(lst)
 print(range(10))
 ```
 
-Ah
-
 Ce n'est pas très informatif. Dans les temps anciens de la version 2 de Python, `range(n)` renvoyait
 la liste des entiers de $0$ à $n$. Depuis, les temps ont changé et `range` renvoie simplement un
 objet de type `range`.
@@ -125,20 +117,17 @@ objet de type `range`.
 print(type(range(10)))
 ```
 
-Vous pouvez itérer dessus :
+Pourquoi `range` ne renvoie pas une liste ? Parce que ça permet d'éviter de stocker tous les
+éléments de la liste en mémoire, ça prend moins de place, votre machine est contente.
+
+Mais vous pouvez quand même itérer dessus :
 
 ```python
 for i in range(16):
     print(i)
 ```
 
-Pourquoi `range` ne renvoie pas une liste ? Parce que ça ne servirait pas à grand-chose : vous
-connaissez déjà les valeurs des éléments d'un `range`, pas besoin d'indexer. En plus, ça permet
-d'éviter de stocker tous les éléments de la liste en mémoire, ça prend moins de place, votre machine
-est contente.
-
-Les objets de type `range` ne sont donc pas des **séquences**. En revanche on peut itérer dessus, ce
-sont donc des ✨**itérables**✨.
+On dit que les objets de type `range` sont des ✨**itérables**✨.
 
 En plus de la borne supérieure, on peut aussi spécifier la borne inférieure :
 
@@ -203,9 +192,8 @@ def index_chars(s):
     for index in range(len(s)):
         print(index, mot[index])
 
-index_chars("Anaouder")
+index_chars("linguistique")
 ```
-
 
 ### `enumerate` : compter ses pas
 
@@ -270,16 +258,16 @@ for idx, lettre in enumerate(mot):
     print(lettre, " indice :", idx)
 ```
 
-C'est *vraiment* plus lisible. C'est le style *pythonique* (recommandé en Python). Pour notre fonction, la meilleure solution c'est donc
+C'est *vraiment* plus lisible. C'est le style *pythonique* (recommandé en Python). Pour notre
+fonction, la meilleure solution c'est donc
 
 ```python
 def index_chars(s):
     for i, c in enumerate(s):
         print(i, c)
 
-index_chars("Anaouder")
+index_chars("linguistique")
 ```
-
 
 ### `zip` : la fermeture éclair
 
@@ -332,7 +320,6 @@ for ou, quand, comment in zip(villes, annee, appreciation):
 
 Est-ce que vous voyez comment simuler `enumerate` en utilisant `zip` ?
 
-
 ```python
 mot = "linguistique"
 
@@ -358,10 +345,10 @@ for v, a in zip(villes, annee, strict=True):
     print (a, v)
 ```
 
-### Tuples
+### Tuples ###
 
-Un dernier point : c'est quoi exactement ces éléments que renvoient `zip` et `enumerate`, ça
-ressemble à des listes, mais avec des parenthèses ?
+Un dernier point : c'est quoi exactement ces éléments que renvoient les itérations sur des `zip` e
+des `enumerate`, ça ressemble à des listes, mais avec des parenthèses ?
 
 ```python
 villes = ["Orléans", "Tours", "Nanterre"]
@@ -604,8 +591,7 @@ print("La valeur de 'da' est", iso_639["da"])
 ```
 
 **Question** En utilisant ce dictionnaire, modifier la cellule suivante pour afficher la chaîne
-`"Chewa"`
-
+`"Divehi"`
 
 ```python
 print(iso_639["ny"])
@@ -627,7 +613,7 @@ iso_639["ru"] = "Russian"
 print(iso_639)
 ```
 
-On peut aussi en supprimer, en utilisant le mot clé `del`
+On peut aussi en supprimer, en utilisant le mot clé `del` :
 
 ```python
 iso_639["fr"] = "French"
@@ -638,7 +624,7 @@ print(iso_639)
 
 ### Parcourir un dictionnaire
 
-Les dictionnaires sont des **itérables**, et on peut les parcourir dans une boucle `for`.
+Les dictionnaires sont des **itérables**, et on peut les parcourir dans une boucle `for` :
 
 ```python
 for language in iso_639:
@@ -679,23 +665,6 @@ for language in iso_639:
     print(language)
 ```
 
-```python
-for language in iso_639:
-    print(language, "->", iso_639[language])
-```
-
-```python
-for language in iso_639:
-    print(f"{language} -> '{iso_639[language]}'")
-```
-
-```python
-var = 1234
-s = f"la valeur est {var}, super"
-print(s)
-print(f"la valeur est {var+12}, super")
-```
-
 ### Parcourir les paires clé/valeur
 
 Si on veut parcourir un dictionnaire en accédant aux couples clé/valeur (ce qui arrive souvent), on
@@ -719,7 +688,6 @@ for cle, valeur in iso_639.items():
     print("Valeur:", valeur)
     print()
 ```
-
 
 ### Créer un dictionnaire
 
@@ -840,10 +808,3 @@ Merci de bien répondre à chacune de ces questions dans la cellule de texte ci-
 de l'exécuter avant de sauvegarder) : elles me permettent d'ajuster le cours en fonction de vos
 besoins, avec un peu de chance, elles devraient également vous aider à guider votre travail et à
 apprécier votre progression.
-
-
-
-
-
-
-
