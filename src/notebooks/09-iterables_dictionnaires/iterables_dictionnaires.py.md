@@ -15,9 +15,10 @@ jupyter:
 ---
 
 <!-- LTeX: language=fr -->
+
 <!-- #region slideshow={"slide_type": "slide"} -->
-Cours 9 : Itérables et dictionnaires
-=========================================================================
+
+# Cours 9 : Itérables et dictionnaires
 
 **L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
@@ -345,7 +346,7 @@ for v, a in zip(villes, annee, strict=True):
     print (a, v)
 ```
 
-### Tuples ###
+### Tuples
 
 Un dernier point : c'est quoi exactement ces éléments que renvoient les itérations sur des `zip` e
 des `enumerate`, ça ressemble à des listes, mais avec des parenthèses ?
@@ -409,8 +410,8 @@ print(un_tuple)
 
 ## Dictionnaires
 
-On va faire une pause avec les boucles pour parler d'une nouvelle structure de données
-omniprésente en Python : les dictionnaires.
+On va faire une pause avec les boucles pour parler d'une nouvelle structure de données omniprésente
+en Python : les dictionnaires.
 
 On a vu des structures de données ordonnées comme les listes et les chaînes de caractères qui
 permettent d'accéder à leurs éléments *via* des indices numériques.
@@ -566,8 +567,8 @@ Quelle est la taille maximale que peut atteindre un dictionnaire dont toutes les
 
 ## Étude de cas : les codes ISO 639
 
-Voici un dictionnaire qui contient une liste de quelques langues indexées par leur code [ISO
-639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+Voici un dictionnaire qui contient une liste de quelques langues indexées par leur code
+[ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 ```python
 iso_639 = {
