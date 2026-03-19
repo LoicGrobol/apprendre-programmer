@@ -56,6 +56,33 @@ exemple pour `"linguistique"`:
 
 ```
 
+<!-- #region -->
+
+<details><summary>Solution</summary>
+
+```python
+def index_chars(chaine):
+    n = 0
+    for c in chaine:
+        print(n, c)
+        n = n + 1
+
+index_chars("Nanterre")
+```
+
+</details>
+<!-- #endregion -->
+
+```python
+def index_chars(chaine):
+    n = 0
+    for c in chaine:
+        print(n, c)
+        n = n + 1
+
+index_chars("Nanterre")
+```
+
 <!-- TODO: changer la section suivante en rappel pour l'an prochain : on l'a fait dans le cours while -->
 
 ### `range` : les intervalles entiers
@@ -248,15 +275,15 @@ for couple in enumerate(mot):
 qui est *un peu* plus lisible. On peut aussi utiliser la syntaxe suivante :
 
 ```python
-a, b = 1, 2
-print(a)
-print(b)
-```
-
-```python
 mot = "linguistique"
 for idx, lettre in enumerate(mot):
     print(lettre, " indice :", idx)
+```
+
+```python
+a, b = 1, 2
+print(a)
+print(b)
 ```
 
 C'est *vraiment* plus lisible. C'est le style *pythonique* (recommandé en Python). Pour notre
@@ -324,18 +351,18 @@ Est-ce que vous voyez comment simuler `enumerate` en utilisant `zip` ?
 ```python
 mot = "linguistique"
 
-for couple in zip(range(len(mot)), mot):
-    print(couple[1], " indice :", couple[0])
+for i, c in zip(range(len(mot)), mot):
+    print(c, " indice :", i)
 ```
 
-Un truc récent en Python 3.12 (?), le paramètre `strict`.
+Un truc récent depuis Python 3.12 (?), le paramètre `strict`.
 
 ```python
 villes = ["Orléans", "Tours", "Nanterre"]
 annee = ["1991", "2014", "2021", "2024"]
 
 for v, a in zip(villes, annee):
-    print (a, v)
+    print(a, v)
 ```
 
 ```python
@@ -343,7 +370,7 @@ villes = ["Orléans", "Tours", "Nanterre"]
 annee = ["1991", "2014", "2021", "2024"]
 
 for v, a in zip(villes, annee, strict=True):
-    print (a, v)
+    print(a, v)
 ```
 
 ### Tuples
@@ -439,14 +466,6 @@ dico = {
 print(dico)
 ```
 
-```python
-l = [
-    "machin",
-    "truc",
-    "chose",
-]
-```
-
 Dans la notation `{k: v}`, on dit que `k` est une **clé** et `v` est la **valeur** associée à `k`.
 On peut accéder à la valeur associée à une clé avec l'opération d'indexation dont vous avez
 l'habitude :
@@ -481,7 +500,7 @@ mon_dictionnaire["Horizon"] = "Zero Dawn"
 print(mon_dictionnaire)
 ```
 
-```python jupyter={"outputs_hidden": true}
+```python
 locals()
 ```
 
@@ -573,9 +592,9 @@ Voici un dictionnaire qui contient une liste de quelques langues indexées par l
 ```python
 iso_639 = {
     "ny": "Chewa", 
-    "zh": "Chinese", 
+    "zh": "Chinese",
     "cs": "Czech", 
-    "da": "Danish", 
+    "da": "Danish",
     "dv": "Divehi",
     "br": "Breton",
     "gcf": "Guadeloupean Creole French",
@@ -652,7 +671,7 @@ iso_639 = {
 Modifier la cellule ci-dessous pour qu'elle affiche la sortie suivante :
 
 ```text
-ny -> Nyanja
+ny -> Chewa
 zh -> Chinese
 cs -> Czech
 da -> Danish
