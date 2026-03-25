@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.13.7
+      jupytext_version: 1.19.1
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -16,12 +16,11 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 
-Projet Apprendre à programmer 2025
-==================================
+# Projet Apprendre à programmer
 
 ## Pratique
 
-- Projet à rendre le 2 mai 2025 *au plus tard*
+- Projet à rendre le 11 mai 2026 *au plus tard*
   - Si vous avez un problème, si vous êtes en retard, contactez-moi le plus tôt possible pour ce
     qu'il est possible d'arranger.
 - Projet individuel ou par groupe de deux personnes.
@@ -32,8 +31,8 @@ Projet Apprendre à programmer 2025
 ## Principe
 
 Pour ce projet, vous allez réaliser un clone du jeu
-[Wordle](https://www.nytimes.com/games/wordle/index.html) (voir aussi [Le
-Mot](https://wordle.louan.me/), une version en français). Le principe de ce jeu est le suivant :
+[Wordle](https://www.nytimes.com/games/wordle/index.html) (voir aussi
+[Le Mot](https://wordle.louan.me/), une version en français). Le principe de ce jeu est le suivant :
 
 - Vous avez six essais pour trouver un mot secret de six lettres.
 - Le mot secret est un mot courant, qui n'est pas un nom propre, choisi au hasard dans un lexique
@@ -51,8 +50,8 @@ Mot](https://wordle.louan.me/), une version en français). Le principe de ce jeu
 L'objectif de ce projet est de produire un script Python qui implémente les règles ci-dessus.
 
 Voici à quoi pourrait ressembler une partie où le mot à trouver était *attela*. Les saisies sont
-indiquées par `>`, une lettre bien placée est indiquée par `o`, une lettre présente, mais mal
-placée par `+` et une lettre fausse par `×` :
+indiquées par `>`, une lettre bien placée est indiquée par `o`, une lettre présente, mais mal placée
+par `+` et une lettre fausse par `×` :
 
 ```text
 Deviner un mot de 6 lettres
@@ -84,10 +83,10 @@ suivantes, voire en faisant un peu des deux. Pour aller plus loin, vous pouvez e
 d'implémenter les [règles facultatives](#regles-facultatives).
 
 Vous pouvez travailler directement dans ce notebook pour répondre aux questions, **mais** je vous
-recommande plutôt d'écrire un script en Python, soit dans un environnement de développement sur votre
-machine (comme Thonny) soit dans [repl.it](https://repl.it). Dans ce cas, écrivez simplement un
-script `.py` qui démarre le jeu quand on le lance. Vous pouvez indiquer les parties du code qui
-correspondent aux questions en écrivant des commentaires `#`.
+recommande plutôt d'écrire un script en Python dans un environnement de développement sur votre
+machine (comme Thonny). Dans ce cas, écrivez simplement un script `.py` qui démarre le jeu quand on
+le lance. Vous pouvez indiquer les parties du code qui correspondent aux questions en écrivant des
+commentaires `#`.
 
 ### 1. Comparer une proposition au mot secret
 
@@ -132,9 +131,10 @@ liste de chaînes de caractères. `tour` doit
 - Agir en fonction de `proposition`
   - Si `proposition` est égal à `secret`, renvoyer `True`.
   - Sinon, afficher le résultat de `comparer(proposition, secret)` et renvoyer `False`.
-  
-Pensez à tester votre fonction, par exemple avec `"caisse"` pour `secret` et `lexique = ["caisse",
-"sieges", "bureau", "tables", "canapé"]`. Pour le jeu final, on utilisera un vrai lexique.
+
+Pensez à tester votre fonction, par exemple avec `"caisse"` pour `secret` et
+`lexique = ["caisse", "sieges", "bureau", "tables", "canapé"]`. Pour le jeu final, on utilisera un
+vrai lexique.
 
 **Indice** : rappelez-vous que la boucle conditionnelle `while` existe.
 
@@ -159,8 +159,8 @@ tour("caisse", ["caisse", "sieges", "bureau", "tables", "canapé"])
     partie est perdu et s'arrêter.
 - Après chaque tour, afficher le nombre d'essais restants.
 
-Pensez à tester votre fonction, par exemple avec `lexique = ["caisse", "sieges", "bureau", "tables",
-"canapé"]`.
+Pensez à tester votre fonction, par exemple avec
+`lexique = ["caisse", "sieges", "bureau", "tables", "canapé"]`.
 
 **Indices** :
 
@@ -213,22 +213,29 @@ Assurez-vous d'avoir une version qui implémente les règles de base avant de vo
 
 - Le mot secret est choisi dans un lexique beaucoup plus petit que celui des mots autorisés et qui
   ne contient que des mots très fréquents.
+
   - Vous pouvez trouver par exemple sur <http://www.lexique.org> des lexiques du français avec les
     fréquences d'usages des mots.
+
 - La comparaison entre le mot secret et le mot proposé ne tient compte ni de la casse, ni des
   diacritiques. Ainsi `a` et `A` sont considérés comme la même lettre, et `é` et `e` également.
+
 - On indique les lettres bien trouvées et bien placées dans les mots proposés par un code couleur :
+
   - Dans la version de base, 🟩 indique une lettre bien placée, 🟨 une lettre présente, mais mal
     placée et ⬛ une lettre fausse.
   - Dans une version adaptée aux personnes daltoniennes, 🟧 indique une lettre bien placée, 🟦 une
     lettre présente, mais mal placée, et ⬛ une lettre fausse.
   - Attention, il se peut que les emojis soient mal affichés dans Thonny.
+
 - En fin de partie, un résumé est affiché, donnant le déroulement de la partie avec les emojis
   précédents, sans révéler le mot secret ou les propositions, afin de pouvoir être partagé sans
   spoiler.
+
 - Le mot secret est déterminé par la date, ainsi on ne peut faire qu'une partie par jour. Attention
   cependant à trouver une détermination qui ait l'air pseudo-aléatoire pour que le jeu soit plus
   agréable. Par exemple, éviter de donner les mots par ordre alphabétique.
+
 - Quand une même lettre apparaît $n$ fois dans le mot proposé et $m$ fois dans le mot secret avec
   $m<n$, elles sont traitées ainsi :
 
@@ -238,6 +245,6 @@ Assurez-vous d'avoir une version qui implémente les règles de base avant de vo
   - Les occurrences restantes sont signalées comme fausses.
 
   Exemples :
-  
+
   - Mot secret *avions*, mot proposé *avares* : 🟧🟧⬛⬛⬛🟧
   - Mot secret *marche*, mot proposé *aimant* : 🟦⬛🟦⬛⬛⬛
