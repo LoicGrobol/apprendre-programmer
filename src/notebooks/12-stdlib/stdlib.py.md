@@ -232,8 +232,35 @@ dans une chaîne de caractères.
 [Real Python](https://realpython.com/regex-python/) a un tutoriel très complet dessus, que je vous
 encourage fort à suivre.
 
-- re
-- maths
-- itertools
-- csv
-- pathlib
+## Les autres
+
+- `math` pour faire des maths
+
+- `itertools` pour manipuler des itérables
+
+```python
+import itertools
+
+l1 = ["a", "b", "c", "d", "e"]
+l2 = [1, 2, 3]
+
+for t in itertools.product(l1, l2):
+  print(t)
+```
+
+- `csv` pour manipuler des fichiers tabulaires
+
+- `pathlib` pour manipuler facilement des chemins de fichiers
+
+```python
+import pathlib
+
+p = pathlib.Path("/home/morgan/books")
+print(p.name)
+print(p.parent)
+
+p2 = p / "hades_calculus.epub"
+print(p2.name)
+print(p2.parent)
+print(p2.suffix)
+```
