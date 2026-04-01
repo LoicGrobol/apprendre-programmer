@@ -68,7 +68,7 @@ Rappelez vous
 >
 > ```python
 > import random
-> random.randint(8)
+> random.randint(0, 8)
 > ```
 
 > […] ou encore le module `copy`
@@ -109,7 +109,7 @@ fonction `randint` nous devient accessible sous le nom composé `random.randint`
 « l'objet qui a été défini comme `randint` dans le module `random` » :
 
 ```python
-print(random.randint(4))
+print(random.randint(1, 4))
 ```
 
 La liste de tous les modules distribués avec Python (sa « bibliothèque standard ») est disponible
