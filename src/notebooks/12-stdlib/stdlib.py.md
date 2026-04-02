@@ -26,6 +26,7 @@ jupyter:
 
 Dans ce notebook :
 
+- La **doc**
 - Importer un module
 - Les modules utiles inclus dans Python
 
@@ -129,7 +130,37 @@ entre $0$ et $1$ et renvoie leur somme. Pensez à la tester ! Indice : allez
 section « *Real-valued distributions* ».
 
 ```python
+
 ```
+
+<!-- #region -->
+
+<details><summary>Solution</summary>
+
+```python
+import random
+
+def randsum():
+    a = random.random()
+    b = random.random()
+    return a + b
+
+print(randsum())
+```
+
+</details>
+<!-- #endregion -->
+
+Une fois qu'un module a été importé dans une session (un script ou un notebook), il y reste ! Pas
+besoin de le réimporter à chaque fois. De fait, si vous le ré-importez, ça ne fait rien.
+
+En conséquence, on recommande en général d'importer les modules une seule fois, et que la liste des
+`import` soit la première chose que vous faites dans un script, ou la première cellule d'un
+notebook.
+
+Dans les notebooks de ce cours, je ne suit pas toujours cette règle pour que les `import`s soient
+visuellement à proximité de l'endroit où les modules sont utilisés, mais c'est uniquement pour vous
+faciliter la lecture : ce n'est pas recommandé si vous faites un script de travail.
 
 ### From import ?
 
@@ -184,7 +215,33 @@ machin(12.9)
 1\. Importer uniquement la fonction du module `math` qui permet de calculer la racine carrée d'un
 nombre. Calculer $√2713$.
 
+<!-- #region -->
+
+<details><summary>Solution</summary>
+
+```python
+from math import sqrt
+
+sqrt(2713)
+```
+
+</details>
+<!-- #endregion -->
+
 2\. En important une seule fonction, afficher la date et l'heure actuelle
+
+<!-- #region -->
+
+<details><summary>Solution</summary>
+
+```python
+from time import asctime
+
+print(asctime())
+```
+
+</details>
+<!-- #endregion -->
 
 ### `*`?
 
@@ -193,6 +250,12 @@ un module dans l'espace de nom principal. Ainsi la fonction `turtle.forward` dev
 disponible sous le nom `forward`. C'est **une très mauvaise pratique** : entre autres parce que
 quand vous lisez du code où elle a été utilisée, il est très difficile de savoir où les objets ont
 été définis. Vous ne devriez **jamais** avoir à l'utiliser.
+
+```python
+from turtle import forward, left, right, up, down, shape
+
+shape()
+```
 
 ## Module utiles
 
@@ -222,6 +285,9 @@ if re.search(motif, "Bonjour"):
     print("oui")
 else:
     print("non")
+
+s = re.search(motif, "truc 65787b idu le")
+print(s)
 ```
 
 Les expressions régulières de Python sont un peu différentes de celles qu'on a vu l'an dernier, mais
@@ -260,6 +326,7 @@ print(p.name)
 print(p.parent)
 
 p2 = p / "hades_calculus.epub"
+print(p2)
 print(p2.name)
 print(p2.parent)
 print(p2.suffix)
