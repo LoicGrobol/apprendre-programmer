@@ -15,31 +15,40 @@ jupyter:
 ---
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 <!-- LTeX: language=fr -->
 
-Cours 12 : résumé
-=================
+# Cours 12 : résumé
 
-**L. Grobol** [\<lgrobol@parisnanterre.fr\>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [\<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Opérateurs mathématiques et fonctions
 
 ### Opérateurs
 
 - `+` addition
+
 - `-` soustraction
+
 - `*` multiplication
+
 - `/` division
+
 - `//` la division entière
+
 - `%` modulo (reste de la division)
+
 - `**` puissance
 
 - L'ordre des opérations est l'ordre classique en mathématiques (puissance passe avant les
   opérations).
+
 - On peut utiliser des parenthèses pour définir des priorités.
+
 - Lire [la doc](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex)
 
 <!-- #endregion -->
@@ -53,9 +62,11 @@ Cours 12 : résumé
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ### Les fonctions
 
 Vous connaissez les fonctions
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -63,11 +74,15 @@ print(2713)
 ```
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
+
 Ici on a fait **un appel** de la fonction `print` avec comme **argument** le nombre `2713`.
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Il y a plein de fonctions déjà définies
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -83,11 +98,15 @@ abs(-12)
 ```
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
+
 …
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Et on peut en définir des nouvelles
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -101,7 +120,9 @@ ma_super_fonction(15)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Si on veut que la fonction donne un résultat, comme `abs` par exemple, on le fait avec `return`
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -114,7 +135,9 @@ ma_nouvelle_fonction(2715)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 **Attention** : *afficher* un résultat et *renvoyer* un résultat ce n'est pas la même chose
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -151,11 +174,12 @@ mon_incroyable_affichage(27) + 3
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ### ✍️ Exos 1 ✍️
 
 C'est à vous de jouer !
 
-Vous avez une fonction à compléter (ça vous apprendra à écrire des fonctions 😤).  
+Vous avez une fonction à compléter (ça vous apprendra à écrire des fonctions 😤).
 
 À chaque fois j'essaierai d'ajouter une cellule avec des tests qui vous permettront de valider votre
 code. Écrivez votre code dans la cellule de la fonction (et enlevez `pass`), exécutez cette cellule
@@ -163,6 +187,7 @@ code. Écrivez votre code dans la cellule de la fonction (et enlevez `pass`), ex
 
 L'objectif est que vous soyez autonome pour valider ces exos (et accessoirement de vous familiariser
 avec les tests).
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -178,6 +203,7 @@ assert square(-2) == 4
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Opérateurs de comparaison
 
 - `<` inférieur strict / `<=` inférieur ou égal
@@ -187,10 +213,13 @@ assert square(-2) == 4
   importante)
 
 Lire [la doc](https://docs.python.org/3/library/stdtypes.html#comparisons).
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ### ✍️ Exo 2 ✍️
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -206,9 +235,11 @@ assert on_fait_la_taille(100, 100) == "pareil"
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ### Identité et égalité
 
 `a == b` est vrai si `a` et `b` sont égaux, `a is b` si c'est le même objet.
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -217,19 +248,23 @@ display(["spam"] is ["spam"])
 ```
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
+
 Il y a quelques pièges, mais on y reviendra
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les variables
 
-- L'affectation des variables se fait à l'aide du symbole `=`  
+- L'affectation des variables se fait à l'aide du symbole `=`
 - Si la variable est placée à droite du symbole `=`, sa *valeur* est affectée à la variable placée à
   gauche.
 - Les noms de variable sont composés de caractères alphabétiques (avec la propriété Unicode « L
   (Letter) ») des chiffres et de l'underscore.
-- Les noms de variable sont choisis par læ programmeureuse, ils doivent être le plus clair possible. Il
-  est conseillé de suivre la [PEP 8](https://www.python.org/dev/peps/pep-0008/).,
+- Les noms de variable sont choisis par læ programmeureuse, ils doivent être le plus clair possible.
+  Il est conseillé de suivre la [PEP 8](https://www.python.org/dev/peps/pep-0008/).,
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -249,7 +284,9 @@ je-ne-suis-pas-une-variable = 2
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - À part ça, seuls les mots-clés réservés sont interdits :
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -259,7 +296,10 @@ print(keyword.kwlist)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-On *peut* faire des trucs exotiques (voir la [doc](https://docs.python.org/3/reference/lexical_analysis.html#identifiers))
+
+On *peut* faire des trucs exotiques (voir la
+[doc](https://docs.python.org/3/reference/lexical_analysis.html#identifiers))
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -268,16 +308,20 @@ print(z̷̫̻̘̞̫͓̩̮͐̄̀̇̐̅̈́̂̊͂̚͜͝͝ā̷̛̏̈́͒͋̃́̄̿͋͛
 ```
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
+
 (mais on ne le fait pas, pitié)
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les types
 
 - Python est un langage à typage *dynamique* fort : le type d'une variable est déterminé par
   l'interpréteur.
 - Python est un langage à typage dynamique *fort* : pas de conversion implicite, certaines actions
   sont interdites.
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -285,7 +329,9 @@ print(z̷̫̻̘̞̫͓̩̮͐̄̀̇̐̅̈́̂̊͂̚͜͝͝ā̷̛̏̈́͒͋̃́̄̿͋͛
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - La fonction `type()` retourne le type de la variable donnée en argument.
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -293,8 +339,10 @@ type("Hello")
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - La fonction `isinstance(obj, class)` vous dit si l'objet donné en argument est de la classe
   `class` ou non
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -302,10 +350,12 @@ isinstance("hello", int)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ### ✍️ Exo 3 ✍️
 
 Vous reprenez votre fonction `square` de façon à afficher "Erreur de type" quand l'argument n'est
 pas de type `int`
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -322,12 +372,16 @@ square("test")
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les chaînes de caractères
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "-"} -->
+
 - Les chaînes de caractères sont entourées de quotes simples `'` ou doubles `"`
 - Si votre chaîne de caractères contient l'un, utilisez l'autre pour la délimiter :
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -339,7 +393,9 @@ square("test")
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 On peut aussi utiliser trois quotes pour avoir une chaîne de caractères sur plusieurs lignes
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -354,12 +410,14 @@ Certaines personnes s'en servent pour commenter rapidement plusieurs lignes. C'E
 IDÉE.
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Les chaînes sont des **séquences de caractères**, on peut leur appliquer les opérations suivantes
 propres à la catégorie d'objets *séquences* :
 
 (Vous connaissez d'autres *séquences* au fait ?)
 
 - longueur
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -368,8 +426,10 @@ print(len(spam))
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - *index*
   - Les indices commencent à `0` !
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -379,8 +439,10 @@ print(spam[-1])
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - *slice*
   - `spam[i:j]`, c'est `spam[i]`, `spam[i+1]`, …, `spam[j-1]`
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -389,7 +451,9 @@ print(spam[-3:])  # 3 derniers éléments
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - *appartenance*
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -398,26 +462,29 @@ if "u" in spam:
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Les chaînes ont aussi des fonctions qui leur sont propres
 
-Voir [la liste complète dans la
-doc](https://docs.python.org/3/library/stdtypes.html#string-methods)
+Voir [la liste complète dans la doc](https://docs.python.org/3/library/stdtypes.html#string-methods)
 
 - `lower()` transforme la chaine en minuscules
 - `upper()` transforme la chaine en majuscules
 - `replace(old, new)` remplace les occurrences de `old` par `new`
-- `strip()` appelé sans arguments supprime le ou les espaces en tête et en fin de chaîne  
+- `strip()` appelé sans arguments supprime le ou les espaces en tête et en fin de chaîne
 - `rstrip()` fait la même chose en fin de chaîne uniquement
 - `lstrip()` idem en début de chaîne
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `split(sep=None)` découpe une chaîne en fonction de `sep` et renvoie une liste. Si `sep` n'est pas
   donné, coupe sur tous les caractères d'espace
 - `join(iterable)` est l'inverse de `split`, il permet de joindre les éléments d'un *itérable* pour
   former une seule chaîne de caractères
   [`format()`](https://docs.python.org/3/library/string.html#formatstrings) pour effectuer
   l'[interpolation de chaîne](https://en.wikipedia.org/wiki/String_interpolation)
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -426,19 +493,21 @@ words = "bonjour ça va ?".split(" ")
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### Formatage de chaînes
 
-> There should be one — and preferably only one — obvious way to do it.  ([PEP 20 : *Zen of
-> Python*](https://www.python.org/dev/peps/pep-0020/))
+> There should be one — and preferably only one — obvious way to do it.
+> ([PEP 20 : *Zen of Python*](https://www.python.org/dev/peps/pep-0020/))
 
 Sauf que :
 
-- Concaténation avec `+` [comme n'importe quelle
-  séquence](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations) **à éviter
-  parce que c'est lent**
+- Concaténation avec `+`
+  [comme n'importe quelle séquence](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations)
+  **à éviter parce que c'est lent**
 - [f-string](https://docs.python.org/3/library/string.html#formatstrings)
 - Interpolation avec [`format()`](https://docs.python.org/3/library/functions.html#format)
 - Et encore d'autres dont on ne parlera pas.
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -468,8 +537,10 @@ print(
 **Si possible utiliser des *f-strings*** (c'est presque toujours possible).
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 On évite de faire ça avec `+` parce que c'est moins lisible et que c'est **lent**. De fait on crée
 une chaîne intermédiaire à chaque étape.
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -480,13 +551,17 @@ s4 = s3 + " euros pour 2 cafés ?"
 ```
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
+
 Sur l'exemple ci-dessus ça va, mais on se retrouve vite à additionner des centaines de chaînes et
 c'est la galère.
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Pour concaténer beaucoup de chaînes il vaut mieux les mettre dans une liste (éventuellement
 construite itérativement, les listes sont optimisées pour ça) et utiliser `join`
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"}
@@ -509,7 +584,9 @@ print(
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Attention aussi à la concaténation implicite :
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -520,7 +597,9 @@ print(ham)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ### ✍️ Exo 4 ✍️
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -535,8 +614,10 @@ assert say_hello("Lucky", "Luke") == "Hello Lucky Luke !"
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Un objet de type `str` (*string*, chaîne de caractères) est *immutable*, on ne peut pas modifier sa
 valeur :
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -545,15 +626,19 @@ chaine[1] = "y"
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les structures de données
 
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### Les listes
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "-"} -->
+
 - Les listes sont des *séquences d'objets arbitraires*. (comme les `str` sont spécifiquement des
   séquences de *caractères*)
 - Les *séquences* sont des structures de données *indicées* qui peuvent contenir des éléments de
@@ -561,10 +646,13 @@ chaine[1] = "y"
 - Les *séquences* sont des *itérables* (on peut s'en servir dans une boucle `for`)
 - Les éléments d'une liste peuvent être modifiés (*mutable*)
 - On accède à un élément par son indice (de `0` à `n-1`, `n` étant le nombre d'éléments)
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Une liste vide peut se déclarer de deux façons
+
 <!-- #endregion -->
 
 ```python
@@ -573,7 +661,9 @@ stack = list()
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Les listes, elles, sont *mutables*
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "fragment"} editable=true
@@ -583,11 +673,15 @@ stack
 ```
 
 <!-- #region slideshow={"slide_type": "fragment"} -->
+
 C'est même le prototype d'une séquence mutable, elles servent à tout, partout, en Python.
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Quelques fonctions utiles pour des listes de nombres
+
 <!-- #endregion -->
 
 ```python editable=true slideshow={"slide_type": ""}
@@ -598,7 +692,9 @@ print(sum(lst))
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} editable=true -->
+
 ### ✍️ Exo 5 ✍️
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -616,6 +712,7 @@ assert change_char("maison", 0) == "zaison"
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### Les dictionnaires
 
 - Un dictionnaire est une structure de données associative de type `clé: valeur`
@@ -623,6 +720,7 @@ assert change_char("maison", 0) == "zaison"
 - On accède à une valeur par sa clé
 - Les clés sont uniques : on ne peut pas associer deux valeurs à une même clé
 - `keys()` renvoie la liste des clés, `values()` la liste des valeurs
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -644,6 +742,7 @@ couleurs.items()
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### Les tuples
 
 - Les tuples (`tuple`) sont des *séquences* similaires aux listes sauf qu'ils ne peuvent pas être
@@ -651,6 +750,7 @@ couleurs.items()
 - Les tuples sont souvent utilisés comme valeur de retour d'une fonction.
 - Contrairement aux listes, les tuples peuvent être utilisés comme clé de dictionnaire, à votre avis
   pourquoi ?.
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -660,10 +760,13 @@ my_var
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les structures conditionnelles
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "-"} -->
+
 ```python
 if condition:
     [...]
@@ -672,17 +775,21 @@ elif condition:  # si besoin
 else:  # si besoin
     [...]
 ```
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### Opérateurs booléens
 
-- `not` négation  
-- `and` conjonction (`True` si les deux opérandes sont vraies, `False` sinon)  
+- `not` négation
+- `and` conjonction (`True` si les deux opérandes sont vraies, `False` sinon)
 - `or` disjonction (`True` si une des deux opérandes est vraie)
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - Les valeurs ci-dessous sont toutes évaluées par l'interpréteur comme ayant la valeur booléenne
   `False` :
 
@@ -691,11 +798,12 @@ else:  # si besoin
 - Tout le reste<sup>1</sup> sera évalué comme `True`. On parle de « *truthiness* », en français
   peut-être « véridicité » ?
 
-  Vous *pourriez* écrire `if var` ou `while my_list` plutôt que `if var != ""` ou `while
-  len(my_list) == 0`, mais je vous recommande de ne pas faire ça pour garder votre code plus
+  Vous *pourriez* écrire `if var` ou `while my_list` plutôt que `if var != ""` ou
+  `while len(my_list) == 0`, mais je vous recommande de ne pas faire ça pour garder votre code plus
   lisible.
 
 <sup>1</sup> <small>Sauf si vous avez défini un type d'objets qui fonctionne différemment.</small>
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -709,10 +817,12 @@ else:
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les boucles
 
 - Les boucles `while` répètent un bloc d'instruction tant qu'une certaine expression est vraie (ou
   véridique).
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -726,6 +836,7 @@ while (
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - Les boucles `for` permettent de parcourir des
   [*itérables*](https://docs.python.org/3/glossary.html#term-iterable), et notamment des *séquences*
   (`list`, `str`, `tuple`)
@@ -733,6 +844,7 @@ while (
   implémentent la méthode `__getitem__()`, dans ce cas Python crée automatiquement `__iter__()`).
 - L'instruction `continue` force le passage à l'itération suivante
 - L'instruction `break` force la sortie de la boucle en cours
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -765,9 +877,9 @@ for nom, fac, parcours in zip(noms, facs, parcours):
     print(f"{nom} est inscrit en {parcours} à {fac}")
 ```
 
-Si vous savez que vos itérables ont la même longueur (c'est le cas en général), vous pouvez le dire à Python avec l'option
-`strict=True`, qui dans ce cas vous signalera par une erreur si c'est n'est pas le cas (ce qui vous
-permettra donc de repérer le bug et de le corriger !).
+Si vous savez que vos itérables ont la même longueur (c'est le cas en général), vous pouvez le dire
+à Python avec l'option `strict=True`, qui dans ce cas vous signalera par une erreur si c'est n'est
+pas le cas (ce qui vous permettra donc de repérer le bug et de le corriger !).
 
 ```python slideshow={"slide_type": "subslide"} tags=["raises-exception"]
 noms = ['einstein', 'planck', 'turing', 'curie', 'bohr', 'shannon']
@@ -782,23 +894,27 @@ ne changera rien pour Python (puisque c'est la valeur par défaut), mais signale
 liront votre code (et en premier lieu vous-même) que ce qui se passe à cet endroit est inhabituel.
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### ☕ Exos 6 ☕
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 #### 1. Des triangles
 
 1. Écrire une fonction `la_plus_grande(longueur1, longueur2, longueur3)` qui renvoie la longueur du
    plus grand côté (une fonction de python fait peut-être déjà cela...).
-2. Écrire une fonction `est_equilateral(longueur1, longueur2, longueur3)` qui détermine si un
+1. Écrire une fonction `est_equilateral(longueur1, longueur2, longueur3)` qui détermine si un
    triangle est équilatéral ou non (les trois côtés ont la même longueur).
-3. Écrire une fonction `est_isocele(longueur1, longueur2, longueur3)` qui détermine si un triangle
+1. Écrire une fonction `est_isocele(longueur1, longueur2, longueur3)` qui détermine si un triangle
    est isocèle (deux côtés de même longueur, mais pas trois) ou non.
-4. Écrire une fonction `caracteristiques(longueur1, longueur2, longueur3)` qui renvoie la nature et
+1. Écrire une fonction `caracteristiques(longueur1, longueur2, longueur3)` qui renvoie la nature et
    la taille du plus grand côté d'un triangle. On dira qu'un triangle est `quelconque` s'il n'est ni
    équilatéral ni isocèle. Affiche `pas un triangle` si les longueurs données ne font pas un
    triangle (la longueur du plus grand côté est supérieure à la somme de celles des deux autres). On
    peut commencer par écrire la fonction `est_triangle` pour vérifier cette dernière condition.
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -848,6 +964,7 @@ assert caracteristiques(2, 6, 3) == "pas un triangle"
 ```
 
 (Le terme technique pour « quelconque » serait *scalène*)
+
 <!-- #region slideshow={"slide_type": "subslide"} -->
 
 #### 2. La parité
@@ -871,16 +988,18 @@ assert is_even(0) == True
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 #### 3. Des heures
 
 1. Écrire une fonction `secondes(heure)` qui prend une heure au format `H:M:S` et renvoie le nombre
    de secondes correspondantes (entier).
-2. Écrire une fonction `heures(secondes)` qui prend un nombre de secondes (entier) et le convertit
+1. Écrire une fonction `heures(secondes)` qui prend un nombre de secondes (entier) et le convertit
    en heures, minutes et secondes sous le format `H:M:S` où `H` est le nombre d'heures, `M` le
    nombre de minutes et `S` le nombre de secondes.
 
 On ne gèrera ici pas les cas incohérents comme un nombre de secondes négatif ou une heure mal
 formatée. Il faudra sans doute utiliser l'opérateur reste `%`…
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -918,10 +1037,12 @@ assert heures(secondes("24:1:1")) == "24:1:1"
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les listes : fonctions
 
-Les listes héritent des fonctions des *sequences*, elles ont également des [méthodes
-propres](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+Les listes héritent des fonctions des *sequences*, elles ont également des
+[méthodes propres](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -931,7 +1052,9 @@ stack = [12, 15, 12, 7, 18]
 Parmi ces fonctions, nous utiliserons principalement :
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-- `append(x)` : ajoute un élément `x` à la fin de la liste (haut de la pile*)
+
+- `append(x)` : ajoute un élément `x` à la fin de la liste (haut de la pile\*)
+
 <!-- #endregion -->
 
 ```python
@@ -940,7 +1063,9 @@ display(stack)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `extend(lst)` : ajoute tous les éléments de `lst` à la fin de la liste
+
 <!-- #endregion -->
 
 ```python
@@ -949,7 +1074,9 @@ display(stack)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `pop(index=-1)` : supprime et renvoie l'élément de la liste à la position `index`
+
 <!-- #endregion -->
 
 ```python
@@ -959,7 +1086,9 @@ display(stack)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `index(x)` : renvoie l'index du premier élément de valeur x
+
 <!-- #endregion -->
 
 ```python
@@ -967,10 +1096,12 @@ stack.index(12)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `count(x)` : renvoie le nombre de fois où x apparaît
 
   **Attention** : si vous avez plusieurs éléments à compter, utilisez plutôt
   [`collections.Counter`](https://docs.python.org/3/library/collections.html#collections.Counter)
+
 <!-- #endregion -->
 
 ```python
@@ -978,9 +1109,11 @@ stack.count(12)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `sort(key=None, reverse=False)` : trie et modifie la liste, lire la
-    [doc](https://docs.python.org/3/howto/sorting.html#sortinghowto) pour en savoir plus sur les
-    ordres de tri.
+  [doc](https://docs.python.org/3/howto/sorting.html#sortinghowto) pour en savoir plus sur les
+  ordres de tri.
+
 <!-- #endregion -->
 
 ```python
@@ -989,7 +1122,9 @@ display(stack)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Attention à ne pas confondre `append` et `extend`
+
 <!-- #endregion -->
 
 ```python
@@ -1008,7 +1143,9 @@ display(stack)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### ✍️ Exo 7 ✍️
+
 <!-- #endregion -->
 
 ```python
@@ -1047,13 +1184,15 @@ assert tokenize("tout mon cœur est resté là-bas") == [
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### Les listes en compréhension
 
 - Elles permettent de définir des listes par filtrage ou opération sur les éléments d'une autre
   liste
 - La [PEP 202](http://www.python.org/dev/peps/pep-0202/) conseille de préférer les listes en
-  compréhension aux fonctions `map()` et `filter()`  
+  compréhension aux fonctions `map()` et `filter()`
 - C'est puissant et concis, *so pythonic*
+
 <!-- #endregion -->
 
 ```python
@@ -1069,10 +1208,12 @@ assert tokenize("tout mon cœur est resté là-bas") == [
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### ✍️ Exo 8 ✍️
 
 Utilisez une liste en compréhension sur la sortie de votre fonction `tokenize` de manière à ne
 retenir que les noms composés
+
 <!-- #endregion -->
 
 ```python
@@ -1082,9 +1223,11 @@ assert compounds == [["De", "ci"], ["de", "là,"], ["cahin", "caha,"]]
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### Parcours de liste
 
 La boucle `for` est particulièrement adaptée pour parcourir les itérables et donc les listes
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -1094,8 +1237,10 @@ for item in voyelles:
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 La fonction `enumerate` peut être utile dans certains cas, elle renvoie un `tuple` contenant
 l'indice et la valeur de l'item à l'indice concerné
+
 <!-- #endregion -->
 
 ```python
@@ -1106,10 +1251,12 @@ for i, item in enumerate(voyelles):
 C'est de très loin préférable à itérer sur `range(len(voyelles))`.
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### Copie
 
 Dans `y = x`, `y` n'est pas une copie de x, les deux pointent vers le même objet. C'st
 particulièrement important pour les objets *mutables* comme les listes.
+
 <!-- #endregion -->
 
 ```python
@@ -1123,7 +1270,9 @@ print(x)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Si ce qu'on veut copier est une liste, on peut utiliser `list()` :
+
 <!-- #endregion -->
 
 ```python
@@ -1133,7 +1282,9 @@ x
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ou, plus court (et un peu plus rapide), mais plus mystérieux :
+
 <!-- #endregion -->
 
 ```python
@@ -1141,19 +1292,22 @@ x = [1, 2, 3]
 y = x[:]
 ```
 
-
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Il y a d'autres façons de faire. Pour les objets complexes on peut regarder du côté du module
 [`copy`](https://docs.python.org/3/library/copy.html), mais il n'y a pas de réponse universelle et
 copier c'est souvent coûteux. Le mieux à faire quand on a envie de faire une copie, c'est de
 commencer par se demander si on en a vraiment besoin.
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Déballage de séquences
 
 - Le *sequence unpacking* permet d'effectuer plusieurs affectations simultanées
 - L'*unpacking* s'applique souvent sur des tuples
+
 <!-- #endregion -->
 
 ```python
@@ -1168,7 +1322,9 @@ for ortho, phon in lexique:
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - On peut aussi utiliser `*` pour déballer une séquence en argument de fonction
+
 <!-- #endregion -->
 
 ```python
@@ -1178,6 +1334,7 @@ for i in range(*bornes):
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les ensembles
 
 Les ensembles ([`set`](https://docs.python.org/3/library/stdtypes.html#set)) sont des collections
@@ -1208,7 +1365,9 @@ ens1.intersection(ens2)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Attention il y a un piège
+
 <!-- #endregion -->
 
 ```python
@@ -1222,11 +1381,13 @@ type(b)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## ✍️ Exo 9
 
-Dans cet extrait de données tirées des [listes de Swadesh de langues
-austronésiennes](https://en.wiktionary.org/wiki/Appendix:Austronesian_Swadesh_lists), ici pour le
-tagalog et le cebuano, trouvez les mots en commun.
+Dans cet extrait de données tirées des
+[listes de Swadesh de langues austronésiennes](https://en.wiktionary.org/wiki/Appendix:Austronesian_Swadesh_lists),
+ici pour le tagalog et le cebuano, trouvez les mots en commun.
+
 <!-- #endregion -->
 
 ```python
@@ -1268,10 +1429,12 @@ cebuano = {
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les dictionnaires : suite
 
 - Les dictionnaires ([`dict`](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict))
   sont des structures de données associatives de type clé: valeur.
+
 - Les clés d'un dictionnaire sont uniques, seuls les types *hashable* (*immutable* et objets que
   vous avez définis) peuvent être des clés.
 
@@ -1283,6 +1446,7 @@ cebuano = {
     l'argument `default`. Ne modifie pas le dictionnaire.
   - `setdefault(key, default=None)` si `key` n'existe pas, insère `key` avec la valeur `default`
     dans le dictionnaire puis renvoie la valeur associée à la clé.
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -1300,11 +1464,13 @@ d
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Module collections
 
 - Le module *collections* propose des implémentations de structures de données supplémentaires
-- Dans la liste (voir [doc](https://docs.python.org/3/library/collections.html)), deux pourront
-  nous intéresser :
+
+- Dans la liste (voir [doc](https://docs.python.org/3/library/collections.html)), deux pourront nous
+  intéresser :
 
   - `defaultdict`
 
@@ -1326,9 +1492,11 @@ dico
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `Counter`
-  
+
 `Counter` est un dictionnaire où les valeurs attendues sont les nombres d'occurrences des clés
+
 <!-- #endregion -->
 
 ```python
@@ -1342,6 +1510,7 @@ display(cnt)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ### ✍️ Exo 10
 
 Faites la même chose avec un dictionnaire
@@ -1349,16 +1518,19 @@ Faites la même chose avec un dictionnaire
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Les fichiers
 
 - Pour travailler avec les fichiers on doit procéder à deux opérations :
-   1. Ouverture avec la fonction [`open`](https://docs.python.org/3/library/functions.html#open)
-      (lève l'exception `FileNotFoundError` en cas d'échec)
-   2. Lecture (`read` ou `readline` ou `readlines`) et/ou écriture (`write`)
+  1. Ouverture avec la fonction [`open`](https://docs.python.org/3/library/functions.html#open)
+     (lève l'exception `FileNotFoundError` en cas d'échec)
+  1. Lecture (`read` ou `readline` ou `readlines`) et/ou écriture (`write`)
 - Ouverture
-  - `open` est une fonction qui accepte de nombreux arguments : lire [la
-    doc](https://docs.python.org/3/library/functions.html#open)
+  - `open` est une fonction qui accepte de nombreux arguments : lire
+    [la doc](https://docs.python.org/3/library/functions.html#open)
+
   - `open` renvoie un objet dit *file-like*.
+
   - Le plus souvent elle s'emploie de la manière suivante :
 
     ```python
@@ -1368,9 +1540,11 @@ Faites la même chose avec un dictionnaire
 
     L'utilisation du mot clé `with` garantit la fermeture du fichier quoi qu'il arrive. Si vous
     faites autrement, vous risquez que le fichier reste ouvert si votre programme plante.
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 Les modes sont :
 
 - `r` : lecture (défaut)
@@ -1382,13 +1556,16 @@ Les modes sont :
 - `+` : mise à jour
 
 Voir [la doc](https://docs.python.org/3/library/functions.html#open) pour les détails
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ## Les fichiers : lecture
 
 Un objet *file-like* ouvert en lecture est un itérable ! La façon Pythonique de le parcourir, c'est
 une boucle `for` :
+
 <!-- #endregion -->
 
 ```python
@@ -1416,11 +1593,13 @@ Autres options qui peuvent servir dans certains cas (mais à éviter si possible
   fichier.
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ## Les fichiers : écriture et fermeture
 
 `write(text)` écrit `texte` dans le fichier
 
 <!-- #endregion -->
+
 ```python slideshow={"slide_type": "-"}
 with open("demo.txt", "w") as out_stream:
     for item in ["spam", "ham", "ægget"]:
@@ -1429,11 +1608,15 @@ with open("demo.txt", "w") as out_stream:
 ```
 
 Attention, `write` n'ajoute pas de fin de ligne `\n` à votre place.
+
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `sys.stdin`, `sys.stdout` et `sys.stderr` sont des objets *file-like*.
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### ✍️ Exo 11
 
 Lisez le fichier [`data/austronesian_swadesh.csv`](data/austronesian_swadesh.csv) et écrivez les
@@ -1444,6 +1627,7 @@ Les données viennent de
 
 (Essayez de faire comme si vous ne connaissiez pas le module csv sinon la partie qui suit n'aura
 aucun intérêt.)
+
 <!-- #endregion -->
 
 ```python
@@ -1455,14 +1639,17 @@ aucun intérêt.)
 ## Module csv
 
 La documentation est ici
-: [https://docs.python.org/3/library/csv.html](https://docs.python.org/3/library/csv.html)  
+: [https://docs.python.org/3/library/csv.html](https://docs.python.org/3/library/csv.html)\
 Parce que les données au format csv sont très répandues et parce qu'il peut être pénible de le lire
-correctement, le module csv est là pour vous aider.  
+correctement, le module csv est là pour vous aider.\
 Pour le dire vite il y a deux façons de l'utiliser : reader/writer ou DictReader/DictWriter.
+
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `csv.reader`
+
 <!-- #endregion -->
 
 ```python
@@ -1479,7 +1666,9 @@ with open("data/austronesian_swadesh.csv") as csvfile:
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `csv.writer`
+
 <!-- #endregion -->
 
 ```python
@@ -1491,10 +1680,12 @@ with open("swadesh_light.csv", "w") as csvfile:
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-- csv.DictReader  
 
-Cette classe s'appuie sur la ligne d'en-tête pour créer une suite de dictionnaires.  
+- csv.DictReader
+
+Cette classe s'appuie sur la ligne d'en-tête pour créer une suite de dictionnaires.\
 S'il n'y a pas de ligne d'en-tête on peut utiliser une liste `fieldnames` en paramètre.
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
@@ -1505,10 +1696,12 @@ with open("data/austronesian_swadesh.csv") as csvfile:
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-- csv.DictWriter  
+
+- csv.DictWriter
 
 Cette fois il s'agit de générer un fichier csv à partir d'une séquence de dictionnaires. Le
 paramètre `fieldnames` est obligatoire.
+
 <!-- #endregion -->
 
 ```python
@@ -1523,7 +1716,9 @@ with open("swadesh_light.csv", "w") as csvfile:
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ## Module `re`
+
 <!-- #endregion -->
 
 ```python
@@ -1531,11 +1726,12 @@ import re
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 - `re` est un module particulièrement important, vous devez lire la
   [doc](https://docs.python.org/3/library/re.html), absolument
 
-- La doc officielle est parfois aride, ce [howto](https://docs.python.org/3/howto/regex.html)
-  rédigé par A.M. Kuchling est plus digeste
+- La doc officielle est parfois aride, ce [howto](https://docs.python.org/3/howto/regex.html) rédigé
+  par A.M. Kuchling est plus digeste
 
 a minima vous devez connaître les fonctions :
 
@@ -1546,6 +1742,7 @@ a minima vous devez connaître les fonctions :
 - `split` : découpe une chaîne selon un motif, retourne une liste de chaînes
 - `sub` : remplace les occurrences d'un motif par une chaîne de remplacement
 - `compile` : compilation d'un motif (pattern), retourne un objet `Pattern`
+
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
@@ -1558,16 +1755,19 @@ re.sub(r"e|é", "i", "éléphanteau")
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+
 ## `\w`
 
 `\w` est la classe prédéfinie des caractères alphanumériques, ceux pour lesquels
 `str.isalnum` renvoie `True`, ainsi que l'underscore `_`. **Ce n'est pas une catégorie
 Unicode propre**. En principe, c'est l'ensemble des caractères qui peuvent apparaître dans un
 identifiant (nom de variable, de module etc.) en Python.
+
 <!-- c'est-à-dire à tous les caractères qui
 ont la propriété Unicode `Letter`, ce que Python détermine à l'aide de son module
 [`unicodedata`](https://docs.python.org/3/library/unicodedata.html) (sauf si le motif est compilé en
 binaire ou si l'option `re.ASCII` est activée) -->
+
 <!-- #endregion -->
 
 ```python
@@ -1593,7 +1793,9 @@ print(regex.findall(r"\p{L}", "_1a234bé€γ"))
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+
 ### ☕ Exos 12 ☕
+
 <!-- #endregion -->
 
 1\. Écrire une fonction qui reçoit deux noms de langue austronésiennes, une liste de mots en anglais
@@ -1622,12 +1824,12 @@ assert get_austro_words("Malay", "Balinese", ["new", "old", "good"]) == {
 ```
 
 2\. Pour chaque mot du Cebuano de la liste [Swadesh austronésienne](data/swadesh_light.csv), trouvez
-   les mots des autres langues qui ont les deux ou trois premiers caractères en commun.  
-   (optionnel si vous voulez jouer avec les expressions régulières) Si le mot commence par une
-   voyelle, elle pourra différer dans les autres langues. Ex: isa / usa seront considérées comme
-   similaires (i/u) parce qu'à part la première lettre voyelle elles sont similaires.
+les mots des autres langues qui ont les deux ou trois premiers caractères en commun.\
+(optionnel si vous voulez jouer avec les expressions régulières) Si le mot commence par une voyelle,
+elle pourra différer dans les autres langues. Ex: isa / usa seront considérées comme similaires
+(i/u) parce qu'à part la première lettre voyelle elles sont similaires.
 
 3\. **Pour les champion⋅nes** Sans rechercher de solution sur internet, essayez d'implémenter une
-   fonction qui calcule la distance de Levenshtein. (Vous pouvez chercher ce que c'est que la
-   distance de Levenshtein et l'algorithme en pseudo-code, mais n'allez pas chercher directement
-   d'implémentation en Python !)
+fonction qui calcule la distance de Levenshtein. (Vous pouvez chercher ce que c'est que la distance
+de Levenshtein et l'algorithme en pseudo-code, mais n'allez pas chercher directement
+d'implémentation en Python !)

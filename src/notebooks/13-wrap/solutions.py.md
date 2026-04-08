@@ -16,10 +16,9 @@ jupyter:
 
 <!-- LTeX: language=fr -->
 
-Résumé : solutions
-=====================
+# Résumé : solutions
 
-**Loïc Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
+**L. Grobol** [<lgrobol@parisnanterre.fr>](mailto:lgrobol@parisnanterre.fr)
 
 ## ✍️ Exos 1 ✍️
 
@@ -129,11 +128,11 @@ assert change_char("maison", 0) == "zaison"
 
 1. Écrire une fonction `la_plus_grande(longueur1, longueur2, longueur3)` qui renvoie la longueur du
    plus grand côté (une fonction de python fait peut-être déjà cela...).
-2. Écrire une fonction `est_equilateral(longueur1, longueur2, longueur3)` qui détermine si un
+1. Écrire une fonction `est_equilateral(longueur1, longueur2, longueur3)` qui détermine si un
    triangle est équilatéral ou non (les trois côtés ont la même longueur).
-3. Écrire une fonction `est_isocele(longueur1, longueur2, longueur3)` qui détermine si un triangle
+1. Écrire une fonction `est_isocele(longueur1, longueur2, longueur3)` qui détermine si un triangle
    est isocèle (deux côtés de même longueur, mais pas trois) ou non.
-4. Écrire une fonction `caracteristiques(longueur1, longueur2, longueur3)` qui renvoie la nature et
+1. Écrire une fonction `caracteristiques(longueur1, longueur2, longueur3)` qui renvoie la nature et
    la taille du plus grand côté d'un triangle. On dira qu'un triangle est `quelconque` s'il n'est ni
    équilatéral ni isocèle. Affiche `pas un triangle` si les longueurs données ne font pas un
    triangle (la longueur du plus grand côté est supérieure à celle des deux autres).
@@ -223,9 +222,8 @@ def is_even(num):
     return num % 2 == 0
 ```
 
-En poussant le golf plus loin : en exploitant le fait que `0` est faux.
-
-Ou simplement utiliser le fait que la comparaison est déjà un booléen
+En poussant le golf plus loin : en exploitant le fait que `0` est faux. Attention : c'est rigolo
+mais difficile à lire, dans la vie, mieux vaut éviter !
 
 ```python
 def is_even(num):
@@ -246,10 +244,11 @@ assert is_even(0) == True
 1. Écrire une fonction `heures(secondes)` qui prend un nombre de secondes (entier) et le convertit
    en heures, minutes et secondes sous le format `H:M:S` où `H` est le nombre d'heures, `M` le
    nombre de minutes et `S` le nombre de secondes.
-2. Écrire une fonction `secondes(heure)` qui prend une heure au format `H:M:S` et renvoie le nombre
+1. Écrire une fonction `secondes(heure)` qui prend une heure au format `H:M:S` et renvoie le nombre
    de secondes correspondantes (entier).
 
-On ne gèrera ici pas les cas incohérents comme un nombre de secondes négatif ou une heure mal formatée.
+On ne gèrera ici pas les cas incohérents comme un nombre de secondes négatif ou une heure mal
+formatée.
 
 ```python
 def heures(secondes):
@@ -334,9 +333,9 @@ Là encore on pourrait mieux faire, mais ça ne vaut pas vraiment le coup pour c
 
 ## ✍️ Exo 9
 
-> Dans cet extrait de données tirées des [listes de Swadesh de langues
-> austronésiennes](https://en.wiktionary.org/wiki/Appendix:Austronesian_Swadesh_lists), ici pour le
-> tagalog et le cebuano, trouvez les mots en commun.
+> Dans cet extrait de données tirées des
+> [listes de Swadesh de langues austronésiennes](https://en.wiktionary.org/wiki/Appendix:Austronesian_Swadesh_lists),
+> ici pour le tagalog et le cebuano, trouvez les mots en commun.
 
 ```python
 tagalog = {'i':'ako', 'you_sg':'ikaw', 'he':'siya', 'we':'tayo', 'you_pl':'kayo', 'they':'sila',\
@@ -349,8 +348,8 @@ set(tagalog.values()).intersection(set(cebuano.values()))
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-### ✍️ Exo 10
 
+### ✍️ Exo 10
 
 ```python
 from collections import Counter
@@ -504,14 +503,13 @@ def find_words_same_prefix(path):
 ```
 
 > 3\. **Pour les champion⋅nes** Sans rechercher de solution sur internet, essayez d'implémenter une
-   fonction qui calcule la distance de Levenshtein. (Vous pouvez chercher ce que c'est que la
-   distance de Levenshtein et l'algorithme en pseudo-code, mais n'allez pas chercher directement
-   d'implémentation en Python !).
+> fonction qui calcule la distance de Levenshtein. (Vous pouvez chercher ce que c'est que la
+> distance de Levenshtein et l'algorithme en pseudo-code, mais n'allez pas chercher directement
+> d'implémentation en Python !).
 
 Voir <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_dist/edit_distance.html> et
 <https://fr.wikipedia.org/wiki/Distance_de_Levenshtein> Pour les implémentations
 : <https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python>
-
 
 ```python
 def distance(longer_word, shorter_word):
