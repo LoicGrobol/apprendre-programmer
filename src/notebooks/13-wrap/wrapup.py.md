@@ -185,6 +185,9 @@ Vous avez une fonction à compléter (ça vous apprendra à écrire des fonction
 code. Écrivez votre code dans la cellule de la fonction (et enlevez `pass`), exécutez cette cellule
 (bouton « ⏵ Run » ou <kbd>ctrl</kbd> + <kbd>⏎</kbd>) puis exécutez la cellule de test.
 
+- Si la cellule de test n'affiche rien, c'est que vous avez bien codé votre fonction.
+- Si elle vous signale une erreur, c'est que votre fonction ne fait pas ce qu'il fallait.
+
 L'objectif est que vous soyez autonome pour valider ces exos (et accessoirement de vous familiariser
 avec les tests).
 
@@ -224,7 +227,6 @@ Lire [la doc](https://docs.python.org/3/library/stdtypes.html#comparisons).
 
 ```python slideshow={"slide_type": "-"}
 def on_fait_la_taille(moi, toi):
-    """Vrai ssi `moi` est plus grand que `toi`"""
     pass  # Votre code ici
 ```
 
@@ -340,8 +342,8 @@ type("Hello")
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 
-- La fonction `isinstance(obj, class)` vous dit si l'objet donné en argument est de la classe
-  `class` ou non
+- La fonction `isinstance(truc, c)` vous dit si l'objet `truc` donné en argument est de la classe
+  `c` ou non
 
 <!-- #endregion -->
 
@@ -353,7 +355,7 @@ isinstance("hello", int)
 
 ### ✍️ Exo 3 ✍️
 
-Vous reprenez votre fonction `square` de façon à afficher "Erreur de type" quand l'argument n'est
+Reprenez votre fonction `square` de façon à afficher `Erreur de type` quand l'argument n'est
 pas de type `int`
 
 <!-- #endregion -->
@@ -434,6 +436,7 @@ print(len(spam))
 
 ```python slideshow={"slide_type": "-"}
 spam = "bonjour"
+print(spam[0])
 print(spam[2])
 print(spam[-1])
 ```
@@ -526,7 +529,7 @@ print(
 # Faites plutôt ça, c'est plus lisible
 print(f"Tiens salut {name}. T'aurais pas {coffee_price * 2} euros pour 2 cafés ?")
 
-# Ou ça à la rigueurs
+# Ou ça à la rigueur
 print(
     "Tiens salut {}. T'aurais pas {} euros pour 2 cafés ?".format(
         name, coffee_price * 2
@@ -584,14 +587,12 @@ print(
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-
-Attention aussi à la concaténation implicite :
-
+Attention aussi à la concaténation implicite ! Ici `spam` et `ham` ne sont pas du tout égales. Vous voyez pourquoi ?
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "-"}
-spam = "Hello, there"
-ham = ("General ", "Kenobi")
+spam = ("Hello", "there")
+ham = ("Hello, " "there")
 print(spam)
 print(ham)
 ```
@@ -829,7 +830,8 @@ else:
 i = 1
 while (
     i < 5
-):  # À chqaue passage ici, on évalue `i < 5`, si c'est truthy on exécute le bloc, sinon on le saute
+):  # À chqaue passage ici, on évalue `i < 5`, si c'est truthy,
+    # on exécute le bloc, sinon on le saute
     print(i)
     i = i + 1
     # Ici on retourne au début du bloc
@@ -1283,7 +1285,7 @@ x
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 
-ou, plus court (et un peu plus rapide), mais plus mystérieux :
+ou, plus court (et un peu plus rapide), mais moins explicite :
 
 <!-- #endregion -->
 
@@ -1681,7 +1683,7 @@ with open("swadesh_light.csv", "w") as csvfile:
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 
-- csv.DictReader
+- `csv.DictReader`
 
 Cette classe s'appuie sur la ligne d'en-tête pour créer une suite de dictionnaires.\
 S'il n'y a pas de ligne d'en-tête on peut utiliser une liste `fieldnames` en paramètre.
@@ -1697,7 +1699,7 @@ with open("data/austronesian_swadesh.csv") as csvfile:
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 
-- csv.DictWriter
+- `csv.DictWriter`
 
 Cette fois il s'agit de générer un fichier csv à partir d'une séquence de dictionnaires. Le
 paramètre `fieldnames` est obligatoire.
@@ -1823,11 +1825,12 @@ assert get_austro_words("Malay", "Balinese", ["new", "old", "good"]) == {
 }
 ```
 
-2\. Pour chaque mot du Cebuano de la liste [Swadesh austronésienne](data/swadesh_light.csv), trouvez
-les mots des autres langues qui ont les deux ou trois premiers caractères en commun.\
-(optionnel si vous voulez jouer avec les expressions régulières) Si le mot commence par une voyelle,
-elle pourra différer dans les autres langues. Ex: isa / usa seront considérées comme similaires
-(i/u) parce qu'à part la première lettre voyelle elles sont similaires.
+2a. Pour chaque mot du Cebuano de la liste [Swadesh austronésienne](data/swadesh_light.csv), trouvez
+les mots des autres langues qui ont les même deux premiers caractères.
+
+2b. (optionnel si vous voulez jouer avec les expressions régulières) Même question, mais si
+le mot commence par une voyelle, donner les mots des autres langues qui commencent par une voyelle (qui pourra être différente) et on les même deuxième et troisième caractères que le mot de référence. Ex: isa / usa seront considérées comme similaires
+(i/u) parce qu'à part la première lettre voyelle ils sont similaires.
 
 3\. **Pour les champion⋅nes** Sans rechercher de solution sur internet, essayez d'implémenter une
 fonction qui calcule la distance de Levenshtein. (Vous pouvez chercher ce que c'est que la distance
