@@ -55,7 +55,7 @@ jobs:
           python tools/manage.py build "src"
 
       - name: Upload artifact ⬆️
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _build
 
